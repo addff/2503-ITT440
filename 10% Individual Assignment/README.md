@@ -1,3 +1,3 @@
 Markdown Syntax
 ***
-[Please](https://www.markdownguide.org/basic-syntax/)
+[Read More](https://www.markdownguide.org/basic-syntax/)
