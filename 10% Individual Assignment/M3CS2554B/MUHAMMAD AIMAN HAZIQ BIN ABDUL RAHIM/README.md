@@ -10,9 +10,9 @@ This project leverages PyTorch, a powerful deep learning framework, to build and
 
 Pytorch is widely used for deep learning framework for building and training models.
 
-Here are the step to setup the environment using Pytorch:
+## Here are the step to setup the environment using Pytorch:
 
-Step 1: Choose Python Environment Tool
+### Step 1: Choose Python Environment Tool
 Pick one:
 
 Option A: Conda (recommended)
@@ -28,11 +28,11 @@ Lightweight and fast
 If you're not sure, go with Conda.
 
 
-Step 2: Install Python (if not already)
+### Step 2: Install Python (if not already)
 Install Python 3.8–3.11. Check:
 python --version
 
-Step 3: Create a Virtual Environment
+### Step 3: Create a Virtual Environment
 
 Conda :
 conda create -n pytorch-env python=3.10
@@ -43,7 +43,7 @@ python -m venv pytorch-env
 source pytorch-env/bin/activate  # Mac/Linux
 pytorch-env\Scripts\activate     # Windows
 
-Step 4: Install PyTorch
+### Step 4: Install PyTorch
 Check your system:
 Go to https://pytorch.org/get-started/locally/ and copy the install command that matches:
 
@@ -54,55 +54,55 @@ Package manager: pip or conda
 Compute: CPU or CUDA (GPU)
 
 CPU only (safe default):
-# pip
+#### pip
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-# conda
+#### conda
 conda install pytorch torchvision torchaudio cpuonly -c pytorch
 
 With CUDA (NVIDIA GPU support):
-# For CUDA 11.8
+#### For CUDA 11.8
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-# conda
+#### conda
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
-Step 5: Test PyTorch
-In Python:
+### Step 5: Test PyTorch
+#### In Python:
 import torch
 print("PyTorch version:", torch.__version__)
 print("CUDA available:", torch.cuda.is_available())
 ✅ You should see your version and True for CUDA if GPU is available.
 
-Now here are the steps on Object Detection using Pytorch :
+## Now here are the steps on Object Detection using Pytorch :
 
 We will use a PRETRAINED MODEL that can detect objects and create boxes around them. 
 This has many applications in real life such as self driving cars.
 
-First: Import both of this tools
+### First: Import both of this tools
 ![image](https://github.com/user-attachments/assets/cbabee2d-8647-4c1b-ac4b-f65458c46fab)
 
-Next : Use this command to download the pretrained model
+### Next : Use this command to download the pretrained model
 ![image](https://github.com/user-attachments/assets/fd2ac6d2-43c7-412b-8a26-363ee0f8b745)
 
-Then : You need to put it into evaluation mode
+### Then : You need to put it into evaluation mode
 ![image](https://github.com/user-attachments/assets/f47ae1d0-48b4-4ebb-8ad2-198be324a2a5)
 
-After that : We get the list of names :
+### After that : We get the list of names :
 ![image](https://github.com/user-attachments/assets/b5e47e12-ec55-4e29-af5e-402862fba837)
 
-Next : import these things for images and other functions
+### Next : import these things for images and other functions
 ![image](https://github.com/user-attachments/assets/a31a31d6-fb4f-4929-a239-f2acdd3ea421)
 
-After that : code the get_prediction method 
+### After that : code the get_prediction method 
 ![image](https://github.com/user-attachments/assets/db0758df-b31f-400d-8e9a-58730b630dce)
 
-Next : make this function and import random 
+### Next : make this function and import random 
 
 ![image](https://github.com/user-attachments/assets/312149a3-7bd1-4d88-97d4-558e184cd39e)
 
-Lastly : make an object detection method 
+### Lastly : make an object detection method 
 ![image](https://github.com/user-attachments/assets/f9dbd06e-3ce4-49f8-bcdb-c4522d4acf06)
 
-RESULTS
+## RESULTS
 
 Here are the sample for an image with multiple cars for this model to detect.
 
