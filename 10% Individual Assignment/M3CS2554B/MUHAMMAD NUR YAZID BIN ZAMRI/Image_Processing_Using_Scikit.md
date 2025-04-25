@@ -35,3 +35,49 @@ from skimage import io, color, feature
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score 
+```
+### Step 3: Load and Preprocess Images 
+Load images and extract features for classification:
+```
+# Load image dataset (example: grayscale images)
+image1 = color.rgb2gray(io.imread("image1.jpg"))
+image2 = color.rgb2gray(io.imread("image2.jpg"))
+
+# Extract edge features using Canny
+edges1 = feature.canny(image1)
+edges2 = feature.canny(image2)
+
+# Flatten features into 1D arrays
+features = [edges1.ravel(), edges2.ravel()]
+labels = [0, 1]  # Example labels for classification
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
+```
+### Step 4: Train a Classifier
+Use Scikit-learn’s machine learning model for classification:
+```
+# Use Random Forest for image classification
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+```
+Step 5: Evaluate the Model
+Test the classifier and calculate accuracy:
+```
+y_pred = clf.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Model Accuracy: {accuracy * 100:.2f}%")
+```
+Applications
+- Medical Imaging: Detecting tumors or abnormalities in scans.
+- Face Recognition: Identifying individuals in photos or videos.
+- Object Detection: Detecting and classifying objects in real-time.
+- Self-Driving Cars: Analyzing road signs and obstacles.
+
+
+Conclusion
+Image processing, when combined with machine learning, opens up a world of possibilities for analyzing visual data. By leveraging libraries like Scikit-learn for machine learning and Scikit-image for feature extraction, you can build powerful systems that understand and act on images.
+
+
+
+
