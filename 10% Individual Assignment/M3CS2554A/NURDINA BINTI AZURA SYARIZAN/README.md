@@ -31,9 +31,8 @@ Notepad++ is a popular and free source code editor and text editor for Windows. 
 
 
 ## LIBRARY: OPENCV
-<p align="center">
-<img src="https://github.com/-----" width=100% height=100%>
-</p>
+<img src="https://github.com/user-attachments/assets/9b29b3a7-4590-42b1-b614-acf8f2a770ab" width="300" />
+
 
 ### What is OpenCV?
 
