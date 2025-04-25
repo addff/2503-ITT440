@@ -11,6 +11,7 @@ Image processing involves the manipulation and enhancement of digital images thr
 ### FRAMEWORK
 
 #### Albumenatations
+![Image](https://github.com/user-attachments/assets/c7f06c36-18cc-49d0-9eeb-4d1caf6e2010)
 
 
 ##### What is Albumenatations ?
