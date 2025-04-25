@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dbdf4fc7-7981-4dbb-8ace-b1e7fb45a440)# 2503-ITT440
+# 2503-ITT440
 ## 10% Individual Assignment
 ### NAME: NUR 'IZZAH NAJIHAH BINTI NOOR AZMI  
 ### MATRIC NUMBER: 2023298506
