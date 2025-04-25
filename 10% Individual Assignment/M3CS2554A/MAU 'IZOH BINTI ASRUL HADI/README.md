@@ -6,6 +6,7 @@ CLASS : CDCS2554A
 ## TITLE : INTRODUCTION TO IMAGE PROCESSING USING SCIPY IN PYTHON
 ### What is Image Processing ?
 Image processing refers to the process of manipulating and enhancing digital images. Using computer algorithms, it is mainly applied to extract useful information, improve image quality and prepare images for future use. It plays a crucial role in various industries, such as security systems where it is used for facial recognition. This highlights how image processing has become an essential tool in both current and future world. 
+
 ![scipy-bids-project-banners-template-ob-people-1 5-1-ratio-rectangle](https://github.com/user-attachments/assets/2bb4894c-5e72-408e-9450-7ad0eb23dd58)
 ### What is SciPy ?
 SciPy is a free and open-source library in Python that is built on top of Numpy. It is widely used for scientific and technical computing, including multidimensional image processing. This library extends Python's capabilities by offering high-level functions and classes that are especially useful for data analysis, scientific computation, and image processing tasks. In the context of image processing, SciPy provides tools that are both powerful and accessible, making it an excellent choice for researchers, developers, and engineers working with multidimensional image data.
