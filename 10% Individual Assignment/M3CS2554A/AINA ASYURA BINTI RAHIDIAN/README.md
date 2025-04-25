@@ -5,22 +5,26 @@
 - To write article about CVG & Image Processing using Python tools or library
 - To demonstrate coding used related to the article
 
-### Editor: Notepad ++
-Notepad++ is a widely-used, free source code and text editor for Windows, developed by Don Ho and licensed under the GNU General Public License. It is known for its intuitive interface and broad support for various programming languages and file formats.
-###### Significance Of Notepad++ :
-- Free and Open Source: Notepad++ is available at no cost, and its open-source nature means the source code is accessible to the public, allowing users to inspect, modify, and contribute to its development.
-- Lightweight: Notepad++ is a lightweight application that doesn’t use much system resource, enabling it to run smoothly even on older or lower-performance computers.
-- Community and Support: Notepad++ benefits from a large, active community, providing users with access to tutorials, plugins, and help from fellow users to extend its capabilities.
+### Image Processing
+Image processing involves the manipulation and enhancement of digital images through computer algorithms. It is primarily used to extract valuable information, enhance image quality, and prepare images for further applications. This technology plays a vital role across various industries. For example, in security systems, where it is used for facial recognition. Its wide range of applications underscores the importance of image processing as a key tool in both today’s world and in the future.
 
 ### FRAMEWORK
 
 #### Albumenatations
 
+
 ##### What is Albumenatations ?
 Albumentations is a fast and flexible Python library used for image augmentation. It's specifically designed to perform various image transformation operations, making it a popular choice for data preprocessing in machine learning and computer vision projects. Albumentations provides a wide range of augmentations, from basic transformations like rotation and flipping to more advanced ones like elastic deformations and random brightness adjustments.
 
-##### Albumenatations Features :
-Here are some key features and characteristics of the Albumenatations framework:
+### Core Features of Albumenatations
+ 1) Gaussian blur
+ 2) Median blur
+ 3) Image sharpening
+ 4) Edge detection (via emulation, since direct Sobel is not available)
+ 5) Brightness and contrast contro
+
+##### Albumenatations Advantages :
+Here are some advantages of the Albumenatations framework:
 
 1) High Performance: Albumentations is optimized for speed and efficiency, making it suitable for large-scale image processing tasks.
 2) Rich Set of Transformations: It offers a wide variety of image augmentations, including flipping, rotating, cropping, brightness/contrast adjustments, blurring, noise addition, and more.
@@ -28,6 +32,20 @@ Here are some key features and characteristics of the Albumenatations framework:
 4) Mask and Keypoint Support: Allows simultaneous augmentation of images, segmentation masks, and keypoints, which is essential for tasks like semantic segmentation and pose estimation
 5) Custom Transformations: Users can define their own custom transformations for specialized use cases.
 6) Reproducibility: Augmentations can be made deterministic using random seeds, ensuring consistent results when needed.
+
+### Library Related to Albumentations
+Albumentations is a fast and flexible image processing library designed primarily for machine learning and computer vision tasks. It supports a wide range of image augmentation techniques such as blurring, sharpening, cropping, and color adjustments. Unlike SciPy, which is more general-purpose, Albumentations is optimized for preparing image datasets, especially for training deep learning models.
+
+### Integrated Development Environment (IDE)
+Albumentations can be used in various popular IDEs such as Jupyter Notebook, VS Code, and PyCharm. These platforms allow for seamless integration with image visualization tools like Matplotlib or OpenCV, making it easy to view and test augmentations in real time.
+
+### Basic Image Processing Functions
+ 1) A.GaussianBlur(blur_limit=(3, 3), p=1.0) – Smooths the image.
+ 2) A.MedianBlur(blur_limit=3, p=1.0) – Reduces noise.
+ 3) A.Sharpen(p=1.0) – Enhances edges and detail.
+ 4) A.RandomBrightnessContrast(p=1.0) – Adjusts brightness and contrast.
+ 5) A.Equalize(p=1.0) – Improves overall image histogram distribution.
+
    
 ###### Exact code used:
 ```py
