@@ -1,9 +1,9 @@
-# AMIRUL ZULHAKIMI BIN MAT ZAWAWI
-
+# NAME : AMIRUL ZULHAKIMI BIN MAT ZAWAWI
+# STUDENT ID : 2023298656
 
 ---
 
-# Image Processing Using MATLAB: A Powerful Tool for Visual Data Analysis
+# Image Processing Using MATLAB
 
 Image processing has become an integral part of numerous fields including medical imaging, remote sensing, computer vision, and industrial automation. Among the various tools and programming environments available, **MATLAB** stands out as one of the most powerful and widely used platforms for image processing applications. Its comprehensive Image Processing Toolbox and user-friendly interface make it ideal for both beginners and advanced users.
 
