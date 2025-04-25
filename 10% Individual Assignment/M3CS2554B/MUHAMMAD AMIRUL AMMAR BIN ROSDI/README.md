@@ -11,6 +11,8 @@ There are 5 types of image processing :
 - **Pattern Recognition** - Measure the various patterns around the objects in the image
 - **Retrieval** - Browse and search images from a large database of digital images that are similar to the original image
 ## *2. What is MoviePy*
+![logo](https://github.com/user-attachments/assets/79eb1580-78a2-4fa9-9e58-8f0107a537ef)
+
 MoviePy is a powerful Python library used for video editing, compositing, and processing. It's often used for video manipulation but also supports frame-by-frame image processing, allowing you to apply effects, filters and transformations using Python.
 ## *2.1 Why choose MoviePy for Image Processing*
 MoviePy stands out as a developer-friendly, Pythonic solution for processing and editing video with image processing techniques. Its ability to apply custom Python functions to each frame, along with built-in support for audio, overlays, transitions and text, makes it an all-in-one toolkit for creating high quality video content programmatically.
