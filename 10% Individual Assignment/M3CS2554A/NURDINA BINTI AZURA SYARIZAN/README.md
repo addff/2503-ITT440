@@ -62,6 +62,41 @@ With OpenCV, you can easily manipulate images, detect objects, track movements, 
 * __Free and Open Source__
 	* Zero cost, maximum power.
 
+###### Exact code used:
+```py
+import cv2
+import matplotlib.pyplot as plt
+
+# Load the image using OpenCV
+image = cv2.imread("example.jpg")
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Resize the image to 256x256
+resized_image = cv2.resize(image, (256, 256))
+
+# Flip the image horizontally (mirror effect)
+flipped_image = cv2.flip(resized_image, 1)
+
+# Adjust brightness and contrast
+alpha = 1.2  # Contrast (1.0 = normal)
+beta = 30    # Brightness (0 = no change)
+bright_contrast_image = cv2.convertScaleAbs(flipped_image, alpha=alpha, beta=beta)
+
+# Rotate the image by 15 degrees
+(h, w) = bright_contrast_image.shape[:2]
+center = (w // 2, h // 2)
+rotation_matrix = cv2.getRotationMatrix2D(center, 15, 1.0)
+rotated_image = cv2.warpAffine(bright_contrast_image, rotation_matrix, (w, h))
+
+# Display the final image using matplotlib
+plt.imshow(rotated_image)
+plt.title("Augmented Image (OpenCV Only)")
+plt.axis('off')
+plt.show()
+
+
+
+
 ### DEMONSTRATION OF INSTALLATION AND HOW TO USE OPENCV
 
 
