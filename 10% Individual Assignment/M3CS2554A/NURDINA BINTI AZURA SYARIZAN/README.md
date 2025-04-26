@@ -1,6 +1,10 @@
 # 2503-ITT440 (10% INDIVIDUAL ASSIGNMENT)
 
-## NURDINA BINTI AZURA SYARIZAN (2023239276 | M3CS2554A)
+NAME: NURDINA BINTI AZURA SYARIZAN
+
+STUDENT ID: 2023239276
+
+GROUP: M3CS2554A
 
 ## TITLE: CVG AND IMAGE PROCESSING WITH PYTHON
 
@@ -9,43 +13,27 @@
 - To write article about CVG and Image Processing using Python tools or library.
 - To demonstrate coding used related to the article.
 
-### Editor: Notepad ++
-
-
-![notepad++](https://github.com/----)
-
-Notepad++ is a popular and free source code editor and text editor for Windows. It was developed by Don Ho and is distributed under the GNU General Public License. Notepad++ is known for its user-friendly interface and its extensive support for various programming languages and file formats.
-
-
-###### Significance Of Notepad++ :
-
-- Free and Open Source: Notepad++ is free to use, and its open-source nature means that its source code is publicly available. This transparency allows users to inspect and modify the software, as well as contribute to its development.
-
-- Lightweight: Notepad++ is a lightweight application, which means it doesn't consume a significant amount of system resources. It loads quickly and runs smoothly even on older or less powerful computers.
-
-- Extensible: Notepad++ supports a wide range of plugins that can be used to enhance its functionality. This extensibility allows users to add features and capabilities as needed.
-
-- Multi-Language Support: It supports a wide variety of languages and character encodings, making it a versatile choice for users around the world.
-
-- Community and Support: It has a strong and active user community, which means you can find help, tutorials, and plugins created by other users to extend its functionality.
-
-
 ## LIBRARY: OPENCV
 <img src="https://github.com/user-attachments/assets/9b29b3a7-4590-42b1-b614-acf8f2a770ab" width="300" />
 
-
 ### What is OpenCV?
 
-OpenCV (Open Source Computer Vision Library) is a powerful open-source Python library focused on real-time image processing and computer vision tasks. It was originally developed by Intel and has become a standard in the CV community.
-With OpenCV, you can easily manipulate images, detect objects, track movements, apply filters, and even power up AI models with vision capabilities. Whether you're building facial recognition systems or just playing around with filters like Snapchat, OpenCV is your go-to library!
+OpenCV (Open Source Computer Vision Library) is an open-source library primarily focused on real-time image processing and computer vision tasks. Originally developed by Intel, OpenCV has since grown into one of the most widely used libraries in computer vision and AI. With OpenCV, developers can easily manipulate images, detect objects, track movements, apply filters, and even build complex machine learning and AI systems with visual capabilities.
+
+Whether you're building advanced systems like facial recognition, object tracking, or simpler image transformations such as rotating or scaling, OpenCV is a tool you can't overlook. Its ability to handle both simple and complex tasks with ease has made it the go-to library in the field of computer vision.
 
 #### Key Features
-- Image transformation: Resizing, cropping, rotating, flipping.
-- Object detection: Face, eyes, body detection using pretrained Haar cascade models.
-- Color filtering: Convert RGB to HSV, grayscale.
-- Edge detection: Canny edge detection, Sobel filters.
-- Contour Detection: Useful for detecting shapes, outlines, and blobs.
-- Video Processing: Reading and writing videos, webcam feeds, frame-by-frame manipulation.
+- Image transformation: OpenCV provides an array of functions to manipulate images, such as resizing, cropping, rotating, and flipping. This makes it ideal for adapting images for different uses or performing basic editing tasks
+  
+- Object detection: Through Haar cascade classifiers, OpenCV enables real-time face, eye, and body detection. This allows developers to build applications such as security systems or face recognition software.
+  
+- Color filtering: Convert RGB to HSV, grayscale, allowing users to perform operations like color-based segmentation, which is vital for object detection tasks.
+  
+- Edge detection: Techniques like Canny edge detection and Sobel filters help identify the boundaries within images, making it easier to analyze objects and structures within an image.
+  
+- Contour Detection: Contours are essential for identifying shapes, boundaries, and blobs in images. OpenCV’s contour detection features are used in a variety of applications, from identifying shapes to image segmentation.
+  
+- Video Processing: Beyond still images, OpenCV allows the processing of video streams, webcam feeds, and frame-by-frame analysis. This is crucial for applications involving motion analysis or video surveillance.
 
 #### Advantages of OpenCV
 ***
@@ -65,38 +53,36 @@ With OpenCV, you can easily manipulate images, detect objects, track movements, 
 ###### Exact code used:
 ```py
 import cv2
-import matplotlib.pyplot as plt
+import numpy as np
 
-# Load the image using OpenCV
-image = cv2.imread("example.jpg")
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+# create a numpy array filled with zeros to use as a blank image
+image = np.zeros((512,512,3), np.uint8)
 
-# Resize the image to 256x256
-resized_image = cv2.resize(image, (256, 256))
+# draw a green line on the image
+cv2.line(image, (0,0), (511, 511), (0, 255, 0), 5)
 
-# Flip the image horizontally (mirror effect)
-flipped_image = cv2.flip(resized_image, 1)
+# draw a red rectangle on the image
+cv2.rectangle(image, (384,0), (510, 128), (0, 0, 255), 3)
 
-# Adjust brightness and contrast
-alpha = 1.2  # Contrast (1.0 = normal)
-beta = 30    # Brightness (0 = no change)
-bright_contrast_image = cv2.convertScaleAbs(flipped_image, alpha=alpha, beta=beta)
+# draw a blue circle on the image
+cv2.circle(image, (447,63), 63, (255, 0, 0), -1)
 
-# Rotate the image by 15 degrees
-(h, w) = bright_contrast_image.shape[:2]
-center = (w // 2, h // 2)
-rotation_matrix = cv2.getRotationMatrix2D(center, 15, 1.0)
-rotated_image = cv2.warpAffine(bright_contrast_image, rotation_matrix, (w, h))
+# display the image
+cv2.imshow('Image', image)
 
-# Display the final image using matplotlib
-plt.imshow(rotated_image)
-plt.title("Augmented Image (OpenCV Only)")
-plt.axis('off')
-plt.show()
+# wait for a key press and then close the window
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+### SAMPLE OUTPUT
+<img src="https://github.com/user-attachments/assets/9b29b3a7-4590-42b1-b614-acf8f2a770ab" width="300" />
+
+----
+### DEMO AND INSTALLATION OF PYTHON AND OPENCV
+##### Video included below: 
+[![Video included below](https://img.youtube.com)
 
 
-
-
-### DEMONSTRATION OF INSTALLATION AND HOW TO USE OPENCV
 
 
