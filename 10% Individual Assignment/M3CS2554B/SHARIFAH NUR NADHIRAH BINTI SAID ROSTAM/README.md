@@ -9,25 +9,34 @@ This project demonstrates how to manipulate image using the **NumPy** library wh
 #### Introduction
 Image processing is a type of mathematical computation. It demonstrates core in computer vision, involving techniques to manipulate images to extract useful information or modify visual attributes. NumPy was one of the powerful tools that treat image as arrays. NumPy stands for Numerical Python. It is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourirer transform and matrices.
 #### Why Numpy for Image Processing?
-- **Efficiency**: NumPy can perform a fast array processing due to the highly optimized numerical operations.
-- **Simplicity**: It allows direct manipulation of pixel values.
-- **Control**: Offers more transparency than using high-level libraries.
+- **Efficiency**: A fast array can be processed with NumPy due to its highly optimized numerical operations. 
+- **Simplicity**: A direct manipulation of pixel values can be allowed. 
+- **Control**: NumPy offers more transparency compared to other high-level libraries.
 #### Which Language is NumPy written in?
 NumPy is a Python library and is written partially in Python but most of the parts that require fast computation are written in C or C++.
+
 #### Step-by-step Implementation
-#### Tools and Libraries Used
-- **Python 3.x**
-- **NumPy** – for matrix manipulation.
-- **OpenCV** – for loading/saving/displaying images.
-- **Matplotlib** – for visualization in Jupyter or Python scripts.
-The dependencies was included to visualize the results clearly.
-#### How to implement?
+
 #### Step 1: Environment Setup
+The following tools need to be installed to perform this project
 - Python 3.8+
 - Python Packages: PIL, NumPy
-#### Step 2: Import Image 
-![image](https://github.com/user-attachments/assets/89e75e6f-4d4c-4d64-8b65-d26ad19e0ace)
 
+  
+#### Step 2: Import Image 
+```
+import numpy as np
+
+#Use PIL to access image data
+from PIL import Image
+img = Image.open('monalisa.jpg')
+
+#Create array from image data 
+M = np.array(img)
+
+#Display array from image data 
+display(Image.fromarray(M))
+```
 
 The results:
 
@@ -35,32 +44,85 @@ The results:
 
 
 #### Step 3: Rotate Image
-![image](https://github.com/user-attachments/assets/20123dee-64cc-41d6-9f6b-94d41d5a4c50)
 
+```
+def rotate_image (image, n):
+  # rotate image using rot90, use n to determine number of rotation 
+  rotated_img = Image.fromarray(np.rot90(image, k=n, axes=(1, 0)))
+  return rotated_img
+
+#rotate image twice (n=2)
+display(rotate_image(reduced_M, 2))
+```
 
 The results:
 
 ![image](https://github.com/user-attachments/assets/d9fcc465-6c19-4a8c-a3e6-3e1d60936366)
 
 #### Step 4: Crop an Image
-![image](https://github.com/user-attachments/assets/c47a7837-3458-4037-a6f1-eaa602a39629)
+```
+def crop_image(image, crop_ratio, zoom_ratio):
 
+  #create focused part using crop_ratio and zoom_ratio of choice
+  
+  top = image.shape[0] // crop_ratio 
+  bottom = zoom_ratio * image.shape[0] // crop_ratio
+  left = image.shape[1] // crop_ratio
+  right = zoom_ratio * image.shape[1] // crop_ratio
+
+  # Extract the focused part using array slicing
+  focused_part = image[top:bottom, left:right]
+  return focused_part
+
+display(crop_image(reduced_M, 4, 2))
+```
 
 The results:
 
 ![image](https://github.com/user-attachments/assets/744da381-84f7-4001-a347-4a6a0a5de391)
 
 #### Step 5: Binarize Image
-![image](https://github.com/user-attachments/assets/5a2fe06b-07a8-4cb9-b5c1-9b4376da8e27)
+```
+def binarize_image(image, threshold):
 
+  #set pixel value greater than threshold to 255
+  binarize_image = ((image > threshold) * 255).astype(np.uint8)
+  
+  return binarize_image
+
+#set threshold
+threshold = 68
+
+M_binarized = Image.fromarray(binarize_image(reduced_M, threshold))
+
+display(M_binarized)
+```
 
 The results:
 
 ![image](https://github.com/user-attachments/assets/e4d95688-7349-430f-a89c-ca1557c0b7d7)
 
 #### Step 6: Grayscale Image
-![image](https://github.com/user-attachments/assets/fb055d2b-23ff-45f4-9ed4-3b1025f3ad59)
+```
+import numpy as np
 
+def grayscale(image):
+    # Convert the RGB image to grayscale using weighted average
+    grayscale_img = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
+
+    # Ensure values are within valid range [0, 255]
+    grayscale_img = np.clip(grayscale_img, 0, 255)
+
+    # Convert to uint8 data type
+    grayscale_img = grayscale_img.astype(np.uint8)
+
+    return grayscale_img
+
+# Convert the image to grayscale
+M_gray = grayscale(reduced_M)
+
+display(M_gray)
+```
 
 The results:
 
