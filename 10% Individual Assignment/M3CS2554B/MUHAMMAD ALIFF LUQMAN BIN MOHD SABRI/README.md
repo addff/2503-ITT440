@@ -151,7 +151,7 @@ imageio.imwrite('sobel_edges.jpg', sobel_edges.astype(np.uint8))
 
 ## Conclusion
 
-While SciPy isn’t specialized for image processing like OpenCV, its `ndimage` module is extremely valuable for scientific workflows where images are treated as data arrays. If you’re working with biological data, remote sensing, or scientific research, SciPy is an excellent, efficient tool.
+While SciPy isn’t specialized for image processing like OpenCV, its `ndimage` module is extremely valuable for scientific workflows where images are treated as data arrays. If you’re working with biological data, remote sensing, or scientific research, SciPy is an excellent, efficient tool. SciPy is especially powerful when images are viewed not just as pictures, but as data: arrays of values that can be measured, transformed, and analyzed. This makes it incredibly useful for researchers, data scientists, and engineers working in domains where image data is core to experiments or diagnostics.
 
 
 
