@@ -19,7 +19,7 @@ SciPy is a free and open-source library in Python that is built on top of Numpy.
 ### Library Related to SciPy
 Even though SciPy’s module has powerful image processing capabilities, it mainly depends on **NumPy** for array manipulation with all of NumPy’s functions included in it . Moreover, in order to view processed images, it is necessary to use external libraries such as **Matplotlib**. Hence, SciPy is usually used with other libraries to create a comprehensive workflow for image processing.
 ### Module / Subpackage
-SciPy offers a specifically designed module for image processing and analysis functions, which called .ndimage. This subpackage provide variety of functions including linear and non-linear filtering, object measurements, interpolation and binary morphology. Below are a few of basic image processing functions : 
+SciPy offers a specifically designed module for image processing and analysis functions, which called .ndimage. This subpackage provide variety of functions including linear and non-linear filtering, object measurements, interpolation and binary morphology. Below are some of basic image processing functions : 
 1) gaussian_filter(input, sigma[, order, ...])
 2) median_filter(input[, size, footprint, ...])
 3) sobel(input[, axis, output, mode, cval])
