@@ -100,45 +100,99 @@ Jupyter Notebook is an easy-to-use and friendly user editor application that can
 
 **<h2>Code for image processing </h2>**
 
-```
-from PIL import Image
+```python
+
+from PIL import Image, ImageEnhance, ImageFilter
+import numpy as np
 import matplotlib.pyplot as plt
 
 #open image
 img = Image.open('cat.jpg')
 
-#show image
-plt.imshow(img)
-plt.axis('off')
-plt.show()
+#crop image
+crop_box = (100, 100, 400, 400)
+img_cropped = img.crop(crop_box)
 
-# resize to 200x200 pixels
-img_resized = img.resize((200, 200))
-
-plt.imshow(img_resized)
-plt.axis('off')
-plt.show()
-
-# Convert to grayscale
+#convert grayscale
 img_gray = img.convert('L')
 
+#apply Sepia Tone
+def apply_sepia(image):
+    width, height = image.size
+    pixels = np.array(image)
+    for i in range(width):
+        for j in range(height):
+            r, g, b = pixels[j, i]
+            tr = int(0.393 * r + 0.769 * g + 0.189 * b)
+            tg = int(0.349 * r + 0.686 * g + 0.168 * b)
+            tb = int(0.272 * r + 0.534 * g + 0.131 * b)
+            pixels[j, i] = (min(tr, 255), min(tg, 255), min(tb, 255))
+    return Image.fromarray(pixels)
+
+img_sepia = apply_sepia(img)
+
+#apply sharpen filter
+img_sharpened = img.filter(ImageFilter.SHARPEN)
+
+#rotate the image
+img_rotated = img.rotate(45)
+
+#cropped image
+plt.subplot(3, 3, 2)
+plt.imshow(img_cropped)
+plt.title('Cropped Image')
+plt.axis('off')
+
+#grayscale image
+plt.subplot(3, 3, 3)
 plt.imshow(img_gray, cmap='gray')
+plt.title('Grayscale Image')
 plt.axis('off')
-plt.show()
 
-# Rotate the image by 90 degrees
-img_rotated = img.rotate(90)
+#Sepia image
+plt.subplot(3, 3, 4)
+plt.imshow(img_sepia)
+plt.title('Sepia Image')
+plt.axis('off')
 
+
+#sharpened image
+plt.subplot(3, 3, 7)
+plt.imshow(img_sharpened)
+plt.title('Sharpened Image')
+plt.axis('off')
+
+#rotated image
+plt.subplot(3, 3, 8)
 plt.imshow(img_rotated)
+plt.title('Rotated Image')
 plt.axis('off')
+
+plt.tight_layout()
 plt.show()
 
-# Flip horizontally
-img_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
+#save all processed images
+img_cropped.save('photo_cropped.jpg')
+img_gray.save('photo_gray.jpg')
+img_sepia.save('photo_sepia.jpg')
+img_sharpened.save('photo_sharpened.jpg')
+img_rotated.save('photo_rotated.jpg')
+```
+**<h3>The sample image of the code</h3>**
 
-plt.imshow(img_flip)
-plt.axis('off')
-plt.show()
+
+Original image :
+![cat](https://github.com/user-attachments/assets/63a8c3a9-80d8-4934-b53f-53394bc84d09)
+
+Output :
+![Screenshot (152)](https://github.com/user-attachments/assets/00341732-230a-4a14-aefe-6158a65b8277)
+
+
+
+
+
+
+
 
 
 
