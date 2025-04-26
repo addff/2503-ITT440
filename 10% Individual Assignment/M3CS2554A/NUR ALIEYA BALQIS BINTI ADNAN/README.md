@@ -77,13 +77,13 @@ The Pillow library provides a wide range of basic image processing functions tha
 	<em>- //degrees can be 15,30,45,90 or others</em> </li> 
 	
   <li> img.convert("RGB")   
-	<em>-//change colour modes like RGB,L(grayscales) or RGBA</em> </li>
+	<em>- //change colour modes like RGB,L(grayscales) or RGBA</em> </li>
   
   <li>img.filter(ImageFilter.BLUR)  
-	<em>-//apply built-in filters such as blur,sharpen and contour</em> </li>
+	<em>- //apply built-in filters such as blur,sharpen and contour</em> </li>
   
   <li> ImageEnhance.Brightness(img)  
-	<em>-//adjust brightness, contrast, sharpness, and color.</em> </li>
+	<em>- //adjust brightness, contrast, sharpness, and color.</em> </li>
  
 </ol> <br>
 
