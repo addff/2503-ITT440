@@ -50,16 +50,6 @@ pip install Wand
 
 ---
 
-## 🖼️ Images
-
-### Wand Logo  
-![Wand Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ImageMagick_Wand.svg/1200px-ImageMagick_Wand.svg.png)
-
-### ImageMagick Logo  
-![ImageMagick Logo](https://imagemagick.org/images/magick-icon.png)
-
----
-
 ## ▶️ Video Tutorial
 
 Learn how to use the Wand library with this video tutorial:  
