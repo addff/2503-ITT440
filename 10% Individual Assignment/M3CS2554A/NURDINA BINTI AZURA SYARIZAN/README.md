@@ -79,6 +79,7 @@ cv2.destroyAllWindows()
 ![Output](https://github.com/addff/2503-ITT440/blob/ee954765a41a1e9ef6326f71fc0eeb95758d9b79/10%25%20Individual%20Assignment/M3CS2554A/NURDINA%20BINTI%20AZURA%20SYARIZAN%EF%80%8D/Screenshot%202025-04-26%20174224.png)
 
 
+
 ----
 ### DEMO AND INSTALLATION OF PYTHON AND OPENCV
 ##### Video included below: 
