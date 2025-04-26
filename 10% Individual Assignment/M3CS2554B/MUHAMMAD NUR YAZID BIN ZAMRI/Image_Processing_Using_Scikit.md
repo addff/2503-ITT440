@@ -71,14 +71,36 @@ y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy * 100:.2f}%")
 ```
-Applications
+---
+## **Example output for Edge Detection in Image Processsing**
+
+Before classification, the program applies Canny edge detection to images. These processed images will be displayed as black-and-white images highlighting detected edges.
+
+![Edge-detection](https://github.com/user-attachments/assets/6853f55a-037b-4a53-accb-594e45ebaeef)
+
+---
+## **Example output for ORB in Image Processing**
+
+If ORB keypoints are enabled, the program will show the detected keypoints in red dots on the image.
+
+![1_NOLrjmm_21d2vRmW9cNYVA](https://github.com/user-attachments/assets/71dea59e-4a03-4da9-8b2b-900790164453)
+
+---
+## **Example output for Test Image Predictions in Image Processing**
+
+After classification, the program displays test images with predicted labels
+
+![Predictions-on-the-test-images-for-four-detection-algorithms](https://github.com/user-attachments/assets/8aec1c0d-4b8f-4a59-a6a2-81f0e54dd2b3)
+
+---
+## Applications
 - Medical Imaging: Detecting tumors or abnormalities in scans.
 - Face Recognition: Identifying individuals in photos or videos.
 - Object Detection: Detecting and classifying objects in real-time.
 - Self-Driving Cars: Analyzing road signs and obstacles.
 
 
-Conclusion
+## Conclusion
 Image processing, when combined with machine learning, opens up a world of possibilities for analyzing visual data. By leveraging libraries like Scikit-learn for machine learning and Scikit-image for feature extraction, you can build powerful systems that understand and act on images.
 
 
