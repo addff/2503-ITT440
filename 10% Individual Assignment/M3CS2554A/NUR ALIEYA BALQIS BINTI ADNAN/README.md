@@ -89,7 +89,17 @@ The Pillow library provides a wide range of basic image processing functions tha
 
 **<h3>Library related to Pillow (PIL)</h3>** 
 
-A fork of the original Python Imaging Library (PIL), Pillow is a powerful image processing library for Python. NumPy is the Python library most closely related to Pillow. Basic image processing operations like opening, saving, resizing, cropping, and adding basic filters are the main uses for Pillow. With the use of NumPy, you could convert Pillow images into numerical arrays or grids of pixel values that can then be worked with using powerful numerical operations.
+A fork of the original Python Imaging Library (PIL), Pillow is a powerful image processing library for Python. NumPy is the Python library most closely related to Pillow. Basic image processing operations like opening, saving, resizing, cropping, and adding basic filters are the main uses for Pillow. With the use of NumPy, you could convert Pillow images into numerical arrays or grids of pixel values that can then be worked with using powerful numerical operations.<br>
+
+**<h3>Editor for Pillow</h3>**
+
+![images](https://github.com/user-attachments/assets/3c52c2f6-24cc-426f-9246-8aad51f1f5d7)
+
+
+Jupyter Notebook is an easy-to-use and friendly user editor application that can be used together with Pillow to do image processing tasks. We can write and run Pillow image processing code using “cells.” They also will compare the before and after processed images in one notebook.
+
+
+
 
 
  
