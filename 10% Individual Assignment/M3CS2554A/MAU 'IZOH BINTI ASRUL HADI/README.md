@@ -30,5 +30,60 @@ SciPy offers a specifically designed module for image processing and analysis fu
 
 When it comes to selecting an editor or IDE for image processing tasks using SciPy, the choice ultimately depends on personal preference, project size, and the features you need. In this article, we use **Spyder**, which is designed for scientific computing with built-in support for SciPy, NumPy, and Matplotlib, making it ideal for image processing.
 ### Python Code Example for Basic Image Processing with SciPy
+``` py
+from skimage import io, img_as_ubyte
+from scipy import ndimage
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Importing image
+img = img_as_ubyte(io.imread("Downloads/fruits.png", as_gray=True))
+
+# Applying Gaussian filter
+gaussian_filtered = ndimage.gaussian_filter(img, sigma=2)
+
+# Applying Sobel filter for edge detection
+sobel_x = ndimage.sobel(img, axis=0) # Vertical direction.
+sobel_y = ndimage.sobel(img, axis=1) # Horizontal direction.
+sobel_combined = np.hypot(sobel_x, sobel_y) # Combine
+
+# Apply grey dilation
+dilated_img = ndimage.grey_dilation(img, size=(15, 15))
+
+# Plotting the results
+plt.figure(figsize=(20, 6))
+
+# Original picture
+plt.subplot(1, 6, 1)
+plt.title("Original")
+plt.imshow(img, cmap='gray')
+
+# Gaussian Filtered picture
+plt.subplot(1, 6, 2)
+plt.title("Gaussian Blurred")
+plt.imshow(gaussian_filtered, cmap='gray')
+
+# Edge Detection picture
+plt.subplot(1, 6, 3)
+plt.title("Sobel Edge Detection X")
+plt.imshow(sobel_x, cmap='gray')
+
+plt.subplot(1, 6, 4)
+plt.title("Sobel Edge Detection Y")
+plt.imshow(sobel_y, cmap='gray')
+
+plt.subplot(1, 6, 5)
+plt.title("Sobel Edge Detection Combined")
+plt.imshow(sobel_combined, cmap='gray')
+
+# Grey Dilation picture
+plt.subplot(1, 6, 6)
+plt.title("Grey Dilation")
+plt.imshow(dilated_img, cmap='gray')
+
+plt.tight_layout()
+plt.show()
+```
+
 
 
