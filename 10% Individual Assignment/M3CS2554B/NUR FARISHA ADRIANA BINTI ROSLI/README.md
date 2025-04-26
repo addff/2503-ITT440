@@ -7,6 +7,8 @@
 
 Image processing enhances images or extracts information using various techniques and algorithms. It improves quality, detects patterns, separates objects, and converts formats for both photos and videos. The process involves capturing an image, applying algorithms, and generating analyzable results. In this part, we will be focusing on the library used in Kornia to develop digital image processing.
 
+
+
 **WHY KORNIA FOR IMAGE PROCESSING?**
 
 Kornia is a unique library that makes it possible to combine traditional computer vision techniques with deep learning models. It includes various routines and modules that can handle common computer vision tasks. The library is built on PyTorch, which helps it run efficiently and allows for easy calculation of gradients for complicated functions using reverse-mode auto-differentiation.
