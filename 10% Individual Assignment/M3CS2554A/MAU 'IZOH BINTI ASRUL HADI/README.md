@@ -47,7 +47,7 @@ sobel_x = ndimage.sobel(img, axis=0) # Vertical direction.
 sobel_y = ndimage.sobel(img, axis=1) # Horizontal direction.
 sobel_combined = np.hypot(sobel_x, sobel_y) # Combine
 
-# Apply grey dilation
+# Applying Grey Dilation
 dilated_img = ndimage.grey_dilation(img, size=(15, 15))
 
 # Plotting the results
@@ -63,7 +63,7 @@ plt.subplot(1, 6, 2)
 plt.title("Gaussian Blurred")
 plt.imshow(gaussian_filtered, cmap='gray')
 
-# Edge Detection picture
+# Sobel Fitered / Edge Detection picture
 plt.subplot(1, 6, 3)
 plt.title("Sobel Edge Detection X")
 plt.imshow(sobel_x, cmap='gray')
