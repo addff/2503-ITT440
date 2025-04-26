@@ -3,7 +3,7 @@
 
 ## Introduction
 
-SciPy is a scientific computing library in Python, built on top of NumPy. While it’s not primarily an image processing library, its `scipy.ndimage` module provides powerful functions for image manipulation. It’s ideal for tasks like filtering, transforming, and basic analysis of images. SciPy's image processing capabilities are particularly well-suited for scientific and research-oriented tasks—especially in domains such as biology, medicine, astronomy, and engineering—where images are often analyzed not just visually but quantitatively.
+SciPy is a scientific computing library in Python, built on top of NumPy. While it’s not primarily an image processing library, its `scipy.ndimage` module provides powerful functions for image manipulation. It’s ideal for tasks like filtering, transforming, and basic analysis of images. SciPy's image processing capabilities are particularly well-suited for scientific and research-oriented tasks—especially in domains such as biology, medicine, astronomy, and engineering where images are often analyzed not just visually but quantitatively.
 
 ## Objectives
 
