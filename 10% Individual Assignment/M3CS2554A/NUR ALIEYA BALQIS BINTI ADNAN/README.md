@@ -184,7 +184,7 @@ img_rotated.save('photo_rotated.jpg')
 Original image :
 ![cat](https://github.com/user-attachments/assets/63a8c3a9-80d8-4934-b53f-53394bc84d09)
 
-Output :
+Output : <br>
 ![Screenshot (152)](https://github.com/user-attachments/assets/00341732-230a-4a14-aefe-6158a65b8277)
 
 
