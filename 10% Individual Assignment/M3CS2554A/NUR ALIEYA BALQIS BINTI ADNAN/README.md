@@ -98,6 +98,54 @@ A fork of the original Python Imaging Library (PIL), Pillow is a powerful image 
 
 Jupyter Notebook is an easy-to-use and friendly user editor application that can be used together with Pillow to do image processing tasks. We can write and run Pillow image processing code using “cells.” They also will compare the before and after processed images in one notebook.
 
+**<h2>Code for image processing </h2>**
+
+```
+from PIL import Image
+import matplotlib.pyplot as plt
+
+#open image
+img = Image.open('cat.jpg')
+
+#show image
+plt.imshow(img)
+plt.axis('off')
+plt.show()
+
+# resize to 200x200 pixels
+img_resized = img.resize((200, 200))
+
+plt.imshow(img_resized)
+plt.axis('off')
+plt.show()
+
+# Convert to grayscale
+img_gray = img.convert('L')
+
+plt.imshow(img_gray, cmap='gray')
+plt.axis('off')
+plt.show()
+
+# Rotate the image by 90 degrees
+img_rotated = img.rotate(90)
+
+plt.imshow(img_rotated)
+plt.axis('off')
+plt.show()
+
+# Flip horizontally
+img_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
+
+plt.imshow(img_flip)
+plt.axis('off')
+plt.show()
+
+
+
+
+
+
+
 
 
 
