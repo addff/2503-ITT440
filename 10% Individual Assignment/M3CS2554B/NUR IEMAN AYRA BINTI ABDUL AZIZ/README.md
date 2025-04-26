@@ -91,6 +91,7 @@ cocker_spaniel  :  1.12
 vizsla  :  0.54
 Irish_setter  :  0.48
 ```
-ImageAI predicts 92.54% sure that this is a golden retriever.
+
+AfterImageAI predicts 92.54% sure that this is a golden retriever. processing the image, the AI model predicted the object as a golden retriever with a 92% probability.Other possible predictions included labrador retriever (5.3%) and cocker spaniel (1.1%), but the model was highly confident that the dog is a golden retriever.The high probability score indicates that the AI correctly recognized the breed based on features like the dog's fur color, body shape, and posture.Therefore,ImageAI predicts 92.54% sure that this is a golden retriever.
 
 
