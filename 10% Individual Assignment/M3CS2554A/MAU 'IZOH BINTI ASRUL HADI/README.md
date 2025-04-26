@@ -21,15 +21,16 @@ Even though SciPy’s module has powerful image processing capabilities, it main
 ### Module / Subpackage
 SciPy offers a specifically designed module for image processing and analysis functions, which called .ndimage. This subpackage provide variety of functions including linear and non-linear filtering, object measurements, interpolation and binary morphology. Below are some of basic image processing functions : 
 1) gaussian_filter(input, sigma[, order, ...])
-2) median_filter(input[, size, footprint, ...])
 3) sobel(input[, axis, output, mode, cval])
-4) maximum_position(input[, labels, index])
-5) minimum_position(input[, labels, index])
+4) grey_dilation(input[, size, footprint, ...])
+5) maximum_position(input[, labels, index])
+6) minimum_position(input[, labels, index])
 ### Integrated Development Environment (IDE)
 ![images](https://github.com/user-attachments/assets/32ccb994-634d-4d1a-a56b-0a7faa691361)
 
 When it comes to selecting an editor or IDE for image processing tasks using SciPy, the choice ultimately depends on personal preference, project size, and the features you need. In this article, we use **Spyder**, which is designed for scientific computing with built-in support for SciPy, NumPy, and Matplotlib, making it ideal for image processing.
 ### Python Code Example for Basic Image Processing with SciPy
+Coding below shows the use of some functions that has been listed before which is gaussian filter, sobel, grey dilation : 
 ``` py
 from skimage import io, img_as_ubyte
 from scipy import ndimage
