@@ -15,6 +15,9 @@ Image processing is the science of analyzing and manipulating digital images to 
 ---
 
 ## Tools for Image Processing
+
+![skimage_logo](https://github.com/user-attachments/assets/ed901153-6e46-428e-bb90-8a158e62ca33) ![OIP](https://github.com/user-attachments/assets/16367e7e-91f0-4f6f-b6d8-de14bdb1c051)
+
 - **Scikit-learn**: A versatile library for machine learning, often used for tasks like image classification, clustering, and regression.
 - **Scikit-image**: A companion library to Scikit-learn, specifically designed for image processing tasks such as edge detection, segmentation, and transformations.
 
