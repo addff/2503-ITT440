@@ -55,7 +55,40 @@ Image processing is a method that is used to perform operations of an image such
   Can be run on various platforms such as Windows,macOS and Linux.This means that despite of the platform, users can put it into their projects with easily.
 
 **- Open source :**
-  Pillow is openly accessible and can be customized with custom functionalities. This enables users to customize the library according to their specific needs while taking part in its ongoing development.
+  Pillow is openly accessible and can be customized with custom functionalities. This enables users to customize the library according to their specific needs while taking part in its ongoing development.<br><br>
+
+
+**<h3>Basic image proceesing functions :</h3>** 
+
+The Pillow library provides a wide range of basic image processing functions that are simple and easy to use for doing the tasks. In addition to these features, Pillow is a powerful yet user-friendly tool for image editing, transformation, and analysis.
+
+<ol>
+  <li>Image.open("example.jpg") </li>
+	
+  <li>img.save("copy.png") </li>
+  
+  <li>img.resize((width, height))</li>
+  
+  <li> img.crop((left, top, right, bottom))</li>
+
+   <li> img.rotate(degrees)  <em>//degrees can be 15,30,45,90 or others</em> </li> 
+	
+  <li> img.convert("RGB")   <em>//change colour modes like RGB,L(grayscales) or RGBA</em> </li>
+  
+  <li>img.filter(ImageFilter.BLUR)   <em>//apply built-in filters such as blur,sharpen and contour</em> </li>
+  
+  <li> ImageEnhance.Brightness(img)  <em>//adjust brightness, contrast, sharpness, and color.</em> </li>
+ 
+</ol> <br>
+
+**<h3>Library related to Pillow (PIL)</h3>** 
+
+A fork of the original Python Imaging Library (PIL), Pillow is a powerful image processing library for Python. NumPy is the Python library most closely related to Pillow. Basic image processing operations like opening, saving, resizing, cropping, and adding basic filters are the main uses for Pillow. With the use of NumPy, you could convert Pillow images into numerical arrays or grids of pixel values that can then be worked with using powerful numerical operations.
+
+
+ 
+
+
 
 
 
