@@ -83,7 +83,8 @@ cv2.destroyAllWindows()
 ----
 ### DEMO AND INSTALLATION OF PYTHON AND OPENCV
 ##### Video included below: 
-[![Video included below](https://img.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/Q17rCG9OoLg/maxresdefault.jpg)](https://youtu.be/Q17rCG9OoLg)
+
 
 
 
