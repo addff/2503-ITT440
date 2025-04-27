@@ -4,7 +4,7 @@
 
 # Image Processing using OpenCV
 
-**INTRODUCTION**
+## **INTRODUCTION**
 
 Image processing is the process of converting an image into a digital form and conducting a certain operation on it to get the desired result.  The image processing system often sees all pictures as 2D signals when it uses specific signal processing techniques. The tool utilized to do the processing is OpenCV alongside with the help of Matplotlib using Python. 
 
@@ -20,11 +20,12 @@ Understanding computer vision: Tracking objects and detecting movement.
 
 When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if to use Matplotlib, it has to be changed to RGB (Red, Green, Blue) format to see correctly.
 
-**STEP-BY-STEP to perform IMAGE PROCESSING**
+## **STEP-BY-STEP to perform IMAGE PROCESSING**
 
 1. Install OpenCV and Matplotlib
 
 Open command prompt and enter the command
+
 `pip install opencv-python matplotlib`
 
 2. Prepare a folder that contains images
