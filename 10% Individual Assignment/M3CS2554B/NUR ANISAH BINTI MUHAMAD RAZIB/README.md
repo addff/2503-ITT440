@@ -71,7 +71,9 @@ The output:
 
 -**Dominant Race** - DeepFace also estimates race or ethnicity based on facial features. It checks categories like white, black, asian, latino, indian and more. The dominant race of the person is asian.
 
+#### Conclusion
+In this project, we successfully used the DeepFace library to perform facial analysis on a single image.By applying pre-trained deep learning models, we were able to predict four main attributes which are age, gender, dominant emotion, and dominant race. The predictions were based on probability scores and model confidence, which means the results are estimates rather than guaranteed facts. Overall, this project provides a working example of how deep learning can be applied to basic facial attribute recognition tasks.
 
-
-
+#### Demonstration video
+[![Watch the video](https://img.youtube.com/vi/z7KQz2vYh6U/0.jpg)](https://www.youtube.com/watch?v=z7KQz2vYh6U)
 
