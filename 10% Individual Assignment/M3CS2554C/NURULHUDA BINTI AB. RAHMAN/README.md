@@ -16,9 +16,10 @@ From an HCI perspective, hand tracking aligns with the principles of Natural Use
 
 The provided Python code exemplifies a research-informed approach to implementing hand tracking for game control.
 
-MediaPipe's Robust Hand Tracking Pipeline: MediaPipe leverages state-of-the-art machine learning models, built upon research in convolutional neural networks (CNNs) and temporal modeling, to achieve real-time hand landmark detection (Lugaresi et al., 2019). Its efficiency and accuracy make it a suitable tool for interactive applications, aligning with the performance requirements identified in HCI research for seamless user experiences (Dix et al., 2004).
+MediaPipe (Hand Tracking): MediaPipe Hands is a Google ML-based hand tracking solution. It runs in real-time and outputs 21 landmark points for each detected hand​
+mediapipe.readthedocs.io. This lets us precisely locate key points (like finger tips) on the hand. MediaPipe leverages state-of-the-art machine learning models, built upon research in convolutional neural networks (CNNs) and temporal modeling, to achieve real-time hand landmark detection (Lugaresi et al., 2019). Its efficiency and accuracy make it a suitable tool for interactive applications, aligning with the performance requirements identified in HCI research for seamless user experiences (Dix et al., 2004).
 
-Pygame for Rapid Prototyping of Interactive Environments: Pygame provides a flexible framework for creating interactive applications, allowing researchers and developers to quickly prototype and evaluate novel control schemes based on hand tracking data. Its ease of use facilitates the iterative design process often employed in HCI research (Norman, 2013).
+Pygame: Pygame is a set of Python modules for writing games and multimedia programs​ pygame.org. It makes it easy to open a window, draw shapes (like our circle), and handle user input and events (keyboard/mouse/quit). Pygame provides a flexible framework for creating interactive applications, allowing researchers and developers to quickly prototype and evaluate novel control schemes based on hand tracking data. Its ease of use facilitates the iterative design process often employed in HCI research (Norman, 2013).
 
 Mapping Hand Landmarks to Game Control: The code’s direct mapping of the index finger tip position to the movement of an on-screen object reflects the principles of direct manipulation. Research suggests that such direct mappings can lead to more intuitive and learnable interfaces compared to indirect control methods (Hinckley et al., 1994).
 
