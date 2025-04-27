@@ -12,11 +12,7 @@ Image processing is the process of converting an image into a digital form and c
 
 OpenCV stands for Open Source Computer Vision Library. It is a popular tool used for many image processing activities such as: 
 
-Changing images: Rotating, resizing and cropping. 
-Improving images: Reducing noise, blurring and adjusting contrast. 
-Finding features: Detecting edges, shapes and faces. 
-Recognizing objects: Spotting items in a picture. 
-Understanding computer vision: Tracking objects and detecting movement. 
+Modifying pictures means turning them, making them bigger or smaller and cutting parts out. Enhancing pictures involves getting rid of unwanted noise, softening them and changing the brightness. Identifying features is about finding lines, forms and faces. Recognizing things is about seeing items in a photo and understanding how computers see includes following objects and noticing movement.
 
 When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if to use Matplotlib, it has to be changed to RGB (Red, Green, Blue) format to see correctly.
 
