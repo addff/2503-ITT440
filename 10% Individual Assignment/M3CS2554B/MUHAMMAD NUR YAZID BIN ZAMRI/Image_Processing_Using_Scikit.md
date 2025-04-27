@@ -105,11 +105,11 @@ Image processing, when combined with machine learning, opens up a world of possi
 
 ## References
 
--GeeksforGeeks. (2024, April 12). What is python scikit library? GeeksforGeeks. https://www.geeksforgeeks.org/what-is-python-scikit-library/
+- GeeksforGeeks. (2024, April 12). What is python scikit library? GeeksforGeeks. https://www.geeksforgeeks.org/what-is-python-scikit-library/
 
--Kumar, A. (2025) What is image processing? everything you need to know!, Simplilearn.com. Available at: https://www.simplilearn.com/image-processing-article . 
+- Kumar, A. (2025) What is image processing? everything you need to know!, Simplilearn.com. Available at: https://www.simplilearn.com/image-processing-article . 
 
--Scikit-Image tutorial (2018) Tutorialspoint. Available at: https://www.tutorialspoint.com/scikit-image/index.html. 
+- Scikit-Image tutorial (2018) Tutorialspoint. Available at: https://www.tutorialspoint.com/scikit-image/index.html. 
 
 
 
