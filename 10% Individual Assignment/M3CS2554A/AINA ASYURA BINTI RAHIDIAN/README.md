@@ -1,6 +1,6 @@
 # 2503-ITT440
 ## NAME: AINA ASYURA BT RAHIDIAN (2023414614)
-## TITLE: CVG & Image Processing Using Python
+## TITLE: CVG & Image Processing Using Albumenatations In Python
 ### OBJECTIVE
 - To write article about CVG & Image Processing using Python tools or library
 - To demonstrate coding used related to the article
