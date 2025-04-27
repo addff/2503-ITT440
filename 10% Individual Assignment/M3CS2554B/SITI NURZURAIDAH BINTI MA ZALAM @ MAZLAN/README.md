@@ -33,8 +33,9 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
    - write the codes for image processing.
    - upload the image.
    - display the result from the process
-   - saves the program  
-**ORIGINAL IMAGE**
+   - saves the program
+
+## **ORIGINAL IMAGE**
 **INPUT**
 ```
 import cv2
@@ -62,7 +63,7 @@ plt.show()'
 
 **RESULT**
 
-**RGB CHANNEL IMAGE**
+## **RGB CHANNEL IMAGE**
 **INPUT**
 ```
 import cv2
@@ -96,7 +97,7 @@ plt.show()
 ```
 **RESULT**
 
-**BLACK and WHITE IMAGE**
+## **BLACK and WHITE IMAGE**
 **INPUT**
 ```
 import cv2
@@ -123,7 +124,7 @@ plt.show()
 ```
 **RESULT**
 
-**SHARP IMAGE**
+## **SHARP IMAGE**
 **INPUT**
 ```
 import cv2
@@ -156,7 +157,7 @@ plt.show()
 ```
 **RESULT**
 
-**BLUR IMAGE**
+## **BLUR IMAGE**
 **INPUT**
 ```
 import cv2
