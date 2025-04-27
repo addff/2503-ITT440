@@ -1,5 +1,8 @@
-# SITI NURZURAIDAH BINTI MA ZALAM @ MAZLAN
-### Image Processing using OpenCV
+## SITI NURZURAIDAH BINTI MA ZALAM @ MAZLAN
+## 2023260808
+## CDCS2554B
+
+# Image Processing using OpenCV
 
 **INTRODUCTION**
 
@@ -19,24 +22,25 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
 
 **STEP-BY-STEP to perform IMAGE PROCESSING**
 
-Install OpenCV and Matplotlib
+1. Install OpenCV and Matplotlib
 
 Open command prompt and enter the command
-![cmd](C://Users//Huawei//Pictures//Screenshots//cmd.png)
+`pip install opencv-python matplotlib`
 
-Prepare a folder that contains images
+2. Prepare a folder that contains images
 Make sure the pictures are in formats that work like JPEG, PNG or BMP.
-Example: 
-Create the new file in OpenCV in order to:
-write the codes for image processing.
-upload the image.
-display the result from the process
-Saves the program
+Example:
+
+3. Create the new file in OpenCV in order to:
+   - write the codes for image processing.
+   - upload the image.
+   - display the result from the process
+   - saves the program
 
 **ORIGINAL IMAGE**
 **INPUT**
-
-'import cv2
+```
+import cv2
 import matplotlib.pylab as plt
 
 # Read and convert image
@@ -57,3 +61,42 @@ ax.set_title('Original Image')
 
 # Display the result
 plt.show()'
+```
+
+**RESULT**
+
+**RGB CHANNEL**
+**INPUT**
+```
+import cv2
+import matplotlib.pylab as plt
+
+# Read the image
+image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
+
+# Convert image
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Create subplots
+fig, axs = plt.subplots(1, 3, figsize=(10, 5))
+
+# Draw image
+axs[0].imshow(image_rgb[:, :, 0], cmap='Reds')
+axs[1].imshow(image_rgb[:, :, 1], cmap='Greens')
+axs[2].imshow(image_rgb[:, :, 2], cmap='Blues')
+
+# Hide axes
+for ax in axs:
+    ax.axis('off')
+
+# Set titles
+axs[0].set_title('Red channel')
+axs[1].set_title('Green channel')
+axs[2].set_title('Blue channel')
+
+# Display the result
+plt.show()
+```
+**RESULT**
+**SHARP IMAGE**
+**INPUT**
