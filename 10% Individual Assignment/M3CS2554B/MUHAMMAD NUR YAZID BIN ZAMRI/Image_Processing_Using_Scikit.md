@@ -103,6 +103,15 @@ After classification, the program displays test images with predicted labels
 ## Conclusion
 Image processing, when combined with machine learning, opens up a world of possibilities for analyzing visual data. By leveraging libraries like Scikit-learn for machine learning and Scikit-image for feature extraction, you can build powerful systems that understand and act on images.
 
+## References
+
+-GeeksforGeeks. (2024, April 12). What is python scikit library? GeeksforGeeks. https://www.geeksforgeeks.org/what-is-python-scikit-library/
+
+-Kumar, A. (2025) What is image processing? everything you need to know!, Simplilearn.com. Available at: https://www.simplilearn.com/image-processing-article . 
+
+-Scikit-Image tutorial (2018) Tutorialspoint. Available at: https://www.tutorialspoint.com/scikit-image/index.html. 
+
+
 
 
 
