@@ -65,7 +65,7 @@ plt.show()'
 
 **RESULT**
 
-**RGB CHANNEL**
+**RGB CHANNEL IMAGE**
 **INPUT**
 ```
 import cv2
@@ -98,5 +98,95 @@ axs[2].set_title('Blue channel')
 plt.show()
 ```
 **RESULT**
+
+**BLACK and WHITE IMAGE**
+**INPUT**
+```
+import cv2
+import matplotlib.pylab as plt
+
+# Read and convert image
+image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# Create subplot
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Draw image
+ax.imshow(image, cmap='gray')
+
+# Hide axes
+ax.axis('off')
+
+# Set title
+ax.set_title('Gray')
+
+# Display the result
+plt.show()
+```
+**RESULT**
+
 **SHARP IMAGE**
 **INPUT**
+```
+import cv2
+import matplotlib.pylab as plt
+
+# Read and convert image
+image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Sharp the image
+kernel_sharpening = plt.array ([[-1,-1,-1],
+			     [-1,9,-1],
+			     [-1,-1,-1]])
+sharpened = cv2.filter2D(image,-1, kernel_sharpening)
+
+# Create subplot
+fig, ax=plt.subplots(figsize=(6,6))
+
+# Dram image
+ax.imshow(sharpened)
+
+# Hide axes
+ax.axis ('off')
+
+# Set title
+ax.set_title ('Sharpened')
+
+# Display result
+plt.show()
+```
+**RESULT**
+
+**BLUR IMAGE**
+**INPUT**
+```
+import cv2
+import matplotlib.pylab as plt
+
+# Read and convert image
+image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Blur image
+kernel_3x3=plt.ones((3,3),plt.float32)/5 
+blurred=cv2.filter2D(image, -1, kernel_3x3)
+
+# Create subplot
+fig, ax=plt.subplots(figsize=(6,6))
+
+# Dram image
+ax.imshow(blurred)
+
+# Hide axes
+ax.axis ('off')
+
+# Set title
+ax.set_title ('Blurred')
+
+# Display result
+plt.show()
+```
+**RESULT**
+
