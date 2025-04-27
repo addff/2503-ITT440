@@ -31,7 +31,7 @@ SciPy offers a specifically designed module for image processing and analysis fu
 
 When it comes to selecting an editor or IDE for image processing tasks using SciPy, the choice ultimately depends on personal preference, project size, and the features you need. In this article, we use **Spyder**, which is designed for scientific computing and comes with built-in support for SciPy, NumPy, scikit-image (skimage), and Matplotlib making it ideal for image processing. This means we don't need to install these libraries separately, as they are pre-installed.
 ### Python Code Example for Basic Image Processing with SciPy
-The following code demonstrates the use of some functions mentioned earlier which is gaussian filter, sobel, grey dilation : 
+The following code demonstrates the use of some functions mentioned earlier which is gaussian filter, sobel, and grey dilation : 
 ``` py
 from skimage import io, img_as_ubyte
 from scipy import ndimage
