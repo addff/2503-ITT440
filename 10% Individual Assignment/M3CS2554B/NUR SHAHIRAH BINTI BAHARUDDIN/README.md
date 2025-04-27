@@ -186,5 +186,6 @@ print("✅ Color-changed image saved as 'cat_colored.jpg'!")
 #### RESULT :
 ![image](https://github.com/user-attachments/assets/9555bad9-2bb6-4663-912c-57c99f616baf)
 
-
+#### Demonstration Video
+[![Watch the video](https://img.youtube.com/vi/CSxCeyyPqIs/0.jpg)](https://www.youtube.com/watch?v=CSxCeyyPqIs)
 
