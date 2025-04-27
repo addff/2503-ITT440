@@ -24,20 +24,20 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
 
 1. Install OpenCV and Matplotlib
 
-Open command prompt and enter the command
+   Open command prompt and enter the command
 
-`pip install opencv-python matplotlib`
+   `pip install opencv-python matplotlib`
 
 2. Prepare a folder that contains images
-Make sure the pictures are in formats that work like JPEG, PNG or BMP.
-Example:
+   Make sure the pictures are in formats that work like JPEG, PNG or BMP.
+
+   Example: `xukai.jgp`
 
 3. Create the new file in OpenCV in order to:
    - write the codes for image processing.
    - upload the image.
    - display the result from the process
-   - saves the program
-
+   - saves the program  
 **ORIGINAL IMAGE**
 **INPUT**
 ```
