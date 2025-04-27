@@ -87,5 +87,4 @@ plt.tight_layout()
 plt.show()
 ```
 ### Code Execution Demonstration
-
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zZIpdotoH-o/0.jpg)](https://www.youtube.com/watch?v=zZIpdotoH-o)
