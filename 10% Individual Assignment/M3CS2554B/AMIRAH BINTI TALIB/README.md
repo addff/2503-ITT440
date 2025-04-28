@@ -1,12 +1,13 @@
 # AMIRAH BINTI TALIB
 # ITT440 - INDIVIDUAL ASSIGNMENT
 
-Object Tracking refers to the process of monitoring the movement of a specific object across consecutive frames within a video stream or live camera feed. The primary objective is to accurately locate and follow the movement of a specific object over time within a sequence of images or video frames.
+Color Manipulation refers to changing, analyzing, or adjusting the colors in an image to achieve a certain goal, such as finding specific objects, highlighting features, or preparing an image for further processing. 
 
-SimpleCV is an open-source framework for building computer vision applications using Python. Designed to make computer vision accessible to beginners and rapid prototyping easy for developers. In this tutorial, we will learn to run Object Tracking with SimpleCV.
+SimpleCV is an open-source framework for building computer vision applications using Python. It provides a simple interface for accessing and processing images and videos, making it ideal for beginners and rapid prototyping. In this tutorial, we will learn to run Color Manipulation with SimpleCV.
 
 ![SimpleCV_Logo](https://github.com/user-attachments/assets/b686c8d9-feb1-47aa-a57c-d5ad96dcd834 "SimpleCV Logo")
 
-### Steps to Track Object with SimpleCV
+## Steps to Track Object with SimpleCV
 
-#### Step 1: 
+### Step 1: Load the image
+
