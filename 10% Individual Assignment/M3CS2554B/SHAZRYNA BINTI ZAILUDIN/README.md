@@ -6,6 +6,7 @@
 ---
 ##### INTRODUCTION
 
+![image alt](https://github.com/inaee/website/blob/e11a3c418b70d08af7a40bab2610633721391291/pillow_picture1.png)
 ###### IMAGE PROCESSING
 Image Processing is known as the manipulation of an image to produce desired results, such improving its quality, changing its structure, or extracting crucial information. 
 
