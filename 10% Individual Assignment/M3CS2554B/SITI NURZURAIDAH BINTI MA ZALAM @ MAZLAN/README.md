@@ -61,7 +61,6 @@ ax.set_title('Original Image')
 # Display the result
 plt.show()'
 ```
-
 **RESULT**
 ![ori](https://github.com/user-attachments/assets/52cdc1f5-ef59-4555-b5ac-1190a58b90a0)
 ## **RGB CHANNEL IMAGE**
@@ -123,9 +122,7 @@ ax.set_title('Gray')
 # Display the result
 plt.show()
 ```
-**RESULT**
 ![gray](https://github.com/user-attachments/assets/ac491255-6dd6-450e-b3fb-5a0382da638d)
-
 ## **SHARPENED IMAGE**
 **INPUT**
 ```
@@ -157,9 +154,7 @@ ax.set_title ('Sharpened')
 # Display result
 plt.show()
 ```
-**RESULT**
 ![sharp](https://github.com/user-attachments/assets/20d3f0a9-078c-470b-a7ff-9abf9f685e2f)
-
 ## **BLURRED IMAGE**
 **INPUT**
 ```
@@ -189,7 +184,6 @@ ax.set_title ('Blurred')
 # Display result
 plt.show()
 ```
-**RESULT**
 ![blur](https://github.com/user-attachments/assets/9a0e9f56-b933-46fc-9afd-200985ca15af)
 
 To watch image processing at terminal, click the link below: 
