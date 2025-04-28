@@ -2,13 +2,13 @@
 #### 2023260808
 #### CDCS2554B
 
-# Image Processing using OpenCV
+# Image Processing using OpenCV 📸
 
 ## **INTRODUCTION**
 
 Image processing is the process of converting an image into a digital form and conducting a certain operation on it to get the desired result.  The image processing system often sees all pictures as 2D signals when it uses specific signal processing techniques. The tool utilized to do the processing is OpenCV alongside with the help of Matplotlib using Python. 
 
-![opencv](C:\Users\Huawei\Documents\image\opencv.png)
+![](https://Users/Huawei/Documents/image/opencv.png)
 
 OpenCV stands for Open Source Computer Vision Library. It is a popular tool used for many image processing activities such as: 
 
@@ -18,7 +18,7 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
 
 ## **STEP-BY-STEP to perform IMAGE PROCESSING**
 
-1. Install OpenCV and Matplotlib
+1. Install OpenCV and Matplotlib 🛠️
 
    Open command prompt and enter the command
 
@@ -34,7 +34,7 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
    - write the codes for image processing.
    - upload the image.
    - display the result from the process
-   - saves the program
+   - save the program
 
 ## **ORIGINAL IMAGE**
 **INPUT**
@@ -63,7 +63,7 @@ plt.show()'
 ```
 
 **RESULT**
-
+![](C:\Users\Huawei\Documents\image\ori.png)
 ## **RGB CHANNEL IMAGE**
 **INPUT**
 ```
@@ -189,3 +189,4 @@ plt.show()
 ```
 **RESULT**
 
+To watch image processing at terminal, click the link below: 
