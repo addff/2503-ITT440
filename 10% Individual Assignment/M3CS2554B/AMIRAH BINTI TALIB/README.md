@@ -1,10 +1,11 @@
 # AMIRAH BINTI TALIB
 # ITT440 - INDIVIDUAL ASSIGNMENT
+
 # COLOR MANIPULATING USING SIMPLECV
 
 ![SimpleCV_Logo](https://github.com/user-attachments/assets/b686c8d9-feb1-47aa-a57c-d5ad96dcd834 "SimpleCV Logo")
 
-#### SIMPLECV
+## SIMPLECV
 SimpleCV is an open-source framework for building computer vision applications using Python. It provides a simple interface for accessing and processing images and videos, making it ideal for beginners and rapid prototyping. In this tutorial, we will learn to run Color Manipulation with SimpleCV.
 
 ### COLOR MANIPULATION
