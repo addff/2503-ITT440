@@ -27,6 +27,19 @@ In this project, we use OpenCV, a powerful open-source computer vision library, 
 
 OpenCV (Open Source Computer Vision Library) is a free and popular open-source library for computer vision and image processing tasks.
 Developed by Intel, it is widely used in academia, research, and industry for building real-time image and video processing systems. OpenCV is fast, efficient, and beginner-friendly, especially with Python.
+## Overview:
+- Type: Image Processing / Computer Vision
+- Language: Python
+- License: Apache 2.0 License
+  ## Key Features:
+1. Color Filters
+- Grayscale (convert to black and white)
+- Invert (reverse the colors)
+2. Style Filters
+- Cartoon Effect (simplify image details and edges)
+3. Effects Filters
+- Fisheye Distortion (wide-angle lens effect)
+- Edge Detection (highlight object boundaries)
 
 
 
