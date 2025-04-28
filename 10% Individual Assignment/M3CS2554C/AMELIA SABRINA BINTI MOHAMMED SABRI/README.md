@@ -23,7 +23,8 @@ In this project, we use OpenCV, a powerful open-source computer vision library, 
 - NumPy: Handling matrix operations for image manipulation.
 - Thonny IDE: A Simple Python environment for writing and running code.
 ## Library
-<img src="https://github.com/user-attachments/assets/7432de34-33b7-4794-891b-f1bb6b99ad3e" width="300" alt="OpenCV_logo_black svg">
+<img src="https://github.com/user-attachments/assets/7432de34-33b7-4794-891b-f1bb6b99ad3e" width="150" alt="OpenCV_logo_black svg">
+
 OpenCV (Open Source Computer Vision Library) is a free and popular open-source library for computer vision and image processing tasks.
 Developed by Intel, it is widely used in academia, research, and industry for building real-time image and video processing systems. OpenCV is fast, efficient, and beginner-friendly, especially with Python.
 
