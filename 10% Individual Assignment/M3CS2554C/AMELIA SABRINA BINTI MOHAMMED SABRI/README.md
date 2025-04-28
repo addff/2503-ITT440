@@ -1,6 +1,6 @@
 # AMELIA SABRINA BINTI MOHAMMED SABRI
 ## Image Processing with Filters using OpenCV
--ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+-ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ## 💡 Introduction
 Image processing is an essential part of computer vision that focuses on enhancing and transforming images to make them more useful for analysis or artistic effects.
 Applying filters to images is one of the simplest and most effective ways to explore image processing.
