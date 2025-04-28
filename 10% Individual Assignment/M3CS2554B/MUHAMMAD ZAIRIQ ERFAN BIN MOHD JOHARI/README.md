@@ -66,7 +66,75 @@ seq = iaa.Sequential([
         shear=(-8, 8)
     )
 ])
-
+```
 ### 4. Batch Processing
 imgaug can process entire batches of images simultaneously, making it efficient for use in training loops or with data generators in frameworks like TensorFlow and PyTorch.
 
+Example: Augmenting an Image with Bounding Boxes
+```python
+from imgaug.augmentables.bbs import BoundingBox, BoundingBoxesOnImage
+
+bbs = BoundingBoxesOnImage([
+    BoundingBox(x1=30, y1=40, x2=200, y2=300)
+], shape=image.shape)
+
+image_aug, bbs_aug = seq(image=image, bounding_boxes=bbs)
+```
+Here, the bounding box is transformed consistently along with the image, preserving the spatial relationship — critical for detection tasks.
+
+Integration with Deep Learning Frameworks
+---
+You can use imgaug directly with:
+
+- Keras/TensorFlow
+
+- PyTorch
+
+- MXNet
+
+- Or any custom data pipeline that feeds images to your model
+
+To integrate imgaug into a PyTorch Dataset, for instance, you'd simply call your augmentation pipeline in the __getitem__() method.
+
+## ✅ Pros
+
+- 🔧 Wide variety of augmentations out of the box
+- 📦 Supports annotations: bounding boxes, keypoints, masks
+- 🔁 Reproducible augmentations using deterministic mode
+- ⚡ Can process images in batches for speed
+- 🧩 Easy to integrate into custom pipelines
+
+## ❌ Cons
+
+- 🐢 Slower than newer libraries like Albumentations
+- 🧱 API is more verbose and complex
+- 🔧 Some functions are less optimized for large datasets
+- 💤 Less actively maintained compared to newer tools
+
+---
+
+## 🔁 Alternatives
+
+### Albumentations
+- Fast, GPU-aware, modern design
+- Supports PyTorch, TensorFlow, and OpenCV
+- Cleaner API
+
+### Torchvision Transforms
+- Native for PyTorch
+- Simple for basic augmentations
+- Limited support for annotations
+
+### TensorFlow Image
+- Native TF ops for augmentation
+- Integrates into tf.data
+- GPU-friendly
+
+---
+
+## 🧪 Conclusion
+
+- `imgaug` is great for complex augmentations and custom pipelines.
+- It supports detailed transformations on images + labels (boxes, keypoints, masks).
+- Ideal for object detection and segmentation projects.
+- Consider newer tools (like Albumentations) for faster, simpler use cases.
