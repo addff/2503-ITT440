@@ -8,7 +8,7 @@
 
 Image processing is the process of converting an image into a digital form and conducting a certain operation on it to get the desired result.  The image processing system often sees all pictures as 2D signals when it uses specific signal processing techniques. The tool utilized to do the processing is OpenCV alongside with the help of Matplotlib using Python. 
 
-![opencv](https://github.com/user-attachments/assets/44f2464e-4152-4b1f-b7f1-81eb3d431844)
+![opencv](https://github.com/user-attachments/assets/dd950662-bca0-4562-9a52-da48be435a8f)
 
 OpenCV stands for Open Source Computer Vision Library. It is a popular tool used for many image processing activities **such as**: 
 
@@ -28,8 +28,9 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
 
    - Make sure the pictures are in formats that work like JPEG, PNG or BMP.
 
-   - Example: 
-	![ori](https://github.com/user-attachments/assets/52cdc1f5-ef59-4555-b5ac-1190a58b90a0)
+   - Example:
+     
+	![xukai](https://github.com/user-attachments/assets/2717d9fb-3804-4457-b2bd-e2dcd8990f0c)
 
 3. Create the new file in OpenCV in order to:
    - write the codes for image processing.
@@ -69,7 +70,8 @@ axs[2].set_title('Blue channel')
 plt.show()
 ```
 **RESULT**
-![rgb](https://github.com/user-attachments/assets/7577a92a-9796-4b63-aa3f-87029f72b3cb)
+![rgb](https://github.com/user-attachments/assets/710edf62-9f40-418f-a35f-48faca2d2850)
+
 ## **GRAY IMAGE**
 **INPUT**
 ```
@@ -96,7 +98,9 @@ ax.set_title('Gray')
 plt.show()
 ```
 **RESULT**
-![gray](https://github.com/user-attachments/assets/ac491255-6dd6-450e-b3fb-5a0382da638d)
+
+![gray](https://github.com/user-attachments/assets/9df37751-65af-4ba6-a707-a5a98fe8452d)
+
 ## **SHARPENED IMAGE**
 **INPUT**
 ```
@@ -129,7 +133,9 @@ ax.set_title ('Sharpened')
 plt.show()
 ```
 **RESULT**
-![sharp](https://github.com/user-attachments/assets/20d3f0a9-078c-470b-a7ff-9abf9f685e2f)
+
+![sharp](https://github.com/user-attachments/assets/66bb43f5-b00e-4fe8-b4fc-35635d397c81)
+
 ## **BLURRED IMAGE**
 **INPUT**
 ```
@@ -160,7 +166,8 @@ ax.set_title ('Blurred')
 plt.show()
 ```
 **RESULT**
-![blur](https://github.com/user-attachments/assets/9a0e9f56-b933-46fc-9afd-200985ca15af)
+
+![blur](https://github.com/user-attachments/assets/090b4c49-5534-4a81-a0a3-a725f1414db6)
 
 To watch image processing at terminal, click the link below: 
 
