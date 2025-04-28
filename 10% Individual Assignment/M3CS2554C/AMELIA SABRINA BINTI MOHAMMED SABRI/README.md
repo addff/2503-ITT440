@@ -1,6 +1,6 @@
 # AMELIA SABRINA BINTI MOHAMMED SABRI
 ## Image Processing with Filters using OpenCV
-## Introduction
+## 💡 Introduction
 Image processing is an essential part of computer vision that focuses on enhancing and transforming images to make them more useful for analysis or artistic effects.
 Applying filters to images is one of the simplest and most effective ways to explore image processing.
 ### Applications of image filtering include:
@@ -27,7 +27,7 @@ In this project, we use OpenCV, a powerful open-source computer vision library, 
 
 OpenCV (Open Source Computer Vision Library) is a free and popular open-source library for computer vision and image processing tasks.
 Developed by Intel, it is widely used in academia, research, and industry for building real-time image and video processing systems. OpenCV is fast, efficient, and beginner-friendly, especially with Python.
-## Overview
+## 📝 Overview
 - Type: Image Processing / Computer Vision
 - Language: Python
 - License: Apache 2.0 License
