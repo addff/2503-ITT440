@@ -9,7 +9,21 @@ Image processing is the field of computer science that focuses on performing ope
 
 # Tools
 
+### Pyvips
+
+
+#### What is Pyvips?
 Pyvips is a fast and powerful Python library used for processing very large images quickly and efficiently, built on top of a C library called libvips.
+
+
+#### Significance
+1.Speed and Efficiency-Pyvips is extremely fast and memory-efficient. It uses a demand-driven, streaming approach, meaning it doesn't load the entire image into memory at once — only the parts needed for computation
+
+2.Low Memory Usage-Compared to libraries like PIL (Pillow) or OpenCV, pyvips typically uses much less memory. You can process images larger than your available RAM, which is critical for medical imaging, satellite imaging, or big photo archives.
+
+3.Parallel Processing-pyvips is multithreaded automatically. It takes full advantage of multiple CPU cores without you needing to explicitly manage threads or parallelism, leading to major speed-ups for heavy workloads.
+
+
 
 # How It Works
 
@@ -34,7 +48,7 @@ which gives some more background.
 
 https://www.libvips.org/API/current/How-it-opens-files.html
 
-# How to install Pyvips ?
+# ⚙️ How to install Pyvips ?
 
 Binary installation
 
@@ -63,7 +77,6 @@ Linux
 
 Perhaps:
 
-.. code-block:: shell
 
     $ sudo apt install libvips-dev --no-install-recommends
     $ pip install pyvips
@@ -71,7 +84,6 @@ Perhaps:
 With python 3.11 and later, you will need to create a venv first and add
 `path/to/venv` to your `PATH`. Something like:
 
-.. code-block:: shell
 
     $ python3 -m venv ~/.local
     $ pip install pyvips
@@ -81,7 +93,6 @@ macOS
 
 With Homebrew:
 
-.. code-block:: shell
 
     $ brew install vips python pkg-config
     $ pip install pyvips
@@ -120,34 +131,45 @@ For Python 3.8 and later, you need:
 Now when you import pyvips, it should be able to find the DLLs.
 
 
-# Code In Python
-#!/usr/bin/python3
+## ▶️ Video Tutorial
 
-import sys
+Learn how to use the pyvips with this video tutorial:
+[**Watch on YouTube**](https://youtu.be/jiSvmMddM5Q?si=4_PflQRgKXj6qAV4)
+
+## 🧪 Python Code (Image Processing)
+
+The following code demonstrates how to change the its **brightness**, apply **reesized**, and **rotation** it vertically using pyvips.
+
+---
+### Code
+```python
 import pyvips
 
-im = pyvips.Image.new_from_file(sys.argv[1], access="sequential")
+# Load image
+image = pyvips.Image.new_from_file('input.jpg')
+    # Resize (scale) an image:
+    resized = image.resize(0.5)  # 50% size
+    resized.write_to_file('resized.jpg')
 
-text = pyvips.Image.text(f"<span color=\"red\">{sys.argv[3]}</span>",
-                         width=500,
-                         dpi=100,
-                         align="centre",
-                         rgba=True)
 
-# scale the alpha down to make the text semi-transparent
-text = (text * [1, 1, 1, 0.3]).cast("uchar")
+    # Rotate an image:
+   rotated = image.rot90()  # 90 degree rotation
+    rotated.write_to_file('rotated.jpg')
 
-text = text.rotate(45)
 
-# tile to the size of the image page, then tile again to the full image size
-text = text.embed(10, 10, text.width + 20, text.width + 20)
-page_height = im.get_page_height()
-text = text.replicate(1 + im.width / text.width, 1 + page_height / text.height)
-text = text.crop(0, 0, im.width, page_height)
-text = text.replicate(1, 1 + im.height / text.height)
-text = text.crop(0, 0, im.width, im.height)
+    # Adjust brightness / contrast:
+    # Multiply pixel values
+    brighter = image.linear(1.2, 10)  # multiply by 1.2 and add 10
+    brighter.write_to_file('brighter.jpg')
 
-# composite the two layers
-im = im.composite(text, "over")
+```
 
-im.write_to_file(sys.argv[2])
+> **Note**: Replace `'input.jpg'` with your actual image file path.
+
+---
+## ✅ Output Description
+
+- **resized.jpg**: Image that have been resized 50% of the original size
+- **rotated.jpg**: Image that have been rotated 90 degree 
+- **brighter.jpg**: Image that have been adjusted its brightness
+
