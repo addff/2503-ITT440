@@ -1,5 +1,5 @@
 # MUHAMMAD ZAIRIQ ERFAN BIN MOHD JOHARI
-# Understanding `imgaug`: A Powerful Library for Image Augmentation in Deep Learning
+# Student ID : 2023260792
 
 ## Introduction
 
@@ -138,3 +138,22 @@ To integrate imgaug into a PyTorch Dataset, for instance, you'd simply call your
 - It supports detailed transformations on images + labels (boxes, keypoints, masks).
 - Ideal for object detection and segmentation projects.
 - Consider newer tools (like Albumentations) for faster, simpler use cases.
+
+---
+
+## 📚 References
+
+1. **imgaug GitHub Repository**  
+   https://github.com/aleju/imgaug
+
+2. **imgaug Documentation**  
+   https://imgaug.readthedocs.io/en/latest/
+
+3. **Albumentations GitHub Repository** – Fast image augmentation library  
+   https://github.com/albumentations-team/albumentations
+
+4. **Torchvision Transforms Documentation**  
+   https://pytorch.org/vision/stable/transforms.html
+
+5. **TensorFlow Image Operations API**  
+   https://www.tensorflow.org/api_docs/python/tf/image
