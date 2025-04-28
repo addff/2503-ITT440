@@ -8,7 +8,7 @@
 
 Image processing is the process of converting an image into a digital form and conducting a certain operation on it to get the desired result.  The image processing system often sees all pictures as 2D signals when it uses specific signal processing techniques. The tool utilized to do the processing is OpenCV alongside with the help of Matplotlib using Python. 
 
-![opencv](C:\\Users\\Huawei\\Documents\\image\\opencv.png)
+![](C:\Users\Huawei\Documents\image\opencv.png)
 
 OpenCV stands for Open Source Computer Vision Library. It is a popular tool used for many image processing activities such as: 
 
@@ -97,7 +97,7 @@ plt.show()
 ```
 **RESULT**
 
-## **BLACK and WHITE IMAGE**
+## **GRAY IMAGE**
 **INPUT**
 ```
 import cv2
@@ -124,7 +124,7 @@ plt.show()
 ```
 **RESULT**
 
-## **SHARP IMAGE**
+## **SHARPENED IMAGE**
 **INPUT**
 ```
 import cv2
@@ -157,7 +157,7 @@ plt.show()
 ```
 **RESULT**
 
-## **BLUR IMAGE**
+## **BLURRED IMAGE**
 **INPUT**
 ```
 import cv2
