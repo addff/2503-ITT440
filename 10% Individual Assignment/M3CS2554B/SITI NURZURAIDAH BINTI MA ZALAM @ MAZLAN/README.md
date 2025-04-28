@@ -25,11 +25,12 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
    `pip install opencv-python matplotlib`
 
 2. Prepare a folder that contains images
+
    Make sure the pictures are in formats that work like JPEG, PNG or BMP.
 
    Example: `xukai.jpg`
 
-3. Create the new file in OpenCV in order to:
+4. Create the new file in OpenCV in order to:
    - write the codes for image processing.
    - upload the image.
    - display the result from the process
