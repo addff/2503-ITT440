@@ -2,7 +2,7 @@
 #### 2023260808
 #### CDCS2554B
 
-# Image Processing using OpenCV 📸
+# IMAGE PROCESSING USING OPENCV📸
 
 ## **INTRODUCTION**
 
@@ -16,7 +16,7 @@ Modifying pictures means turning them, making them bigger or smaller and cutting
 
 When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if to use Matplotlib, it has to be changed to RGB (Red, Green, Blue) format to see correctly.
 
-## **STEP-BY-STEP to perform IMAGE PROCESSING**
+## **STEPS to perform IMAGE PROCESSING**
 
 1. Install OpenCV and Matplotlib 🛠️
 
@@ -30,7 +30,7 @@ When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if t
 
    - Example: `xukai.jpg`
 
-4. Create the new file in OpenCV in order to:
+3. Create the new file in OpenCV in order to:
    - write the codes for image processing.
    - upload the image.
    - display the result from the process
@@ -190,3 +190,6 @@ plt.show()
 **RESULT**
 
 To watch image processing at terminal, click the link below: 
+
+## **SUMMARY**
+OpenCV is an amazing tool that helps people work with images. It can do everything from basic changes to really complicated analysis. It is great for making cool visual effects and awesome pictures. OpenCV is not just about images. It can do a lot in different areas. In a nutshell, OpenCV is a free toolkit that helps developers and researchers make smart applications that can use machine learning and understand visual information quickly.
