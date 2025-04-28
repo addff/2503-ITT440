@@ -2,5 +2,6 @@
 # 2024544635
 # INDIVIDUAL ASSIGNMENT
 # Image Processing with Filters using OpenCV
-![OpenCV_logo_black svg](https://github.com/user-attachments/assets/5c0b4f5d-c245-4f00-a3e2-73b6a63a45b4)
+![1_S8Il5ethl3YFh0M9XKVz-A](https://github.com/user-attachments/assets/da24f091-9b9e-48c5-b872-579dd77c8a43)
+
 
