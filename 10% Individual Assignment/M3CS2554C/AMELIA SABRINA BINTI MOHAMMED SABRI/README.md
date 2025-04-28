@@ -18,7 +18,7 @@ In this project, we use OpenCV, a powerful open-source computer vision library, 
 - Stylization: Applying artistic effects such as cartoon or fisheye distortion.
 - Edge Detection: Finding and highlighting the boundaries inside an image.
 - Visualization: Displaying and saving the filtered images for presentation.
-## Tools Used
+## 🛠️ Tools Used
 - OpenCV: Image processing functions and filters.
 - NumPy: Handling matrix operations for image manipulation.
 - Thonny IDE: A Simple Python environment for writing and running code.
