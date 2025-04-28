@@ -31,15 +31,15 @@ Developed by Intel, it is widely used in academia, research, and industry for bu
 - Type: Image Processing / Computer Vision
 - Language: Python
 - License: Apache 2.0 License
-  ## Key Features:
+## Key Features:
 1. Color Filters
-- Grayscale (convert to black and white)
-- Invert (reverse the colors)
+   - Grayscale (convert to black and white)
+   - Invert (reverse the colors)
 2. Style Filters
-- Cartoon Effect (simplify image details and edges)
+   - Cartoon Effect (simplify image details and edges)
 3. Effects Filters
-- Fisheye Distortion (wide-angle lens effect)
-- Edge Detection (highlight object boundaries)
+   - Fisheye Distortion (wide-angle lens effect)
+   - Edge Detection (highlight object boundaries)
 
 
 
