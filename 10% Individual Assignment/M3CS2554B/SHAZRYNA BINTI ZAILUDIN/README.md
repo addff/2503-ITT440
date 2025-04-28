@@ -25,3 +25,19 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 * **Easy Integration with other python libraries:** Can be easily combined with other libraries like NumPy, OpenCV and Matplotlib, making it possible to combine powerful image processing with scientific computing, machine learning, or data visualization.
 * **Lightweight and fast:** Lightweight and efficient, ensuring that applications using it remain fast, responsive, and do not consume excessive memory or processing power.
 * **Cross-platform compatibility:** Works on Windows, MacOs and Linux, providing flexibility and convenience for developers working in different environments.
+
+##### BASIC OPERATIONS IN PILLOW
+1. Open - *image = image.open(‘example.jpg’)*
+2. Resized - *resized_image = image.resize((300,300))*
+3. Rotated - *rotated_image = image.rotate(90)*
+4. Crop - *cropped_image = image.crop((100,100,300,300))*
+5. Flip - *flipped _image = image.transpose(image.FLIP_LEFT_RIGHT)*
+6. Grayscale - *gray_image = image.convert(‘L’)*
+7. Blur - *blurred_image = image.filter(imageFilter.BLUR)*
+8. Sharpen - *sharpened_image = image.filter(image.Filter.Sharpen)*
+9. Brightness - *enhancer = imageEnhance.Brightness(image)*
+10. Contrast - *enhancer = imageEnhance.Contrast(image)*
+11. Draw - *draw = imageDraw.Draw(image)*
+12. Blended two image - *blended_image = image.blend(image1, image2, alpha = 0.5)*
+13. Save - *image.save(‘example.jpg’)*
+
