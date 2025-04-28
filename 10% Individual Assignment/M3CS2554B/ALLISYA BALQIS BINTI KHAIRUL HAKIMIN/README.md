@@ -33,7 +33,6 @@ First, you need to install Caffe and Python bindings built
 
 ## 2. Import Libraries
 ```
-import caffe
 import numpy as np
 import cv2
 ```
@@ -117,36 +116,24 @@ cv2.destroyAllWindows()
 ```
 ## Full Code
 ```
-import caffe
-import numpy as np
 import cv2
-import os
+import numpy as np
 
-caffe.set_mode_cpu()
+model_def = 'deploy.prototxt'
+model_weights = 'mobilenet_iter_73000.caffemodel'
 
-model_def = 'deploy.prototxt'         # Path to your deploy.prototxt
-model_weights = 'mobilenet_iter_73000.caffemodel'  # Path to trained weights
-
-net = caffe.Net(model_def,             # Defines the model architecture
-                model_weights,         # Contains the trained weights
-                caffe.TEST)             # Set to test mode
+# Load the model using OpenCV's dnn module
+net = cv2.dnn.readNetFromCaffe(model_def, model_weights)
 
 image = cv2.imread('test.jpg')
 (h, w) = image.shape[:2]
 
-# Preprocess the image: resize, normalize
-resized_image = cv2.resize(image, (300, 300)).astype(np.float32)
-resized_image = (resized_image - 127.5) * 0.007843  # Normalization
+# Preprocess the image
+blob = cv2.dnn.blobFromImage(image, 0.007843, (300, 300), 127.5)
 
-# Caffe requires channels first: (C, H, W)
-resized_image = resized_image.transpose((2, 0, 1))  # (HWC) -> (CHW)
-
-# Set the input for the network
-net.blobs['data'].reshape(1, *resized_image.shape)
-net.blobs['data'].data[...] = resized_image
-
-output = net.forward()
-detections = output['detection_out']
+# Set input and forward pass
+net.setInput(blob)
+detections = net.forward()
 
 classes = ["background", "aeroplane", "bicycle", "bird", "boat",
            "bottle", "bus", "car", "cat", "chair", "cow", "diningtable",
@@ -169,8 +156,8 @@ for i in range(detections.shape[2]):
         cv2.putText(image, label, (startX, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-
-cv2.imshow("Caffe Detection", image)
+cv2.imshow("Caffe Detection (via OpenCV)", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 ```
