@@ -31,7 +31,7 @@ Developed by Intel, it is widely used in academia, research, and industry for bu
 - Type: Image Processing / Computer Vision
 - Language: Python
 - License: Apache 2.0 License
-## Key Features
+## ✨ Key Features
 1. Color Filters
    - Grayscale (convert to black and white)
    - Invert (reverse the colors)
