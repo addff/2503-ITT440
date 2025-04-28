@@ -41,6 +41,8 @@ Developed by Intel, it is widely used in academia, research, and industry for bu
 3. Effects Filters
    - Fisheye Distortion (wide-angle lens effect)
    - Edge Detection (highlight object boundaries)
+## Steps
+-ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈.ᐟ
 
 
 
