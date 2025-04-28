@@ -43,4 +43,11 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 
 #### INSTALLATIONS
 Python Pillow does not come in-built with Python. To install it type the below command in the terminal.
-
+* Windows
+```bash
+pip install pillow
+```
+* MacOs & Linux
+```bash
+pip3 install pillow
+```
