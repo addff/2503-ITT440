@@ -73,7 +73,6 @@ def apply_invert(img):
 
 # Brightness Increase Filter
 def make_brighter(image, value=50):
-    # Add a constant value to all pixels
     brighter_image = cv2.convertScaleAbs(image, alpha=1, beta=value)
     return brighter_image
 
@@ -119,7 +118,6 @@ def apply_invert(img):
 
 # Brightness Increase Filter
 def make_brighter(image, value=50):
-    # Add a constant value to all pixels
     brighter_image = cv2.convertScaleAbs(image, alpha=1, beta=value)
     return brighter_image
 
