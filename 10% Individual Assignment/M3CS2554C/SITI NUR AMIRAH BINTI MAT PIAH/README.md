@@ -1,5 +1,5 @@
-# SITI NUR AMIRAH BINTI MAT PIAH
-### Title: Computer Vision - Book Counting
+## SITI NUR AMIRAH BINTI MAT PIAH
+## **Title: Computer Vision - Book Counting**
 
 # **Introduction**
 
