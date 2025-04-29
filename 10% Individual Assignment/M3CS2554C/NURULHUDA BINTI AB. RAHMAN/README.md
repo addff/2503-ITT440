@@ -43,11 +43,11 @@ Even though hand tracking is getting good, there are still some challenges:
 
 ### What's Next?
 
-In the future, hand tracking could lead to even more amazing ways to play games. Imagine:
-
-Using complex hand movements to do special actions in games.
-Playing with other people by seeing their virtual hands in the same game world.
-Making games more comfortable and natural to play for long periods.
+In the future, hand tracking could lead to even more amazing ways to play games. 
+Imagine:
+- Using complex hand movements to do special actions in games.
+- Playing with other people by seeing their virtual hands in the same game world.
+- Making games more comfortable and natural to play for long periods.
 
 ### In Conclusion:
 
