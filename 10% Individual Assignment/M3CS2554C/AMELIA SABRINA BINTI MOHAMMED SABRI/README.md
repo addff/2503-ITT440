@@ -12,7 +12,7 @@ Applying filters to images is one of the simplest and most effective ways to exp
 - Improving image quality for machine learning tasks
 
 In this project, we use OpenCV, a powerful open-source computer vision library to apply various filters to images such as grayscale, invert, cartoon, fisheye and edges.
-## 📍 Core Concepts
+## 🧠 Core Concepts
 - Image Reading: Loading the original images using OpenCV.
 - Color Transformations: Changing the color space, like converting to grayscale or inverting colors.
 - Smoothing: Blurring the image to remove noise and soften details.
@@ -167,7 +167,7 @@ Edges Filter:
 <img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
 
 ## 🎥 Video Demonstration
-## 🧠 Conclusion
+## 📍 Conclusion
 In this assignment, I learned:
 - How to apply basic image processing filters using OpenCV such as grayscale, invert, edge detection and brightness adjustment.
 - How image data is stored and manipulated as arrays using NumPy, allowing direct control over pixel values.
