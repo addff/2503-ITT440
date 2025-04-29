@@ -43,7 +43,8 @@ Developed by Intel, it is widely used in academia, research, and industry for bu
    - Edge Detection (highlight object boundaries)
 ## 🪜 Steps
 Step 1: Install OpenCV
-'''pip install opencv-python
+```bash
+pip install opencv-python
 Step 2: Import libraries
 import cv2
 import numpy as np
