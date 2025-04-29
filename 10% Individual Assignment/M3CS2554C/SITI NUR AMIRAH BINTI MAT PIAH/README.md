@@ -93,28 +93,27 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **Count books**
 
-		boxes = results[0].boxes
-  
-		book_count = len(boxes)
+    boxes = results[0].boxes
+    book_count = len(boxes)
 
 **Log into CSV**
 
-		timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = pd.DataFrame([[timestamp, frame_count, book_count]], columns=["Timestamp", "Frame", "Book Count"])
+    log_entry.to_csv(csv_file, mode='a', header=False, index=False)
+    
   
-		log_entry = pd.DataFrame([[timestamp, frame_count, book_count]], columns=["Timestamp", "Frame", "Book Count"])
-  
-		log_entry.to_csv(csv_file, mode='a', header=False, index=False)
-  
-  **Annotate frame**
-  
-		annotated_frame = frame.copy()
-		for idx, box in enumerate(boxes):
-			x1, y1, x2, y2 = map(int, box.xyxy[0])
-			cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-			cv2.putText(annotated_frame, f"Book {idx+1}", (x1, y1-10),
-						cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+**Annotate frame**
 
+    annotated_frame = frame.copy()
+    for idx, box in enumerate(boxes):
+        x1, y1, x2, y2 = map(int, box.xyxy[0])
+        cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.putText(annotated_frame, f"Book {idx+1}", (x1, y1-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+		    
 **Display book counter**
+
     cv2.putText(annotated_frame, f"Book Counter: {book_count}",
                 (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 4)
 
