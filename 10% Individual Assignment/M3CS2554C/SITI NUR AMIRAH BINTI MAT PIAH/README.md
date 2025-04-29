@@ -31,16 +31,19 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 ![pycharm logo](https://github.com/user-attachments/assets/4ad4fc4a-84f3-4ee2-8c82-57934d85aab1)
 
 ## Tools
-
 **1. YOLOv8 -** The model framework used for bbject detection
+
 **2. OpenCV -** A toolset for image and video processing
+
 **3. Pandas + CSV -** Managing and saving structured data
 
 
 ## Library
-
 **1. ultralytics -** loading and using YOLOv8 object detection
+
 **2. cv2 -** video capture, image annotation and frame display
+
 **3. pandas -** logging detection results into a CSV file
+
 **4. datetime -** generating timestamps
 
