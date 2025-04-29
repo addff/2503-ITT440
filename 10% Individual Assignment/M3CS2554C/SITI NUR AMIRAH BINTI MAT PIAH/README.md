@@ -53,25 +53,28 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 ## *book_count.py*
 
-from ultralytics import YOLO
+    from ultralytics import YOLO
 
-import cv2
+    import cv2
 
-import pandas as pd
+    import pandas as pd
 
-from datetime import datetime
+    from datetime import datetime
 
-import os
+    import os
 
 **YOLOv8 model**
-model = YOLO("yolov8n.pt")
 
-**video file**
-video_path = "bokshelfvid.mp4"
+    model = YOLO("yolov8n.pt")
 
-cap = cv2.VideoCapture(video_path)
+**Video file**
+
+    video_path = "bokshelfvid.mp4"
+
+    cap = cv2.VideoCapture(video_path)
 
 **CSV log file**
+
     csv_file = "book_log.csv"
 
     if not os.path.exists(csv_file):
