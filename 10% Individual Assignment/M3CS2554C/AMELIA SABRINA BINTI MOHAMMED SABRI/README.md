@@ -54,15 +54,14 @@ import numpy as np
 Step 3: Load the images
 ```
 image1 = cv2.imread('image1.jpg')
-image2 = cv2.imread('image2.jpg')
 ```
 Step 4: Check if images are loaded successfully
 ```
 if image1 is None:
     print("Error: Image 1 not loaded properly.")
-if image2 is None:
-    print("Error: Image 2 not loaded properly.")
 ```
+Step 5: Apply filters on the image
+
 
 
 -ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈.ᐟ
