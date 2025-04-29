@@ -63,16 +63,20 @@ from datetime import datetime
 
 import os
 
-#YOLOv8 model
+#Load YOLOv8 model
+
 model = YOLO("yolov8n.pt")  
 
-#video file
+#Load video file
 video_path = "bokshelfvid.mp4"
 cap = cv2.VideoCapture(video_path)
 
-#CSV log file
+#Create CSV log file
+
 csv_file = "book_log.csv"
+
 if not os.path.exists(csv_file):
+
     pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
 
 frame_count = 0
@@ -113,7 +117,7 @@ while cap.isOpened():
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Cleanup
+#Cleanup
 cap.release()
 cv2.destroyAllWindows()
 
