@@ -60,32 +60,54 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 	import os
 
 **YOLOv8 model**
+	model = YOLO("yolov8n.pt")  # Replace with your custom model if trained on books
 
-    model = YOLO("yolov8n.pt")
+**Load video file**
+	video_path = "bokshelfvid.mp4"
+	cap = cv2.VideoCapture(video_path)
+ 
+**Create CSV log file**
+	csv_file = "book_log.csv"
+	if not os.path.exists(csv_file):
+		pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
 
-**Video file**
+	frame_count = 0
 
-    video_path = "bokshelfvid.mp4"
+	while cap.isOpened():
+		ret, frame = cap.read()
+		if not ret:
+			break
 
-    cap = cv2.VideoCapture(video_path)
+**Run detection**
+		results = model(frame, conf=0.1, verbose=False)
 
-**CSV log file**
+**Count books**
+		boxes = results[0].boxes
+		book_count = len(boxes)
 
-    csv_file = "book_log.csv"
-    
-    if not os.path.exists(csv_file):
-        
-    pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
+**Log into CSV**
+		timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+		log_entry = pd.DataFrame([[timestamp, frame_count, book_count]], columns=["Timestamp", "Frame", "Book Count"])
+		log_entry.to_csv(csv_file, mode='a', header=False, index=False)
+  
+  **Annotate frame**
+		annotated_frame = frame.copy()
+		for idx, box in enumerate(boxes):
+			x1, y1, x2, y2 = map(int, box.xyxy[0])
+			cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+			cv2.putText(annotated_frame, f"Book {idx+1}", (x1, y1-10),
+						cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
-    frame_count = 0
+**Display book counter**
+		cv2.putText(annotated_frame, f"Book Counter: {book_count}",
+					(20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 4)
 
-    while cap.isOpened():
-        ret, frame = cap.read()
-            if not ret:
-                break
-                
-    **Run detection**
-    
-    results = model(frame, conf=0.1, verbose=False)
+		cv2.imshow("Book Detection", annotated_frame)
 
+		frame_count += 1
 
+		if cv2.waitKey(1) & 0xFF == ord('q'):
+			break
+   **Cleanup**
+	cap.release()
+	cv2.destroyAllWindows()
