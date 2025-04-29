@@ -72,7 +72,7 @@ def apply_invert(img):
     return cv2.bitwise_not(img)
 
 # Brightness Increase Filter
-def make_brighter(image, value=50):
+def apply_brighter(image, value=50):
     brighter_image = cv2.convertScaleAbs(image, alpha=1, beta=value)
     return brighter_image
 
@@ -84,7 +84,7 @@ Step 6: Apply filters to the image
 ```
 gray_image = apply_grayscale(image)
 inverted_image = apply_invert(image)
-brightness_image = apply_brightness(image)
+brightness_image = apply_brighter(image)
 edges_image = apply_edges(image)
 ```
 Step 7: Display the filtered images
@@ -117,7 +117,7 @@ def apply_invert(img):
     return cv2.bitwise_not(img)
 
 # Brightness Increase Filter
-def make_brighter(image, value=50):
+def apply_brighter(image, value=50):
     brighter_image = cv2.convertScaleAbs(image, alpha=1, beta=value)
     return brighter_image
 
@@ -127,7 +127,7 @@ def apply_edges(img):
 
 gray_image = apply_grayscale(image)
 inverted_image = apply_invert(image)
-brightness_image = apply_brightness(image)
+brightness_image = apply_brighter(image)
 edges_image = apply_edges(image)
 
 cv2.imshow('Grayscale Image', gray_image)
