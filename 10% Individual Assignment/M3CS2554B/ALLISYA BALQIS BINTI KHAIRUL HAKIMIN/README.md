@@ -162,4 +162,4 @@ cv2.destroyAllWindows()
 
 ```
 ## Demonstration Video
-https://youtu.be/Q6lgimLBqfw
+[![Watch the video](https://img.youtube.com/vi/Q6lgimLBqfw/0.jpg)](https://www.youtube.com/watch?v=Q6lgimLBqfw)
