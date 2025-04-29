@@ -132,7 +132,7 @@ The script processes a video which applies a YOLOv8 model frame by frame to dete
  
 	cv2.destroyAllWindows()
 
- ## System output: Book Count Log
+ ## Output Preview: Book Count Log
 
  ## *book_log.csv*
  
