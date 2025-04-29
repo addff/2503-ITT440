@@ -13,7 +13,7 @@ Computer Vision is
 
 
 ## Overview
-The script processes a video which applies a YOLOv8 model frame by frame to detect books in the shelf, annotstes the frames visually, displays the count in real time and saves the timestamped results in a CSV file.
+The script processes a video which applies a YOLOv8 model frame by frame to detect books in the shelf, annotates the frames visually, displays the count in real time and saves the timestamped results in a CSV file.
 
 
 ## Key Features
@@ -28,6 +28,7 @@ The script processes a video which applies a YOLOv8 model frame by frame to dete
 ***Programming languages:** Python, Java*
 
 ***Developer:** JetBrains*
+
 ![pycharm logo](https://github.com/user-attachments/assets/4ad4fc4a-84f3-4ee2-8c82-57934d85aab1)
 
 ## Tools
