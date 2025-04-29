@@ -67,5 +67,6 @@ clip = clip.volumex(0.5)
 clip.ipython_display(width = 280)
 ```
 This the result of the tutorial
+
 🎥 [Klik untuk tonton video demo](https://media.geeksforgeeks.org/wp-content/uploads/20200721003455/19.mp4)
 
