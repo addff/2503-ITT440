@@ -139,6 +139,21 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ## 🔎 Output Preview
+Original Image:  
+<img src="https://github.com/user-attachments/assets/2c4f2615-083b-4c36-85a8-7d2b94bccb07" width="150" alt="Original Image">
+
+Grayscale Filter:  
+<img src="https://github.com/user-attachments/assets/0ef30593-2e81-4818-be81-2fe2fb6c110d" width="150" alt="Grayscale Filter">
+
+Inverted Filter:  
+<img src="https://github.com/user-attachments/assets/55fb7579-269c-4b16-9e7d-025e46da18e5" width="150" alt="Inverted Filter">
+
+Brightness Filter:  
+<img src="https://github.com/user-attachments/assets/3085ea31-0f30-4a4d-929e-8f01e722015e" width="150" alt="Brightness Filter">
+
+Edges Filter:  
+<img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
+
 ## 🎥 Video Demonstration
 ## 🔗 Conclusion
 
