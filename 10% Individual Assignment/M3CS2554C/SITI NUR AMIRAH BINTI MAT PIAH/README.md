@@ -131,9 +131,10 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
  
 	cv2.destroyAllWindows()
 
- ## The result of the system
+ ## System output: Book Count Log
 
  **book_log.csv**
+ 
  <img width="391" alt="ss result pycharm" src="https://github.com/user-attachments/assets/0b91538c-33fe-413d-832f-de8304ba6fea" />
  
 
