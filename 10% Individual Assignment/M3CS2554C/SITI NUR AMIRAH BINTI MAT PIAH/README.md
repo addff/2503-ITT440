@@ -49,7 +49,8 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **5. os -** file system operations
 
-## Final Code
+## The Code
+
 
 ## *book_count.py*
 
@@ -89,7 +90,7 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **Run detection**
 
-		results = model(frame, conf=0.1, verbose=False)
+	results = model(frame, conf=0.1, verbose=False)
 
 **Count books**
 
@@ -125,6 +126,7 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
         break
 	
    **Cleanup**
+   
 	cap.release()
  
 	cv2.destroyAllWindows()
