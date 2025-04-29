@@ -49,24 +49,28 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **5. os -** file system operations
 
-## Code
+## Final Code
 
 ## *book_count.py*
 
 from ultralytics import YOLO
+
 import cv2
+
 import pandas as pd
+
 from datetime import datetime
+
 import os
 
-# Load YOLOv8 model
-model = YOLO("yolov8n.pt")  # Replace with your custom model if trained on books
+#YOLOv8 model
+model = YOLO("yolov8n.pt")  
 
-# Load video file
+#video file
 video_path = "bokshelfvid.mp4"
 cap = cv2.VideoCapture(video_path)
 
-# Create CSV log file
+#CSV log file
 csv_file = "book_log.csv"
 if not os.path.exists(csv_file):
     pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
