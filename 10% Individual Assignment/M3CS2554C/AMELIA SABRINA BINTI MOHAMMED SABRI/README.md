@@ -155,7 +155,12 @@ Edges Filter:
 <img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
 
 ## 🎥 Video Demonstration
-## 🔗 Conclusion
+## 🧠 Conclusion
+In this assignment, I learned:
+- How to apply basic image processing filters using OpenCV such as grayscale, invert, edge detection and brightness adjustment.
+- How image data is stored and manipulated as arrays using NumPy, allowing direct control over pixel values.
+- How different filters can highlight or transform features in an image for analysis or visual effect.
+- How OpenCV functions like cvtColor(), bitwise_not(), convertScaleAbs(), and Canny() work and how to use them in real-world image filtering tasks.
 
 
 -ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈.ᐟ
