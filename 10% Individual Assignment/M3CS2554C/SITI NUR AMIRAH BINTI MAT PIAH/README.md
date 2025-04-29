@@ -60,37 +60,53 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 	import os
 
 **YOLOv8 model**
+
 	model = YOLO("yolov8n.pt")  # Replace with your custom model if trained on books
 
 **Load video file**
+
 	video_path = "bokshelfvid.mp4"
+ 
 	cap = cv2.VideoCapture(video_path)
  
 **Create CSV log file**
+
 	csv_file = "book_log.csv"
+ 
 	if not os.path.exists(csv_file):
+ 
 		pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
 
 	frame_count = 0
 
 	while cap.isOpened():
+ 
 		ret, frame = cap.read()
+  
 		if not ret:
+  
 			break
 
 **Run detection**
+
 		results = model(frame, conf=0.1, verbose=False)
 
 **Count books**
+
 		boxes = results[0].boxes
+  
 		book_count = len(boxes)
 
 **Log into CSV**
+
 		timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+  
 		log_entry = pd.DataFrame([[timestamp, frame_count, book_count]], columns=["Timestamp", "Frame", "Book Count"])
+  
 		log_entry.to_csv(csv_file, mode='a', header=False, index=False)
   
   **Annotate frame**
+  
 		annotated_frame = frame.copy()
 		for idx, box in enumerate(boxes):
 			x1, y1, x2, y2 = map(int, box.xyxy[0])
@@ -110,4 +126,5 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 			break
    **Cleanup**
 	cap.release()
+ 
 	cv2.destroyAllWindows()
