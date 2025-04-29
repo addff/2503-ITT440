@@ -75,7 +75,9 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **CSV log file**
     csv_file = "book_log.csv"
+    
         if not os.path.exists(csv_file):
+        
             pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
 
     frame_count = 0
