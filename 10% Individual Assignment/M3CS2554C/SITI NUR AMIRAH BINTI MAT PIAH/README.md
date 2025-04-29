@@ -115,15 +115,16 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 						cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
 **Display book counter**
-		cv2.putText(annotated_frame, f"Book Counter: {book_count}",
-					(20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 4)
+    cv2.putText(annotated_frame, f"Book Counter: {book_count}",
+                (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 4)
 
-		cv2.imshow("Book Detection", annotated_frame)
+    cv2.imshow("Book Detection", annotated_frame)
 
-		frame_count += 1
+    frame_count += 1
 
-		if cv2.waitKey(1) & 0xFF == ord('q'):
-			break
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+	
    **Cleanup**
 	cap.release()
  
