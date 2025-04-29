@@ -51,7 +51,7 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 ## Code
 
-### book_count.py
+## *book_count.py*
 
 from ultralytics import YOLO
 import cv2
