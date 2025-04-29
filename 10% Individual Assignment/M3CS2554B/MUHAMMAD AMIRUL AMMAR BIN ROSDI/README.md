@@ -45,3 +45,29 @@ import moviepy.editor as mp
 print("MoviePy installed successfully!")
 ```
 2. If success, it will prints that line without errors.
+## *4. Tutorial to rotate video using MoviePy*
+```Python
+# Import everything needed to edit video clips 
+from moviepy.editor import *
+  
+# loading video intro  
+clip = VideoFileClip("dsa_geek.webm") 
+  
+# clipping of the video  
+# getting video for only starting 10 seconds 
+clip = clip.subclip(0, 10) 
+  
+# rotating video by 180 degree 
+clip = clip.rotate(180) 
+  
+# Reduce the audio volume (volume x 0.5) 
+clip = clip.volumex(0.5) 
+  
+# showing clip 
+clip.ipython_display(width = 280)
+```
+This the result of the tutorial
+## Demo Projek
+
+🎥 [Klik untuk tonton video demo](https://media.geeksforgeeks.org/wp-content/uploads/20200721003455/19.mp4)
+
