@@ -97,6 +97,13 @@ cv2.imshow('Edges Image', edges_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+Step 8: Save as files
+```
+cv2.imwrite('gray_image.jpg', gray_image)
+cv2.imwrite('inverted_image.jpg', inverted_image)
+cv2.imwrite('brightness_image.jpg', brightness_image)
+cv2.imwrite('edges_image.jpg', edges_image)
+```
 ## ▶ Final Code
 ```
 import cv2
@@ -137,6 +144,11 @@ cv2.imshow('Edges Image', edges_image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+cv2.imwrite('gray_image.jpg', gray_image)
+cv2.imwrite('inverted_image.jpg', inverted_image)
+cv2.imwrite('brightness_image.jpg', brightness_image)
+cv2.imwrite('edges_image.jpg', edges_image)
 ```
 ## 🔎 Output Preview
 Original Image:  
