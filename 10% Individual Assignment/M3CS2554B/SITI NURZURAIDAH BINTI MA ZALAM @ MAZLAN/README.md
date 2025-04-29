@@ -14,7 +14,7 @@ OpenCV stands for Open Source Computer Vision Library. It is a popular tool used
 
 Modifying pictures means turning them, making them bigger or smaller and cutting parts out. Enhancing pictures involves getting rid of unwanted noise, softening them and changing the brightness. Identifying features is about finding lines, forms and faces. Recognizing things is about seeing items in a photo and understanding how computers see includes following objects and noticing movement.
 
-When using OpenCV, images are usually in BGR (Blue, Green, Red) format, but if to use Matplotlib, it has to be changed to RGB (Red, Green, Blue) format to see correctly.
+When using **OpenCV**, images are usually in **BGR (Blue, Green, Red) format**, but if to use **Matplotlib**, it has to be changed to **RGB (Red, Green, Blue) format** to see correctly.
 
 ## **STEPS to perform IMAGE PROCESSING**
 
@@ -47,15 +47,15 @@ import matplotlib.pylab as plt
 image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
 
 # Convert image
-image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image_rgb = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
 
-# Create subplots
-fig, axs = plt.subplots(1, 3, figsize=(10, 5))
+# create subplots
+fig, axs = plt.subplots(1,3,figsize=(10,5))
 
 # Draw image
-axs[0].imshow(image_rgb[:, :, 0], cmap='Reds')
-axs[1].imshow(image_rgb[:, :, 1], cmap='Greens')
-axs[2].imshow(image_rgb[:, :, 2], cmap='Blues')
+axs[0].imshow(image_rgb[:,:,0],cmap='Reds')
+axs[1].imshow(image_rgb[:,:,1],cmap='Greens')
+axs[2].imshow(image_rgb[:,:,2],cmap='Blues')
 
 # Hide axes
 for ax in axs:
@@ -80,13 +80,13 @@ import matplotlib.pylab as plt
 
 # Read and convert image
 image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 # Create subplot
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8,6))
 
 # Draw image
-ax.imshow(image, cmap='gray')
+ax.imshow(image,cmap='gray')
 
 # Hide axes
 ax.axis('off')
@@ -113,23 +113,23 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Sharp the image
 kernel_sharpening = plt.array ([[-1,-1,-1],
-			     [-1,9,-1],
-			     [-1,-1,-1]])
-sharpened = cv2.filter2D(image,-1, kernel_sharpening)
+                                [-1,9,-1],
+                                [-1,-1,-1]])
+sharpened = cv2.filter2D(image,-1,kernel_sharpening)
 
 # Create subplot
-fig, ax=plt.subplots(figsize=(6,6))
+fig,ax=plt.subplots(figsize=(6,6))
 
-# Dram image
+# Draw image
 ax.imshow(sharpened)
 
 # Hide axes
-ax.axis ('off')
+ax.axis('off')
 
 # Set title
-ax.set_title ('Sharpened')
+ax.set_title('Sharpened')
 
-# Display result
+# Display the result
 plt.show()
 ```
 **RESULT**
@@ -147,22 +147,22 @@ image = cv2.imread('C:\\Users\\Huawei\\Documents\\image\\xukai.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Blur image
-kernel_3x3=plt.ones((3,3),plt.float32)/5 
-blurred=cv2.filter2D(image, -1, kernel_3x3)
+kernel_3x3=plt.ones((3,3),plt.float32)/5
+blurred=cv2.filter2D(image,-1,kernel_3x3)
 
 # Create subplot
-fig, ax=plt.subplots(figsize=(6,6))
+fig,ax=plt.subplots(figsize=(6,6))
 
-# Dram image
+#Draw image
 ax.imshow(blurred)
 
 # Hide axes
-ax.axis ('off')
+ax.axis('off')
 
 # Set title
-ax.set_title ('Blurred')
+ax.set_title('Blurred')
 
-# Display result
+# Display the result
 plt.show()
 ```
 **RESULT**
