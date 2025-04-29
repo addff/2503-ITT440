@@ -53,15 +53,11 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 ## *book_count.py*
 
-    from ultralytics import YOLO
-
-    import cv2
-
-    import pandas as pd
-
-    from datetime import datetime
-
-    import os
+	from ultralytics import YOLO
+	import cv2
+	import pandas as pd
+	from datetime import datetime
+	import os
 
 **YOLOv8 model**
 
@@ -75,9 +71,9 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 **CSV log file**
 
-csv_file = "book_log.csv"
+    csv_file = "book_log.csv"
     
-if not os.path.exists(csv_file):
+    if not os.path.exists(csv_file):
         
     pd.DataFrame(columns=["Timestamp", "Frame", "Book Count"]).to_csv(csv_file, index=False)
 
@@ -87,6 +83,9 @@ if not os.path.exists(csv_file):
         ret, frame = cap.read()
             if not ret:
                 break
-
+                
+    **Run detection**
+    
+    results = model(frame, conf=0.1, verbose=False)
 
 
