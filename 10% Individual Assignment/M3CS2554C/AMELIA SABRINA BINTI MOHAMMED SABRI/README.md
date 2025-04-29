@@ -112,7 +112,7 @@ cv2.imshow('Edges Image', edges_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-##Final Code
+## Final Code
 ```
 import cv2
 import numpy as np
