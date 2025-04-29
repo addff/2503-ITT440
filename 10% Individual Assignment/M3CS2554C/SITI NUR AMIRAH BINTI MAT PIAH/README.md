@@ -3,7 +3,7 @@
 **LECTURE'S: SHAHADAN BIN SAAD**
 
 
-# **Title: Computer Vision - Book Detection and Counting*
+# *Title: Computer Vision - Book Detection and Counting*
 
 ## Introduction
 
