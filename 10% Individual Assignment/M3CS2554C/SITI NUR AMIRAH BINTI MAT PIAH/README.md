@@ -64,13 +64,13 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
 
 	model = YOLO("yolov8n.pt")  # Replace with your custom model if trained on books
 
-**Load video file**
+**Video file**
 
 	video_path = "bokshelfvid.mp4"
  
 	cap = cv2.VideoCapture(video_path)
  
-**Create CSV log file**
+**CSV log file**
 
 	csv_file = "book_log.csv"
  
@@ -125,8 +125,15 @@ PyCharm - An integrated development surroundings (IDE) used for programming in P
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 	
-   **Cleanup**
+   **System exit**
    
 	cap.release()
  
 	cv2.destroyAllWindows()
+
+ ## The result of the system
+
+ **book_log.csv**
+ <img width="391" alt="ss result pycharm" src="https://github.com/user-attachments/assets/0b91538c-33fe-413d-832f-de8304ba6fea" />
+ 
+
