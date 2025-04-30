@@ -39,7 +39,9 @@ Drawing: Add text, shapes, or lines onto images.
 
 Complex Operations: You can work with more advanced image processing tasks, like handling alpha channels (transparency) or creating image composites.
 
+Library Related to pgmagick
 
+The three libraries pgmagick, matplotlib, and NumPy , each play an important role in handling basic image processing in Python. pgmagick is the core image processing library that provides access to powerful features of GraphicsMagick, such as resizing, color manipulation, and applying filters like blur and sharpen. It efficiently processes images at a low level, allowing for high-quality transformations and manipulations. matplotlib complements this by providing a simple yet effective way to visualize the processed images, which is particularly useful for tasks like displaying results, adding annotations, and presenting images in a clear and informative way. Finally, NumPy is used for managing image data as arrays, which is essential for performing pixel-based operations. In this case, it allows for converting the image into a format that can be visualized with matplotlib, making it a critical part of the workflow for manipulating and displaying images in a flexible and computationally efficient manner. Together, these libraries create a powerful yet accessible toolset for working with images in Python.
 
 Module / Subpackage
 pgmagick provided through core classes and objects, rather than a large set of subpackages like in bigger libraries. It's designed to be lightweight and closely mirror the C++ GraphicsMagick++ API.
