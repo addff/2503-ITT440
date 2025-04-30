@@ -67,68 +67,68 @@ pip3 install pillow
 ```python
 from PIL import Image
 
-# Open the image
+# 1.Open the image
 img = Image.open("input.jpg") 
 # Show the image
 img.show()
 
-# Open the image
+# 2.Open the image
 img = Image.open("input.jpg")
 # Save the image to a new file
 img.save("output.jpg")
 
-# Resize the image (width, height)
+# 3.Resize the image (width, height)
 resized_img = img.resize((300, 300))  # Resize to 300x300 pixels
 # Save the resized image
 resized_img.save("resized_output.jpg")
 
-# Rotate the image 90 degrees counter-clockwise
+# 4.Rotate the image 90 degrees counter-clockwise
 rotated_img = img.rotate(90)
 # Save the rotated image
 rotated_img.save("rotated_output.jpg")
 
-# Crop the image (left, top, right, bottom)
+# 5.Crop the image (left, top, right, bottom)
 cropped_img = img.crop((50, 50, 300, 300))
 # Save the cropped image
 cropped_img.save("cropped_output.jpg")
 
-# Flip horizontally (mirror left ↔ right)
+# 6.Flip horizontally (mirror left ↔ right)
 horizontal_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
 horizontal_flip.save("flipped_horizontal.jpg")
 # Flip vertically (mirror top ↔ bottom)
 vertical_flip = img.transpose(Image.FLIP_TOP_BOTTOM)
 vertical_flip.save("flipped_vertical.jpg")
 
-# Convert to grayscale
+# 7.Convert to grayscale
 gray_img = img.convert("L")  # "L" stands for luminance (grayscale)
 # Save the grayscale image
 gray_img.save("grayscale_output.jpg")
 
-# Apply blur filter
+# 8.Apply blur filter
 blurred_img = img.filter(ImageFilter.BLUR)
 # Save the blurred image
 blurred_img.save("blurred_output.jpg")
 
-# Apply sharpen filter
+# 9.Apply sharpen filter
 sharpened_img = img.filter(ImageFilter.SHARPEN)
 # Save the sharpened image
 sharpened_img.save("sharpened_output.jpg")
 
-# Create brightness enhancer
+# 10.Create brightness enhancer
 enhancer = ImageEnhance.Brightness(img)
 # Increase brightness (1.0 = original, >1 = brighter, <1 = darker)
 bright_img = enhancer.enhance(1.5)  # Try 0.5 for darker, 2.0 for more bright
 # Save the brightened image
 bright_img.save("brightness_output.jpg")
 
-# Create contrast enhancer
+# 11.Create contrast enhancer
 enhancer = ImageEnhance.Contrast(img)
 # Increase contrast (1.0 = original, >1 = more contrast, <1 = less contrast)
 contrast_img = enhancer.enhance(1.8)  # Try 0.5 for low contrast, 2.0 for high contrast
 # Save the contrast-adjusted image
 contrast_img.save("contrast_output.jpg")
 
-# Create a drawing context
+# 12.Create a drawing context
 draw = ImageDraw.Draw(img)
 # Draw a rectangle (left, top, right, bottom)
 draw.rectangle([50, 50, 250, 250], outline="red", width=5)
@@ -140,7 +140,7 @@ draw.text((100, 350), "Sample Text", fill="green", font=font)
 # Save the image with drawings
 img.save("drawn_output.jpg")
 
-# Open the two images
+# 13.Open the two images
 img1 = Image.open("input1.jpg")
 img2 = Image.open("input2.jpg")
 # Resize both images to the same size (optional, if images are not the same size)
