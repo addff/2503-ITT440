@@ -211,4 +211,9 @@ blended_img.save("blended_output.jpg")
 
 ---
 
+#### CONCLUSION
+
+---
+
+#### VIDEO DEMONSTRATION
 
