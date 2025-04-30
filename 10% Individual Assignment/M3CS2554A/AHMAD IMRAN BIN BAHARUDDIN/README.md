@@ -16,7 +16,7 @@
   - Powerful and Versatile Rendering: pycairo provides a comprehensive set of drawing primitives. You can create lines, curves (Bezier and elliptical arcs), rectangles, text, and even work with image data. This makes it suitable for a wide range of applications, from simple drawings to complex visualizations.
 
   - High-Quality Output: Cairo, the underlying C library, is known for producing crisp and professional-looking graphics. It supports antialiasing, alpha compositing, and various rendering backends, ensuring your visuals look polished across different platforms and output formats.
-
+---
 #### How To Use PyCairo
   1) Install PyCairo library
   ```
@@ -27,7 +27,7 @@
     python3
   ```
   4) Start coding using PyCairo
-
+---
 #### Example Code
 ``` py
 import math
