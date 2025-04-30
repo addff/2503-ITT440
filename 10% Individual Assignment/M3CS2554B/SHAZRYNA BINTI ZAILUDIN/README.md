@@ -20,10 +20,15 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 
 #### ADVANTAGES OF USING PILLOW
 * **Support multiple image formats:** Easily works with JPEG, PNG, GIF, BMP and more, allowing users to work with almost any type of image file without needing additional converters or tools.
+  
 * **Easy to learn and use:** Designed with simplicity in mind, providing an intuitive and straightforward API that enables even beginners in Python programming to perform complex image processing tasks easily and quickly.
+  
 * **Wide range of features:** Rich collection of features such as image resizing, cropping, rotating, filtering, blending, and drawing on images, making it a one-stop solution for both basic and advanced image manipulation needs.
+  
 * **Easy Integration with other python libraries:** Can be easily combined with other libraries like NumPy, OpenCV and Matplotlib, making it possible to combine powerful image processing with scientific computing, machine learning, or data visualization.
+  
 * **Lightweight and fast:** Lightweight and efficient, ensuring that applications using it remain fast, responsive, and do not consume excessive memory or processing power.
+  
 * **Cross-platform compatibility:** Works on Windows, MacOs and Linux, providing flexibility and convenience for developers working in different environments.
 
 #### BASIC OPERATIONS IN PILLOW
@@ -51,3 +56,5 @@ pip install pillow
 ```bash
 pip3 install pillow
 ```
+
+#### CODE FOR IMAGE PROCESSING
