@@ -105,6 +105,8 @@ gray_img = img.convert("L")  # "L" stands for luminance (grayscale)
 gray_img.save("grayscale_output.jpg")
 
 # 8.Apply blur filter
+from PIL import Image, ImageFilter
+
 blurred_img = img.filter(ImageFilter.BLUR)
 # Save the blurred image
 blurred_img.save("blurred_output.jpg")
@@ -115,6 +117,8 @@ sharpened_img = img.filter(ImageFilter.SHARPEN)
 sharpened_img.save("sharpened_output.jpg")
 
 # 10.Create brightness enhancer
+from PIL import Image, ImageEnhace
+
 enhancer = ImageEnhance.Brightness(img)
 # Increase brightness (1.0 = original, >1 = brighter, <1 = darker)
 bright_img = enhancer.enhance(1.5)  # Try 0.5 for darker, 2.0 for more bright
@@ -129,6 +133,8 @@ contrast_img = enhancer.enhance(1.8)  # Try 0.5 for low contrast, 2.0 for high c
 contrast_img.save("contrast_output.jpg")
 
 # 12.Create a drawing context
+from PIL import Image, ImageDraw, ImageFont
+
 draw = ImageDraw.Draw(img)
 # Draw a rectangle (left, top, right, bottom)
 draw.rectangle([50, 50, 250, 250], outline="red", width=5)
