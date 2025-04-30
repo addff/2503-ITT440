@@ -70,3 +70,10 @@ It is especially useful when you want the power of ImageJ with the flexibility a
 - **Extensive Customization**: Create custom workflows and integrate additional Python tools or external libraries to enhance the capabilities of **ImageJ**.
 
 ## How to install PyImageJ
+
+
+
+<p align="center">
+  <img src="https://github.com/Wafiy2003/IMAGE/blob/ec5332b18f3be61965d525f365752e99fcf7bcee/Screenshot%202025-05-01%20013853.png
+" alt="image alt">
+</p>
