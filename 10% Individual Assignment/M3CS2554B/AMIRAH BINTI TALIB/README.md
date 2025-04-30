@@ -100,3 +100,4 @@ cv2.destroyAllWindows()
 This project provides valuable insights into color-based image segmentation using OpenCV, specifically for detecting and isolating red areas in an image. It demonstrates essential techniques such as converting color spaces (BGR to HSV), creating masks to filter out specific colors, and applying these masks to extract or highlight desired regions. By highlighting red areas with green, the project showcases how to manipulate images for better analysis and visualization. Overall, this project lays the foundation for more complex computer vision tasks, such as object detection and tracking, by emphasizing the importance of color manipulation and filtering in image processing.
 
 ## DEMONSTRATION VIDEO
+https://youtu.be/57ha1JCCCqI 
