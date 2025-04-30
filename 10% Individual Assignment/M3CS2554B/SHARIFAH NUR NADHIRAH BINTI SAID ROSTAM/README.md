@@ -106,8 +106,9 @@ M_binarized = binarize_image(M_gray, threshold)
 Image.fromarray(M_binarized).show(title="Binarized")
 ```
 
-Simple Demonstration Using NumPy for Image Processing
+Simple Demonstration Using NumPy for Image Processing on YouTube
 
+https://youtu.be/4VK6Rv3i5rk?si=ZCMuJ9bLpWcoizLo 
 
 
 
