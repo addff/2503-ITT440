@@ -70,7 +70,7 @@ import math
 ### Step 2 : Load and Normalize The Image 
 
 ```
-img = color.rgb2gray(io.imread("your_image_path.png")).astype(np.float32)
+img = color.rgb2gray(io.imread("C:\\Users\\User\\Downloads\\monochrome-gray-freeze-dust-powder-explosion-isolated-white-background_90220-1400.jpg")).astype(np.float32)
 img /= 255.0
 ```
 ### Step 3 : Prepare Data for GPU 
@@ -142,7 +142,7 @@ from skimage import io, color
 import math
 
 # Load image in grayscale
-img = color.rgb2gray(io.imread("your_image_path.png")).astype(np.float32)
+img = color.rgb2gray(io.imread("C:\\Users\\User\\Downloads\\monochrome-gray-freeze-dust-powder-explosion-isolated-white-background_90220-1400.jpg")).astype(np.float32)
 
 # Normalize image to [0, 1]
 img /= 255.0
