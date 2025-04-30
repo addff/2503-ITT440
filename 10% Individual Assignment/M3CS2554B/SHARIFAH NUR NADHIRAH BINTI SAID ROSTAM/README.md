@@ -2,11 +2,11 @@
 #### M3CS2554B
 #### ITT440 - 10% Individual Assignment
 # Image Manipulation with NumPy: Basic Operations and Transformations
-#### Overview
+### Overview
 This project demonstrates how to manipulate image using the **NumPy** library while the **PIL** library wll be used to access the pixel data stored in an image. It is ideal for understanding how row image data can be manipulated with array-based logic - a foundational concept in computer vision and image processing.
 
 ![NumPy Logo](https://github.com/user-attachments/assets/f17d4a63-b2c1-42ea-a5bb-9c53044f8956)
-#### Introduction
+### Introduction
 Image processing is a type of mathematical computation. It demonstrates core in computer vision, involving techniques to manipulate images to extract useful information or modify visual attributes. NumPy was one of the powerful tools that treat image as arrays. NumPy stands for Numerical Python. It is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourirer transform and matrices.
 
 #### Why Numpy for Image Processing?
@@ -18,12 +18,12 @@ Image processing is a type of mathematical computation. It demonstrates core in 
 #### Which Language is NumPy written in?
 NumPy is a Python library and is written partially in Python but most of the parts that require fast computation are written in C or C++.
 
-#### Step-by-step Implementation
+### Step-by-step Implementation
 
 #### Step 1: Environment Setup
 The following tools need to be installed to perform this project
-- Python 3.8+
-- Python Packages: PIL, NumPy
+- Python 3.8+ [Application Installation](https://www.python.org/downloads/release/python-380/)
+- Python Packages: PIL, NumPy library in your command prompt
 
   
 #### Step 2: Import and Reduced Image
@@ -108,7 +108,9 @@ Image.fromarray(M_binarized).show(title="Binarized")
 
 Simple Demonstration Using NumPy for Image Processing on YouTube
 
-https://youtu.be/4VK6Rv3i5rk?si=ZCMuJ9bLpWcoizLo 
+[Learn How to Use Numpy Here](https://youtu.be/4VK6Rv3i5rk?si=rGZkYNq5uOvJxgGe) 
+
+
 
 
 
