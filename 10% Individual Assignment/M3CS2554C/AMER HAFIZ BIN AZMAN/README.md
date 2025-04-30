@@ -46,9 +46,19 @@ Here are some commonly used Mahotas functions:
 
 # How To Install Mahotas?
 
-<p align="center">
-  <img src="1.PNG" alt="Image" width="500"/>
-</p>
+Here are the step to install Mahotas in your Laptop/PC
+
+- Go to Anaconda website (https://www.anaconda.com/download) and enter your email. The download link will be sent in your email
+  
+- Click "Download Now". After finish download Anaconda, lunch it
+  
+- Click "Lunch" at Jupyter Notebook. It will open a new tab on your browser
+  
+- Click "New" and after that click "Python". It will open a new tab in your browser
+  
+- Write "!pip install mahotas" in the prompt box and your Mahotas is ready to use after the download finish.
+
+
 
 
 
