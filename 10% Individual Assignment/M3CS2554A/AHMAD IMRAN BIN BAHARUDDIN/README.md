@@ -69,3 +69,7 @@ ctx.stroke()
 
 surface.write_to_png("example.png")  # Output to PNG
 ```
+
+---
+#### Demonstration Using Example Code
+
