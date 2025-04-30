@@ -18,6 +18,7 @@ Image processing refers to the manipulation or analysis of images to enhance the
 # Image Processing Using Mahotas
 
 Image processing is an essential technique in various industries such as medical imaging, remote sensing, and computer vision. Among the many tools available for image processing, *Mahotas* stands out due to its simplicity, speed, and seamless integration with the Python programming language. Developed in C++ for performance and callable from Python for ease of use, Mahotas offers a rich set of functions suitable for both basic and advanced image processing tasks.
+
 ---
 
 # Why Mahotas?
@@ -58,9 +59,7 @@ Here are the step to install Mahotas in your Laptop/PC
   
 - Write "!pip install mahotas" in the prompt box and your Mahotas is ready to use after the download finish.
 
-
-
-
+---
 
 # Example: Simple Edge Detection
 
@@ -94,8 +93,8 @@ plt.axis('off')
 
 plt.show()
 
-
 ---
+
 # Applications of Image Processing with Mahotas
 
 - *Medical Imaging*: Pre-processing MRI, CT scans, and other medical images.
