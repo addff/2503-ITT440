@@ -21,7 +21,8 @@ Image processing involves the manipulation and enhancement of digital images thr
 
 **SimpleITK**
 
-![SimpleITK Logo](https://simpleitk.readthedocs.io/en/master/_images/SimpleITKLogo.png)
+![Image](https://github.com/user-attachments/assets/9d02e4fb-cff8-482c-bcf4-fe416bc8414a)
+
 
 ---
 
