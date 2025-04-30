@@ -48,6 +48,8 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 12. Draw - *draw = imageDraw.Draw(image)*
 13. Blended two image - *blended_image = image.blend(image1, image2, alpha = 0.5)*
 
+---
+
 #### INSTALLATIONS
 Python Pillow does not come in-built with Python. To install it type the below command in the terminal.
 * Windows
@@ -58,6 +60,8 @@ pip install pillow
 ```bash
 pip3 install pillow
 ```
+
+---
 
 #### CODE FOR IMAGE PROCESSING
 ```python
@@ -148,3 +152,6 @@ blended_img = Image.blend(img1, img2, alpha=0.5)  # alpha controls the blend rat
 blended_img.save("blended_output.jpg")
 ```
 
+---
+
+#### OUTPUT
