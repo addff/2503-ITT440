@@ -15,14 +15,16 @@ In the context of computer vision, image processing, or data visualisation, comp
 ---
 
 ## Core Concept
-- **Preprocessing**:
-- **Feature Extraction**:
-- **Segmentation**:
-- **Classification**:
+- **Preprocessing**: Resize, normalize, blur, denoise
+- **Feature Extraction**: Improve generalization with augmented variants
+- **Segmentation**: Synchronized image-mask transformations
+- **Classification**: Increase robustness through image variety
 
 ---
 
 ![image](https://github.com/user-attachments/assets/2aa0aa5d-23b4-4203-b40d-6f4b0d829841)
+
+---
 
 ## 🛠️ **Why** imgaug?
 
@@ -61,7 +63,11 @@ print(imgaug.__version__)
 If no error occurs, it’s installed correctly.
 
 ---
+##Installation 
 
+👉 https://imgaug.readthedocs.io/en/latest/source/installation.html
+
+---
 ## 🔍 Python Code (Computer Visual Graphic)
 
 Here's a simple script to load an image and apply several augmentations using imgaug.
