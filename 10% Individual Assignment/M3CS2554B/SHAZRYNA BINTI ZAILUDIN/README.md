@@ -72,7 +72,7 @@ img = Image.open("input.jpg")
 # Show the image
 img.show()
 
-# 2.Open the image
+# 2.Save the image
 img = Image.open("input.jpg")
 # Save the image to a new file
 img.save("output.jpg")
@@ -92,7 +92,7 @@ cropped_img = img.crop((50, 50, 300, 300))
 # Save the cropped image
 cropped_img.save("cropped_output.jpg")
 
-# 6.Flip horizontally (mirror left ↔ right)
+# 6.Flip horizontally (mirror left ↔ right) and vertical (mirror top ↔ bottom)
 horizontal_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
 horizontal_flip.save("flipped_horizontal.jpg")
 # Flip vertically (mirror top ↔ bottom)
@@ -155,3 +155,54 @@ blended_img.save("blended_output.jpg")
 ---
 
 #### OUTPUT
+1. Open Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/Open%20image.jpg" width="700">
+
+
+2. Resize Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/RESIZED.jpg" width="400">
+
+
+3. Rotate Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/ROTATE.jpg" width="400">
+
+
+4. Crop Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/CROP.jpg" width="400">
+
+
+5. Flip Horizontal and Vertical Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/HORIZONTAL.jpg" width="400">
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/VERTICAL.jpg" width="400">
+
+
+6. Grayscale Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/GRAYSCALE.jpg" width="400">
+
+
+7. Blur Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BLUR.jpg" width="400">
+
+
+8. Sharpen Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/SHARPEN.jpg" width="400">
+
+
+9. Brightness Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BRIGHTNESS.jpg" width="400">
+
+
+10. Contrast Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/CONTRAST.jpg" width="400">
+
+
+11. Draw and Text Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/DRAW%20%26%20TEXT.jpg" width="400">
+
+
+12. Blended two Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BLENDED.jpg" width="400">
+
+---
+
+
