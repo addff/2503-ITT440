@@ -212,8 +212,8 @@ blended_img.save("blended_output.jpg")
 ---
 
 #### CONCLUSION
+In conclusion, the Pillow library provides a powerful yet user-friendly toolkit for image processing in Python. Throught this project, we explored key functionalities such as opening, editing, resizing, cropping, rotating, and saving images in various formats. Pillow simplifies complex image manipulation tasks and supports a wide range of file types, making it deal for both beginners and advanced users. This experience not only enhanced our practical skills in Python programming but also deepened our understanding of how digital images are represented and manipulated programmatically. Overall, Pillow proved to be an essential tool for efficient and effective image processing.
 
 ---
 
 #### VIDEO DEMONSTRATION
-
