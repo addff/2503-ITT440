@@ -47,3 +47,15 @@ PyWavelets offers the `pywt` module with key image processing tools such as:
 
 These functions are used for tasks like image compression, edge detection, and noise reduction through wavelet-based techniques.
 
+### Python Code Example for Basic Image Processing with PyWavelets
+
+## 🌀 Basic Image Processing with PyWavelets
+
+This example demonstrates how to use the PyWavelets library to perform image decomposition and reconstruction using the Haar wavelet.
+
+### 🔧 Step 1: Import Required Libraries
+
+```python
+from skimage import io, img_as_float
+import pywt
+import matplotlib.pyplot as plt
