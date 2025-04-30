@@ -8,6 +8,9 @@ Group : CDCS2554B
 
 
 🧪 What is Mahotas?
+
+
+
 Mahotas is a high-performance Python library specifically designed for scientific image processing and analysis, especially in domains like biology, microscopy, and pattern recognition.
 
 It’s best for processing grayscale images, analyzing textures, and applying morphological operations efficiently.
@@ -16,6 +19,8 @@ It’s best for processing grayscale images, analyzing textures, and applying mo
 Python + NumPy: Easy to use with Python's scientific stack.
 
 C++ Backend: Fast processing, ideal for large datasets or real-time applications.
+
+
 
 
 
