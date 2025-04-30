@@ -3,7 +3,7 @@
 
 ---
 
-# Computer Vision in MATLAB
+# Computer Vision in MATLAB <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB Logo" width="40"/> 
 
 This repository provides an overview of computer vision techniques implemented using MATLAB. MATLAB offers a rich set of tools and functions for image processing, object detection, and 3D vision, making it ideal for rapid prototyping and development in academia and industry.
 
