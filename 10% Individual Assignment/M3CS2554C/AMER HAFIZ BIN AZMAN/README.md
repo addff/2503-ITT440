@@ -127,9 +127,12 @@ In the real world, image processing technologies like those powered by Mahotas a
 
 ---
 
-Conclusion
+# Conclusion
+
 Mahotas provides a fast, lightweight, and easy-to-use framework for performing image processing tasks in Python. Its C++ backend ensures efficient computation, while its Python interface offers simplicity and flexibility. Whether for academic research, industrial applications, or personal projects, Mahotas is a powerful choice for developers and researchers who need quick and reliable image processing solutions
 
 ---
+
+# Here are demonstrate using Mahotas
 
 https://youtu.be/TKKcg88uUUY 
