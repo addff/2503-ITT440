@@ -71,5 +71,5 @@ surface.write_to_png("example.png")  # Output to PNG
 ```
 
 ---
-#### Demonstration Using Example Code
+#### Example Output Using Code Above
 
