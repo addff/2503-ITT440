@@ -110,5 +110,51 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 ```
+### final code
+```
+from skimage import io, img_as_float
+import pywt
+import matplotlib.pyplot as plt
+
+# Load and normalize image
+image = img_as_float(io.imread("Downloads/fruits.png", as_gray=True))
+
+# Apply 2D Discrete Wavelet Transform
+coeffs2 = pywt.dwt2(image, 'haar')
+cA, (cH, cV, cD) = coeffs2  # Approximation and detail coefficients
+
+# Reconstruct the image
+reconstructed = pywt.idwt2(coeffs2, 'haar')
+
+# Plotting the results
+plt.figure(figsize=(12, 6))
+
+plt.subplot(2, 3, 1)
+plt.title("Original Image")
+plt.imshow(image, cmap='gray')
+
+plt.subplot(2, 3, 2)
+plt.title("Approximation (cA)")
+plt.imshow(cA, cmap='gray')
+
+plt.subplot(2, 3, 3)
+plt.title("Horizontal Detail (cH)")
+plt.imshow(cH, cmap='gray')
+
+plt.subplot(2, 3, 4)
+plt.title("Vertical Detail (cV)")
+plt.imshow(cV, cmap='gray')
+
+plt.subplot(2, 3, 5)
+plt.title("Diagonal Detail (cD)")
+plt.imshow(cD, cmap='gray')
+
+plt.subplot(2, 3, 6)
+plt.title("Reconstructed Image")
+plt.imshow(reconstructed, cmap='gray')
+
+plt.tight_layout()
+plt.show()
+```
 
 
