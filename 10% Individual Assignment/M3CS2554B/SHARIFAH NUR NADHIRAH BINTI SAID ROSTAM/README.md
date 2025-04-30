@@ -8,10 +8,13 @@ This project demonstrates how to manipulate image using the **NumPy** library wh
 ![NumPy Logo](https://github.com/user-attachments/assets/f17d4a63-b2c1-42ea-a5bb-9c53044f8956)
 #### Introduction
 Image processing is a type of mathematical computation. It demonstrates core in computer vision, involving techniques to manipulate images to extract useful information or modify visual attributes. NumPy was one of the powerful tools that treat image as arrays. NumPy stands for Numerical Python. It is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourirer transform and matrices.
+
 #### Why Numpy for Image Processing?
+
 - **Efficiency**: A fast array can be processed with NumPy due to its highly optimized numerical operations. 
 - **Simplicity**: A direct manipulation of pixel values can be allowed. 
 - **Control**: NumPy offers more transparency compared to other high-level libraries.
+  
 #### Which Language is NumPy written in?
 NumPy is a Python library and is written partially in Python but most of the parts that require fast computation are written in C or C++.
 
@@ -35,7 +38,6 @@ reduced_M = np.array(reduced_img)
 ```
 
 #### Step 3: RGB Image
-
 ```
 def RGB_image(image, image_color):
     if image_color == 'R':
@@ -57,23 +59,18 @@ def RGB_image(image, image_color):
 Image.fromarray(RGB_image(reduced_M, 'R')).show(title="Red Channel")
 Image.fromarray(RGB_image(reduced_M, 'G')).show(title="Green Channel")
 Image.fromarray(RGB_image(reduced_M, 'B')).show(title="Blue Channel")
-
 ```
 
-#### Step 4: Rotate Image
-
+#### Step 4: Grayscale Image
 ```
-def rotate_image(image, n):
-    rotated_img = Image.fromarray(np.rot90(image, k=n, axes=(1, 0)))
-    return rotated_img
+def grayscale(image):
+    grayscale_img = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
+    grayscale_img = np.clip(grayscale_img, 0, 255).astype(np.uint8)
+    return grayscale_img
 
-rotated = rotate_image(reduced_M, 2)
-rotated.show(title="Rotated")
+M_gray = grayscale(reduced_M)
+Image.fromarray(M_gray).show(title="Grayscale")
 ```
-
-The results:
-
-![image](https://github.com/user-attachments/assets/d9fcc465-6c19-4a8c-a3e6-3e1d60936366)
 
 #### Step 5: Crop an Image
 ```
@@ -89,11 +86,17 @@ M_cropped = crop_image(reduced_M, 4, 2)
 Image.fromarray(M_cropped).show(title="Cropped")
 ```
 
-The results:
+#### Step 6: Rotate Image
+```
+def rotate_image(image, n):
+    rotated_img = Image.fromarray(np.rot90(image, k=n, axes=(1, 0)))
+    return rotated_img
 
-![image](https://github.com/user-attachments/assets/744da381-84f7-4001-a347-4a6a0a5de391)
+rotated = rotate_image(reduced_M, 2)
+rotated.show(title="Rotated")
+```
 
-#### Step 6: Binarize Image
+#### Step 7: Binarize Image
 ```
 def binarize_image(image, threshold):
     binarized = ((image > threshold) * 255).astype(np.uint8)
@@ -103,25 +106,12 @@ M_binarized = binarize_image(M_gray, threshold)
 Image.fromarray(M_binarized).show(title="Binarized")
 ```
 
-The results:
-
-![image](https://github.com/user-attachments/assets/538b6754-7074-452b-8b59-16dd8ab10459)
+Simple Demonstration Using NumPy for Image Processing
 
 
-#### Step 7: Grayscale Image
-```
-def grayscale(image):
-    grayscale_img = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
-    grayscale_img = np.clip(grayscale_img, 0, 255).astype(np.uint8)
-    return grayscale_img
 
-M_gray = grayscale(reduced_M)
-Image.fromarray(M_gray).show(title="Grayscale")
-```
 
-The results:
 
-![image](https://github.com/user-attachments/assets/04ea948a-32ad-44bb-8d39-3409c4358301)
 
 
 
