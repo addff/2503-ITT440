@@ -32,7 +32,7 @@ The script processes a video which applies a YOLOv8 model frame by frame to dete
 ![pycharm logo](https://github.com/user-attachments/assets/4ad4fc4a-84f3-4ee2-8c82-57934d85aab1)
 
 ## Tools
-**1. YOLOv8 -** The model framework used for bbject detection
+**1. YOLOv8 -** The model framework used for object detection
 
 **2. OpenCV -** A toolset for image and video processing
 
