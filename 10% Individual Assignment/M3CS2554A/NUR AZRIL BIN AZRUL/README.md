@@ -34,3 +34,16 @@ While PyWavelets is powerful on its own, it's often used alongside:
 - **OpenCV (optional)** – For more advanced image manipulation and pre-processing.
 
 These libraries create a full workflow from image loading, transformation, to display and analysis.
+
+### Module / Subpackage in PyWavelets
+
+PyWavelets offers the `pywt` module with key image processing tools such as:
+
+- `pywt.dwt2()` – 2D Discrete Wavelet Transform
+- `pywt.idwt2()` – 2D Inverse Discrete Wavelet Transform
+- `pywt.wavedec2()` – Multilevel 2D wavelet decomposition
+- `pywt.waverec2()` – Multilevel 2D wavelet reconstruction
+- `pywt.threshold()` – For wavelet-based denoising
+
+These functions are used for tasks like image compression, edge detection, and noise reduction through wavelet-based techniques.
+
