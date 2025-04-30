@@ -133,52 +133,45 @@ process:
 ---
 ..
 
-    
     import imageio.v3 as iio
     import numpy as np
     import matplotlib.pyplot as plt
     
-    // Step 1: Read the image
-    img = iio.imread("/mnt/data/Imageio.png")  // Replace with your image path
+    // Step 1: Read the uploaded image
+    img = iio.imread("/mnt/data/Imageio.png")  // Use the correct path to the uploaded image
     
-    // Step 2: Convert to grayscale using a weighted sum formula
+    // Step 2: Convert to grayscale
     def rgb2gray(rgb):
         return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
     
     gray_img = rgb2gray(img)
     
-    // Step 3: Apply a basic edge detection (Sobel filter)
+    // Step 3: Apply basic edge detection (Sobel filter)
     def simple_edge_detect(gray):
-        # Sobel filter kernels
         Kx = np.array([[-1, 0, 1],
                        [-2, 0, 2],
                        [-1, 0, 1]])
-    
         Ky = np.array([[1, 2, 1],
                        [0, 0, 0],
                        [-1, -2, -1]])
-    
-        // Pad image
+        
         padded = np.pad(gray, ((1, 1), (1, 1)), mode='constant')
-    
-        // Create output
         G = np.zeros_like(gray)
-    
+        
         for i in range(gray.shape[0]):
             for j in range(gray.shape[1]):
                 region = padded[i:i+3, j:j+3]
                 gx = np.sum(Kx * region)
                 gy = np.sum(Ky * region)
                 G[i, j] = np.sqrt(gx**2 + gy**2)
-    
-        # Normalize
+        
         G = (G / np.max(G)) * 255
         return G.astype(np.uint8)
     
     edges = simple_edge_detect(gray_img)
     
-    # Step 4: Save the result
-    iio.imwrite("/mnt/data/edges_output.png", edges) //save the edge image
+    // Step 4: Save the result
+    iio.imwrite("/mnt/data/edges_output.png", edges)  // Save the edge image
     
     // Step 5: Display original and processed images
     plt.figure(figsize=(12, 6))
@@ -200,6 +193,7 @@ process:
     
     plt.tight_layout()
     plt.show()
+
 
 
 The outcome of the process from imageio:
