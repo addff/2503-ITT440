@@ -132,7 +132,7 @@ dilated_img = d_dilated.copy_to_host()
 ```
 plt.imshow(..., cmap='inferno')
 ```
-## Final Code 
+## ✅ Final Code 
 
 ```
 import numpy as np
