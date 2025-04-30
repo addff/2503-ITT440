@@ -219,8 +219,85 @@ plt.show()
 
 
 
+###   📄 Mahotas Image Processing Full Code
+
+```
+import mahotas
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# --- STEP 1: Load and Convert Image ---
+img = Image.open('your_image.jpg').convert('L')  # Convert to grayscale
+image = np.array(img)
+
+# --- STEP 2: Preprocess Image (Gaussian Smoothing) ---
+smoothed = mahotas.gaussian_filter(image, sigma=2)
+
+# --- STEP 3: Thresholding (Otsu) ---
+T = mahotas.thresholding.otsu(smoothed)
+binary = smoothed > T
+
+# --- STEP 4: Label Connected Components ---
+labeled, num_objects = mahotas.label(binary)
+print(f"Detected {num_objects} objects")
+
+# --- STEP 5: Extract Features ---
+from mahotas import labeled as mlabel
+
+areas = mlabel.area(labeled)
+perimeters = mlabel.perimeter(labeled)
+eccentricities = mlabel.eccentricity(labeled)
+
+# --- STEP 6: Filter Small Objects (Optional) ---
+min_area = 100
+filtered = np.zeros_like(labeled)
+
+for i in range(1, labeled.max() + 1):
+    if areas[i] > min_area:
+        filtered[labeled == i] = i
+
+# --- STEP 7: Display Results ---
+fig, axs = plt.subplots(1, 3, figsize=(15, 5))
+axs[0].imshow(image, cmap='gray')
+axs[0].set_title("Original")
+axs[0].axis('off')
+
+axs[1].imshow(binary, cmap='gray')
+axs[1].set_title("Binary (Otsu)")
+axs[1].axis('off')
+
+axs[2].imshow(filtered, cmap='nipy_spectral')
+axs[2].set_title(f"Filtered & Labeled ({np.max(filtered)} objects)")
+axs[2].axis('off')
+
+plt.tight_layout()
+plt.show()
+
+# --- STEP 8: Print Feature Summary ---
+print("\nFeature Summary (First 5 objects):")
+for i in range(1, min(6, len(areas))):
+    if areas[i] > min_area:
+        print(f"Object {i} | Area: {areas[i]} | Perimeter: {perimeters[i]:.2f} | Eccentricity: {eccentricities[i]:.2f}")
+```
 
 
+
+###  🧾 Output:
+
+Visual display of:
+
+- Original image
+
+- Binary thresholded image
+
+- Labeled/filtered objects
+
+Console printout of:
+
+- Object count
+
+- Shape features (area, perimeter, eccentricity)
 
 
                       
