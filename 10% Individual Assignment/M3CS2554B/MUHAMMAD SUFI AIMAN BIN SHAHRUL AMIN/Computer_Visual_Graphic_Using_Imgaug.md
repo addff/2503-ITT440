@@ -39,8 +39,10 @@ Object-aware augmentation (bounding boxes, keypoints, segmentation masks)
 ### 1.Standard Installation 
 This is the most common that people use to install imgaug
 
-'''bash
+```bash 
 pip install imgaug
+
+
 
 
 
