@@ -17,6 +17,9 @@ Python + NumPy: Easy to use with Python's scientific stack.
 
 C++ Backend: Fast processing, ideal for large datasets or real-time applications.
 
+
+
+
 🧰 Core Capabilities of Mahotas
 Here’s what Mahotas can do:
 
