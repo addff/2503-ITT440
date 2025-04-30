@@ -24,3 +24,13 @@ The main features of PyWavelets are:
   * Single and double precision calculations
   * Real and complex calculations
   * Results compatible with Matlab Wavelet Toolbox (TM)
+
+### Library related to pywavelets ?
+While PyWavelets is powerful on its own, it's often used alongside:
+
+- **NumPy** – For numerical array manipulation (PyWavelets depends on it).
+- **scikit-image (`skimage`)** – For loading, converting, and preparing image formats.
+- **Matplotlib** – To visualize the original and processed images.
+- **OpenCV (optional)** – For more advanced image manipulation and pre-processing.
+
+These libraries create a full workflow from image loading, transformation, to display and analysis.
