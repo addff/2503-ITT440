@@ -12,7 +12,7 @@ Applying filters to images is one of the simplest and most effective ways to exp
 - Improving image quality for machine learning tasks
 
 In this project, we use OpenCV, a powerful open-source computer vision library to apply various filters to images such as grayscale, invert, cartoon, fisheye and edges.
-## 📍 Core Concepts
+## 🧠 Core Concepts
 - Image Reading: Loading the original images using OpenCV.
 - Color Transformations: Changing the color space, like converting to grayscale or inverting colors.
 - Smoothing: Blurring the image to remove noise and soften details.
@@ -97,6 +97,13 @@ cv2.imshow('Edges Image', edges_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+Step 8: Save as files
+```
+cv2.imwrite('gray_image.jpg', gray_image)
+cv2.imwrite('inverted_image.jpg', inverted_image)
+cv2.imwrite('brightness_image.jpg', brightness_image)
+cv2.imwrite('edges_image.jpg', edges_image)
+```
 ## ▶ Final Code
 ```
 import cv2
@@ -137,10 +144,35 @@ cv2.imshow('Edges Image', edges_image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+cv2.imwrite('gray_image.jpg', gray_image)
+cv2.imwrite('inverted_image.jpg', inverted_image)
+cv2.imwrite('brightness_image.jpg', brightness_image)
+cv2.imwrite('edges_image.jpg', edges_image)
 ```
 ## 🔎 Output Preview
+Original Image:  
+<img src="https://github.com/user-attachments/assets/2c4f2615-083b-4c36-85a8-7d2b94bccb07" width="150" alt="Original Image">
+
+Grayscale Filter:  
+<img src="https://github.com/user-attachments/assets/0ef30593-2e81-4818-be81-2fe2fb6c110d" width="150" alt="Grayscale Filter">
+
+Inverted Filter:  
+<img src="https://github.com/user-attachments/assets/55fb7579-269c-4b16-9e7d-025e46da18e5" width="150" alt="Inverted Filter">
+
+Brightness Filter:  
+<img src="https://github.com/user-attachments/assets/3085ea31-0f30-4a4d-929e-8f01e722015e" width="150" alt="Brightness Filter">
+
+Edges Filter:  
+<img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
+
 ## 🎥 Video Demonstration
-## 🔗 Conclusion
+## 📍 Conclusion
+In this assignment, I learned:
+- How to apply basic image processing filters using OpenCV such as grayscale, invert, edge detection and brightness adjustment.
+- How image data is stored and manipulated as arrays using NumPy, allowing direct control over pixel values.
+- How different filters can highlight or transform features in an image for analysis or visual effect.
+- How OpenCV functions like cvtColor(), bitwise_not(), convertScaleAbs(), and Canny() work and how to use them in real-world image filtering tasks.
 
 
 -ˋˏ✄┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈.ᐟ
