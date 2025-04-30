@@ -9,6 +9,37 @@ This repository provides an overview of computer vision techniques implemented u
 
 ---
 
+## 🛠️ Installation & Setup
+
+### Step 1: Install MATLAB
+- Download MATLAB from the [MathWorks website](https://www.mathworks.com/products/matlab.html).
+- Follow the installation instructions based on your operating system.
+
+### Step 2: Install Required Toolboxes
+Ensure you have the following toolboxes installed:
+- Image Processing Toolbox
+- Computer Vision Toolbox
+- Deep Learning Toolbox (optional, for AI applications)
+
+You can install these using the Add-On Explorer:
+```
+Home Tab > Add-Ons > Get Add-Ons > Search and Install
+```
+
+Or use the command line:
+```matlab
+matlab.addons.install('Computer Vision Toolbox')
+```
+
+### Step 3: Set Up Your Workspace
+- Clone this repository or create a new folder in MATLAB.
+- Add your scripts and images to this folder.
+
+### Step 4: Test with an Example
+Run the provided face detection example (see below) to verify your setup.
+
+---
+
 ## 🚀 Why Use MATLAB for Computer Vision?
 
 - 🛠️ **Image Processing Toolbox**: Image filtering, transformation, and analysis.
@@ -76,7 +107,28 @@ MATLAB supports integration with:
 
 ---
 
-## 📚 Resources
+---
+
+## 📺 Recommended Video Tutorials
+
+### 1. [Computer Vision Made Easy – MATLAB & Simulink] 
+- (https://la.mathworks.com/videos/computer-vision-made-easy-81802.html)
+- A 36-minute webinar covering real-world vision tasks in MATLAB.
+- Topics: object detection, measurement, and toolbox workflows.
+
+### 2. [Computer Vision Onramp – Free Interactive Course] 
+- (https://matlabacademy.mathworks.com/details/computer-vision-onramp/orcv)
+- Beginner-friendly, hands-on training.
+- Learn detection, tracking, labeling, and classification.
+
+### 3. [Computer Vision with MATLAB – Video Series] 
+- (https://www.mathworks.com/videos/series/computer-vision-with-matlab-95166.html)
+- A collection of short videos on various computer vision use cases.
+- Topics: object tracking, motion analysis, facial recognition.
+
+---
+
+## 📚 References
 
 - [MathWorks Computer Vision Toolbox](https://www.mathworks.com/products/computer-vision.html)
 - [MATLAB Documentation](https://www.mathworks.com/help/vision/)
