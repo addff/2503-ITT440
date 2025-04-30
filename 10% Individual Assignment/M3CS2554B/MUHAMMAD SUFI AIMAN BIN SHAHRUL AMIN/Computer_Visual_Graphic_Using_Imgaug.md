@@ -63,9 +63,11 @@ print(imgaug.__version__)
 If no error occurs, it’s installed correctly.
 
 ---
-##Installation 
+## Installation 
 
 👉 https://imgaug.readthedocs.io/en/latest/source/installation.html
+
+### This resource provides detailed instructions for installing imgaug using both pip and conda, as well as troubleshooting tips for common installation issues.​
 
 ---
 ## 🔍 Python Code (Computer Visual Graphic)
@@ -115,7 +117,11 @@ Gaussian Noise: The image will have visual "static" or noise added—like a grai
 
 Each time you run the script, a different variation may appear due to the random nature of the augmentations.
 
+---
 
+## 📝 Conclusion:
+
+In the ever-evolving field of computer vision, the ability to diversify and enhance training datasets is crucial for improving the performance and generalization of machine learning models. The imgaug library stands out as a versatile tool that empowers developers and researchers to easily apply a wide range of image augmentations, from basic transformations like flipping and rotation to more complex effects such as noise addition and Gaussian blur.
 
 
 
