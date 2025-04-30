@@ -16,6 +16,7 @@ Image processing refers to the manipulation or analysis of images to enhance the
 ---
 
 # Image Processing Using Mahotas
+![Image](https://github.com/user-attachments/assets/2c0ea612-b95f-4715-b439-3d779334f528)
 
 Image processing is an essential technique in various industries such as medical imaging, remote sensing, and computer vision. Among the many tools available for image processing, *Mahotas* stands out due to its simplicity, speed, and seamless integration with the Python programming language. Developed in C++ for performance and callable from Python for ease of use, Mahotas offers a rich set of functions suitable for both basic and advanced image processing tasks.
 
@@ -49,29 +50,28 @@ Here are some commonly used Mahotas functions:
 
 Here are the step to install Mahotas in your Laptop/PC
 
-- Go to Anaconda website (https://www.anaconda.com/download) and enter your email. The download link will be sent in your email
-          ![Image](https://github.com/user-attachments/assets/ef4904de-e888-4215-98e8-0f435ea372fc)
+1) Go to Anaconda website (https://www.anaconda.com/download) and enter your email. The download link will be sent in your email
+  ![Image](https://github.com/user-attachments/assets/ef4904de-e888-4215-98e8-0f435ea372fc)
   
-- Click "Download Now". After finish download Anaconda, lunch it
+2) Click "Download Now". After finish download Anaconda, lunch it
   ![Image](https://github.com/user-attachments/assets/0613a50e-f8c4-4489-b6bf-5fe62cf6abff)
   
-- Click "Lunch" at Jupyter Notebook. It will open a new tab on your browser
+3) Click "Lunch" at Jupyter Notebook. It will open a new tab on your browser
   ![Image](https://github.com/user-attachments/assets/5734c263-ad08-4d33-ac81-e6b5b01abd60)
   
-- Click "New" and after that click "Python". It will open a new tab in your browser
+4) Click "New" and after that click "Python". It will open a new tab in your browser
   ![Image](https://github.com/user-attachments/assets/3701b206-f576-4387-a4d2-911ae1d67e84)
   
   
-- Write "!pip install mahotas" in the prompt box and your Mahotas is ready to use after the download finish.
+5) Write "!pip install mahotas" in the prompt box and your Mahotas is ready to use after the download finish.
   ![Image](https://github.com/user-attachments/assets/55c3f5a5-5efc-4afa-b04e-01977dc7ab4b)
 
 ---
 
----
+# Example Coding with Mahotas
 
+```python
 # Example: Simple Edge Detection
-
-python
 import mahotas
 import mahotas.demos
 import numpy as np
@@ -89,18 +89,18 @@ edges = mahotas.sobel(image)
 
 # Display the result
 plt.figure(figsize=(10,5))
-plt.subplot(1,2,1)
-plt.title('Original Image')
-plt.imshow(image, cmap='gray')
+plt.subplot(1,2,1) 
+plt.title('Original Image') 
+plt.imshow(image, cmap='gray') 
 plt.axis('off')
 
-plt.subplot(1,2,2)
-plt.title('Edge Detection with Sobel')
-plt.imshow(edges, cmap='gray')
+plt.subplot(1,2,2) 
+plt.title('Edge Detection with Sobel') 
+plt.imshow(edges, cmap='gray') 
 plt.axis('off')
 
 plt.show()
-
+```
 
 ---
 
@@ -129,3 +129,7 @@ In the real world, image processing technologies like those powered by Mahotas a
 
 Conclusion
 Mahotas provides a fast, lightweight, and easy-to-use framework for performing image processing tasks in Python. Its C++ backend ensures efficient computation, while its Python interface offers simplicity and flexibility. Whether for academic research, industrial applications, or personal projects, Mahotas is a powerful choice for developers and researchers who need quick and reliable image processing solutions
+
+---
+
+https://youtu.be/TKKcg88uUUY 
