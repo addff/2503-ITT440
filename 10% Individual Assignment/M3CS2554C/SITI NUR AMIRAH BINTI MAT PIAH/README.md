@@ -1,6 +1,5 @@
 **SITI NUR AMIRAH BINTI MAT PIAH**
 
-**LECTURE'S: SHAHADAN BIN SAAD**
 
 
 # *Title:  Book Detection and Counting*
@@ -8,12 +7,14 @@
 
 ## Introduction
 
-Computer Vision is
+The study of computer vision aims to provide methods for computers to view and comprehend digital pictures, such as photos and videos. This involves developing techniques that aim that imitate human vision's capabilities. The automatic extraction of information from pictures, including object identification, camera position, and content search, is known as computer vision. Retrieving valuable information from pictures is the aim of computer vision.There are a lot of digital photos and videos available, so it's useful to focus on some of the basic computer vision problems that want to solve.
+
+I focused on using object detection to help automatically count the number of books on a shelf whether there are hundreds or thousands. This makes the process faster, more accurate, and removes the need for manual counting.
 
 
 
 ## Overview
-The script processes a video which applies a YOLOv8 model frame by frame to detect books in the shelf, annotates the frames visually, displays the count in real time and saves the timestamped results in a CSV file.
+The highlight for this project is processes a video which applies a YOLOv8 model frame by frame to detect books in the shelf, annotates the frames visually, displays the count in real time and saves the timestamped results in a CSV file.
 
 
 ## Key Features
