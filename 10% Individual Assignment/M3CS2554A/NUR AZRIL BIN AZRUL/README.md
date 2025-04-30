@@ -59,4 +59,56 @@ This example demonstrates how to use the PyWavelets library to perform image dec
 from skimage import io, img_as_float
 import pywt
 import matplotlib.pyplot as plt
+```
+### 🔧Step 2: Load the Grayscale Image
+```
+image = img_as_float(io.imread("Downloads/fruits.png", as_gray=True))
+```
+### 🔧Step 3: Apply 2D Discrete Wavelet Transform (DWT)
+```
+coeffs2 = pywt.dwt2(image, 'haar')
+cA, (cH, cV, cD) = coeffs2
+```
+### 🔧Step 4: Reconstruct the Image Using Inverse DWT
+```
+reconstructed = pywt.idwt2(coeffs2, 'haar')
+```
+### 🔧Step 5: Display the Results
+```
+plt.figure(figsize=(12, 6))
+
+plt.subplot(2, 3, 1)
+plt.title("Original Image")
+plt.imshow(image, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2, 3, 2)
+plt.title("Approximation (cA)")
+plt.imshow(cA, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2, 3, 3)
+plt.title("Horizontal Detail (cH)")
+plt.imshow(cH, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2, 3, 4)
+plt.title("Vertical Detail (cV)")
+plt.imshow(cV, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2, 3, 5)
+plt.title("Diagonal Detail (cD)")
+plt.imshow(cD, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2, 3, 6)
+plt.title("Reconstructed Image")
+plt.imshow(reconstructed, cmap='gray')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+```
+
 
