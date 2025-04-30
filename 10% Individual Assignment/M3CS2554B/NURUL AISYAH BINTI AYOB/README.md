@@ -101,6 +101,7 @@ python tools/train.py configs/custom_config.py
 ./tools/dist_train.sh configs/custom_config.py 4
 ````
 Applications
+
 -Medical Imaging: Tumor detection in MRI/CT scans
 
 -Autonomous Systems: Pedestrian/vehicle detection
