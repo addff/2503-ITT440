@@ -36,18 +36,78 @@ Object-aware augmentation (bounding boxes, keypoints, segmentation masks)
 ---
 ## Installation and setup
 
-### 1.Standard Installation 
-This is the most common that people use to install imgaug
+### 1.🦅 Standard Installation 
+This is the most common that people use to install imgaug:
 
 ```bash 
 pip install imgaug
+```
 
+### 2.📦 Recommended Extra Packages
 
+To work with images and visualize them, you’ll likely want:
 
+```bash
+pip install imageio matplotlib opencv-python
+```
+### 3.🧪 Check Installation
 
+Open a Python shell or script and run:
 
+```bash
+import imgaug
+print(imgaug.__version__)
+```
+If no error occurs, it’s installed correctly.
 
+---
 
+## 🔍 Python Code (Computer Visual Graphic)
+
+Here's a simple script to load an image and apply several augmentations using imgaug.
+
+---
+
+```bash
+import imgaug.augmenters as iaa
+import imageio
+import matplotlib.pyplot as plt
+
+# Load an image
+image = imageio.imread('example.jpg')  # Replace with your image path
+
+# Define the augmentation pipeline
+aug = iaa.Sequential([
+    iaa.Fliplr(0.5),                      # Flip horizontally with 50% probability
+    iaa.Affine(rotate=(-20, 20)),        # Rotate between -20 and +20 degrees
+    iaa.AdditiveGaussianNoise(scale=(10, 60)),  # Add Gaussian noise
+    iaa.GaussianBlur(sigma=(0.0, 1.0))   # Apply Gaussian blur
+])
+
+# Apply augmentation
+augmented_image = aug(image=image)
+
+# Display the result
+plt.imshow(augmented_image)
+plt.axis('off')
+plt.title("Augmented Image")
+plt.show()
+```
+---
+
+## 🖼️ Expected Output Description
+
+### When you run this script with a valid image file like example.jpg, the output will be:
+
+✅ Original Image with Augmentations:
+The displayed image (augmented_image) will look like a randomly transformed version of the original, with these effects:
+
+**Horizontal Flip (50% chance):** The image might be flipped left-to-right.
+**Rotation:** Randomly rotated between -20° and +20°.
+Gaussian Noise: The image will have visual "static" or noise added—like a grainy texture.
+**Blur:** A soft blur effect, simulating slight out-of-focus or camera shake.
+
+Each time you run the script, a different variation may appear due to the random nature of the augmentations.
 
 
 
