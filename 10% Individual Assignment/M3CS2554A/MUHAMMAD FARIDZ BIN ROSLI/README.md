@@ -8,42 +8,48 @@ CLASS : CDCS2554A
 
 ## What is Image Processing ?
 
-Image processing in Python tools the process of altering digital photos in order to improve them, extract useful information, or get them ready for additional examination.  It entails utilizing computer-based tools and mathematical algorithms to manipulate images.
+The process of modifying and evaluating digital images to improve their quality, extract useful information, or get them ready for additional analysis is known as image processing in Python tools.  To carry out a variety of tasks like filtering, edge detection, segmentation, noise reduction, and feature extraction, this field integrates methods from computer science, mathematics, and engineering.  To manipulate images at the pixel level or in larger structures, developers and researchers can easily apply complex algorithms with the help of robust Python libraries like OpenCV, scikit-image, Pillow, and SciPy.  With the use of techniques like thresholding, blurring, and morphological operations, these tools enable the conversion, resizing, enhancement, or transformation of images. Image processing is a crucial ability in contemporary data-driven applications since it is used extensively in fields like computer vision, robotics, machine learning, security, and medical imaging.  Both novices and experts can now process images more easily and effectively thanks to Python's ease of use and the abundance of open-source libraries.
 
-What is CUDA ?
+## What is CUDA ?
 
 [![CUDA Logo](https://upload.wikimedia.org/wikipedia/commons/b/b9/Nvidia_CUDA_Logo.jpg)](https://en.wikipedia.org/wiki/CUDA)
 
 CUDA is a tools in Python language.
 
-NVIDIA created the parallel computing platform and programming model known as CUDA (Compute Unified Device Architecture), which enables programmers to use NVIDIA GPUs (Graphics Processing Units) for general-purpose computing, or GPU computing.
-The main features of PyWavelets are:
+NVIDIA created the parallel computing platform and programming model known as CUDA (Compute Unified Device Architecture), which enables programmers to use the enormous processing power of NVIDIA GPUs (Graphics Processing Units) for general-purpose computing tasks other than graphics rendering.  CUDA significantly accelerates compute-intensive applications like medical imaging, scientific simulations, image and video processing, artificial intelligence, and financial modeling by allowing thousands of lightweight threads to operate concurrently.  GPUs optimized with CUDA can execute operations in massive parallel, which makes them perfect for tasks involving large datasets and real-time performance, in contrast to CPUs, which process tasks sequentially with a limited number of cores. With the aid of tools like Numba or PyCUDA, developers can create CUDA programs in C, C++, Fortran, or Python that use sophisticated memory control and customized GPU kernels to carry out high-performance calculations.  Consequently, CUDA has emerged as a key instrument for speeding up workloads related to next-generation computing, real-time analytics, and data-driven research.
 
-1D, 2D and nD Forward and Inverse Discrete Wavelet Transform (DWT and IDWT)
-1D, 2D and nD Multilevel DWT and IDWT
-1D and 2D Stationary Wavelet Transform (Undecimated Wavelet Transform)
-1D and 2D Wavelet Packet decomposition and reconstruction
-1D Continuous Wavelet Transform
-Computing Approximations of wavelet and scaling functions
-Over 100 built-in wavelet filters_ and support for custom wavelets
-Single and double precision calculations
-Real and complex calculations
-Results compatible with Matlab Wavelet Toolbox (TM)
-Library related to pywavelets ?
-While PyWavelets is powerful on its own, it's often used alongside:
+## The main features of CUDA are:
 
-NumPy – For numerical array manipulation (PyWavelets depends on it).
-scikit-image (skimage) – For loading, converting, and preparing image formats.
-Matplotlib – To visualize the original and processed images.
-OpenCV (optional) – For more advanced image manipulation and pre-processing.
-These libraries create a full workflow from image loading, transformation, to display and analysis.
+- Custom CUDA kernels for GPU-accelerated image processing, such as morphological operations, Gaussian blur, and Sobel edge detection.
 
-Module / Subpackage in PyWavelets
-PyWavelets offers the pywt module with key image processing tools such as:
+- High-performance image operations using parallel 1D, 2D, and multi-dimensional calculations
 
-pywt.dwt2() – 2D Discrete Wavelet Transform
-pywt.idwt2() – 2D Inverse Discrete Wavelet Transform
-pywt.wavedec2() – Multilevel 2D wavelet decomposition
-pywt.waverec2() – Multilevel 2D wavelet reconstruction
-pywt.threshold() – For wavelet-based denoising
-These functions are used for tasks like image compression, edge detection, and noise reduction through wavelet-based techniques.
+- Effective memory management with shared, constant, and global memory
+
+- Capacity to execute massive parallelization, which allows large image datasets to be processed more quickly
+
+- Both float32 and float64 precision are natively supported.
+
+- Real-time image transformation and filtering support
+
+- Through numba.cuda.to_device(), it functions flawlessly with GPU memory and NumPy arrays (on the host).
+
+## Library related to CUDA ?
+While CUDA Python (via Numba) is powerful on it's own, it is often used alongside:
+
+- NumPy – Array manipulation on the host side prior to and following GPU computation.
+- scikit-image – Preprocessing, grayscale conversion, and image loading.
+- Matplotlib – Display of both processed and original images
+- OpenCV (cv2) –  Sophisticated image pre/post processing, filtering, and input/output.
+
+From loading and prepping images to GPU-accelerated computation and visual output, these tools offer a comprehensive image processing workflow.
+
+## Module / Subpackage in CUDA
+
+- @cuda.jit – To compile a Python function as a CUDA GPU kernel, it must be decorated.
+- cuda.grid() / cuda.threadIdx – Used to determine thread-by-thread parallel execution positions.
+- cuda.to_device() – NumPy arrays are transferred to the GPU.
+- cuda.device_array() – Memory allocation on the GPU.
+- Custom GPU kernels	 – Used to apply filters (such as Gaussian, Dilation, Sobel, etc.)
+
+With the help of these tools, one can create custom GPU-based image processing logic that runs in parallel and offers notable performance benefits over CPU-only processing.
