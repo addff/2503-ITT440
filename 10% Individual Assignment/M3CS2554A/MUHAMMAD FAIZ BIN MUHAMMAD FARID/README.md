@@ -192,3 +192,10 @@ This example use NumPy for pixel manipulation and Matplotlib for displaying the 
     
     plt.tight_layout()
     plt.show()
+
+
+The outcome of the process from imageio
+---
+
+![image](https://github.com/user-attachments/assets/2543a067-1c6d-42d5-a8cc-519ec3bfe93c)
+
