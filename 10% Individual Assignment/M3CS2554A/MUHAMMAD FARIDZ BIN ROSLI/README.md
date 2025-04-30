@@ -58,7 +58,7 @@ With the help of these tools, one can create custom GPU-based image processing l
 
 ## Basic Image Processing Using CUDA 
 
-### Step 1 : Import Required Libraries 
+### 🧩 Step 1 : Import Required Libraries 
 
 ```python
 import numpy as np
@@ -67,18 +67,18 @@ from numba import cuda, float32
 from skimage import io, color
 import math
 ```
-### Step 2 : Load and Normalize The Image 
+### 🖼️ Step 2 : Load and Normalize The Image 
 
 ```
 img = color.rgb2gray(io.imread("C:\\Users\\User\\Downloads\\monochrome-gray-freeze-dust-powder-explosion-isolated-white-background_90220-1400.jpg")).astype(np.float32)
 img /= 255.0
 ```
-### Step 3 : Prepare Data for GPU 
+### 🧠 Step 3 : Prepare Data for GPU 
 
 ```
 d_img = cuda.to_device(img)
 ```
-### Step 4 : Create Empty Output Arrays
+### 🧺 Step 4 : Create Empty Output Arrays
 
 ```
 blurred_img = np.zeros_like(img)
@@ -89,7 +89,7 @@ d_blurred = cuda.to_device(blurred_img)
 d_sobel_x = cuda.to_device(sobel_x_img)
 d_dilated = cuda.to_device(dilated_img)
 ```
-### Step 5 : Define Grid and Block Size 
+### 🔢 Step 5 : Define Grid and Block Size 
 
 ```
 threadsperblock = (16, 16)
@@ -97,7 +97,7 @@ blockspergrid_x = math.ceil(img.shape[0] / threadsperblock[0])
 blockspergrid_y = math.ceil(img.shape[1] / threadsperblock[1])
 blockspergrid = (blockspergrid_x, blockspergrid_y)
 ```
-### Step 6 : Define GPU Kernels
+### 🧮 Step 6 : Define GPU Kernels
 A. Gaussian Blur Kernel 
 ```
 @cuda.jit
@@ -116,19 +116,19 @@ C. Grey Dilation Kernel
 def grey_dilation(img, output):
     ...
 ```
-### Step 7 : Run The GPU Kernels
+### 🚀 Step 7 : Run The GPU Kernels
 ```
 gaussian_blur[blockspergrid, threadsperblock](d_img, d_blurred)
 sobel_x_filter[blockspergrid, threadsperblock](d_img, d_sobel_x)
 grey_dilation[blockspergrid, threadsperblock](d_img, d_dilated)
 ```
-### Step 8 : Transfer Data Back to CPU 
+### 🔄 Step 8 : Transfer Data Back to CPU 
 ```
 blurred_img = d_blurred.copy_to_host()
 sobel_x_img = d_sobel_x.copy_to_host()
 dilated_img = d_dilated.copy_to_host()
 ```
-### Step 9 : Display The Result  
+### 🎨 Step 9 : Display The Result  
 ```
 plt.imshow(..., cmap='inferno')
 ```
