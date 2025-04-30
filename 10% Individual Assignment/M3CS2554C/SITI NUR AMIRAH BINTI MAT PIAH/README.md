@@ -141,7 +141,8 @@ The script processes a video which applies a YOLOv8 model frame by frame to dete
 ## Demostration
 **Video File**
 
-![bokshelfvid_mp4-0000](https://github.com/user-attachments/assets/16a373f7-bec4-42d7-ba25-4d58487dd476)
+https://www.youtube.com/watch?v=vvKUuFk_uWI
+
 
 
 **Video Demostartion**
