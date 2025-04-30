@@ -24,7 +24,7 @@ In the context of computer vision, image processing, or data visualisation, comp
 
 ![image](https://github.com/user-attachments/assets/2aa0aa5d-23b4-4203-b40d-6f4b0d829841)
 
-🛠️ **Why** imgaug?
+## 🛠️ **Why** imgaug?
 
 imgaug is a flexible and powerful image augmentation library that supports:
 
@@ -32,6 +32,24 @@ Geometric transformations (flip, rotate, scale)
 Color and brightness adjustments
 Noise addition and blurring
 Object-aware augmentation (bounding boxes, keypoints, segmentation masks)
+
+---
+## Installation and setup
+
+### 1.Standard Installation 
+This is the most common that people use to install imgaug
+
+'''bash
+pip install imgaug
+
+
+
+
+
+
+
+
+
 
 
 
