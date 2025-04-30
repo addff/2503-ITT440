@@ -15,7 +15,9 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 
 #### OBJECTIVES
 * To explore and apply advanced image processing techniques using the Pillow library.
+  
 * To manipulate images through resizing, filtering, rotating, blending, masking, and enhancement.
+  
 * To automate a series of image operations through Python programming.
 
 #### ADVANTAGES OF USING PILLOW
@@ -33,18 +35,18 @@ The Pillow (PIL) package for Python offers strong capabilities for quickly and e
 
 #### BASIC OPERATIONS IN PILLOW
 1. Open - *image = image.open(‘example.jpg’)*
-2. Resized - *resized_image = image.resize((300,300))*
-3. Rotated - *rotated_image = image.rotate(90)*
-4. Crop - *cropped_image = image.crop((100,100,300,300))*
-5. Flip - *flipped _image = image.transpose(image.FLIP_LEFT_RIGHT)*
-6. Grayscale - *gray_image = image.convert(‘L’)*
-7. Blur - *blurred_image = image.filter(imageFilter.BLUR)*
-8. Sharpen - *sharpened_image = image.filter(image.Filter.Sharpen)*
-9. Brightness - *enhancer = imageEnhance.Brightness(image)*
-10. Contrast - *enhancer = imageEnhance.Contrast(image)*
-11. Draw - *draw = imageDraw.Draw(image)*
-12. Blended two image - *blended_image = image.blend(image1, image2, alpha = 0.5)*
-13. Save - *image.save(‘example.jpg’)*
+2. Save - *image.save(‘example.jpg’)*
+3. Resized - *resized_image = image.resize((300,300))*
+4. Rotated - *rotated_image = image.rotate(90)*
+5. Crop - *cropped_image = image.crop((100,100,300,300))*
+6. Flip - *flipped _image = image.transpose(image.FLIP_LEFT_RIGHT)*
+7. Grayscale - *gray_image = image.convert(‘L’)*
+8. Blur - *blurred_image = image.filter(imageFilter.BLUR)*
+9. Sharpen - *sharpened_image = image.filter(image.Filter.Sharpen)*
+10. Brightness - *enhancer = imageEnhance.Brightness(image)*
+11. Contrast - *enhancer = imageEnhance.Contrast(image)*
+12. Draw - *draw = imageDraw.Draw(image)*
+13. Blended two image - *blended_image = image.blend(image1, image2, alpha = 0.5)*
 
 #### INSTALLATIONS
 Python Pillow does not come in-built with Python. To install it type the below command in the terminal.
@@ -58,3 +60,91 @@ pip3 install pillow
 ```
 
 #### CODE FOR IMAGE PROCESSING
+```python
+from PIL import Image
+
+# Open the image
+img = Image.open("input.jpg") 
+# Show the image
+img.show()
+
+# Open the image
+img = Image.open("input.jpg")
+# Save the image to a new file
+img.save("output.jpg")
+
+# Resize the image (width, height)
+resized_img = img.resize((300, 300))  # Resize to 300x300 pixels
+# Save the resized image
+resized_img.save("resized_output.jpg")
+
+# Rotate the image 90 degrees counter-clockwise
+rotated_img = img.rotate(90)
+# Save the rotated image
+rotated_img.save("rotated_output.jpg")
+
+# Crop the image (left, top, right, bottom)
+cropped_img = img.crop((50, 50, 300, 300))
+# Save the cropped image
+cropped_img.save("cropped_output.jpg")
+
+# Flip horizontally (mirror left ↔ right)
+horizontal_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
+horizontal_flip.save("flipped_horizontal.jpg")
+# Flip vertically (mirror top ↔ bottom)
+vertical_flip = img.transpose(Image.FLIP_TOP_BOTTOM)
+vertical_flip.save("flipped_vertical.jpg")
+
+# Convert to grayscale
+gray_img = img.convert("L")  # "L" stands for luminance (grayscale)
+# Save the grayscale image
+gray_img.save("grayscale_output.jpg")
+
+# Apply blur filter
+blurred_img = img.filter(ImageFilter.BLUR)
+# Save the blurred image
+blurred_img.save("blurred_output.jpg")
+
+# Apply sharpen filter
+sharpened_img = img.filter(ImageFilter.SHARPEN)
+# Save the sharpened image
+sharpened_img.save("sharpened_output.jpg")
+
+# Create brightness enhancer
+enhancer = ImageEnhance.Brightness(img)
+# Increase brightness (1.0 = original, >1 = brighter, <1 = darker)
+bright_img = enhancer.enhance(1.5)  # Try 0.5 for darker, 2.0 for more bright
+# Save the brightened image
+bright_img.save("brightness_output.jpg")
+
+# Create contrast enhancer
+enhancer = ImageEnhance.Contrast(img)
+# Increase contrast (1.0 = original, >1 = more contrast, <1 = less contrast)
+contrast_img = enhancer.enhance(1.8)  # Try 0.5 for low contrast, 2.0 for high contrast
+# Save the contrast-adjusted image
+contrast_img.save("contrast_output.jpg")
+
+# Create a drawing context
+draw = ImageDraw.Draw(img)
+# Draw a rectangle (left, top, right, bottom)
+draw.rectangle([50, 50, 250, 250], outline="red", width=5)
+# Draw a circle (bounding box coordinates)
+draw.ellipse([100, 100, 300, 300], outline="blue", width=5)
+# Draw text on the image
+font = ImageFont.load_default()  # Load a default font
+draw.text((100, 350), "Sample Text", fill="green", font=font)
+# Save the image with drawings
+img.save("drawn_output.jpg")
+
+# Open the two images
+img1 = Image.open("input1.jpg")
+img2 = Image.open("input2.jpg")
+# Resize both images to the same size (optional, if images are not the same size)
+img1 = img1.resize((400, 400))
+img2 = img2.resize((400, 400))
+# Blend the images (img1 and img2)
+blended_img = Image.blend(img1, img2, alpha=0.5)  # alpha controls the blend ratio
+# Save the blended image
+blended_img.save("blended_output.jpg")
+```
+
