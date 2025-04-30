@@ -171,5 +171,7 @@ plt.show()
 
 To watch image processing at terminal, click the link below: 
 
+https://youtu.be/Wl0MRtjX658?si=r0zZ18Nl-w-9Kmue
+
 ## **SUMMARY**
 OpenCV is an amazing tool that helps people work with images. It can do everything from basic changes to really complicated analysis. It is great for making cool visual effects and awesome pictures. OpenCV is not just about images. It can do a lot in different areas. In a nutshell, OpenCV is a free toolkit that helps developers and researchers make smart applications that can use machine learning and understand visual information quickly.
