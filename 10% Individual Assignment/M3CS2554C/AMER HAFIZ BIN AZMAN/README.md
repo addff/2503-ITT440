@@ -50,14 +50,22 @@ Here are some commonly used Mahotas functions:
 Here are the step to install Mahotas in your Laptop/PC
 
 - Go to Anaconda website (https://www.anaconda.com/download) and enter your email. The download link will be sent in your email
+          ![Image](https://github.com/user-attachments/assets/ef4904de-e888-4215-98e8-0f435ea372fc)
   
 - Click "Download Now". After finish download Anaconda, lunch it
+  ![Image](https://github.com/user-attachments/assets/0613a50e-f8c4-4489-b6bf-5fe62cf6abff)
   
 - Click "Lunch" at Jupyter Notebook. It will open a new tab on your browser
+  ![Image](https://github.com/user-attachments/assets/5734c263-ad08-4d33-ac81-e6b5b01abd60)
   
 - Click "New" and after that click "Python". It will open a new tab in your browser
+  ![Image](https://github.com/user-attachments/assets/3701b206-f576-4387-a4d2-911ae1d67e84)
+  
   
 - Write "!pip install mahotas" in the prompt box and your Mahotas is ready to use after the download finish.
+  ![Image](https://github.com/user-attachments/assets/55c3f5a5-5efc-4afa-b04e-01977dc7ab4b)
+
+---
 
 ---
 
@@ -93,7 +101,9 @@ plt.axis('off')
 
 plt.show()
 
+
 ---
+
 
 # Applications of Image Processing with Mahotas
 
