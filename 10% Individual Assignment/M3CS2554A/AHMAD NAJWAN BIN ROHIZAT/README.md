@@ -56,62 +56,52 @@ Composite images	Image.composite(other_image, Geometry(x, y), CompositeOperator)
 
 ENVIRONMENT AND CODING
 Integrated Development Environment (IDE)
-images
 
-When it comes to selecting an editor or IDE for image processing tasks using SciPy, the choice ultimately depends on personal preference, project size, and the features you need. In this article, we use Spyder, which is designed for scientific computing and comes with built-in support for SciPy, NumPy, scikit-image (skimage), and Matplotlib making it ideal for image processing. This means we don't need to install these libraries separately, as they are pre-installed.
 
-Python Code Example for Basic Image Processing with SciPy
-The following code demonstrates the use of some functions mentioned earlier which is gaussian filter, sobel, and grey dilation :
+The decision of which editor or IDE to use for pgmagick image processing jobs ultimately comes down to your needs, project size, and personal preferences.  In this tutorial, we use VS Code, which is fully compatible with Visual Studio Code(VS Code).In fact, VS Code is a great IDE for working with pgmagick and Python image processing projects.
 
-from skimage import io, img_as_ubyte
-from scipy import ndimage
-import numpy as np
-from matplotlib import pyplot as plt
 
-# Importing image
-img = img_as_ubyte(io.imread("Downloads/fruits.png", as_gray=True))
 
-# Applying Gaussian filter
-gaussian_filtered = ndimage.gaussian_filter(img, sigma=2)
+Python Code Example for Basic Image Processing with pgmagick
+The following code demonstrates the use of some functions mentioned earlier which is loading and saving an image, resizing, cropping, rotating, blurring, changing brightness or saturation, drawing text and shapes and compositing images :
 
-# Applying Sobel filter for edge detection
-sobel_x = ndimage.sobel(img, axis=0) # Vertical direction.
-sobel_y = ndimage.sobel(img, axis=1) # Horizontal direction.
-sobel_combined = np.hypot(sobel_x, sobel_y) # Combine
+from pgmagick import (
+    Image, Geometry, Color, DrawableText, DrawableFillColor,
+    DrawableStrokeColor, DrawableRectangle, ImageList
+)
 
-# Applying Grey Dilation
-dilated_img = ndimage.grey_dilation(img, size=(15, 15))
+# --- 1. Load the main image ---
+img = Image("input.jpg")  # Replace with your image file
 
-# Plotting the results
-plt.figure(figsize=(20, 6))
+# --- 2. Resize image ---
+img.resize(Geometry(400, 300))  # Resize to 400x300
 
-# Original picture
-plt.subplot(1, 6, 1)
-plt.title("Original")
-plt.imshow(img, cmap='gray')
+# --- 3. Crop the image (100x100 from top-left corner) ---
+img.crop(Geometry(100, 100, 0, 0))
 
-# Gaussian Filtered picture
-plt.subplot(1, 6, 2)
-plt.title("Gaussian Blurred")
-plt.imshow(gaussian_filtered, cmap='gray')
+# --- 4. Rotate the image 45 degrees ---
+img.rotate(45)
 
-# Sobel Fitered / Edge Detection picture
-plt.subplot(1, 6, 3)
-plt.title("Sobel Edge Detection X")
-plt.imshow(sobel_x, cmap='gray')
+# --- 5. Blur the image slightly ---
+img.blur(1.0)
 
-plt.subplot(1, 6, 4)
-plt.title("Sobel Edge Detection Y")
-plt.imshow(sobel_y, cmap='gray')
+# --- 6. Adjust brightness (120%), saturation (90%), hue (100%) ---
+img.modulate(120, 90, 100)
 
-plt.subplot(1, 6, 5)
-plt.title("Sobel Edge Detection Combined")
-plt.imshow(sobel_combined, cmap='gray')
+# --- 7. Draw text on image ---
+img.draw(DrawableFillColor(Color("white")))
+img.draw(DrawableStrokeColor(Color("black")))
+img.draw(DrawableText(10, 90, "Hello, pgmagick!"))
 
-# Grey Dilation picture
-plt.subplot(1, 6, 6)
-plt.title("Grey Dilation")
-plt.imshow(dilated_img, cmap='gray')
+# --- 8. Draw a red rectangle ---
+img.draw(DrawableStrokeColor(Color("red")))
+img.draw(DrawableFillColor(Color("transparent")))  # Only border
+img.draw(DrawableRectangle(10, 10, 80, 80))
 
-plt.tight_layout()
-plt.show()
+# --- 9. Composite with another image (overlay) ---
+overlay = Image("overlay.png")  # Must be same or smaller size
+img.composite(overlay, Geometry(10, 10))  # Place at top-left corner
+
+# --- 10. Save the final result ---
+img.write("output.jpg")
+
