@@ -59,3 +59,4 @@ This example demonstrates how to use the PyWavelets library to perform image dec
 from skimage import io, img_as_float
 import pywt
 import matplotlib.pyplot as plt
+
