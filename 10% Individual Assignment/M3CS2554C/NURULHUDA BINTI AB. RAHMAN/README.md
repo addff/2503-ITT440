@@ -1,6 +1,6 @@
 # NURULHUDA BINTI AB. RAHMAN
 
-## Real-Time Hand-Tracking Circle Game with MediaPipe, OpenCV, and Pygame
+## Real-Time Hand-Tracking Circle Game with MediaPipe, OpenCV
 
 ### What's the Big Idea?
 
