@@ -136,6 +136,16 @@ Overall, this project provided a foundational understanding of object detection 
 
 
 ---
+
+![Screenshot 2025-05-01 221619](https://github.com/user-attachments/assets/317bf9e9-8b3d-41fd-8651-b6b1e5d860c9)
+
+---
+
+![Screenshot 2025-05-01 221706](https://github.com/user-attachments/assets/b8a2e33b-c6c6-4bd6-974e-7fd0a314683b)
+
+---
+
+
 Link Video Demostration
 https://youtu.be/7MIs10aujcA?si=jZg9g8LuMQud91Ju
 
