@@ -135,4 +135,9 @@ This project helped me understand the following:
 Overall, this project provided a foundational understanding of object detection using Keras, emphasizing the process of building and training a model from scratch without relying on pre-trained models or extensive image enhancement techniques.​
 
 
+---
+Link Video Demostration
+https://youtu.be/7MIs10aujcA?si=jZg9g8LuMQud91Ju
+
+---
 
