@@ -260,3 +260,9 @@ while running:
 pygame.quit()
 sys.exit()
  </pre>
+
+The Output
+
+![Screenshot 2025-05-01 175914](https://github.com/user-attachments/assets/d65b7695-eeb9-43af-b9bc-5b98c49dbaf7)
+
+
