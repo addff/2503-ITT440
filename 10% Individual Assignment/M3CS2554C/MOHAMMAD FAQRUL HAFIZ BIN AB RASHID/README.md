@@ -36,7 +36,7 @@ conda install numpy pandas opencv
 - Manage environments visually.
 - Launch tools like JupyterLab, Spyder, and VS Code.
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/yFCqj77M/Logo.png" alt="Logo" border="0"></a>
+<a href="https://ibb.co/b5VX9DDy"><img src="https://i.ibb.co/b5VX9DDy/Logo.png" alt="Logo" border="0"></a>
 
 ### 4. Jupyter Notebook/Lab
 - Interactive coding with rich outputs (images, plots, LaTeX).
