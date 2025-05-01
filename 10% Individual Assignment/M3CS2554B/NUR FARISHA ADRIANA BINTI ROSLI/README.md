@@ -33,6 +33,73 @@ At a granular level, Kornia is a library that consists of the following componen
 - kornia.morphology : a module to perform morphological operations
 - kornia.utils : image to tensor utilities and metrics for vision problems
 
+# Example
+
+import torch
+import kornia
+import matplotlib.pyplot as plt
+import cv2
+
+Load and convert image to RGB
+image = cv2.imread('kornia1.jpg')  # Make sure the file exists
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+Convert to normalized tensor
+image_tensor = torch.tensor(image_rgb).float() / 255.0
+image_tensor = image_tensor.permute(2, 0, 1).unsqueeze(0)  # (1, 3, H, W)
+
+# Transformations
+rotated_image = kornia.geometry.transform.rotate(image_tensor, torch.tensor(90.0))
+blurred_image = kornia.filters.gaussian_blur2d(image_tensor, (25, 25), (10.0, 10.0))
+flipped_ud_image = kornia.geometry.transform.vflip(image_tensor)
+color_jitter = kornia.augmentation.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5)
+jittered_image = color_jitter(image_tensor)
+grayscale_image = kornia.color.rgb_to_grayscale(image_tensor)
+edges_image = kornia.filters.sobel(image_tensor)
+brightness_image = kornia.enhance.adjust_brightness(image_tensor, 1.5)
+contrast_image = kornia.enhance.adjust_contrast(image_tensor, 1.5)
+
+# Helper function to convert tensor to numpy image
+def to_numpy(tensor):
+    return tensor.squeeze(0).permute(1, 2, 0).cpu().numpy()
+
+# Convert all results to numpy
+original_np = image_rgb
+rotated_np = to_numpy(rotated_image)
+blurred_np = to_numpy(blurred_image)
+flipped_ud_np = to_numpy(flipped_ud_image)
+jittered_np = to_numpy(jittered_image)
+grayscale_np = grayscale_image.squeeze().cpu().numpy()
+edges_np = to_numpy(edges_image)
+brightness_np = to_numpy(brightness_image)
+contrast_np = to_numpy(contrast_image)
+
+# Display all images
+images = [
+    (original_np, "Original"),
+    (rotated_np, "Rotated 90°"),
+    (blurred_np, "Max Blur"),
+    (flipped_ud_np, "Flip Up-Down"),
+    (jittered_np, "Color Jitter"),
+    (grayscale_np, "Grayscale"),
+    (edges_np, "Edge Detection"),
+    (brightness_np, "Brighter"),
+    (contrast_np, "More Contrast"),
+]
+
+plt.figure(figsize=(16, 10))
+for i, (img, title) in enumerate(images):
+    plt.subplot(3, 3, i + 1)
+    if img.ndim == 2:
+        plt.imshow(img, cmap='gray')
+    else:
+        plt.imshow(img)
+    plt.title(title)
+    plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+
 
 
 
