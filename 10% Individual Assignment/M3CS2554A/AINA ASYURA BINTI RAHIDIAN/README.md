@@ -130,7 +130,7 @@ plt.show()
 
 # Video Tutorial
 Learn how to use the Albumentations with this video tutorial: 
-https://youtu.be/2YgV5oIVxuE?si=deiMlqhKjsLEral7
+[![Watch the video](https://img.youtube.com/vi/2YgV5oIVxuE/maxresdefault.jpg)](https://youtu.be/2YgV5oIVxuE)
 
 ### SAMPLE OUTPUT
 ![Image](https://github.com/user-attachments/assets/31a475b7-a85c-45b3-989d-ebd990aa61ba)
