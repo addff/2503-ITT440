@@ -72,7 +72,7 @@ gray_hash = imagehash.average_hash(gray_image)
 print("Grayscale Image Hash:", gray_hash)
 ```
 #### Rotated Image
-<img src="image3_gray.jpg" alt="image3_gray" width="250">
+<img src="myimage_rotated.jpg" alt="myimage_rotated" width="250">
 
 ```python
 from PIL import Image
@@ -92,7 +92,7 @@ print("Rotated Image Hash:", rotated_hash)
 ```
 
 #### Vertical Image
-<img src="image3_gray.jpg" alt="image3_gray" width="250">
+<img src="myimage_flipped_vertically.jpg" alt="myimage_flipped_vertically" width="250">
 
 ```python
 from PIL import Image
@@ -112,7 +112,7 @@ print("Flipped Vertically Hash:", flipped_hash_v)
 ```
 
 #### Horizontal Image
-<img src="image3_gray.jpg" alt="image3_gray" width="250">
+<img src="myimage_flipped_horizontally.jpg" alt="myimage_flipped_horizontally" width="250">
 
 ```python
 from PIL import Image
@@ -132,7 +132,7 @@ print("Flipped Horizontally Hash:", flipped_hash_h)
 ```
 
 #### Color Modified Image
-<img src="image3_gray.jpg" alt="image3_gray" width="250">
+<img src="myimage_color_modified.jpg" alt="myimage_color_modified" width="250">
 
 ```python
 from PIL import Image
