@@ -59,20 +59,18 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 3. Import Pygame and initialize 
 
-*'''*
+<pre>
 import pygame
-*'''*
+</pre>
 
 4. Create a display surface
-
-<pre> 
-screen = pygame.display.set_mode((640, 480))
+   
+<pre>screen = pygame.display.set_mode((640, 480))
 </pre>
 
 5. Load and display the image
 
-<pre> 
-img = pygame.image.load("your_image.jpg")
+<pre>img = pygame.image.load("your_image.jpg")
 screen.blit(img, (0, 0))
 pygame.display.update()
 </pre>
