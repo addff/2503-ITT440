@@ -14,13 +14,11 @@ This project demonstrates basic image processing operations using imageIO in Pyt
   ## What imageio can do?
 ✅ Read images from files or URLs into NumPy arrays
 
-✅ Write (save) images to various formats like JPG, PNG, GIF, BMP, TIFF
+✅ Write or save images to various formats like JPG, PNG, GIF, BMP, TIFF
 
-✅ Read and write animated images (e.g., animated GIFs as frames)
+✅ Read and write animated images for example animated GIF
 
-✅ Read and write videos (with plugins like ffmpeg)
-
-✅ Work with multi-page images (e.g., TIFF stacks)
+✅ Read and write videos
 
 ✅ Support a wide range of file formats
 
