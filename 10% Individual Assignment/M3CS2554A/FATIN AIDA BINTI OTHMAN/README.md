@@ -25,39 +25,57 @@ Feature of SCIKIT-IMAGES:
 
 
 EXAMPLE CODE 
-from skimage import io, color, filters
+'''from skimage import io, color, filters, feature, exposure
 import matplotlib.pyplot as plt
-import os
 
-# === Load the image ===
-image_path = 'C:/Users/USER/cat.png'
+# === Load image from file ===
+image_path = r"C:\Users\USER\cat.png"  # Use raw string to handle Windows paths
 image = io.imread(image_path)
 
+# === Fix: Remove alpha channel if present (RGBA → RGB) ===
+if image.shape[-1] == 4:
+    image = image[..., :3]
+
 # === Convert to grayscale ===
-gray = color.rgb2gray(image)
+gray_image = color.rgb2gray(image)
 
-# === Apply Otsu's threshold ===
-threshold = filters.threshold_otsu(gray)
-binary_mask = gray > threshold  # or gray < threshold depending on background
+# === Apply Gaussian blur to reduce noise ===
+blurred_image = filters.gaussian(gray_image, sigma=1)
 
-# === Display the results ===
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+# === Detect edges using Canny edge detection ===
+edges = feature.canny(blurred_image, sigma=1)
+
+# === Enhance contrast using histogram equalization ===
+equalized_image = exposure.equalize_hist(gray_image)
+
+# === Plot all images ===
+fig, axes = plt.subplots(2, 3, figsize=(15, 8))
 ax = axes.ravel()
 
 ax[0].imshow(image)
 ax[0].set_title("Original Image")
 
-ax[1].imshow(gray, cmap='gray')
+ax[1].imshow(gray_image, cmap='gray')
 ax[1].set_title("Grayscale")
 
-ax[2].imshow(binary_mask, cmap='gray')
-ax[2].set_title("Segmented (Otsu Threshold)")
+ax[2].imshow(blurred_image, cmap='gray')
+ax[2].set_title("Gaussian Blur")
 
+ax[3].imshow(edges, cmap='gray')
+ax[3].set_title("Canny Edges")
+
+ax[4].imshow(equalized_image, cmap='gray')
+ax[4].set_title("Histogram Equalization")
+
+# Leave the last subplot blank
+ax[5].axis('off')
+
+# Remove axes ticks
 for a in ax:
     a.axis('off')
 
 plt.tight_layout()
-plt.show()
+plt.show()'''
 
 
 
