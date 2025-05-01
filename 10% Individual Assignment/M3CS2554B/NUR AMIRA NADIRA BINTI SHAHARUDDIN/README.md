@@ -9,7 +9,7 @@ This project demonstrates basic image processing operations using imageIO in Pyt
 
 ## Technologies Used
 - Python 3.10.11
-- imageIO Library
+- imageio Library
 
   ## What imageio can do?
 ✅ Read images from files or URLs into NumPy arrays
