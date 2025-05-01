@@ -5,8 +5,8 @@
 
 **Objective**
 
-To write an article about Image Processing using SCIKIT-IMAGE tools
-To demonstrate the coding and functions used in SCIKIT-IMAGE related to the topic.
+- To write an article about Image Processing using SCIKIT-IMAGE tools.
+- To demonstrate the coding and functions used in SCIKIT-IMAGE related to the topic.
 
 **Introduction to Image Processing**
 
