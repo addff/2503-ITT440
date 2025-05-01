@@ -48,3 +48,11 @@ In this project, Kornia was used to apply various basic image transformations. T
 
 All transformations were implemented using Kornia’s functions, demonstrating its capability for simple yet powerful image manipulation.
 
+
+
+<img width="739" alt="image" src="https://github.com/user-attachments/assets/767e3c49-06d0-472e-b327-8d45ebb52961" />
+
+<img width="547" alt="image" src="https://github.com/user-attachments/assets/29c66e14-2e37-41a0-ac31-3fe8ea29893e" />
+
+
+
