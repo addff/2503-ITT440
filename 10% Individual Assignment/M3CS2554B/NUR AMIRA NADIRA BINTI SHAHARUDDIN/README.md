@@ -119,7 +119,7 @@ else:
 ### Sample Output
 
 ```read new_image.jpg```
-![new_image](https://github.com/user-attachments/assets/cd5329e7-fecc-4bee-9b20-b08671758e7c)
+![new_image](https://github.com/user-attachments/assets/cd5329e7-fecc-4bee-9b20-b08671758e7c) 
 
 ```grayscale_picture.jpg```
 ![grayscale_picture](https://github.com/user-attachments/assets/96b9fbf0-4ba8-46af-b9e5-b79f6c80e440)
