@@ -68,3 +68,5 @@ NumPy is at the core of image processing in Python, but it works better when com
 * np.clip(a, 0, 255)   //limit values for brightness changes
 * np.mean(image, axis=2)   //convert colour to grayscale by averaging RGB channels
 
+** Coding python using NumPy example**
+---
