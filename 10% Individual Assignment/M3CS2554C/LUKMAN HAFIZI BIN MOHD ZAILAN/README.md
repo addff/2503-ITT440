@@ -1,6 +1,10 @@
 # LUKMAN HAFIZI BIN MOHD ZAILAN
 
 # SimpleCV
+
+![image](https://github.com/user-attachments/assets/a2b1a218-5b7b-4e86-aeee-238bea65e7fe)
+
+
 SimpleCV is an open-source Python framework designed to simplify Computer Vision (CV) tasks. Built on top of libraries like OpenCV, PIL, and NumPy, it provides a user-friendly interface for beginners and rapid prototyping.
 
 - **Goal**: Make computer vision accessible to non-experts by abstracting complex code.
@@ -109,3 +113,11 @@ if faces:
 else:
     print("No faces detected.")
 ```
+
+# Example
+
+![image](https://github.com/user-attachments/assets/e06196c0-8db5-4d0e-8b10-9745152f1d7a)
+![image](https://github.com/user-attachments/assets/9d1d4a56-8680-4a43-8678-69fecac00a3c)
+![image](https://github.com/user-attachments/assets/4a24f04e-5194-4cc0-aae4-1840785f6365)
+
+
