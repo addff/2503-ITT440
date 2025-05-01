@@ -128,9 +128,9 @@ import sys
 pygame.init()
 
 # Load image
-image_path = r'C:\NASUHA\keta merah.jpg'  # Ganti dengan path gambar sebenar
+image_path = r'C:\NASUHA\keta merah.jpg'  
 original_image = pygame.image.load(image_path)
-original_image = pygame.transform.scale(original_image, (800, 600))  # Resize kalau perlu
+original_image = pygame.transform.scale(original_image, (800, 600))  
 
 # Set window
 screen = pygame.display.set_mode((800, 600))
@@ -211,7 +211,7 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 
 # Load moving object image
-image_path = r'C:\NASUHA\keta merah.jpg'  # Gantikan dengan path sebenar
+image_path = r'C:\NASUHA\keta merah.jpg'  
 object_img = pygame.image.load(image_path)
 object_img = pygame.transform.scale(object_img, (100, 100))  # Resize jika perlu
 
@@ -346,7 +346,7 @@ while running:
 
     # Detect face and calculate jump
     if len(faces) > 0:
-        (x, y, w, h) = faces[0]  # ambil muka pertama
+        (x, y, w, h) = faces[0]  
         face_center_y = y + h//2
         current_time = time.time()
         if face_y_prev is not None and face_y_prev - face_center_y > 8:
