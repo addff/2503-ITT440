@@ -138,6 +138,11 @@ Target: 4, Context: 7, Label: 0   # Negative sample
 
 ---
 
+### ▶️ Video Example
+
+See the example of using keras :  
+[**Watch on YouTube**](https://youtu.be/1c0uIjbLAnU?feature=shared)
+
 ---
 
 ## Conclusion

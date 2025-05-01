@@ -1,8 +1,12 @@
 # NUR IEMAN AYRA BINTI ABDUL AZIZ
 # ITT440-CDCS2554B
 
-# Smart Image Processing with ImageAI in Python
+# Learn Image Processing with ImageAI in Python : ImageAI Analysis
 
+
+![gambar imageai](https://github.com/user-attachments/assets/3e7fcb8b-444d-443c-bf19-7738b97b19cd)
+
+     
 
 # Introduction
 For this project, I chose to use ImageAI, a powerful Python library designed to simplify the development of applications with deep learning and computer vision capabilities. ImageAI makes it easy for developers, researchers, and students to perform complex tasks such as object detection, image prediction, and custom model training with just a few lines of code. Image processing, a crucial aspect of computer vision, involves enhancing, analyzing, and transforming images to extract valuable information, and ImageAI provides an accessible way to implement these techniques efficiently.
