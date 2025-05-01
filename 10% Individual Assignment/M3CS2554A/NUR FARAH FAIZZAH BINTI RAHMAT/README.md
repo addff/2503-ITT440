@@ -1,7 +1,7 @@
 ## 2503 - ITT440
 ## NAME : NUR FARAH FAIZZAH BINTI RAHMAT
 ## STUDENT ID : 2023213584 
-## TITTLE : CVG & IMAGE PROCESSING USING PYTHON
+## TITTLE : CVG & IMAGE PROCESSING USING IMAGEHASH IN PYTHON
 ### OBJECTIVES : 
 * To acquire proficiency in utilizing Python libraries, particularly imagehash, for the analysis and processing of digital images
 * To implement hashing techniques for the purpose of evaluating visual similarities and differences between digital image
