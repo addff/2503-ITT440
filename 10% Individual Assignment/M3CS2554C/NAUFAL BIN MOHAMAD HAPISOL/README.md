@@ -82,49 +82,82 @@ d. Converting Image Formats
    ```
 ---
 
-# 5. Example: Image Processing with ImageIO & NumPy
-Let’s apply a grayscale conversion and edge detection (using Sobel filter) on an image.
+# 5. Example: Converting Video (MP4) to (GIF)
 
 Step 1: Install Required Libraries
    ``` python
-   pip install numpy scikit-image matplotlib
+!pip install imageio[pyav] --quiet
+from google.colab import files
+uploaded = files.upload()  # Upload your MP4
    ```
 Step 2: Code Implementation
    ``` python
-   import imageio.v3 as iio
-import numpy as np
-from skimage import filters
-import matplotlib.pyplot as plt
+# 2. MAIN CONVERSION CODE
+import imageio.v3 as iio
+from IPython.display import display, Image
+import os
 
-# Read image
-image = iio.imread("photo.jpg")
+# 3. USER SETTINGS (edit these)
+input_video = "IMG_5738.mp4"  # ← Your MP4 file
+output_gif = "output.gif"
+duration_seconds = 4  # Max clip length
+output_fps = 10       # GIF frames per second
+quality = 8           # 1-10 (higher=better quality)
 
-# Convert to grayscale
-gray_image = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
-
-# Apply Sobel edge detection
-edges = filters.sobel(gray_image)
-
-# Display results
-plt.figure(figsize=(10, 5))
-plt.subplot(1, 2, 1)
-plt.title("Original")
-plt.imshow(image)
-
-plt.subplot(1, 2, 2)
-plt.title("Edge Detection")
-plt.imshow(edges, cmap="gray")
-
-plt.show()
+# 4. SMART FRAME PROCESSING
+try:
+    # Verify file exists
+    if not os.path.exists(input_video):
+        raise FileNotFoundError(f"❌ File '{input_video}' not found. Please upload it!")
+    
+    print("⏳ Processing your MP4...")
+    
+    # Calculate optimal frame count
+    total_frames = duration_seconds * output_fps
+    
+    # Read and select frames efficiently
+    frames = []
+    for i, frame in enumerate(iio.imiter(input_video, plugin="pyav")):
+        if i >= total_frames * 2:  # Process 2x needed frames for selection
+            break
+        if i % 2 == 0:  # Skip every other frame for smoother playback
+            frames.append(frame)
+            if len(frames) >= total_frames:
+                break
+    
+    # Create optimized GIF
+    iio.imwrite(
+        output_gif,
+        frames[:total_frames],  # Ensure exact frame count
+        duration=1000/output_fps,
+        loop=0,
+        quality=quality
+    )
+    
+    # Show results
+    print(f"🎉 Success! Created {output_gif}")
+    print(f"📊 Stats: {len(frames)} frames | {os.path.getsize(output_gif)/1024:.1f} KB")
+    display(Image(filename=output_gif))
+    
+except Exception as e:
+    print(f"🔥 Error: {str(e)}")
+    print("\n💡 TROUBLESHOOTING:")
+    print("1. Confirm filename is EXACT (including .mp4)")
+    print("2. Try shorter duration_seconds")
+    print("3. Click 'Restart Kernel' if memory errors occur")
    ```
 Output:
-- *The left side shows the original image.*
-- *The right side shows the edge-detected version.*
+- the video (MP4) turn to (GIF)
   
+Converting videos to GIFs using Python and ImageIO is a powerful yet straightforward process, ideal for automating animations, creating social media content, or enhancing presentations.  
+
+Click the link below for tutorial that i have made:
+
+https://youtu.be/SG7ew9Jek-Q?si=VMl-cG48qUZnCM-O
+
 ---
 
 # 6. Conclusion
 - *ImageIO is a powerful yet simple library for reading, writing, and converting images in Python.*
-- *It works seamlessly with NumPy, SciPy, and scikit-image for advanced processing.*
 - *Useful for medical imaging, video processing, and batch image operations.*
 
