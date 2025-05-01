@@ -16,6 +16,7 @@ The growth of Computer vision and graphics has led to substantial impact on the 
 
 **You Only Look Once (YOLO)** is an algorithm that is capable of **detecting real-time objects**. This is accomplished by technology called convolutional neural networks (CNN) that can predict various bounding boxes and class probabilities directly from the complete image in one evaluation. The YOLO model can process images in real-time at 45 frames per second which make it incredibly fast and efficient. It is used across multiple industry fields such as the medical sector for x-rays, MRIs or scans. YOLO’s ability to detect objects in real time is ideal for autonomous vehicles, allowing them to recognize and react to objects like other vehicles or traffic signals. Its strong capabilities made it gain popularity and led to rapid growth over the years. 
 
+
 ### 🚀 ADVANTAGES OF YOLO IN COMPUTER VISION
 - **Speed**  
       YOLO is **extremely fast** since it does not deal with complex pipelines and deal with single-pass architecture. This means it can process images at high frame rate - within
@@ -30,18 +31,19 @@ The growth of Computer vision and graphics has led to substantial impact on the 
 - **Open-Source**  
   YOLO is an **open-source project**, allowing developers to freely use, alter and improve it. This results in constant community improvement and advancement. 
 
+
 ### 🛠️ MODULES USED   
 - _ultralytics.YOLO_ : main class
 - _ultralytics.models_ : internal models
 - _ultralytics.cfg_ : configs for training, validation and testing
 - _ultralytics.utils_ : helper functions for logging, plotting and file handling
 
-### 🔨 METHODS APPLIED  
-- _Yolo(“yolo8vn.pt”)_ // load the model
-- _model(image.jpg)_ // perform prediction on images or videos
-- _model.predict()_ // runs object detection and return results
-- _results.show()_ // display the detection result in a window
-- _results.save()_//: save images’ result with bounding boxes drawn
+### ⚙️ METHODS APPLIED  
+- _Yolo(“yolo8vn.pt”)_  // load the model
+- _model(image.jpg)_  // perform prediction on images or videos
+- _model.predict()_  // runs object detection and return results
+- _results.show()_  // display the detection result in a window
+- _results.save()_  // save images’ result with bounding boxes drawn
 
 ### 🖥️ INTEGRATED DEVELOPMENT ENVIROMENT (IDE) USED FOR YOLO  
 <img src="https://github.com/user-attachments/assets/e88bd664-d8fd-4e95-82e9-3f07acd65561" alt="image" width = "450"/>
@@ -109,4 +111,10 @@ Visual Studio Code, often known as VS Code, is one of IDE that provides an excel
   cv2.destroyAllWindows()
   ```
   
- ### 🎬 YOLOV8 OBJECT DETECTION DEMONSTRATION VIDEO
+ ### 🎬 YOLOV8 OBJECT DETECTION DEMONSTRATION VIDEO  
+ In this video, I provide a quick demonstartion showing YOLO's effectivness and accuracy by performing for real-time object detection on both images and videos.  
+
+<img src="https://github.com/user-attachments/assets/5bf350a4-31f2-4f02-b285-51339a17f673" alts="ss" width="300"/>
+
+👉🏻 [ Demonstration Video ](url)
+ 
