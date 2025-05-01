@@ -194,9 +194,9 @@ if hamming_distance == 0:
 else:
     print("The images are different.")
 ```
-Image hashing is a method that generates a compact digital signature based on an image’s visual content. Perceptual hashing, such as that provided by the imagehash library, allows for the comparison of images by detecting visual similarities rather than exact binary matches. When an image is modified—through color adjustments, rotation, or filtering—the resulting hash usually changes.
+Image hashing is a method that generates a compact digital signature based on an image’s visual content. Perceptual hashing, such as that provided by the imagehash library, allows for the comparison of images by detecting visual similarities rather than exact binary matches. When an image is modified through color adjustments, rotation or filtering, the resulting hash usually changes.
 
-By comparing the hashes of the original and altered images, one can measure their similarity using techniques like Hamming distance. A smaller distance indicates higher similarity. This approach is widely used in areas such as digital forensics, duplicate detection, and content verification due to its efficiency and sensitivity to changes.
+By comparing the hashes of the original and altered images, one can measure their similarity using techniques like Hamming distance. A smaller distance indicates higher similarity. This approach is widely used in areas such as digital forensics, duplicate detection and content verification due to its efficiency and sensitivity to changes.
 
 
 
