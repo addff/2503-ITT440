@@ -75,8 +75,8 @@ To use **PyImageJ**, you need:
 - Python (recommended: version 3.8 or 3.9)
 - Java (OpenJDK 8 is ideal)
 - A package manager: either **conda** (recommended) or **pip**
-- 
- ### ✅ Method 1: Install with Conda (Recommended)
+- Or you can use Google Colab through browser
+ ### Method 1: Install with Conda (Recommended)
 
 This is the easiest and most reliable method.
 ### 🪟 Step-by-Step Guide for Windows
@@ -87,14 +87,14 @@ This is the easiest and most reliable method.
 <p align="center">
   <img src="https://github.com/Wafiy2003/IMAGE/blob/6f5c4dbc8e27ed56db5f6adf5e99f564d4778601/Screenshot%202025-05-01%20154418.png" alt="image alt">
 </p>
-3. Download the **Miniconda Installer for Windows**:  
+2. Download the **Miniconda Installer for Windows**:  
    Choose the **64-bit version** for Python **3.9 or newer**.
 
-4. Run the downloaded `.exe` installer.
+3. Run the downloaded `.exe` installer.
 
-5. Click **Next**, agree to the terms, and choose **"Install Just for Me"**.
+4. Click **Next**, agree to the terms, and choose **"Install Just for Me"**.
 
-6. ⚙When asked, check the box that says:  
+5. ⚙When asked, check the box that says:  
    **"Add Miniconda to my PATH environment variable"** (optional but helpful).
 
  ## Sample Code: PyImageJ in Action
@@ -111,7 +111,7 @@ This example shows how to:
 # Installation and setup
 ---
 
-### 1. Install PyImageJ
+### 1.Install PyImageJ
 
 ```python
 # Install Java and PyImageJ
@@ -122,7 +122,7 @@ This example shows how to:
 print("✅ Installation complete!")
 
 ```
-### Upload Your Image
+### 2.Upload Your Image
 ```python
 from google.colab import files
 import matplotlib.pyplot as plt
@@ -178,7 +178,7 @@ plt.axis('off')
 plt.show()
 
 ```
-### 3.Save the result
+### 4.Save the result
 ```python
 from skimage.io import imsave
 
@@ -204,7 +204,7 @@ Seamlessly combine Python’s machine learning tools (like TensorFlow or scikit-
 
 ---
 
-## 🚀 Strengths and Specialization
+## Strengths and Specialization
 
 - ✔ **Plugin Ecosystem**  
   Directly leverage 500+ ImageJ plugins (e.g., *Fiji*, *TrackMate*, *Bio-Formats*) within Python workflows.
@@ -220,7 +220,7 @@ Seamlessly combine Python’s machine learning tools (like TensorFlow or scikit-
 
 ---
 
-## ⚠️ Challenges
+## Challenges
 
 - **Java Dependency**  
   Requires OpenJDK, which can complicate deployment in certain environments.
@@ -233,7 +233,7 @@ Seamlessly combine Python’s machine learning tools (like TensorFlow or scikit-
 
 ---
 
-## 🧪 Ideal Use Cases
+## Ideal Use Cases
 
 - 🔬 **Bioimage Analysis**  
   Perform automated cell segmentation, colocalization studies, or FRET analysis.
