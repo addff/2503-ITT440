@@ -46,36 +46,49 @@ Mahotas contains many modules such as:
 import mahotas
 import numpy as np
 import matplotlib.pyplot as plt
-from mahotas.thresholding import otsu
-from mahotas import sobel
+import os
 
-# Load a sample image (grayscale)
-image = mahotas.demos.load('nuclear')  # or load your own with mahotas.imread()
+image_files = ['bmw.jpg', 'greyscale image.jpg', 'olivia.jpeg']  
 
-# Apply Otsu thresholding
-T_otsu = otsu(image)
-binary = image > T_otsu
+for img_name in image_files:
+    
+    img = mahotas.imread(img_name)
+    
+    if img.ndim == 3:
+        img = img.mean(axis=2).astype(np.uint8)
 
-# Apply Sobel filter for edge detection
-edges = sobel(image)
+    gaussian_filtered = mahotas.gaussian_filter(img, 2)
+    T_otsu = mahotas.thresholding.otsu(gaussian_filtered.astype(np.uint8))
+    thresholded = gaussian_filtered > T_otsu
+    edges = mahotas.sobel(gaussian_filtered)
 
-# Display results
-fig, ax = plt.subplots(1, 3, figsize=(15, 5))
+    plt.figure(figsize=(12, 8))
 
-ax[0].imshow(image, cmap='gray')
-ax[0].set_title('Original Image')
-ax[0].axis('off')
+    plt.subplot(2, 2, 1)
+    plt.imshow(img, cmap='gray')
+    plt.title(f"{img_name} - Original")
+    plt.axis('off')
 
-ax[1].imshow(binary, cmap='gray')
-ax[1].set_title(f'Otsu Thresholding (T={T_otsu})')
-ax[1].axis('off')
+    plt.subplot(2, 2, 2)
+    plt.imshow(gaussian_filtered, cmap='gray')
+    plt.title("Gaussian Filtered")
+    plt.axis('off')
 
-ax[2].imshow(edges, cmap='gray')
-ax[2].set_title('Sobel Edge Detection')
-ax[2].axis('off')
+    plt.subplot(2, 2, 3)
+    plt.imshow(thresholded, cmap='gray')
+    plt.title("Otsu Thresholding")
+    plt.axis('off')
 
-plt.tight_layout()
-plt.show()
+    plt.subplot(2, 2, 4)
+    plt.imshow(edges, cmap='gray')
+    plt.title("Sobel Edge Detection")
+    plt.axis('off')
+
+    plt.tight_layout()
+
+    output_file = f"{os.path.splitext(img_name)[0]}_mahotas_output.png"
+    plt.savefig(output_file)
+    plt.show()
 
 ```
 ### [Watch My Mahotas Image Processing Demo]
