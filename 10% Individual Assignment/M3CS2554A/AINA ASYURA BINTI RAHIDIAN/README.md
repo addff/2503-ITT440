@@ -116,3 +116,6 @@ plt.show()
 # Video Tutorial
 Learn how to use the Albumentations with this video tutorial: 
 https://youtu.be/f77FgLynZRs?si=xj7PvfZwvHheYNXd
+
+### SAMPLE OUTPUT
+![Image](https://github.com/user-attachments/assets/31a475b7-a85c-45b3-989d-ebd990aa61ba)
