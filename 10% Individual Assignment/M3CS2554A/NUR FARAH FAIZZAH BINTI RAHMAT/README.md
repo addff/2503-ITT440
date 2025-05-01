@@ -10,6 +10,15 @@
 Image processing refers to the techniques of converting an image into its digital representation and applying various operations tp extract meaningful information from it. Typically, an image processing system interprets iamges as two-dimensional signals and utilizes predefined signal processing methods to analyze and manipulate the image data
 ### IMAGEHASH
 Image hashing is the computational process of applying an algorithm to genarate unique hash value that represents the content of an image. Identical copies of the image produce the same hash value, thereby enabling consistent identification. Consequently, image hashing is often referred to as a "digital fingerprint" due to its ability to uniquely characterized visual data.
+### TYPE OF IMAGE HASHING ALGORITHMS
+* Average Hash (aHash)
+  Reduces an image to grayscale and computers a binary hash based on whether each pixel's intensity is above or below the mean
+* Perceptual Hash (pHash)
+  Uses the Discrete Cosine Transform (DCT) to analyze the image in the frequency domain, focusing on low-frequency components to capture overall structure.
+* Difference Hash (dHash)
+  Calculates the gradient of pixel insities by comparing adjacent pixels horizontally or vertically.
+* Wavelet Hash (wHash)
+  Applies a wavelet transform to extract low-frequency coefficients that represent perceptual features.
 ### ADVANTAGES OF USING IMAGEHASH
 * The imagehash library enables rapid and computationally efficient image comparison by transforming images into compact hash representations, thus eliminating the need for exhaustive pixel-level analysis.
 * Image hashing techniques employed within imagehash exhibit resilience to subtle changes such as resizing, cropping, compression or minor color adjustments, thereby ensuring reliable similarity detection under various image transfromations.
