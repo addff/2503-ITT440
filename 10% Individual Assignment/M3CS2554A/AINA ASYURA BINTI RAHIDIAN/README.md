@@ -15,10 +15,10 @@ Image processing involves the manipulation and enhancement of digital images thr
 
 
 
-##### What is Albumenatations ?
+## What is Albumenatations ?
 Albumentations is a fast and flexible Python library used for image augmentation. It's specifically designed to perform various image transformation operations, making it a popular choice for data preprocessing in machine learning and computer vision projects. Albumentations provides a wide range of augmentations, from basic transformations like rotation and flipping to more advanced ones like elastic deformations and random brightness adjustments.
 
-### Core Features of Albumentations
+## Core Features of Albumentations
  1) Gaussian blur
  2) Median blur
  3) Image sharpening
@@ -34,7 +34,7 @@ Albumentations is a fast and flexible Python library used for image augmentation
 - -Bounding box and mask support: Ideal for object detection and segmentation tasks.
 - -Flexible format support: Works with images, masks, keypoints, bounding boxes, and more.
 
-##### Albumenatations Advantages :
+## Albumenatations Advantages :
 Here are some advantages of the Albumenatations framework:
 
 1) High Performance: Albumentations is optimized for speed and efficiency, making it suitable for large-scale image processing tasks.
@@ -50,7 +50,7 @@ Albumentations is a fast and flexible image processing library designed primaril
 ### Integrated Development Environment (IDE)
 Albumentations can be used in various popular IDEs such as Jupyter Notebook, VS Code, and PyCharm. These platforms allow for seamless integration with image visualization tools like Matplotlib or OpenCV, making it easy to view and test augmentations in real time.
 
-### Basic Image Processing Functions
+## Basic Image Processing Functions
  1) A.GaussianBlur(blur_limit=(3, 3), p=1.0) – Smooths the image.
  2) A.MedianBlur(blur_limit=3, p=1.0) – Reduces noise.
  3) A.Sharpen(p=1.0) – Enhances edges and detail.
