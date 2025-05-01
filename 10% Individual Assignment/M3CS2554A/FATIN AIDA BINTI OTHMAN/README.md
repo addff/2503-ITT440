@@ -17,16 +17,18 @@ Scikit-image (also known as skimage) is one of the open-source image-processing 
 
 Feature of SCIKIT-IMAGES:
 
-1. Open-source and free:  Available at no cost and without usage restrictions.
-2. Supports many image formats: Can read and write JPEG, PNG, TIFF, and more.
-3. Uses NumPy arrays: Images are stored as NumPy `ndarray`, so you can use NumPy functions to manipulate them.
-4. Provides many image processing tools: Functions for filtering, segmentation, feature extraction and morphological operations
-5. Easy to use: Beginner-friendly and consistent API.
+1. **Open-source and free**:  Available at no cost and without usage restrictions.
+2. **Supports many image formats**: Can read and write JPEG, PNG, TIFF, and more.
+3. **Uses NumPy arrays**: Images are stored as NumPy `ndarray`, so you can use NumPy functions to manipulate them.
+4. **Provides many image processing tools**: Functions for filtering, segmentation, feature extraction and morphological operations
+5. **Easy to use**: Beginner-friendly and consistent API.
 
 
 EXAMPLE CODE 
+
+```
 from skimage import io, color, filters, feature, exposure
-```import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # === Load image from file ===
 image_path = r"C:\Users\USER\cat.png"  # Use raw string to handle Windows paths
@@ -75,8 +77,5 @@ for a in ax:
     a.axis('off')
 
 plt.tight_layout()
-plt.show()```
-
-
-
-
+plt.show()
+```
