@@ -1,6 +1,6 @@
 ## NAME: AINUR AISYAH BINTI ZULKORNAIN
 ## STUDENT ID: 2023226126
-## TITLE: Image Processing Using MATLAB Image Processing ToolBox
+## TITLE: Image Processing Using MATLAB Image Processing
 
 ### Objective 
 - To write an article about Image Processing using MATLAB tools.
@@ -41,8 +41,6 @@ The Image Processing Toolbox in MATLAB provides a set of tools and functions to 
 ### Basic Image Processing Functions in MATLAB
 
 Below are commonly used image processing functions in MATLAB along with their purposes:
-Gaussian Blur
-imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 1. Median Blur
    medfilt2(image): Removes salt-and-pepper noise from the image.
@@ -55,6 +53,9 @@ imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 4. Histogram Equalization
    histeq(image):  Improves the overall contrast by spreading out intensity values.
+
+5. Gaussian Blur
+imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 ###### Code:
 ```py
