@@ -17,9 +17,10 @@ Scikit-image (also known as skimage) is one of the open-source image-processing 
 
 Feature of SCIKIT-IMAGES:
 
-1. Open-source package in Python. This means that it is available free of charge and free of restriction.
-2. Easy to read and write images of various formats. The library offers multiple plugins and methods to read and write images of various formats, such as JPEG, PNG, TIFF, and more.
-3. Images in scikit-image are represented by NumPy ndarrays (multidimentional containers). Hence, many common operations can be achieved using standard NumPy methods for manipulating arrays.
-4. It provides a vast collection of image Processing Algorithms such as filtering, segmentation, feature extraction, morphology, and more.
-5. User-friendly API that simplifies the process of performing image processing tasks.
+1. Open-source and free:  Available at no cost and without usage restrictions.
+2. Supports many image formats: Can read and write JPEG, PNG, TIFF, and more.
+3. Uses NumPy arrays: Images are stored as NumPy `ndarray`, so you can use NumPy functions to manipulate them.
+4. Provides many image processing tools: Functions for filtering, segmentation, feature extraction and morphological operations
+5. Easy to use: Beginner-friendly and consistent API.
+
 
