@@ -24,3 +24,40 @@ Feature of SCIKIT-IMAGES:
 5. Easy to use: Beginner-friendly and consistent API.
 
 
+EXAMPLE CODE 
+
+from skimage import io, color, filters
+import matplotlib.pyplot as plt
+import os
+
+# === Load the image ===
+image_path = 'C:/Users/USER/cat.png'
+image = io.imread(image_path)
+
+# === Convert to grayscale ===
+gray = color.rgb2gray(image)
+
+# === Apply Otsu's threshold ===
+threshold = filters.threshold_otsu(gray)
+binary_mask = gray > threshold  # or gray < threshold depending on background
+
+# === Display the results ===
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+ax = axes.ravel()
+
+ax[0].imshow(image)
+ax[0].set_title("Original Image")
+
+ax[1].imshow(gray, cmap='gray')
+ax[1].set_title("Grayscale")
+
+ax[2].imshow(binary_mask, cmap='gray')
+ax[2].set_title("Segmented (Otsu Threshold)")
+
+for a in ax:
+    a.axis('off')
+
+plt.tight_layout()
+plt.show()
+
+
