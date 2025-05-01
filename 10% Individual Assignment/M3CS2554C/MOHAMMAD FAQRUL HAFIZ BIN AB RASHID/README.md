@@ -5,7 +5,8 @@
 # Anaconda: The Ultimate Data Science Platform
 
 ## Definition
-**Anaconda** is a free, open-source distribution of Python and R, optimized for **data science, machine learning (ML), and scientific computing**. It simplifies package management, environment isolation, and large-scale data processing.
+
+### **Anaconda** is a free, open-source distribution of Python and R programming languages, designed for **data science, machine learning (ML), and scientific computing**. It simplifies package management, dependency resolution, and environment setup, making it ideal for **large-scale data           processing, AI, and image analysis**.
 
 ---
 
@@ -36,7 +37,7 @@ conda install numpy pandas opencv
 - Manage environments visually.
 - Launch tools like JupyterLab, Spyder, and VS Code.
 
-![Anaconda Navigator]([https://docs.anaconda.com/_images/nav-home.png](https://thedatafrog.com/static/blog/images/2019/01/Anaconda_Logo.png))
+<a href="https://ibb.co/b5VX9DDy"><img src="https://i.ibb.co/b5VX9DDy/Logo.png" alt="Logo" border="0"></a>
 
 ### 4. Jupyter Notebook/Lab
 - Interactive coding with rich outputs (images, plots, LaTeX).
@@ -231,8 +232,11 @@ _**Combining with NumPy and SciPy**_ : While SymPy is primarily focused on symbo
 
      Overall, SymPy is widely used in scientific and engineering applications where symbolic mathematics is required. It is particularly valuable in fields like mathematics, physics, engineering, and computer science for tasks that involve complex algebraic manipulations and symbolic reasoning.
 
-## DEMONSTRATION OF INSTALATION ANACONDA, FRAMEWORK STREAMLIT, AND LIBRARY SYMPY
-[![Watch the Video](https://drive.google.com/drive/folders/1cqFfxB-gTn-tA4FoCX4CglA6ed_5HvX8?usp=sharing)]
+# DEMONSTRATION OF INSTALATION ANACONDA, FRAMEWORK STREAMLIT, AND LIBRARY SYMPY
+### Watch the DEMONSTRATION
+
+# <a href="https://youtu.be/B247YYfOgmo">link</a>
+
 
 <p align='center'>
        -THANK YOU-

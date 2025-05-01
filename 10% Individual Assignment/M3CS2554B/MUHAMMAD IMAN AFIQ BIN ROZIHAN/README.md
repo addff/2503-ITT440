@@ -4,7 +4,7 @@ Student ID : 2023436724
 
 Group : CDCS2554B
 
-# Image Processing using Mahatos
+# Image Processing using Mahotas
 
 
 
@@ -21,6 +21,43 @@ It’s best for processing grayscale images, analyzing textures, and applying mo
 Python + NumPy: Easy to use with Python's scientific stack.
 
 C++ Backend: Fast processing, ideal for large datasets or real-time applications.
+
+
+
+
+
+
+
+
+
+### ⚙️ Key Features of Mahotas
+
+1. Speed:
+
+Written in C++, with Python bindings — making it much faster than pure Python libraries.
+
+2. Numpy Integration:
+
+Works seamlessly with NumPy arrays, so it fits well in the scientific Python ecosystem.
+
+3.0 Rich Functionality:
+
+Morphological operations: dilation, erosion, opening, closing, etc.
+
+Filtering: Gaussian filtering, Sobel edges, thresholding.
+
+Connected components and labeling.
+
+Feature extraction: Haralick textures, Zernike moments, SURF (Speeded-Up Robust Features).
+
+4.0 No GUI dependencies:
+
+Unlike OpenCV, Mahotas doesn’t include I/O or GUI functions. It focuses purely on image processing.
+
+
+
+
+
 
 
 
