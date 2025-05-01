@@ -173,7 +173,7 @@ pygame.quit()
 sys.exit()
 </pre>
 
-The output
+The output :
 
 original    
 
@@ -261,7 +261,7 @@ pygame.quit()
 sys.exit()
  </pre>
 
-The Output
+The Output :
 
 <img src="https://github.com/user-attachments/assets/d65b7695-eeb9-43af-b9bc-5b98c49dbaf7" width="400"/>  
 
@@ -403,7 +403,7 @@ pygame.quit()
 sys.exit()
 </pre>
 
-The Output
+The Output :
 
 <img src="https://github.com/user-attachments/assets/630774dc-d914-4080-b5a3-7c981d020fee" width="400"/>
 
