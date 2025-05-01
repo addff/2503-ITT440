@@ -162,3 +162,4 @@ rotated.write_to_file(r'C:\images\output_rotated.png')
 # ▶️ Video Tutorial
 🎥Learn how to use the pyvips with this video tutorial: 👉 [LETS PROCESSING A CAT](https://youtu.be/xTWOyH7wleQ)
 
+### SAMPLE OUTPUT
