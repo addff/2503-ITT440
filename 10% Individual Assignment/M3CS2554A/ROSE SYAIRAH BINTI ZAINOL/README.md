@@ -69,7 +69,7 @@ Visual Studio Code, often known as VS Code, is one of IDE that provides an excel
 
 ```
 - **Object Detection: Video**
-  ```python
+ ```python
   from ultralytics import YOLO
   import cv2
 
