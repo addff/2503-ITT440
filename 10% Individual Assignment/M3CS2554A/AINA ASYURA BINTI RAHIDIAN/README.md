@@ -113,5 +113,6 @@ plt.title("Augmented Image")
 plt.axis('off')
 plt.show()
 ```
-
+# Video Tutorial
+Learn how to use the Albumentations with this video tutorial: 
 https://youtu.be/f77FgLynZRs?si=xj7PvfZwvHheYNXd
