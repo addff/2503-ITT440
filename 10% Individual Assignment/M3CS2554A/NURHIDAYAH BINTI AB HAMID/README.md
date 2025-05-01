@@ -105,3 +105,14 @@ brighter = np.clip(image_np + 50, 0, 255).astype(np.uint8)
 bright_img = Image.fromarray(brighter)
 bright_img.save("brighter_image.png")
 
+```
+**Sample output**
+---
+![brighter_image](https://github.com/user-attachments/assets/9175f75f-b989-48be-96c4-e9e85af36319) 
+![grayscale_output](https://github.com/user-attachments/assets/22c5541d-900c-4467-a737-8c74b4a6f7ef) 
+![cropped_image](https://github.com/user-attachments/assets/e06ce34b-a196-4f54-8235-e29655b3079f)
+![flipped_image](https://github.com/user-attachments/assets/e1ed8265-3a42-4473-90ee-1984ab116cc6)
+
+Youtube link :
+
+https://youtu.be/UAIPT4ihvS0?si=wCzLX49uCeUt13VW
