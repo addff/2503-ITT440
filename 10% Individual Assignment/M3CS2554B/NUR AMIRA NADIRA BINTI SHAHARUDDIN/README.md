@@ -16,7 +16,7 @@ pip install imageIO
 
 # Read an Image
 
-### Import the imageio library
+```### Import the imageio library
 import imageio.v2 as imageio  # Use v2 to avoid deprecation warnings
 
 ### Define the path to the input image
@@ -33,12 +33,12 @@ imageio.imwrite(output_path, img)  # Write the image to the new file
 
 ### Print confirmation message
 print(f"Image successfully read from '{image_path}' and saved as '{output_path}'")
-
+```
 *Explanation:* This code read picture.jpg in other file saves it as new_image.jpg in diffython
 
 # Resized an Image
 
-python
+``` python
 from PIL import Image
 import imageio.v2 as imageio
 
@@ -57,11 +57,12 @@ resized_image.show()
 
 ### Print new dimensions
 print(f"New dimensions: {resized_image.size[0]}x{resized_image.size[1]}")
+```
 
 *Explanation:* This code are use to resized by using picture.jpg and save as resized_image.jpg.
 
 # Grayscale an Image
-import imageio.v2 as imageio
+```import imageio.v2 as imageio
 from PIL import Image
 
 ### Read the image in RGB (default behavior of imageio)
@@ -83,11 +84,12 @@ pil_image.show()
 
 ### Print original dimensions
 print(f"Original dimensions: {pil_image.size[0]}x{pil_image.size[1]}")
+```
 
 *Explanation:* This code are use to grayscale image by using picture.jpg. A grayscale image is an image that contains only shades of gray and have no color. Each pixel in the image represents intensity ranging from black (0) to white (255) in 8-bit images.
 
 # Download an image using link 
-import requests
+```import requests
 import imageio.v2 as imageio
 from io import BytesIO
 
@@ -111,6 +113,8 @@ if response.status_code == 200:
     print("Image successfully downloaded and saved as 'downloaded_image.jpg'")
 else:
     print("Failed to download image. Status code:", response.status_code)
+```
+*Explanation:* This code are use to download an image from URL and downloaded it into folder. Access an image from the internet using its URL
 
 
 
