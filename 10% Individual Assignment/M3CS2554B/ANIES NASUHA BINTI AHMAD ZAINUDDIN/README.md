@@ -10,7 +10,7 @@ I made a decision to choose pygame because it is one of the popular tools that c
 
 Pygame is an open-source library that is based on SDL (Simple Direct Media Layer), It also supports 2D graphics, sounds, and event handling, making it ideal for visual and interactive applications. Eventhough Pygame is commonly utilized for developing games and multimedia applications. Nonetheless, it also highly useful for Computer Vision Graphics (CVG) projects involving real-time visuals and graphical data presentation.
 
-♥️ Why use Pygame for CVG ?
+# ♥️ Why use Pygame for CVG ?
 
 ✔️ Overlay graphics or text on video/image 
 
@@ -22,13 +22,14 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 ✔️ Can be used to simulate image-based animations, visual tracking output, or frame-based displays.
 
-Programming languange
+# Programming languange
 
 ⚫ Pygame is written in python
 
 ⚫ Works weel with python 3.7 - 3.13
 
-Pygame installation
+# Pygame installation
+
 
 
 
