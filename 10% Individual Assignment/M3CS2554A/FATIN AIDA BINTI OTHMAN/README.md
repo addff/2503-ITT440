@@ -79,3 +79,7 @@ for a in ax:
 plt.tight_layout()
 plt.show()
 ```
+
+THE OUTPUT
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/348f1480-b9d5-48ab-b995-2f6f87686e88" />
