@@ -147,7 +147,15 @@ This script loads an image and applies a variety of computer vision transformati
 
 Simple Demonstration Using Kornia for Image Processing on Youtube
 
-[Let's Learn How to Use Kornia](https://youtu.be/x6MLgoBsRVY?si=-qhGe9CQCuU68C9W)
+[Let's Learn How to Use Kornia](https://youtu.be/x6MLgoBsRVY?si=-qhGe9CQCuU68C9W): A Guide to Image Processing with PyTorch. In this video, we will learn how to use Kornia for basic image filters and transformations. We'll start by loading an image, turning it into a tensor, and then using Kornia for tasks like blurring, flip up-down, and rotation. This demo will show you how Kornia works with PyTorch and makes your computer vision projects faster. Let's dive in and see Kornia at work!
+
+#### CONCLUSION
+
+In conclusion, we investigated how Kornia facilitates image processing through PyTorch. We went through the entire process—from setting up the necessary tools and loading images to executing various transformations such as rotation, blurring, flipping, and edge detection. Kornia allows these operations to be performed directly on tensors, making it an excellent choice for deep learning and improving performance with GPUs. We showcased how powerful Kornia can be in just a few lines of code, appealing to both beginners and experienced professionals in computer vision. By using Kornia in your projects, you can make your preprocessing tasks easier, try out exciting visual effects, and build smarter vision applications more effectively. Keep pushing the boundaries and innovating—let Kornia boost your image processing capabilities!
+
+#### REFERENCES
+
+
 
 
 
