@@ -114,6 +114,8 @@ bright_img.save("brighter_image.png")
 ![flipped_image](https://github.com/user-attachments/assets/e1ed8265-3a42-4473-90ee-1984ab116cc6)
 
 **Demonstration image processing using NumPy in Python**
-Youtube link :
+---
 
-https://youtu.be/UAIPT4ihvS0?si=wCzLX49uCeUt13VW
+[![Watch the video](https://img.youtube.com/vi/UAIPT4ihvS0/maxresdefault.jpg)](https://youtu.be/UAIPT4ihvS0)
+
+### [Watch this video on YouTube](https://youtu.be/UAIPT4ihvS0)
