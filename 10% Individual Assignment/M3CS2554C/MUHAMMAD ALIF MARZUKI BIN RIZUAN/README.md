@@ -247,4 +247,4 @@ Pillow is widely used in web applications, data analysis (for image data), compu
 
 # Video Explaination
 
-
+https://youtu.be/eeFXvTSC6ok
