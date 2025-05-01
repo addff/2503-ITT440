@@ -136,4 +136,5 @@ Save the processed image as PNG
 rotated.write_to_file(r'C:\images\output_rotated.png')
 
 
-
+# ▶️ Video Tutorial
+Learn how to use the pyvips with this video tutorial: 
