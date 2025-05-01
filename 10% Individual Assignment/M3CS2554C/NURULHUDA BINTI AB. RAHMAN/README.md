@@ -1,54 +1,85 @@
-# NURULHUDA BINTI AB. RAHMAN
+## NURULHUDA BINTI AB. RAHMAN
+## STUDENT ID : 2023365581
+## CLASS : M3CS2554C
 
-## Real-Time Hand-Tracking Circle Game with MediaPipe, OpenCV, and Pygame
 
-### What's the Big Idea?
+<ins>**Identifying Colors with OpenCV and Pandas**</ins>
 
-For a long time, we've used controllers like joysticks and buttons to play video games. But what if you could just use your hands? New technology lets computers see your hands moving in real-time, opening up exciting possibilities for how we interact with games.   
+#### Introduction to OpenCV and Pandas
 
-This article looks at how this hand-tracking technology works and why it's a big deal for making games more fun and easier to use. We'll also see a simple example of a game controlled by hand movements.
+OpenCV (Open Source Computer Vision Library) is a powerful library used for image processing and computer vision tasks. It provides tools for manipulating images and videos, detecting objects, applying filters, and even performing machine learning-based image analysis. OpenCV is widely used in applications such as facial recognition, augmented reality, and automated image classification.
 
-### How Does This Work?
+Pandas is a data manipulation and analysis library designed for handling structured data efficiently. It provides tools for loading, filtering, and transforming datasets using intuitive data structures like DataFrames. In these scripts, Pandas is used to read a CSV file containing color names and RGB values, allowing easy comparison and matching of colors.
 
-Making computers "see" and understand hand movements is based on two main things:
+In this project, I use computer vision and image processing to identify the color at a specific pixel location from an image or a webcam feed. It employs the OpenCV library for real-time image capture and processing, alongside pandas for handling color data. The color detection system uses a CSV file containing RGB values and corresponding color names to map a selected color to its closest known name. By combining OpenCV for image processing and Pandas for data handling, these scripts efficiently identify and display color names from images and webcam feeds.
 
-Computer Vision: This is like giving computers "eyes." Scientists have made big progress in teaching computers to recognize objects and track their movements in real-time. Libraries like MediaPipe are a result of this work. MediaPipe can find the different parts of your hand (like your fingertips) very accurately and quickly.
+### Objective
+- To develop an interactive system that detects and displays the name of a color based on a pixel selected in an image or video feed.
+- To enable users to analyze colors from images or live webcam footage for educational, design, or development purposes.
 
-Human-Computer Interaction (HCI): This is about how people interact with computers. Researchers have found that when we can use natural movements, like moving our hands, it feels more intuitive and less like we're using a complicated machine. This is called a Natural User Interface (NUI). It can make games more engaging and make you feel more like you're actually in the game.   
-A Simple Example: Moving a Circle with Your Finger
+### Tools
 
-### The article talks about a simple computer program made with Python, MediaPipe, and Pygame.
+| Tool/Library | Description |
+|--------------|-------------|
+| **OpenCV (cv2)** | Handles image loading, video streaming, pixel manipulation, and GUI windows. |
+| **Pandas** | Reads the CSV file containing RGB values and color names, enabling efficient lookup. |
+| **NumPy** | (Implicitly used via OpenCV) Handles array and image data internally. |
+| **Tkinter** | Provides a GUI file dialog to select images from the filesystem. |
+| **colors.csv** | A CSV file storing color names and their corresponding RGB values. |
 
-MediaPipe watches your hand using a camera. It figures out where your fingertips are.   
-Pygame is a tool for making simple computer games. In this example, it draws a circle on the screen.   
-The program then connects your index finger's tip to the circle. So, when you move your index finger, the circle on the screen moves too!   
-This simple example shows how you can directly control something in a game just by moving your hand.
 
-### Why is This So Cool?
+### How it Works
+Part 1: Image Color Detection
+   - Opens a file dialog to select one or more image files (.jpg, .png).
+   - Resizes and displays each image in a window.
+   - On left mouse click, it retrieves the RGB color of the clicked pixel.
+   - It compares this RGB with all rows in colors.csv and finds the closest match.
+   - Displays a colored rectangle with the name and RGB value of the detected color.
+   - Press ESC to move to the next image.
 
-Using your hands to play games can make things better in a few ways:
+   <img src="https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d" width="600" height="500" />
 
-- More Real Feeling: When you move your hand and see something happen on the screen directly, it can feel more like you're actually interacting with the game world. This makes the game more immersive.
-- New Ways to Play: Hand tracking allows for entirely new kinds of games that wouldn't be possible with traditional controllers. Imagine casting spells with gestures or manipulating objects with your bare hands!
-- Easier for Everyone: For people who have trouble using regular controllers, hand tracking could offer a more accessible way to play games. Simple hand movements might be easier than pressing small buttons.
 
-### What are the Challenges?
+Part 2: Webcam Color Detection
+   - Captures video from the webcam in real-time.
+   - Tracks the mouse movement across the window.
+   - Continuously reads the pixel color under the cursor.
+   - Matches it to the closest name from colors.csv.
+   - Draws a colored rectangle and overlays the detected color name with RGB values.
+   - Press ESC to exit.
 
-Even though hand tracking is getting good, there are still some challenges:
+      <img src ="https://github.com/user-attachments/assets/a720466e-4911-41cb-b5eb-62604c98e3c3" width="600" height="500" />)
 
-- Seeing Hands Clearly: Sometimes the computer can't see your hands properly if they are blocked (occluded), if the lighting is bad, or if the background is too messy. Scientists are working on making the tracking more reliable in these situations.
-- Feeling Things: When you touch something in a game with a controller, you might feel a vibration. With hand tracking, you don't get that physical feedback. Researchers are exploring ways to add the sense of touch to controller-free interactions.
-- Making it Work Everywhere: Right now, hand tracking can need a lot of computer power. Scientists are trying to make it efficient enough to work on phones and other smaller devices.
-- Making it Easy for Game Makers: There aren't many standard rules or tools yet for game developers who want to use hand tracking. Researchers are working on creating these standards to make it easier to build hand-controlled games.
 
-### What's Next?
+### Conclusion
+This project demonstrates a practical application of computer vision, allowing users to easily identify and label colors from any visual source. It combines image processing with user interaction to deliver a simple but effective color detection system. Such a tool can be useful in design, digital art, education, and accessibility.
 
-In the future, hand tracking could lead to even more amazing ways to play games. 
-Imagine:
-- Using complex hand movements to do special actions in games.
-- Playing with other people by seeing their virtual hands in the same game world.
-- Making games more comfortable and natural to play for long periods.
+### Demo
+Click this link for Demo session : https://youtu.be/WKey80JH_d8
 
-### In Conclusion:
+To run this program:
+1. Ensure colors.csv is correctly formatted and present in the same directory.
+<img src="https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd" width="200" height="500" />
 
-Using our hands to play games is a big step forward in making digital entertainment more natural and engaging. Thanks to advances in computer vision and research into how we interact with computers, this technology has a lot of potential to change how we play and make games more accessible to everyone. While there are still challenges to overcome, the future of hand-controlled games looks very exciting!
+3. Install necessary dependencies using:
+   **pip install opencv-python pandas numpy**
+
+4. Run the script and select an image or use the webcam.
+
+**Image color detection**
+
+![image](https://github.com/user-attachments/assets/52816e99-be09-49ee-9c10-b6217d737696)
+
+#### Webcam Color Detection
+![image](https://github.com/user-attachments/assets/fe24c555-3adb-4dd0-868f-260f5deb0014)
+
+5. Click on pixels in the image or move the cursor in the webcam feed to see color detection in action.
+
+
+
+
+
+
+
+
+
