@@ -155,6 +155,7 @@ In conclusion, we investigated how Kornia facilitates image processing through P
 
 #### REFERENCES
 
+- GeeksforGeeks. (2024, July 23). Image Processing Techniques, Types, & Applications. GeeksforGeeks; GeeksforGeeks. https://www.geeksforgeeks.org/image-processing-techniques-types-applications/
 - Kornia. (2025). Readthedocs.io. https://kornia.readthedocs.io/en/stable/
 - kornia. (2025, January 11). PyPI. https://pypi.org/project/kornia/
 - Kornia.AI - Open Source Computer Vision. (2018). Github.io. https://kornia.github.io/
