@@ -9,6 +9,8 @@ Pandas is a data manipulation and analysis library designed for handling structu
 
 By combining OpenCV for image processing and Pandas for data handling, these scripts efficiently identify and display color names from images and webcam feeds.
 
+### Objective
+
 
 
 
