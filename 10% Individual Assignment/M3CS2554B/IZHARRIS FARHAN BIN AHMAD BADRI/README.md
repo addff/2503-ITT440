@@ -36,27 +36,38 @@ Image processing: Commonly used for image denoising and compression.
 ### 🛠️ Step-by-Step: Image Processing Using PyWavelets
 
 ### Basic Workflow Image Processing with Denoising with Daubechies Wavelet
+```
 import pywt
 from skimage import data, color, util
 import matplotlib.pyplot as plt
+```
 
 ### Load and noise image
+```
 image = color.rgb2gray(data.astronaut())
 noisy = util.random_noise(image, mode='gaussian')
+```
 
 ### Wavelet decomposition
+```
 wavelet = 'db2'
 coeffs = pywt.wavedec2(noisy, wavelet, level=2)
+```
 
 ### Thresholding
+```
 threshold = 0.08
 coeffs_thresh = [(pywt.threshold(c, threshold, mode='soft') if isinstance(c, np.ndarray) else 
                   tuple(pywt.threshold(i, threshold, mode='soft') for i in c)) for c in coeffs]
+```
 
 ### Reconstruction
+```
 denoised = pywt.waverec2(coeffs_thresh, wavelet)
+```
 
 ### Display
+```
 plt.subplot(1, 2, 1)
 plt.imshow(noisy, cmap='gray')
 plt.title("Noisy")
@@ -68,6 +79,7 @@ plt.title("Denoised")
 plt.axis('off')
 plt.tight_layout()
 plt.show()
+```
 
 
 ## 📚 References
