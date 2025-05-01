@@ -267,7 +267,7 @@ The Output
 
 <img src="https://github.com/user-attachments/assets/6e9ee49d-1baa-4d2c-9655-9fca991c888b" width="400"/>  
 
-# 3. FACE JUMPER GAME
+# 3. INTERACTIVE FACE CONTROLLED GAME
 
 - The Face Jumper project is an interactive CVG application where the player's facial position, captured in real-time through a webcam, is used to control a character inside a game built with Pygame.
 
@@ -408,3 +408,10 @@ The Output
 <img src="https://github.com/user-attachments/assets/630774dc-d914-4080-b5a3-7c981d020fee" width="400"/>
 
 <img src="https://github.com/user-attachments/assets/63add0c9-b5ce-49d9-ae13-f210761227e7" width="400"/>
+
+## Conclusion
+
+Throughout the development of various mini projects under Computer Vision Graphics (CVG) using Pygame, several key concepts have been successfully explored and demonstrated. These projects, including object tracking, motion detection, image interaction, and an interactive face-controlled game simulation (Face Jumper), shows how visual data and graphics can be integrated to create engaging and intelligent user interfaces. 
+By using Pygame, a lightweight and beginner-friendly graphics library in Python, each project was developed with a focus on visual interaction, real-time feedback, and frame-based control. These implementations highlight how graphical simulation can effectively represent the core principles of computer vision.
+
+In conclusion, I admit there are a lot of valuable learning experience in understanding the graphical side of computer vision. It proves that with the right approach, even basic tools can deliver meaningful visual outputs and interactive elements that are central to the field of CVG.
