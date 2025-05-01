@@ -125,10 +125,8 @@ flipped image
 
 **Demonstration image processing using NumPy in Python**
 ---
+[![Watch the video](https://img.youtube.com/vi/7l8oZ6czTP0/maxresdefault.jpg)](https://youtu.be/7l8oZ6czTP0)
 
-[![Watch the video](https://img.youtube.com/vi/UAIPT4ihvS0/maxresdefault.jpg)](https://youtu.be/UAIPT4ihvS0)
-
-### [Watch this video on YouTube](https://youtu.be/UAIPT4ihvS0)
+### [Watch this video on YouTube](https://youtu.be/7l8oZ6czTP0)
 
 
-### [Watch this video on YouTube](https://youtu.be/UAIPT4ihvS0)
