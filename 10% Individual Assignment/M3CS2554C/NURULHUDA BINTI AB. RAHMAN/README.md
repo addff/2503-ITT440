@@ -10,12 +10,36 @@ Pandas is a data manipulation and analysis library designed for handling structu
 By combining OpenCV for image processing and Pandas for data handling, these scripts efficiently identify and display color names from images and webcam feeds.
 
 ### Objective
-The primary objective of both scripts is to allow users to interactively identify colors in images or live video streams. The image processing script lets users select images, click on pixels to determine their RGB values, and match them with the closest color name from a CSV file, displaying this information in a colored rectangle. The webcam color detection script captures live video, tracks the mouse cursor’s position, continuously detects RGB values of the pixel under the cursor, and displays the matching color name in real time. Both scripts provide an intuitive way to recognize colors through interactive image and video processing.
+The primary objective of both scripts is to allow a user to interactively identify the name of a color present in an image or a live video stream.
+
+For the image processing script, the objectives are:
+
+To enable the user to select one or more image files.
+To allow the user to click on any pixel within the image.
+To determine the RGB values of the clicked pixel.
+To find the closest matching color name from the colors.csv file based on these RGB values.
+To display a colored rectangle along with the identified color name and the RGB values on the image.
+
+For the webcam color detection script, the objectives are:
+
+To capture live video from the user's webcam.
+To display the webcam feed in a window.
+To track the mouse cursor's position within the video frame.
+To continuously determine the RGB values of the pixel under the mouse cursor.
+To find the closest matching color name from the colors.csv file based on these RGB values.
+To display a colored rectangle along with the identified color name and the RGB values on the webcam feed.
+To provide a real-time color identification experience.
 
 ### How it Works
 1) Loading Color Data by using the Pandas library to load color information from a CSV file named colors.csv. This file is expected to have columns like "color_name", "R", "G", and "B" containing the names of colors and their respective Red, Green, and Blue integer values.
 
    ![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
+2)The **get_color_name(R, G, B)** function finds the closest matching color by comparing the input RGB values with those in the **colors.csv** file. It calculates a simplified Manhattan distance and returns the color with the smallest difference.
+
+   ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d)
+  ![image](https://github.com/user-attachments/assets/54f4e34e-67bb-4f95-beca-010a021a5661)
+
+
 
 
 
