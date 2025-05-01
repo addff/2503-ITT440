@@ -11,5 +11,6 @@ Introduction to Image Processing
 
 Image processing involves enhancing and analyzing digital images through algorithmic and mathematical techniques. The scikit-image library in Python offers a wide range of tools for image preprocessing, analysis, and visualization. It is widely used in practical applications such as industrial inspection, surveillance, and medical imaging, reflecting its growing relevance in fields like computer vision and machine learning.
 
+SCIKIT-IMAGES 
 
 
