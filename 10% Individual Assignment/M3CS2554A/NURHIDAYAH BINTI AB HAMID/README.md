@@ -78,6 +78,7 @@ image = Image.open("image.png")
 
 image_np = np.array(image)
 
+//convert to grayscale
 if len(image_np.shape) == 3:
     grayscale = np.mean(image_np,axis=2).astype(np.uint8)
 else:
@@ -89,15 +90,18 @@ grayscale_img.save("grayscale_output.png")
 
 print("Grayscale PNG saved successfully.")
 
+//crop from (x=50, y=50) to (x=200, y=200)
 cropped = image_np[50:200, 50:200]
 cropped_img = Image.fromarray(cropped)
 cropped_img.save("cropped_image.png")
 
+//flip image
 flipped = np.fliplr(image_np)
 flipped_img = Image.fromarray(flipped)
 flipped_img.save("flipped_image.png")
 
+// increase brightness by 50 (max 255)
 brighter = np.clip(image_np + 50, 0, 255).astype(np.uint8)
-
 bright_img = Image.fromarray(brighter)
 bright_img.save("brighter_image.png")
+
