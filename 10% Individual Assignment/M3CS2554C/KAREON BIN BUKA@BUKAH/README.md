@@ -104,7 +104,7 @@ plt.imsave('binary_image.jpg', binary, cmap='gray')
 
 ## Video Demonstration
 
-
+https://youtu.be/bQzVHc9H9Kk
 
 ---
 

@@ -53,7 +53,7 @@ import numpy as np
 ```
 Step 3: Load the images
 ```
-image = cv2.imread('image1.jpg')
+image = cv2.imread('C:/Users/User/Documents/itt440ipcv/image1.jpg')
 ```
 Step 4: Check if images are loaded successfully
 ```
@@ -99,17 +99,17 @@ cv2.destroyAllWindows()
 ```
 Step 8: Save as files
 ```
-cv2.imwrite('gray_image.jpg', gray_image)
-cv2.imwrite('inverted_image.jpg', inverted_image)
-cv2.imwrite('brightness_image.jpg', brightness_image)
-cv2.imwrite('edges_image.jpg', edges_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/gray_image.jpg', gray_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/inverted_image.jpg', inverted_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/brightness_image.jpg', brightness_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/edges_image.jpg', edges_image)
 ```
 ## ▶ Final Code
 ```
 import cv2
 import numpy as np
 
-image = cv2.imread('image1.jpg')
+image = cv2.imread('C:/Users/User/Documents/itt440ipcv/image1.jpg')
 
 if image is None:
     print("Error: Image not loaded properly. ")
@@ -145,10 +145,10 @@ cv2.imshow('Edges Image', edges_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-cv2.imwrite('gray_image.jpg', gray_image)
-cv2.imwrite('inverted_image.jpg', inverted_image)
-cv2.imwrite('brightness_image.jpg', brightness_image)
-cv2.imwrite('edges_image.jpg', edges_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/gray_image.jpg', gray_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/inverted_image.jpg', inverted_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/brightness_image.jpg', brightness_image)
+cv2.imwrite('C:/Users/User/Documents/itt440ipcv/edges_image.jpg', edges_image)
 ```
 ## 🔎 Output Preview
 Original Image:  
@@ -166,7 +166,12 @@ Brightness Filter:
 Edges Filter:  
 <img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
 
-## 🎥 Video Demonstration
+## 🎥 Demonstration Video
+
+
+https://github.com/user-attachments/assets/da88233d-dbbb-4514-b10c-f4a749679bad
+
+[🎥 Watch the demonstration video on YouTube](https://youtu.be/P1yTltTYauE)
 ## 📍 Conclusion
 In this assignment, I learned:
 - How to apply basic image processing filters using OpenCV such as grayscale, invert, edge detection and brightness adjustment.
