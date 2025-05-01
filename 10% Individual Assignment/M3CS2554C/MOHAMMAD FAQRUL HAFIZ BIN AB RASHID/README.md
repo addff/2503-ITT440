@@ -236,7 +236,7 @@ _**Combining with NumPy and SciPy**_ : While SymPy is primarily focused on symbo
 
 ### [link]([demostartion](https://youtu.be/B247YYfOgmo))
 
-# <a href="[https://youtu.be/37TbKwJ8qKU](https://youtu.be/B247YYfOgmo)">link</a>
+# <a href="[https://youtu.be/B247YYfOgmo](https://youtu.be/B247YYfOgmo)">link</a>
 
 <p align='center'>
        -THANK YOU-
