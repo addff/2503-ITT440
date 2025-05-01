@@ -38,6 +38,24 @@ The Image Processing Toolbox in MATLAB provides a set of tools and functions to 
 4. Batch Processing: Can edit or change a lot of images at once using simple MATLAB code or built-in apps.
 5. Custom Algorithm Development: Users can create and try their own image methods. Apps like Image Segmenter and Color Thresholder make it easy to do hard tasks.
 
-   
+### Basic Image Processing Functions in MATLAB
+
+Below are commonly used image processing functions in MATLAB along with their purposes:
+Gaussian Blur
+imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
+
+Median Blur
+medfilt2(image): Removes salt-and-pepper noise from the image.
+
+Sharpening
+imsharpen(image): Makes the edges and details in the image clearer.
+
+Brightness & Contrast Adjustment
+imadjust(image): Changes the brightness and contrast of the image.
+
+Histogram Equalization
+histeq(image):  Improves the overall contrast by spreading out intensity values.
+
+
 
 
