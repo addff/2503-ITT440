@@ -131,7 +131,11 @@ Visual Studio Code, with its rich features and extensibility, stands out as one 
 
 ---
 ## Demonstration
+https://youtu.be/aI3d14m9PUM?si=PTSDmiIwe0NxKEWy
 
+
+### Sample Output
+![image](https://github.com/user-attachments/assets/b9cef609-9630-40bd-867e-d6b14748a01c)
 
 ---
 ## 📚REFERENCES
