@@ -10,7 +10,7 @@
 
 Image processing is the process of applying operations to digital images to improve them, extract information from them, or get them ready for other activities like analysis or recognition.  Filtering, resizing, colour modifications, and edge detection are some of the methods used to manipulate pixel values.  These adjustments aid in enhancing the image's quality, emphasising particular aspects, or changing the image's look.  In contrast to computer vision, which seeks to decipher and comprehend visual content, image processing concentrates on making low-level changes to the image itself.  It is extensively utilised in disciplines including machine learning, photography, medical imaging, and surveillance.
 
-# What is PGyvips?
+# What is Pyvips?
 
 pyvips is a Python binding for the libvips image processing library, known for its high speed, low memory usage, and ability to handle large images efficiently. Unlike traditional image libraries that load entire images into memory, pyvips uses lazy evaluation and streaming to process images in chunks. This makes it especially useful for large-scale or server-side applications, such as batch processing, web services, and scientific imaging. pyvips is widely used in domains where performance and scalability are critical.
 
