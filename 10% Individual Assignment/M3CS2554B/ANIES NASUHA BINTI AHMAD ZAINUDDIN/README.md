@@ -26,7 +26,7 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 - Pygame is written in python
 
-- Works weel with python 3.7 - 3.13
+- Python 3.13.3
 
 ## Tools needed for Pygame
 
