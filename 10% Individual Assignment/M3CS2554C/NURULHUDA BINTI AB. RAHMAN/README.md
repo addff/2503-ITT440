@@ -13,33 +13,56 @@ Pandas is a data manipulation and analysis library designed for handling structu
 By combining OpenCV for image processing and Pandas for data handling, these scripts efficiently identify and display color names from images and webcam feeds.
 
 ### Objective
-The primary objective of both scripts is to allow a user to interactively identify the name of a color present in an image or a live video stream.
+- To develop an interactive system that detects and displays the name of a color based on a pixel selected in an image or video feed.
+- To enable users to analyze colors from images or live webcam footage for educational, design, or development purposes.
 
-For the image processing script, the objectives are:
+### Tools
 
-To enable the user to select one or more image files.
-To allow the user to click on any pixel within the image.
-To determine the RGB values of the clicked pixel.
-To find the closest matching color name from the colors.csv file based on these RGB values.
-To display a colored rectangle along with the identified color name and the RGB values on the image.
+| Tool/Library | Description |
+|--------------|-------------|
+| **OpenCV (cv2)** | Handles image loading, video streaming, pixel manipulation, and GUI windows. |
+| **Pandas** | Reads the CSV file containing RGB values and color names, enabling efficient lookup. |
+| **NumPy** | (Implicitly used via OpenCV) Handles array and image data internally. |
+| **Tkinter** | Provides a GUI file dialog to select images from the filesystem. |
+| **colors.csv** | A CSV file storing color names and their corresponding RGB values. |
 
-For the webcam color detection script, the objectives are:
-
-To capture live video from the user's webcam.
-To display the webcam feed in a window.
-To track the mouse cursor's position within the video frame.
-To continuously determine the RGB values of the pixel under the mouse cursor.
-To find the closest matching color name from the colors.csv file based on these RGB values.
-To display a colored rectangle along with the identified color name and the RGB values on the webcam feed.
-To provide a real-time color identification experience.
 
 ### How it Works
-1) Loading Color Data by using the Pandas library to load color information from a CSV file named colors.csv. This file is expected to have columns like "color_name", "R", "G", and "B" containing the names of colors and their respective Red, Green, and Blue integer values.
-
-   ![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
-2)The **get_color_name(R, G, B)** function finds the closest matching color by comparing the input RGB values with those in the **colors.csv** file. It calculates a simplified Manhattan distance and returns the color with the smallest difference.
+Part 1: Image Color Detection
+   - Opens a file dialog to select one or more image files (.jpg, .png).
+   - Resizes and displays each image in a window.
+   - On left mouse click, it retrieves the RGB color of the clicked pixel.
+   - It compares this RGB with all rows in colors.csv and finds the closest match.
+   - Displays a colored rectangle with the name and RGB value of the detected color.
+   - Press ESC to move to the next image.
 
    ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d)
+
+Part 2: Webcam Color Detection
+   - Captures video from the webcam in real-time.
+   - Tracks the mouse movement across the window.
+   - Continuously reads the pixel color under the cursor.
+   - Matches it to the closest name from colors.csv.
+   - Draws a colored rectangle and overlays the detected color name with RGB values.
+   - Press ESC to exit.
+
+### Conclusion
+This project demonstrates a practical application of computer vision, allowing users to easily identify and label colors from any visual source. It combines image processing with user interaction to deliver a simple but effective color detection system. Such a tool can be useful in design, digital art, education, and accessibility.
+
+### Demo
+To run this program:
+
+1. Ensure colors.csv is correctly formatted and present in the same directory.
+ ![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
+
+3. Install necessary dependencies using:
+   pip install opencv-python pandas numpy
+
+4. Run the script and select an image or use the webcam.
+
+5. Click on pixels in the image or move the cursor in the webcam feed to see color detection in action.
+
+
 
 
 
