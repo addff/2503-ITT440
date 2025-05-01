@@ -9,8 +9,9 @@
 **TITLE : INTRODUCTION TO IMAGE PROCESSING USING NUMPY IN PYTHON**    
 ===
 
-**OBJECTIVE** :
----
+**Objective** :
+--
+
 - To write article about image processing using Python.
 - To demonstrate coding use related to the article
 
@@ -60,16 +61,10 @@ NumPy is at the core of image processing in Python, but it works better when com
 
 **Basic NumPy Functions**
 ---
-import numpy as np
+* np.array([1,2,3])   //create a 1D array
+* np.eye(3)   //identity matrix(3x3)
+* a.shape
+* a.reshape(4,)   //flatten to 1D
+* np.clip(a, 0, 255)   //limit values for brightness changes
+* np.mean(image, axis=2)   //convert colour to grayscale by averaging RGB channels
 
-np.array([1,2,3])   //create a 1D array
-
-np.eye(3)   //identity matrix(3x3)
-
-a.shape 
-
-a.reshape(4,)   //flatten to 1D
-
-np.clip(a, 0, 255)   //limit values for brightness changes
-
-np.mean(image, axis=2)   //convert colour to grayscale by averaging RGB channels
