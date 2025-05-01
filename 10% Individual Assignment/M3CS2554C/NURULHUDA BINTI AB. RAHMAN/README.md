@@ -15,6 +15,9 @@ The primary objective of both scripts is to allow users to interactively identif
 ### How it Works
 1) Loading Color Data by using the Pandas library to load color information from a CSV file named colors.csv. This file is expected to have columns like "color_name", "R", "G", and "B" containing the names of colors and their respective Red, Green, and Blue integer values.
 
+   ![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
+
+
 
 
 
