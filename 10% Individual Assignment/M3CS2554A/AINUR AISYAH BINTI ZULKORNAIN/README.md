@@ -44,17 +44,19 @@ Below are commonly used image processing functions in MATLAB along with their pu
 Gaussian Blur
 imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
-Median Blur
-medfilt2(image): Removes salt-and-pepper noise from the image.
+1. Median Blur
+   medfilt2(image): Removes salt-and-pepper noise from the image.
 
-Sharpening
-imsharpen(image): Makes the edges and details in the image clearer.
+2. Sharpening
+   imsharpen(image): Makes the edges and details in the image clearer.
 
-Brightness & Contrast Adjustment
-imadjust(image): Changes the brightness and contrast of the image.
+3. Brightness & Contrast Adjustment
+   imadjust(image): Changes the brightness and contrast of the image.
 
-Histogram Equalization
-histeq(image):  Improves the overall contrast by spreading out intensity values.
+4. Histogram Equalization
+   histeq(image):  Improves the overall contrast by spreading out intensity values.
+
+
 
 
 
