@@ -338,3 +338,9 @@ Console printout of:
 
 
                       
+
+
+## ▶️ Video Tutorial
+
+Learn how to use mahotas with this video tutorial:
+[**Watch on YouTube**]([https://youtu.be/jiSvmMddM5Q?si=4_PflQRgKXj6qAV4](https://www.youtube.com/watch?v=UM97D0yBkxU&pp=ygUkaW5zdGFsbCBtYWhvdGFzIGZvciBpbWFnZSBwcm9jZXNzaW5n))
