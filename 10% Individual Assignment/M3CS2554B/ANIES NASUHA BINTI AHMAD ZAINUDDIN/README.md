@@ -64,7 +64,28 @@ import pygame
 pygame.init()
 </pre>
 
+4. Create a display surface
 
+<pre> 
+screen = pygame.display.set_mode((640, 480))
+</pre>
 
+5. Load and display the image
 
+<pre> 
+img = pygame.image.load("your_image.jpg")
+screen.blit(img, (0, 0))
+pygame.display.update()
+</pre>
+
+6. Create a game loop
+
+<pre>
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+pygame.quit()
+</pre>
 
