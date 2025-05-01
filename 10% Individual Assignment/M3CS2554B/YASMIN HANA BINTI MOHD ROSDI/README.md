@@ -11,7 +11,7 @@ SUBJECT: ITT440
 Computer vision is a field of artificial intelligence that focuses on extracting information from input images or videos. It involves teaching computers to interpret visuals and understand visual data, allowing them make predictions or decisions based on what they **"see"** similar to how humans perceive the world. 
 
 ![Logo]{https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554B/YASMIN%20HANA%20BINTI%20MOHD%20ROSDI/logo.avif)
-<img src="[https://raw.githubusercontent.com/username/repo/branch/path/to/image.avif](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554B/YASMIN%20HANA%20BINTI%20MOHD%20ROSDI/logo.avif)" alt="Alt Text" width="300"/>
+<img src="[https://raw.githubusercontent.com/username/repo/branch/path/to/image.avif](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554B/YASMIN%20HANA%20BINTI%20MOHD%20ROSDI/logo.avif" alt="Alt Text" width="300"/>
 
 ## :memo: The role OpenCV plays in making computer vision accessible in Python.
 
