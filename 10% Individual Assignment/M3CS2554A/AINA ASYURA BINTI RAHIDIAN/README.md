@@ -57,7 +57,7 @@ Albumentations can be used in various popular IDEs such as Jupyter Notebook, VS 
  4) A.RandomBrightnessContrast(p=1.0) – Adjusts brightness and contrast.
  5) A.Equalize(p=1.0) – Improves overall image histogram distribution.
 
-## How pyvips Works
+## How Albumentations Works
 
 **Step 1: Build Your AUgmentations**  
 You choose what changes you want to make — like flipping, rotating, or changing brightness.
