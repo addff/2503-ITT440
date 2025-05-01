@@ -94,7 +94,7 @@ import imageio.v2 as imageio
 from io import BytesIO
 
 # Image URL
-url = 'https://example.com/sample.jpg'  # 🔁 Replace with the actual image URL
+url = 'https://example.com/sample.jpg'  # 
 
 ### Send HTTP GET request to fetch the image
 response = requests.get(url)
@@ -127,6 +127,7 @@ else:
 ```resized_picture.jpg```
 ![resized_picture](https://github.com/user-attachments/assets/5f0400a5-f73b-4bf5-a56e-746d7e3e7a44)
 
-
+```downloaded_picture.jpg(URL)```
+![downloaded_image](https://github.com/user-attachments/assets/a78320e5-cd7e-430b-bb48-7ab860c4d3e2)
 
 
