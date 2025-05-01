@@ -10,22 +10,22 @@ PyWavelets (also known as PyWavelets or the pywt module) is a Python library for
 
 ## 🔍 Key Features of PyWavelets:
 Discrete Wavelet Transform (DWT): For 1D, 2D, and even n-dimensional data.
-- pywt.dw()t, pywt.dwt2(), pywt.dwtn()
+- `pywt.dw()t`, `pywt.dwt2()`, `pywt.dwtn()`
 
 Inverse Discrete Wavelet Transform (IDWT): Reconstructs original data from wavelet coefficients.
-- pywt.idwt(), pywt.idwt2(), pywt.idwtn()
+- `pywt.idwt()`, `pywt.idwt2()`, `pywt.idwtn()`
 
 Stationary Wavelet Transform (SWT): A non-decimated version of DWT.
-- pywt.swt(), pywt.swt2()
+- `pywt.swt()`, `pywt.swt2()`
 
 Multilevel decompositions: Decompose a signal or image into multiple levels of detail.
-- pywt.wavedec(), pywt.wavedec2()
+- `pywt.wavedec()`, `pywt.wavedec2()`
 
 Wavelet families: Supports a wide variety of wavelets, like Haar, Daubechies, Symlets, Coiflets, etc.
-- pywt.Wavelet(), pywt.wavelist(), pywt.build_wavelet()
+- `pywt.Wavelet()`, `pywt.wavelist()`, `pywt.build_wavelet()`
 
 Image processing: Commonly used for image denoising and compression.
-- pywt.threshold()
+- `pywt.threshold()`
 
 
 ## 🔧 Installation & Setup
