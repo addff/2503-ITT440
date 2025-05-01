@@ -152,7 +152,10 @@ plt.show()
 ```
 
 ### RESULTS
-![image](https://github.com/user-attachments/assets/1db4fb71-50d0-700-ab9b-83b7e6080680)
+Here is the sample output.
+![image](https://github.com/user-attachments/assets/2ac39ef5-21eb-4633-9588-52b00ca5583b)
+
+
 
 
 
