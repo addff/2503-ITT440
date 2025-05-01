@@ -7,9 +7,9 @@ COURSE CODE : ITT 440
 
 CLASS       : CDCS2554A  
 
-##**OBJECTIVES**  
-- To write article related to image processing and computer vision graphics's tools using pyhton
-- To demonstrate application of chosen tools
+## OBJECTIVES 
+- To write article related to image processing and computer vision tools using Pyhton
+- To demonstrate application of the chosen tools
 
 ## APPLICATION OF YOLO IN PYTHON FOR COMPUTER VISION AND GRAPHICS  
 ### 🧠 WHAT IS COMPUTER VISION & GRAPHICS (CVG) ?
