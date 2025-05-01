@@ -108,10 +108,20 @@ bright_img.save("brighter_image.png")
 ```
 **Sample output**
 ---
+![image](https://github.com/user-attachments/assets/763299d3-fc85-473f-9ae4-caf57f45c9e1)
+original image
+
 ![brighter_image](https://github.com/user-attachments/assets/9175f75f-b989-48be-96c4-e9e85af36319) 
+brighter image
+
 ![grayscale_output](https://github.com/user-attachments/assets/22c5541d-900c-4467-a737-8c74b4a6f7ef) 
+grayscale image
+
 ![cropped_image](https://github.com/user-attachments/assets/e06ce34b-a196-4f54-8235-e29655b3079f)
+cropped image
+
 ![flipped_image](https://github.com/user-attachments/assets/e1ed8265-3a42-4473-90ee-1984ab116cc6)
+flipped image
 
 **Demonstration image processing using NumPy in Python**
 ---
