@@ -12,6 +12,8 @@ By combining OpenCV for image processing and Pandas for data handling, these scr
 ### Objective
 The primary objective of both scripts is to allow users to interactively identify colors in images or live video streams. The image processing script lets users select images, click on pixels to determine their RGB values, and match them with the closest color name from a CSV file, displaying this information in a colored rectangle. The webcam color detection script captures live video, tracks the mouse cursor’s position, continuously detects RGB values of the pixel under the cursor, and displays the matching color name in real time. Both scripts provide an intuitive way to recognize colors through interactive image and video processing.
 
+### How it Works
+1) Loading Color Data by using the Pandas library to load color information from a CSV file named colors.csv. This file is expected to have columns like "color_name", "R", "G", and "B" containing the names of colors and their respective Red, Green, and Blue integer values.
 
 
 
