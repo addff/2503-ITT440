@@ -121,9 +121,10 @@ else:
 
 ![new_image](https://github.com/user-attachments/assets/cd5329e7-fecc-4bee-9b20-b08671758e7c)
 
-![resized_picture](https://github.com/user-attachments/assets/d429a833-2120-4c3b-8e04-5154e9cd9e5d)
+
 ![grayscale_picture](https://github.com/user-attachments/assets/96b9fbf0-4ba8-46af-b9e5-b79f6c80e440)
 
+![resized_picture](https://github.com/user-attachments/assets/4d4557ba-a264-41e3-8065-70c9ea9b4561)
 
 
 
