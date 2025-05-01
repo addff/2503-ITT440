@@ -49,76 +49,75 @@ Scikit-image (also known as skimage) is one of the open-source image-processing 
 **Example code processing image using Scikit-image tools**
 
 ```
-from skimage import io, filters, feature, exposure
-import matplotlib.pyplot as plt
+from skimage import io, color
+from skimage.transform import rotate
 import numpy as np
+import matplotlib.pyplot as plt
 
-# === Load image ===
-image_path = r"C:\Users\USER\cat.png"
-image = io.imread(image_path)
+# Step 1: Load the original image
+image_path = r'C:\Users\USER\cat.png'  # Change this path as needed
+original_image = io.imread(image_path)
 
-# === Remove alpha channel if present ===
-if image.shape[-1] == 4:
-    image = image[..., :3]
+# Step 2: Handle RGBA images by removing the alpha channel
+if original_image.shape[2] == 4:
+    original_image = original_image[:, :, :3]
 
-# === Normalize image to [0, 1] for processing ===
-image = image / 255.0  # Ensure all values are float between 0 and 1
+# Step 3: Convert to grayscale
+grayscale_image = color.rgb2gray(original_image)
 
-# === Apply Gaussian blur to color image ===
-blurred_image = filters.gaussian(image, sigma=1, channel_axis=-1)
+# Step 4: Flip the image horizontally
+flipped_image = np.fliplr(original_image)
 
-# === Convert to grayscale for edge detection only ===
-gray = np.dot(image[..., :3], [0.299, 0.587, 0.114])  # manual grayscale conversion
-edges = feature.canny(gray, sigma=1)
+# Step 5: Crop the image (e.g., top-left 150x150 region)
+cropped_image = original_image[0:150, 0:150]
 
-# === Create red edge overlay ===
-edge_overlay = np.copy(image)
-edge_overlay[edges] = [1, 0, 0]  # red edges
+# Step 6: Rotate the image by 45 degrees
+rotated_image = rotate(original_image, angle=45, mode='reflect')
 
-# === Apply histogram equalization to each color channel ===
-equalized_image = np.zeros_like(image)
-for i in range(3):  # R, G, B channels
-    equalized_image[..., i] = exposure.equalize_hist(image[..., i])
+# Step 7: Display all images in a neat and organized way
+fig, axs = plt.subplots(2, 3, figsize=(15, 10))  # 2 rows, 3 columns for the images
 
-# === Plot everything ===
-fig, axes = plt.subplots(2, 3, figsize=(15, 8))
-ax = axes.ravel()
+# Display Original Image
+axs[0, 0].imshow(original_image)
+axs[0, 0].set_title("Original")
+axs[0, 0].axis('off')
 
-# 1. Original
-ax[0].imshow(image)
-ax[0].set_title("Original Image")
+# Display Grayscale Image
+axs[0, 1].imshow(grayscale_image, cmap='gray')
+axs[0, 1].set_title("Grayscale")
+axs[0, 1].axis('off')
 
-# 2. Gaussian Blur (color)
-ax[1].imshow(blurred_image)
-ax[1].set_title("Gaussian Blur")
+# Display Flipped Image
+axs[0, 2].imshow(flipped_image)
+axs[0, 2].set_title("Flipped Horizontally")
+axs[0, 2].axis('off')
 
-# 3. Edge Overlay (in red)
-ax[2].imshow(edge_overlay)
-ax[2].set_title("Canny Edges (Red Overlay)")
+# Display Cropped Image
+axs[1, 0].imshow(cropped_image)
+axs[1, 0].set_title("Cropped")
+axs[1, 0].axis('off')
 
-# 4. Histogram Equalization (color-enhanced)
-ax[3].imshow(equalized_image)
-ax[3].set_title("Histogram Equalization")
+# Display Rotated Image
+axs[1, 1].imshow(rotated_image)
+axs[1, 1].set_title("Rotated by 45°")
+axs[1, 1].axis('off')
 
-# 5. Optional: Side-by-side (Blur + Edges)
-combined = 0.5 * blurred_image + 0.5 * edge_overlay
-ax[4].imshow(np.clip(combined, 0, 1))
-ax[4].set_title("Blur + Edges Combo")
+# Remove the empty subplot (axs[1, 2])
+axs[1, 2].axis('off')
 
-# 6. Empty
-ax[5].axis('off')
+# Adjusting space between subplots (further decreased spacing)
+plt.subplots_adjust(hspace=0.15, wspace=0.15)  # Slightly decreased horizontal and vertical spacing
 
-# Hide axes
-for a in ax:
-    a.axis('off')
-
+# Show the final layout
 plt.tight_layout()
 plt.show()
+
 ```
 
 **Output**
 
 
-<img width="959" alt="image" src="https://github.com/user-attachments/assets/bdb36fc4-cf6e-422e-aad0-4e065e876a3b" />
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/1a1cb70e-afa6-4986-a5f1-af773424384b" />
+
 
 
