@@ -81,38 +81,53 @@ It works with images, masks, boxes, and keypoints — great for training AI mode
    
 ###### Exact code used:
 ```py
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"  # Elak OpenMP crash
+
 import cv2
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import matplotlib.pyplot as plt
+import torch
 
-# Load the image using OpenCV
-image = cv2.imread("example.jpg")
+image_path = r"C:\Users\Admin\Documents\project\gambar.jpg"
+
+image = cv2.imread(image_path)
+if image is None:
+    raise FileNotFoundError(f"Gambar tidak dijumpai: {image_path}")
+    
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-# Define the Albumentations transformation pipeline
 transform = A.Compose([
-    A.Resize(256, 256),
+    A.ToGray(p=1.0),  # Tukar ke grayscale 100%
     A.HorizontalFlip(p=0.5),
     A.RandomBrightnessContrast(p=0.2),
-    A.Rotate(limit=15, p=0.3),
-    A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+    A.Rotate(limit=15, p=0.5),
+    A.Resize(224, 224),
     ToTensorV2()
 ])
 
-# Apply the transformation
 augmented = transform(image=image)
 augmented_image = augmented['image']
 
-# Convert tensor to numpy format for visualization
-augmented_image_np = augmented_image.permute(1, 2, 0).numpy()
 
-# Display the augmented image
-plt.imshow(augmented_image_np)
-plt.title("Augmented Image")
+mean = torch.tensor([0.485]).view(1, 1, 1)
+std = torch.tensor([0.229]).view(1, 1, 1)
+unnormalized = augmented_image * std + mean
+unnormalized_np = unnormalized.permute(1, 2, 0).numpy()
+unnormalized_np = (unnormalized_np * 255).astype('uint8').squeeze()
+
+
+output_path = r"C:\Users\Admin\Documents\project\pic_augmented.jpg"
+cv2.imwrite(output_path, unnormalized_np)
+
+plt.imshow(unnormalized_np, cmap='gray')
+plt.title("Gambar Augmented (Hitam Putih)")
 plt.axis('off')
 plt.show()
+
 ```
+
 # Video Tutorial
 Learn how to use the Albumentations with this video tutorial: 
 https://youtu.be/f77FgLynZRs?si=xj7PvfZwvHheYNXd
