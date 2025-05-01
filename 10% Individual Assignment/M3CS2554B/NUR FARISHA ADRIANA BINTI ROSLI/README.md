@@ -147,7 +147,7 @@ This script loads an image and applies a variety of computer vision transformati
 
 Simple Demonstration Using Kornia for Image Processing on Youtube
 
-[Let's Learn How to Use Kornia]
+[Let's Learn How to Use Kornia](https://youtu.be/x6MLgoBsRVY?si=-qhGe9CQCuU68C9W)
 
 
 
