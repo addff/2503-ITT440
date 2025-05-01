@@ -112,3 +112,157 @@ Pygame is specialized for speed and performance in 2D graphics. The library can 
 🛠️ **Flexible and customizable**
 
 Can easily overlay or overlay text, shapes, or other graphics on top of images and video frames, this produces an interesting and informative CVG output. It is also suitable for both basic visual output, such as image displays, and advanced GUIs or animated simulations.
+
+# 1. OBJECT TRACKING USING PYGAME
+- This project demonstrates a basic form of interactive object tracking using a single static image.
+
+- When the image is displayed using Pygame, user can click anywhere on the image. The program captures the position of the mouse click and interprets it as a point of interest like simulating an object detection. Once the click is detected, the program automatically draws a green diamond shape around the clicked region. This visually indicates the area of interest or the “detected object.”
+
+FULL CODE
+
+<pre>
+import pygame
+import sys
+
+# Initialize PyGame
+pygame.init()
+
+# Load image
+image_path = r'C:\NASUHA\keta merah.jpg'  # Ganti dengan path gambar sebenar
+original_image = pygame.image.load(image_path)
+original_image = pygame.transform.scale(original_image, (800, 600))  # Resize kalau perlu
+
+# Set window
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption('Simple Object Tracker - CVG Project')
+
+# Store all diamond positions
+diamonds = []
+
+# Main loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        # Detect mouse click
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            pos = pygame.mouse.get_pos()
+            diamonds.append(pos)  # Save position
+
+    # Draw the image
+    screen.blit(original_image, (0, 0))
+
+    # Draw diamonds
+    for pos in diamonds:
+        x, y = pos
+        diamond_points = [
+            (x, y - 30),     # Top
+            (x + 30, y),     # Right
+            (x, y + 30),     # Bottom
+            (x - 30, y)      # Left
+        ]
+        pygame.draw.polygon(screen, (0, 255, 0), diamond_points, 2)
+
+    # Update the display
+    pygame.display.update()
+
+# Exit
+pygame.quit()
+sys.exit()
+</pre>
+
+The output
+
+original    
+
+<img src="https://github.com/user-attachments/assets/58b909c4-b307-4ebd-9582-b65f984b4ce2" width="400"/>  
+
+result 
+
+<img src="https://github.com/user-attachments/assets/1e09644d-93e8-482e-b9ff-0652d30deff8" width="400"/>
+
+
+# 2. MOTION DETECTION
+
+- This project is a simplified simulation of motion detection using a moving shape instead of real camera input.
+  
+- Although it is not detecting real-world motion, it simulates how motion can be tracked and visualized by updating the position of an object in each frame.
+
+FULL CODE
+
+<pre>
+import pygame
+import sys
+import random
+
+# Initialize Pygame
+pygame.init()
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Motion Detection with Moving Image")
+
+clock = pygame.time.Clock()
+font = pygame.font.SysFont(None, 36)
+
+# Colors
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+
+# Load moving object image
+image_path = r'C:\NASUHA\keta merah.jpg'  # Gantikan dengan path sebenar
+object_img = pygame.image.load(image_path)
+object_img = pygame.transform.scale(object_img, (100, 100))  # Resize jika perlu
+
+# Starting position & speed
+x = random.randint(0, WIDTH - 100)
+y = random.randint(0, HEIGHT - 100)
+speed_x = random.choice([-5, -4, -3, 3, 4, 5])
+speed_y = random.choice([-5, -4, -3, 3, 4, 5])
+
+# Previous position for motion detection
+previous_pos = (x, y)
+
+# Main loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Update position
+    x += speed_x
+    y += speed_y
+
+    # Bounce off edges
+    if x <= 0 or x >= WIDTH - 100:
+        speed_x *= -1
+    if y <= 0 or y >= HEIGHT - 100:
+        speed_y *= -1
+
+    # Background
+    screen.fill(WHITE)
+
+    # Draw the image (moving object)
+    screen.blit(object_img, (x, y))
+
+    # Motion detection check
+    if abs(x - previous_pos[0]) > 1 or abs(y - previous_pos[1]) > 1:
+        text = font.render("Motion Detected!", True, BLUE)
+        screen.blit(text, (20, 20))
+
+    previous_pos = (x, y)
+
+    pygame.display.flip()
+    clock.tick(30)
+
+pygame.quit()
+sys.exit()
+ </pre>
+
+The Output
+
+![Screenshot 2025-05-01 175914](https://github.com/user-attachments/assets/d65b7695-eeb9-43af-b9bc-5b98c49dbaf7)
+
+
