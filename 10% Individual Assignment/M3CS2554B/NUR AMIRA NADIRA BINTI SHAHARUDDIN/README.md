@@ -116,6 +116,9 @@ else:
 ```
 *Explanation:* This code are use to download an image from URL and downloaded it into folder. Access an image from the internet using its URL
 
+### Sample Output
+
+
 
 
 
