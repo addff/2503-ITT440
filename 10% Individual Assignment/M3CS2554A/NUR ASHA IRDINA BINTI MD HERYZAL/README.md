@@ -1,3 +1,5 @@
+Name: Nur Asha Irdina binti Md Heryzal
+
 🔍 **Title: Object Detection with Keras Using Custom Rectangle Images**
 
 ---
