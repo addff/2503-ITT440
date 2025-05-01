@@ -35,7 +35,7 @@ Image processing: Commonly used for image denoising and compression.
 
 ### 🛠️ Step-by-Step: Image Processing Using PyWavelets
 
-### Basic Workflow Image Processing with Denoising with Daubechies Wavelet
+### Basic Workflow Image Processing Denoising with Daubechies Wavelet
 ```
 import pywt
 from skimage import data, color, util
