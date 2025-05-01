@@ -3,6 +3,9 @@
 ## Identifying Colors with OpenCV and Pandas
 
 ### Introduction to OpenCV and Pandas
+
+In this project, I use computer vision and image processing to identify the color at a specific pixel location from an image or a webcam feed. It employs the OpenCV library for real-time image capture and processing, alongside pandas for handling color data. The color detection system uses a CSV file containing RGB values and corresponding color names to map a selected color to its closest known name.
+
 OpenCV (Open Source Computer Vision Library) is a powerful library used for image processing and computer vision tasks. It provides tools for manipulating images and videos, detecting objects, applying filters, and even performing machine learning-based image analysis. OpenCV is widely used in applications such as facial recognition, augmented reality, and automated image classification.
 
 Pandas is a data manipulation and analysis library designed for handling structured data efficiently. It provides tools for loading, filtering, and transforming datasets using intuitive data structures like DataFrames. In these scripts, Pandas is used to read a CSV file containing color names and RGB values, allowing easy comparison and matching of colors.
@@ -37,7 +40,6 @@ To provide a real-time color identification experience.
 2)The **get_color_name(R, G, B)** function finds the closest matching color by comparing the input RGB values with those in the **colors.csv** file. It calculates a simplified Manhattan distance and returns the color with the smallest difference.
 
    ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d)
-  ![image](https://github.com/user-attachments/assets/54f4e34e-67bb-4f95-beca-010a021a5661)
 
 
 
