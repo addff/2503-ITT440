@@ -1,4 +1,7 @@
-Name: Nur Asha Irdina binti Md Heryzal
+**Name: Nur Asha Irdina binti Md Heryzal**
+**Student ID: 2024977815**
+
+---
 
 🔍 **Title: Object Detection with Keras Using Custom Rectangle Images**
 
