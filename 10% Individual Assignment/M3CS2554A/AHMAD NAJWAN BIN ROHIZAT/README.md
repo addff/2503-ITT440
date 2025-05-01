@@ -4,106 +4,136 @@
 
 ## CLASS : CDCS2554A
 
-## TITLE : INTRODUCTION TO IMAGE PROCESSING USING PGMAGICK IN PYTHON
+## TITLE : INTRODUCTION TO IMAGE PROCESSING USING PYVIPS IN PYTHON
 
 # What is Image Processing ?
 
 Image processing is the process of applying operations to digital images to improve them, extract information from them, or get them ready for other activities like analysis or recognition.  Filtering, resizing, colour modifications, and edge detection are some of the methods used to manipulate pixel values.  These adjustments aid in enhancing the image's quality, emphasising particular aspects, or changing the image's look.  In contrast to computer vision, which seeks to decipher and comprehend visual content, image processing concentrates on making low-level changes to the image itself.  It is extensively utilised in disciplines including machine learning, photography, medical imaging, and surveillance.
 
-# What is PGMAGICK ?
+# What is PGyvips?
 
-![Image Name](https://raw.githubusercontent.com/username/repository/branch/path/to/image.jpg)
+pyvips is a Python binding for the libvips image processing library, known for its high speed, low memory usage, and ability to handle large images efficiently. Unlike traditional image libraries that load entire images into memory, pyvips uses lazy evaluation and streaming to process images in chunks. This makes it especially useful for large-scale or server-side applications, such as batch processing, web services, and scientific imaging. pyvips is widely used in domains where performance and scalability are critical.
 
-pgmagick is a Python wrapper around the GraphicsMagick library, which is a powerful image processing tool. It provides a convenient interface for Python developers to perform advanced image manipulation tasks such as resizing, cropping, format conversion, drawing text and shapes, applying filters, and more.
+# Significance of pyvips
+
+✅ Fast and efficient           : Processes large images significantly faster than PIL or OpenCV.
+
+✅ Low memory usage             : Uses streaming and avoids loading full images into RAM.
+
+✅ Handles very large images    : Ideal for gigapixel images or image pyramids.
+
+✅ Scalable                     : Suitable for cloud/image servers where speed and memory efficiency are critical.
+
+✅ Versatile format support      : Handles JPEG, PNG, TIFF, WebP, OpenEXR, SVG, PDF, and more.
 
 
-# Significance of pgmagick
 
-GraphicsMagick Backend: It leverages the GraphicsMagick library, which is known for its speed and efficiency in processing images.
+# Key Features of pyvips
 
-Python Interface: pgmagick allows Python developers to access the functionality of GraphicsMagick without needing to work directly with C++ code.
+🧠 Lazy evaluation: Operations are queued until needed.
 
-Advanced Image Processing: Like other image manipulation libraries, pgmagick can handle tasks such as format conversion, resizing, blurring, and color adjustments.
+📉 Streaming pipeline: Efficient processing of image data.
 
+✂️ Advanced image operations: Resize, crop, rotate, flip, blend, sharpen, etc.
 
+🔄 Color space conversion: Support for ICC profiles and color manipulation.
 
-# Key Features of pgmagick
+🗂️ Support for multi-page images: PDF, TIFF pages, etc.
 
-Image Manipulation: Resize, crop, rotate, and flip images.
+🔁 Multi-threading: Uses multiple cores efficiently.
 
-Filtering: Apply filters like blur, sharpen, or emboss to improve or modify image quality.
-
-Image Format Conversion: Convert images from one format to another (e.g., PNG to JPEG).
-
-Drawing: Add text, shapes, or lines onto images.
-
-Complex Operations: You can work with more advanced image processing tasks, like handling alpha channels (transparency) or creating image composites.
-
-# Library Related to pgmagick
-
-The three libraries pgmagick, matplotlib, and NumPy , each play an important role in handling basic image processing in Python. pgmagick is the core image processing library that provides access to powerful features of GraphicsMagick, such as resizing, color manipulation, and applying filters like blur and sharpen. It efficiently processes images at a low level, allowing for high-quality transformations and manipulations. matplotlib complements this by providing a simple yet effective way to visualize the processed images, which is particularly useful for tasks like displaying results, adding annotations, and presenting images in a clear and informative way. Finally, NumPy is used for managing image data as arrays, which is essential for performing pixel-based operations. In this case, it allows for converting the image into a format that can be visualized with matplotlib, making it a critical part of the workflow for manipulating and displaying images in a flexible and computationally efficient manner. Together, these libraries create a powerful yet accessible toolset for working with images in Python.
 
 # Module / Subpackage
-pgmagick provided through core classes and objects, rather than a large set of subpackages like in bigger libraries. It's designed to be lightweight and closely mirror the C++ GraphicsMagick++ API.
+pyvips is a single module, but it interacts with the core vips operations underneath. You typically use:
 
-Resize image	    Image.resize(Geometry(width, height))
-Crop image	        Image.crop(Geometry(width, height, x_offset, y_offset))
-Rotate image	    Image.rotate(angle)
-Convert format	  Image.write('output.png') (changes extension)
-Blur image	      Image.blur(radius)
-Sharpen image	    Image.sharpen(radius)
-Change brightness	Image.modulate(brightness, saturation, hue)
-Composite images	Image.composite(other_image, Geometry(x, y), CompositeOperator)
+import pyvips
 
+Load an image
+image = pyvips.Image.new_from_file("input.jpg")
+
+Resize the image to 50%
+resized = image.resize(0.5)
+
+Convert to grayscale (by averaging RGB channels)
+grayscale = image.colourspace("b-w")
+
+Rotate 90 degrees clockwise
+rotated = grayscale.rot90()
+
+brighter image
+brighter=image.linear(1.2,10)
+
+sharpen or blur
+sharpened = image.sharpen()
+blurred = image.gaussblur(2.0)
+
+overlay images 
+blended = image1.composite2(image2, "over")
+Write result
+resized.write_to_file("output.jpg")
+
+# ⚙️ How pyvips Works
+Step 1: Lazy loading
+pyvips doesn't load the full image immediately. It reads metadata and defers processing.
+
+Step 2: Processing pipeline
+When you apply operations like resize() or crop(), it builds a computation graph.
+
+Step 3: Execution
+When write_to_file() or .numpy() is called, pyvips processes the image through the pipeline efficiently, using multi-threaded and streamed processing.
 
 # ENVIRONMENT AND CODING
 Integrated Development Environment (IDE)
 
 
-The decision of which editor or IDE to use for pgmagick image processing jobs ultimately comes down to your needs, project size, and personal preferences.  In this tutorial, we use VS Code, which is fully compatible with Visual Studio Code(VS Code).In fact, VS Code is a great IDE for working with pgmagick and Python image processing projects.
+The decision of which environment to use for pyvips image processing tasks ultimately depends on your project requirements, familiarity, and workflow preferences. In this tutorial, we use the Windows Command Prompt (CMD), which is fully compatible with Python and pyvips. In fact, CMD is a simple and effective environment for running pyvips scripts, especially when working on batch image processing or automated workflows. It allows direct interaction with Python files and provides easy access to file paths, system variables, and tools like vips, making it a practical choice for streamlined development and testing with pyvips.
+
+# 💾 How to Install pyvips (Windows)
+1. Install libvips:
+
+Download from https://github.com/libvips/libvips/releases
+
+Extract to C:\vips
+
+Add C:\vips\bin to your system PATH environment variable.
+
+2. Install pyvips via pip:
+
+pip install pyvips
+
+3.Verify:
+vips --version
+python -c "import pyvips; print(pyvips.__version__)"
+
+# Python Code Example for Basic Image Processing with pyvips
+The following code demonstrates the use of some functions mentioned earlier which is loading and saving an image, resizing, rotating, changing brightness, convert grayscale, sharpen or blur and overlay images :
+
+import pyvips
+
+Load the original image
+image = pyvips.Image.new_from_file(r'C:\images\input.jpg')
+
+Resize the image to 50%
+resized = image.resize(0.5)
+
+Convert to grayscale (by averaging RGB channels)
+grayscale = image.colourspace("b-w")
+
+Rotate 90 degrees clockwise
+rotated = grayscale.rot90()
+
+brighter image
+brighter=image.linear(1.2,10)
+
+sharpen or blur
+sharpened = image.sharpen()
+blurred = image.gaussblur(2.0)
+
+overlay images 
+blended = image1.composite2(image2, "over")
+
+Save the processed image as PNG
+rotated.write_to_file(r'C:\images\output_rotated.png')
 
 
-
-# Python Code Example for Basic Image Processing with pgmagick
-The following code demonstrates the use of some functions mentioned earlier which is loading and saving an image, resizing, cropping, rotating, blurring, changing brightness or saturation, drawing text and shapes and compositing images :
-
-from pgmagick import (
-    Image, Geometry, Color, DrawableText, DrawableFillColor,
-    DrawableStrokeColor, DrawableRectangle, ImageList
-)
-
---- 1. Load the main image ---
-img = Image("input.jpg")  # Replace with your image file
-
---- 2. Resize image ---
-img.resize(Geometry(400, 300))  # Resize to 400x300
-
---- 3. Crop the image (100x100 from top-left corner) ---
-img.crop(Geometry(100, 100, 0, 0))
-
---- 4. Rotate the image 45 degrees ---
-img.rotate(45)
-
---- 5. Blur the image slightly ---
-img.blur(1.0)
-
---- 6. Adjust brightness (120%), saturation (90%), hue (100%) ---
-img.modulate(120, 90, 100)
-
---- 7. Draw text on image ---
-img.draw(DrawableFillColor(Color("white")))
-img.draw(DrawableStrokeColor(Color("black")))
-img.draw(DrawableText(10, 90, "Hello, pgmagick!"))
-
---- 8. Draw a red rectangle ---
-img.draw(DrawableStrokeColor(Color("red")))
-img.draw(DrawableFillColor(Color("transparent")))  # Only border
-img.draw(DrawableRectangle(10, 10, 80, 80))
-
---- 9. Composite with another image (overlay) ---
-overlay = Image("overlay.png")  # Must be same or smaller size
-img.composite(overlay, Geometry(10, 10))  # Place at top-left corner
-
---- 10. Save the final result ---
-img.write("output.jpg")
 
