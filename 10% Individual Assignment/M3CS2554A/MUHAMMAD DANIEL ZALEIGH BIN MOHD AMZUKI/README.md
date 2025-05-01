@@ -6,7 +6,7 @@
 
 ## TITLE: INTRODUCTION TO BASIC IMAGE PROCESSING USING MAHOTAS IN PHYTON.
 
-### Objectives 
+### 🎯 Objectives  
 * To understand the basics of image processing
 * To learn how Mahotas can be used for thresholding and edge detection
 * To write and run Phyton code using Mahotas
