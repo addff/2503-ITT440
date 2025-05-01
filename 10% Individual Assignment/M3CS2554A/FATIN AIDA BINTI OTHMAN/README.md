@@ -82,4 +82,6 @@ plt.show()
 
 THE OUTPUT
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/348f1480-b9d5-48ab-b995-2f6f87686e88" />
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/3b04f4ec-458d-420d-9f2b-8e074ef8c0d2" />
+
