@@ -50,9 +50,11 @@ All transformations were implemented using Kornia’s functions, demonstrating i
 
 
 
-<img width="739" alt="image" src="https://github.com/user-attachments/assets/767e3c49-06d0-472e-b327-8d45ebb52961" />
+<img width="740" alt="image" src="https://github.com/user-attachments/assets/c5f66720-9d35-4231-a753-b374e3058288" />
 
-<img width="547" alt="image" src="https://github.com/user-attachments/assets/29c66e14-2e37-41a0-ac31-3fe8ea29893e" />
+
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/22d41fb7-afdb-4c65-abf1-dde41123c8de" />
+
 
 
 
