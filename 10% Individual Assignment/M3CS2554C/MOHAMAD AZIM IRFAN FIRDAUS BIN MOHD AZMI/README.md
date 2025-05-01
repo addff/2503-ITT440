@@ -131,3 +131,42 @@ anisotropic = sitk.CurvatureAnisotropicDiffusion(image,
                                                 numberOfIterations=5)
 
 ```
+
+# EXAMPLE OF SIMPLE DEMONSTRATION
+### CODING
+``` python
+import SimpleITK as sitk
+import matplotlib.pyplot as plt
+
+# Step 1: Read on image
+image_path = 'imageSimpleitk.png' 
+image = sitk.ReadImage(image_path)
+
+# Step 2: Apply a Gaussian filter
+sigma = 2.0  # Standard deviation for Gaussian kernel
+filtered_image = sitk.SmoothingRecursiveGaussian(image, sigma)
+
+# Step 3: Convert images to numpy arrays for visualization
+original_array = sitk.GetArrayFromImage(image)
+filtered_array = sitk.GetArrayFromImage(filtered_image)
+
+# Step 4: Display the original and filtered images
+plt.figure(figsize=(12, 6))
+
+plt.subplot(1, 2, 1)
+plt.title('Original Image')
+plt.imshow(original_array, cmap='gray')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.title('Filtered Image (Gaussian)')
+plt.imshow(filtered_array, cmap='gray')
+plt.axis('off')
+
+
+plt.show()
+
+```
+### OUTPUT
+
+
