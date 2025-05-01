@@ -138,6 +138,10 @@ Target: 4, Context: 7, Label: 0   # Negative sample
 
 ---
 
+### Example video 
+#### You Tube Link
+https://youtu.be/1c0uIjbLAnU?feature=shared
+
 ---
 
 ## Conclusion
