@@ -24,6 +24,28 @@ Scikit-image (also known as skimage) is one of the open-source image-processing 
 4. **Provides many image processing tools**: Functions for filtering, segmentation, feature extraction and morphological operations
 5. **Easy to use**: Beginner-friendly and consistent API.
 
+**Advantages of SCIKIT-IMAGE**
+
+1. **Works Well with Other Python Tools**  
+   - It uses popular libraries like NumPy and SciPy.
+   - Can mix image processing with data analysis, machine learning, or math easily.
+
+2. **Has Many Built-in Image Tools**  
+   - Can do lots of things: blur, sharpen, resize, detect edges, find shapes, and more.
+   - It's like a toolbox for images — everything you need is included.
+
+3. **Easy to See What You're Doing**  
+   - It works with matplotlib so you can easily show images and results.
+   - Great for learning and testing what happens when you change settings.
+
+4. **Beginner-Friendly and Well-Documented**  
+   - Lots of examples and guides to help you get started.
+   - Simple to understand even if you’re new to image processing.
+
+5. **Lightweight and Easy to Install**  
+   - Pure Python — no complicated setup.
+   - Works on Windows, Mac, and Linux.
+
 **Example code processing image using Scikit-image tools**
 
 ```
