@@ -57,7 +57,7 @@ These are especially useful in **Natural Language Processing (NLP)** tasks like 
 
 ---
 
-# 🧠 Text Preprocessing with `pad_sequences` and `skipgrams` in Keras
+# 🧠 Preprocessing with `pad_sequences` and `skipgrams` in Keras
 
 ---
 
