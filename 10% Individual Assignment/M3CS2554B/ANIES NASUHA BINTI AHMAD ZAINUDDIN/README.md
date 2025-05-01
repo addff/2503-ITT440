@@ -88,11 +88,27 @@ pygame.quit()
 
 ## Advantages of using Pygame
 
-🧠 Easy to learn and use
+🧠 **Easy to learn and use**
     
-    Pygame has a simple and beginner friendly syntax, making it accessible even for students who are new to graphics programming or Python
+Pygame has a simple and beginner friendly syntax, making it accessible even for students who are new to graphics programming or Python
 
-⚙️ Minimal setup
+⚙️ **Minimal setup**
 
-    Installation is straightforward with a single pip install pygame command and also there are no complex configurations or external 
-    dependencies needed 
+Installation is straightforward with a single pip install pygame command and also there are no complex configurations or external 
+dependencies needed. 
+
+🎥 **Great for frame by frame rendering**
+
+The whole aspect of Pygame is in handling 2D graphics and creating static or dynamic image sequences. This is very useful for CVG tasks such as video frame display, animated images, or simulation.
+
+🎮 **Support real time interaction**
+
+With its embedded event handling, Pygame allows the program to interact with keyboard, mouse, or user input events, a special feature in interactive CVG applications, such as sliders, buttons, or live frame control.
+
+🍂 **Lightweight and efficient**
+
+Pygame is specialized for speed and performance in 2D graphics. The library can be especially handy for systems with limited hardware or when projects need smooth performance without performance lag.
+
+🛠️ **Flexible and customizable**
+
+Can easily overlay or overlay text, shapes, or other graphics on top of images and video frames, this produces an interesting and informative CVG output. It is also suitable for both basic visual output, such as image displays, and advanced GUIs or animated simulations.
