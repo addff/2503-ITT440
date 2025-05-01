@@ -70,3 +70,34 @@ NumPy is at the core of image processing in Python, but it works better when com
 
 ** Python Code Example for image processing with NumPy**
 ---
+```p
+from PIL import Image 
+import numpy as np
+
+image = Image.open("image.png")
+
+image_np = np.array(image)
+
+if len(image_np.shape) == 3:
+    grayscale = np.mean(image_np,axis=2).astype(np.uint8)
+else:
+    grayscale = image_np
+
+grayscale_img = Image.fromarray(grayscale, mode='L')
+
+grayscale_img.save("grayscale_output.png")
+
+print("Grayscale PNG saved successfully.")
+
+cropped = image_np[50:200, 50:200]
+cropped_img = Image.fromarray(cropped)
+cropped_img.save("cropped_image.png")
+
+flipped = np.fliplr(image_np)
+flipped_img = Image.fromarray(flipped)
+flipped_img.save("flipped_image.png")
+
+brighter = np.clip(image_np + 50, 0, 255).astype(np.uint8)
+
+bright_img = Image.fromarray(brighter)
+bright_img.save("brighter_image.png")
