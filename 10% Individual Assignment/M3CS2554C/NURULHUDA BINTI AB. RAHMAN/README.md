@@ -2,9 +2,10 @@
 ## STUDENT ID : 2023365581
 ## CLASS : M3CS2554C
 
-## Identifying Colors with OpenCV and Pandas
 
-### Introduction to OpenCV and Pandas
+<ins>**Identifying Colors with OpenCV and Pandas**</ins>
+
+#### Introduction to OpenCV and Pandas
 
 OpenCV (Open Source Computer Vision Library) is a powerful library used for image processing and computer vision tasks. It provides tools for manipulating images and videos, detecting objects, applying filters, and even performing machine learning-based image analysis. OpenCV is widely used in applications such as facial recognition, augmented reality, and automated image classification.
 
@@ -61,11 +62,11 @@ To run this program:
 <img src="https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd" width="200" height="500" />
 
 3. Install necessary dependencies using:
-   pip install opencv-python pandas numpy
+   **pip install opencv-python pandas numpy**
 
 4. Run the script and select an image or use the webcam.
 
-### Image color detection
+**Image color detection**
 
 ![image](https://github.com/user-attachments/assets/52816e99-be09-49ee-9c10-b6217d737696)
 
