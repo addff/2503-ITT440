@@ -44,6 +44,10 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 2. Open command prompt
 
 3. Run the following command
+   
+<pre> pip install pygame </pre>
+   
+   
 
 
 
