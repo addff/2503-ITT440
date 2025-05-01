@@ -56,8 +56,48 @@ imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 4. Histogram Equalization
    histeq(image):  Improves the overall contrast by spreading out intensity values.
 
+###### Code:
+```py
+% Read the image from the current folder
+imageFileName = 'formatlab.jpg';  
+if exist(imageFileName, 'file') ~= 2
+    error('Image file "%s" not found in the current folder.', imageFileName);
+end
 
+% Load and convert to grayscale
+originalImage = imread(imageFileName);
+grayImage = rgb2gray(originalImage);
 
+% Apply Gaussian Blur
+gaussianBlur = imgaussfilt(grayImage, 2);  % sigma = 2
 
+% Apply Histogram Equalization
+equalizedImage = histeq(grayImage);
+
+% Detect Edges using Canny method
+edges = edge(grayImage, 'Canny');
+
+% Display results in a 2x3 grid
+figure('Name', 'Image Processing Demo', 'NumberTitle', 'off');
+
+subplot(2,3,1);
+imshow(originalImage);
+title('Original Image');
+
+subplot(2,3,2);
+imshow(grayImage);
+title('Grayscale');
+
+subplot(2,3,3);
+imshow(gaussianBlur);
+title('Gaussian Blur');
+
+subplot(2,3,4);
+imshow(edges);
+title('Canny Edges');
+
+subplot(2,3,5);
+imshow(equalizedImage);
+title('Histogram Equalization');
 
 
