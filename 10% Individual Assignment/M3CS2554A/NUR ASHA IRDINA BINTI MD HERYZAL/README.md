@@ -85,23 +85,7 @@ Python: The programming language used for the entire project
 ---
 
 ### 4. `predict.py`
-```python
-import cv2
-import numpy as np
-from keras.models import load_model
 
-def predict_and_display(image_path):
-    model = load_model('models/object_detection_model.h5')
-    img = cv2.imread(image_path)
-    resized_img = cv2.resize(img, (64, 64)) / 255.0
-    input_img = np.expand_dims(resized_img, axis=0)
-
-    bbox = model.predict(input_img)[0].astype(int)
-    cv2.rectangle(img, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (0, 255, 0), 2)
-    cv2.imshow('Prediction', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-```
 ![image](https://github.com/user-attachments/assets/783ef5c2-0ec7-45c4-b139-c1950ac4571d)
 
 **Explanation:**
