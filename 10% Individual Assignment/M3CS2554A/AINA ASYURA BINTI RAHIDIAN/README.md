@@ -69,7 +69,7 @@ Put those changes together using A.Compose() like a recipe that tells how and wh
 Feed in your image, and Albumentations instantly gives you a new, changed version.
 It works with images, masks, boxes, and keypoints — great for training AI models
 
-## How to Install ALbumentations (Windows)
+## How to Install Albumentations (Windows)
 
 1. **Install Albumentations via pip**
    - Pip install albumentations
