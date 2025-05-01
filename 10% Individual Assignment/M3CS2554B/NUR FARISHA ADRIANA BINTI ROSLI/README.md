@@ -155,8 +155,13 @@ In conclusion, we investigated how Kornia facilitates image processing through P
 
 #### REFERENCES
 
+- Kornia. (2025). Readthedocs.io. https://kornia.readthedocs.io/en/stable/
+- kornia. (2025, January 11). PyPI. https://pypi.org/project/kornia/
+- Kornia.AI - Open Source Computer Vision. (2018). Github.io. https://kornia.github.io/
+- Riba, E., Ponsa, D., Rublee, E., & Bradski, G. (n.d.). Kornia: an Open Source Differentiable Computer Vision Library for PyTorch. Retrieved May 1, 2025, from https://arxiv.org/pdf/1910.02190.pdf
+‌
 
-
+‌
 
 
 
