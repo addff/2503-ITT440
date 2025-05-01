@@ -173,7 +173,7 @@ pygame.quit()
 sys.exit()
 </pre>
 
-The output
+The output :
 
 original    
 
@@ -261,8 +261,157 @@ pygame.quit()
 sys.exit()
  </pre>
 
-The Output
+The Output :
 
-![Screenshot 2025-05-01 175914](https://github.com/user-attachments/assets/d65b7695-eeb9-43af-b9bc-5b98c49dbaf7)
+<img src="https://github.com/user-attachments/assets/d65b7695-eeb9-43af-b9bc-5b98c49dbaf7" width="400"/>  
 
+<img src="https://github.com/user-attachments/assets/6e9ee49d-1baa-4d2c-9655-9fca991c888b" width="400"/>  
 
+# 3. INTERACTIVE FACE CONTROLLED GAME
+
+- The Face Jumper project is an interactive CVG application where the player's facial position, captured in real-time through a webcam, is used to control a character inside a game built with Pygame.
+
+- Using face detection using OpenCV, the system identifies the position of the player’s face in each video frame. That position data is then passed to the Pygame environment to control the in-game character's movement.
+
+- This project combines real-time computer vision and graphical rendering. Although due to project restrictions only Pygame is used in this case, the concept simulates how face data could be integrated into a game.
+
+FULL CODE
+
+<pre>
+import pygame
+import cv2
+import sys
+import numpy as np
+import time
+
+# Initialize pygame and OpenCV
+pygame.init()
+
+# Constants
+WIDTH, HEIGHT = 640, 480
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+BLUE = (66, 135, 245)
+
+# Setup display
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Face Jumper")
+clock = pygame.time.Clock()
+font = pygame.font.SysFont("Arial", 28)
+
+# Load face detector
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Setup webcam
+cap = cv2.VideoCapture(0)
+
+# Game Variables
+player = pygame.Rect(100, HEIGHT//2, 50, 50)
+player_velocity = 0
+gravity = 0.8
+jump_strength = -14
+obstacles = []
+obstacle_timer = 0
+score = 0
+face_y_prev = None
+
+# Jump control
+last_jump_time = 0
+jump_cooldown = 0.3  # seconds
+
+# Function to add obstacle
+def add_obstacle():
+    gap = 150
+    top_height = np.random.randint(50, HEIGHT - gap - 50)
+    bottom_height = HEIGHT - top_height - gap
+    obstacles.append((pygame.Rect(WIDTH, 0, 50, top_height),
+                      pygame.Rect(WIDTH, HEIGHT - bottom_height, 50, bottom_height)))
+
+# Main loop
+running = True
+while running:
+    screen.fill(WHITE)
+    
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Capture frame from webcam
+    ret, frame = cap.read()
+    if not ret:
+        break
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+
+    # Detect face and calculate jump
+    if len(faces) > 0:
+        (x, y, w, h) = faces[0]  # ambil muka pertama
+        face_center_y = y + h//2
+        current_time = time.time()
+        if face_y_prev is not None and face_y_prev - face_center_y > 8:
+            if current_time - last_jump_time > jump_cooldown:
+                player_velocity = jump_strength
+                last_jump_time = current_time
+        face_y_prev = face_center_y
+
+    # Update player
+    player_velocity += gravity
+    player.y += int(player_velocity)
+    if player.y < 0:
+        player.y = 0
+    if player.y > HEIGHT - player.height:
+        player.y = HEIGHT - player.height
+
+    # Update obstacles
+    obstacle_timer += 1
+    if obstacle_timer > 90:
+        add_obstacle()
+        obstacle_timer = 0
+
+    for obs_top, obs_bottom in obstacles:
+        obs_top.x -= 5
+        obs_bottom.x -= 5
+    obstacles = [obs for obs in obstacles if obs[0].x + obs[0].width > 0]
+
+    # Collision check
+    for obs_top, obs_bottom in obstacles:
+        if player.colliderect(obs_top) or player.colliderect(obs_bottom):
+            print("Game Over! Final Score:", score)
+            running = False
+
+    # Score update
+    for obs_top, _ in obstacles:
+        if obs_top.x + obs_top.width == player.x:
+            score += 1
+
+    # Draw everything
+    pygame.draw.rect(screen, BLUE, player)
+    for obs_top, obs_bottom in obstacles:
+        pygame.draw.rect(screen, BLACK, obs_top)
+        pygame.draw.rect(screen, BLACK, obs_bottom)
+
+    score_text = font.render(f"Score: {score}", True, BLACK)
+    screen.blit(score_text, (10, 10))
+
+    pygame.display.flip()
+    clock.tick(30)
+
+# Cleanup
+cap.release()
+pygame.quit()
+sys.exit()
+</pre>
+
+The Output :
+
+<img src="https://github.com/user-attachments/assets/630774dc-d914-4080-b5a3-7c981d020fee" width="400"/>
+
+<img src="https://github.com/user-attachments/assets/63add0c9-b5ce-49d9-ae13-f210761227e7" width="400"/>
+
+## Conclusion
+
+Throughout the development of various mini projects under Computer Vision Graphics (CVG) using Pygame, several key concepts have been successfully explored and demonstrated. These projects, including object tracking, motion detection, image interaction, and an interactive face-controlled game simulation (Face Jumper), shows how visual data and graphics can be integrated to create engaging and intelligent user interfaces. 
+By using Pygame, a lightweight and beginner-friendly graphics library in Python, each project was developed with a focus on visual interaction, real-time feedback, and frame-based control. These implementations highlight how graphical simulation can effectively represent the core principles of computer vision.
+
+In conclusion, I admit there are a lot of valuable learning experience in understanding the graphical side of computer vision. It proves that with the right approach, even basic tools can deliver meaningful visual outputs and interactive elements that are central to the field of CVG.

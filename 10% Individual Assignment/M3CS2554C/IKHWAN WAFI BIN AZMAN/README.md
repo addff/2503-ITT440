@@ -71,9 +71,83 @@ It is especially useful when you want the power of ImageJ with the flexibility a
 
 ## How to install PyImageJ
 
+To use **PyImageJ**, you need:
+- Python (recommended: version 3.8 or 3.9)
+- Java (OpenJDK 8 is ideal)
+- A package manager: either **conda** (recommended) or **pip**
+- 
+ ### ✅ Method 1: Install with Conda (Recommended)
 
+This is the easiest and most reliable method.
+### 🪟 Step-by-Step Guide for Windows
+
+1. Go to the official Miniconda page:  
+   [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
 <p align="center">
-  <img src="https://github.com/Wafiy2003/IMAGE/blob/ec5332b18f3be61965d525f365752e99fcf7bcee/Screenshot%202025-05-01%20013853.png
-" alt="image alt">
+  <img src="https://github.com/Wafiy2003/IMAGE/blob/6f5c4dbc8e27ed56db5f6adf5e99f564d4778601/Screenshot%202025-05-01%20154418.png" alt="image alt">
 </p>
+3. Download the **Miniconda Installer for Windows**:  
+   Choose the **64-bit version** for Python **3.9 or newer**.
+
+4. Run the downloaded `.exe` installer.
+
+5. Click **Next**, agree to the terms, and choose **"Install Just for Me"**.
+
+6. ⚙When asked, check the box that says:  
+   **"Add Miniconda to my PATH environment variable"** (optional but helpful).
+
+   ## 🧪 Sample Code: PyImageJ in Action
+
+This example shows how to:
+
+- Initialize PyImageJ using the Fiji distribution  
+- Load and display an image  
+- Apply a Gaussian blur  
+- Convert the result to a NumPy array (optional)
+
+---
+
+# PyImageJ: Image Processing in Python
+
+## Basic Usage Examples
+
+---
+
+### 1. Opening and Displaying an Image
+
+```python
+import imagej
+
+# Initialize ImageJ (Fiji)
+ij = imagej.init('sc.fiji:fiji', headless=False)
+
+# Load image
+image = ij.io().open('sample_image.jpg')
+
+# Show image
+ij.ui().show("Original Image", image)
+
+# Print image info
+dims = image.getDimensions()
+print("Image Dimensions:", dims)
+
+```
+### 2.Applying a Gaussian Blur
+```python
+# Apply Gaussian blur (sigma = 2.0)
+blurred = ij.op().run("filter.gaussian", image, 2.0)
+
+# Show blurred image
+ij.ui().show("Blurred Image", blurred)
+```
+
+### 3.Converting to NumPy Array
+```python
+
+# Convert the result to NumPy
+image_np = ij.py.from_java(blurred)
+
+print("Image shape (NumPy):", image_np.shape)
+
+```

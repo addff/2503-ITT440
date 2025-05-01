@@ -53,108 +53,110 @@ These functions are used for tasks like image compression, edge detection, and n
 
 This example demonstrates how to use the PyWavelets library to perform image decomposition and reconstruction using the Haar wavelet.
 
-### 🔧 Step 1: Import Required Libraries
-
-```python
-from skimage import io, img_as_float
+### 🔧 Step 1: Install Required Libraries
+```
+pip install numpy pywt matplotlib scikit-image
+```
+### 🔧Step 2: Import Necessary Libraries
+```
+import numpy as np
 import pywt
 import matplotlib.pyplot as plt
+from skimage import io
 ```
-### 🔧Step 2: Load the Grayscale Image
+### 🔧Step 3: Upload Your Own Image
 ```
-image = img_as_float(io.imread("Downloads/fruits.png", as_gray=True))
+image = io.imread("car.jpeg")
 ```
-### 🔧Step 3: Apply 2D Discrete Wavelet Transform (DWT)
+### 🔧Step 4: Apply 2D Discrete Wavelet Transform (DWT)
 ```
-coeffs2 = pywt.dwt2(image, 'haar')
-cA, (cH, cV, cD) = coeffs2
+coeffs2 = pywt.dwt2(image, 'bior1.3')
+LL, (LH, HL, HH) = coeffs2
 ```
-### 🔧Step 4: Reconstruct the Image Using Inverse DWT
+### 🔧Step 5: Display Results of Wavelet Transform
 ```
-reconstructed = pywt.idwt2(coeffs2, 'haar')
-```
-### 🔧Step 5: Display the Results
-```
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(12, 12))
 
-plt.subplot(2, 3, 1)
-plt.title("Original Image")
-plt.imshow(image, cmap='gray')
+# Approximation (LL)
+plt.subplot(2, 2, 1)
+plt.imshow(LL, cmap='gray')
+plt.title("Approximation (LL)")
 plt.axis('off')
 
-plt.subplot(2, 3, 2)
-plt.title("Approximation (cA)")
-plt.imshow(cA, cmap='gray')
+# Horizontal Detail (LH)
+plt.subplot(2, 2, 2)
+plt.imshow(LH, cmap='gray')
+plt.title("Horizontal Detail (LH)")
 plt.axis('off')
 
-plt.subplot(2, 3, 3)
-plt.title("Horizontal Detail (cH)")
-plt.imshow(cH, cmap='gray')
+# Vertical Detail (HL)
+plt.subplot(2, 2, 3)
+plt.imshow(HL, cmap='gray')
+plt.title("Vertical Detail (HL)")
 plt.axis('off')
 
-plt.subplot(2, 3, 4)
-plt.title("Vertical Detail (cV)")
-plt.imshow(cV, cmap='gray')
-plt.axis('off')
-
-plt.subplot(2, 3, 5)
-plt.title("Diagonal Detail (cD)")
-plt.imshow(cD, cmap='gray')
-plt.axis('off')
-
-plt.subplot(2, 3, 6)
-plt.title("Reconstructed Image")
-plt.imshow(reconstructed, cmap='gray')
+# Diagonal Detail (HH)
+plt.subplot(2, 2, 4)
+plt.imshow(HH, cmap='gray')
+plt.title("Diagonal Detail (HH)")
 plt.axis('off')
 
 plt.tight_layout()
 plt.show()
+
 ```
 ### final code
 ```
-from skimage import io, img_as_float
+import numpy as np
 import pywt
 import matplotlib.pyplot as plt
+from skimage import io
 
-# Load and normalize image
-image = img_as_float(io.imread("Downloads/fruits.png", as_gray=True))
+# === Upload your own image ===
+image = io.imread("car.jpeg")
 
-# Apply 2D Discrete Wavelet Transform
-coeffs2 = pywt.dwt2(image, 'haar')
-cA, (cH, cV, cD) = coeffs2  # Approximation and detail coefficients
 
-# Reconstruct the image
-reconstructed = pywt.idwt2(coeffs2, 'haar')
+# Apply 2D discrete wavelet transform (DWT)
+coeffs2 = pywt.dwt2(image, 'bior1.3')  # 'bior1.3' is a type of wavelet filter
+LL, (LH, HL, HH) = coeffs2  # LL - Approximation coefficients, LH, HL, HH - Detail coefficients
 
-# Plotting the results
-plt.figure(figsize=(12, 6))
+# Display the results of the wavelet transform
+plt.figure(figsize=(12, 12))
 
-plt.subplot(2, 3, 1)
-plt.title("Original Image")
-plt.imshow(image, cmap='gray')
+# Approximation (LL)
+plt.subplot(2, 2, 1)
+plt.imshow(LL, cmap='gray')
+plt.title("Approximation (LL)")
+plt.axis('off')
 
-plt.subplot(2, 3, 2)
-plt.title("Approximation (cA)")
-plt.imshow(cA, cmap='gray')
+# Horizontal Detail (LH)
+plt.subplot(2, 2, 2)
+plt.imshow(LH, cmap='gray')
+plt.title("Horizontal Detail (LH)")
+plt.axis('off')
 
-plt.subplot(2, 3, 3)
-plt.title("Horizontal Detail (cH)")
-plt.imshow(cH, cmap='gray')
+# Vertical Detail (HL)
+plt.subplot(2, 2, 3)
+plt.imshow(HL, cmap='gray')
+plt.title("Vertical Detail (HL)")
+plt.axis('off')
 
-plt.subplot(2, 3, 4)
-plt.title("Vertical Detail (cV)")
-plt.imshow(cV, cmap='gray')
-
-plt.subplot(2, 3, 5)
-plt.title("Diagonal Detail (cD)")
-plt.imshow(cD, cmap='gray')
-
-plt.subplot(2, 3, 6)
-plt.title("Reconstructed Image")
-plt.imshow(reconstructed, cmap='gray')
+# Diagonal Detail (HH)
+plt.subplot(2, 2, 4)
+plt.imshow(HH, cmap='gray')
+plt.title("Diagonal Detail (HH)")
+plt.axis('off')
 
 plt.tight_layout()
 plt.show()
 ```
+
+### RESULTS
+Here is the sample output.
+![image](https://github.com/user-attachments/assets/2ac39ef5-21eb-4633-9588-52b00ca5583b)
+
+
+
+
 
 

@@ -3,7 +3,8 @@
 ### **CLASS: CDCS2554C**
 ### **TITLE: INTRODUCTION TO BASIC IMAGE PROCESSING USING SIMPLEITK IN PYTHON** 
 
-# **WHAT IS IMAGE PROCESSING** <img align="center" width="200" height="200" src="https://github.com/azimirfan/IMAGE/blob/a934caedeaef9f11372b734f2e95edf55b2c0510/art%20geometry%20GIF%20by%20Michel%20Poisson.gif">
+# **WHAT IS IMAGE PROCESSING** 
+<div align="center"> <img align="center" width="200" height="200" src="https://github.com/azimirfan/IMAGE/blob/a934caedeaef9f11372b734f2e95edf55b2c0510/art%20geometry%20GIF%20by%20Michel%20Poisson.gif"> </div>
 Image processing is the manipulation and analysis of images, typically digital ones, to enhance their visual quality, extract information, or prepare them for further use. It involves converting images or video sequences into digital formats that can be analyzed by algorithms. This process can involve various techniques like enhancement, noise reduction, edge detection, and more, ultimately aiming to improve the image or extract meaningful data. 
 
 # **TOOLS**
@@ -15,7 +16,8 @@ Image processing is the manipulation and analysis of images, typically digital o
 
 # WHAT IS SIMPLEITK 
 SimpleITK is a simplified, easy-to-use interface to the Insight Segmentation and Registration Toolkit (ITK), a powerful library widely used for medical image processing. SimpleITK is designed to be accessible from scripting languages like Python, R, and Java, making it suitable for rapid development, education, and research.
-
+<div align="center">
+   
 | **FEATURES OF SIMPLEITK** |
 |---------------------------|
 |1. Multi-language support: Works with Python, R, C#, Java, and more.|  
@@ -23,6 +25,7 @@ SimpleITK is a simplified, easy-to-use interface to the Insight Segmentation and
 |3. IO operations: Read/write many medical image formats (DICOM, NIfTI, MetaImage, NRRD, etc.).|
 |4. Image types: Supports scalar, vector, and label images.|
 |5. Image types: Supports scalar, vector, and label images.|
+</div>
 
 # **CORE CONCEPTS**
 SimpleITK represents images as multi-dimensional arrays with associated metadata:
@@ -131,3 +134,57 @@ anisotropic = sitk.CurvatureAnisotropicDiffusion(image,
                                                 numberOfIterations=5)
 
 ```
+
+# EXAMPLE OF SIMPLE DEMONSTRATION
+### CODING
+``` python
+import SimpleITK as sitk
+import matplotlib.pyplot as plt
+
+# Step 1: Read on image
+image_path = 'imageSimpleitk.png' 
+image = sitk.ReadImage(image_path)
+
+# Step 2: Apply a Gaussian filter
+sigma = 2.0  # Standard deviation for Gaussian kernel
+filtered_image = sitk.SmoothingRecursiveGaussian(image, sigma)
+
+# Step 3: Convert images to numpy arrays for visualization
+original_array = sitk.GetArrayFromImage(image)
+filtered_array = sitk.GetArrayFromImage(filtered_image)
+
+# Step 4: Display the original and filtered images
+plt.figure(figsize=(12, 6))
+
+plt.subplot(1, 2, 1)
+plt.title('Original Image')
+plt.imshow(original_array, cmap='gray')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.title('Filtered Image (Gaussian)')
+plt.imshow(filtered_array, cmap='gray')
+plt.axis('off')
+
+
+plt.show()
+
+```
+### OUTPUT
+<div align="">
+<img align="left" width="260" height="300" src="https://github.com/azimirfan/IMAGE/blob/58532ec0ba059d30fe2756cbaed27f37850270ba/Screenshot%202025-05-01%20194314.png">
+   
+</div>
+<div align="">
+<img align="center" width="260" height="300" src="https://github.com/azimirfan/IMAGE/blob/58532ec0ba059d30fe2756cbaed27f37850270ba/Screenshot%202025-05-01%20194406.png">
+   
+</div>
+
+# CONCLUSION
+SimpleITK offers a powerful yet accessible approach to medical image processing by providing a simplified interface to the robust ITK library. Its strength lies in specialized medical imaging applications where physical space awareness, metadata preservation, and multi-dimensional processing are critical. While it presents challenges in terms of learning curve and performance overhead for simple tasks, its comprehensive toolkit and cross-language compatibility make it invaluable for researchers, clinicians, and developers working with medical and scientific imaging. For applications requiring specialized medical image analysis, segmentation, or registration, SimpleITK provides an excellent balance between power and usability that few alternatives can match. Though not ideal for general computer vision tasks, SimpleITK remains a standout choice for serious medical image computing workflows where accuracy and specialized functionality take precedence.
+
+# DEMONSTRATION VIDEO
+
+[PLEASE ENJOY THE VIDEO](https://youtu.be/PsQeLY0L000?si=3rbuYjRG1x7YN5Oa)
+
+
