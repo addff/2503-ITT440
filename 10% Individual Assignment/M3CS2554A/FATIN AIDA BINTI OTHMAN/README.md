@@ -26,7 +26,7 @@ Feature of SCIKIT-IMAGES:
 
 EXAMPLE CODE 
 from skimage import io, color, filters, feature, exposure
-'''import matplotlib.pyplot as plt
+```import matplotlib.pyplot as plt
 
 # === Load image from file ===
 image_path = r"C:\Users\USER\cat.png"  # Use raw string to handle Windows paths
@@ -75,7 +75,7 @@ for a in ax:
     a.axis('off')
 
 plt.tight_layout()
-plt.show()'''
+plt.show()```
 
 
 
