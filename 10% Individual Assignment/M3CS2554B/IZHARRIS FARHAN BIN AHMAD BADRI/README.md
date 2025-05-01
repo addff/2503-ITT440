@@ -28,12 +28,14 @@ Image processing: Commonly used for image denoising and compression.
 - `pywt.threshold()`
 
 
-## 🔧 Installation & Setup
+## 🛠️ Installation & Setup
 ### Install PyWavelets matplotlib numpy
 
 
 
-### 🛠️ Step-by-Step: Image Processing Using PyWavelets
+
+
+## 🔧 Step-by-Step: Image Processing Using PyWavelets
 
 ### Basic Workflow Image Processing Denoising with Daubechies Wavelet
 ```
