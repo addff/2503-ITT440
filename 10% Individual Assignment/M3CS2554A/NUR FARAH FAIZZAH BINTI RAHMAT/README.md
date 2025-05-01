@@ -27,3 +27,7 @@ Image hashing is the computational process of applying an algorithm to genarate 
 * Imagehash supports a range of hashing algorithms including Average Hash (wHash) by providing adaptability to diverse application requirements.
 * Owing to its lightweight nature, imagehash is well-suited for deployment in both small-scale and large-scale environments without significant computational burdens.
 * Designed to operate alongside widely adopted libraries such as Pillow (PIL), imagehash benefits from broad compatibiity, enhancing its applicability whithin comprehensive computer vision and image processing workflows.
+![My Image]()
+```python
+def hello_world():
+    print("Hello, World!")
