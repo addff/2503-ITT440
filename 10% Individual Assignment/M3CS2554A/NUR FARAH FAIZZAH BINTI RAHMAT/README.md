@@ -31,5 +31,10 @@ Image hashing is the computational process of applying an algorithm to genarate 
 * Designed to operate alongside widely adopted libraries such as Pillow (PIL), imagehash benefits from broad compatibiity, enhancing its applicability whithin comprehensive computer vision and image processing workflows.
 ### A PRACTICAL EXAMPLE FOR IMAGE COMPARISON
 #### Original Image
-![My Image](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554A/NUR%20FARAH%20FAIZZAH%20BINTI%20RAHMAT%EF%80%8D/image3.jpg)
+<img src="image3.jpg" alt="image3" width="250">
+
+#### Resized Image
+<img src="image3_resized.jpg" alt="image3_resized" width="250">
+
+
 
