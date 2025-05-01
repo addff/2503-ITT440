@@ -232,7 +232,7 @@ _**Combining with NumPy and SciPy**_ : While SymPy is primarily focused on symbo
      Overall, SymPy is widely used in scientific and engineering applications where symbolic mathematics is required. It is particularly valuable in fields like mathematics, physics, engineering, and computer science for tasks that involve complex algebraic manipulations and symbolic reasoning.
 
 ## DEMONSTRATION OF INSTALATION ANACONDA, FRAMEWORK STREAMLIT, AND LIBRARY SYMPY
-![Watch the Video](https://drive.google.com/drive/folders/1cqFfxB-gTn-tA4FoCX4CglA6ed_5HvX8?usp=sharing)
+![Watch the Video](https://youtu.be/37TbKwJ8qKU)
 
 <p align='center'>
        -THANK YOU-
