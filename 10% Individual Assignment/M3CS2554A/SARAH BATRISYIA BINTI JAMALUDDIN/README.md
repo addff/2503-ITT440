@@ -11,7 +11,7 @@
  In short, DeepFace is library that support python and using powerful deep learning model without required user to have extensive knowledge of the underlying algorithms. Plus, it handles 
  complexities of model loading, face detection and feature extraction
 
- <img src= "https://github.com/user-attachments/assets/3f48f34a-2f90-466d-a297-0e4353578e30" alts="image" width="450"/>
+ <img src= "https://github.com/user-attachments/assets/3f48f34a-2f90-466d-a297-0e4353578e30" alts="image" width="350"/>
 
  ## KEY CHARACTERISTICS AND ADVANTAGES OF DEEPFACE 
  ### 1.High-Level API
