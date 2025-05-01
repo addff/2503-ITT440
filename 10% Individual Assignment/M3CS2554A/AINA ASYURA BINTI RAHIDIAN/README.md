@@ -113,3 +113,5 @@ plt.title("Augmented Image")
 plt.axis('off')
 plt.show()
 ```
+
+https://youtu.be/f77FgLynZRs?si=xj7PvfZwvHheYNXd
