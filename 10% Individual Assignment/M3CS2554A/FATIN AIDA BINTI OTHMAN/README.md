@@ -27,52 +27,66 @@ Scikit-image (also known as skimage) is one of the open-source image-processing 
 **Example code processing image using Scikit-image tools**
 
 ```
-from skimage import io, color, filters, feature, exposure
+from skimage import io, filters, feature, exposure
 import matplotlib.pyplot as plt
+import numpy as np
 
-# === Load image from file ===
-image_path = r"C:\Users\USER\cat.png"  # Use raw string to handle Windows paths
+# === Load image ===
+image_path = r"C:\Users\USER\cat.png"
 image = io.imread(image_path)
 
-# === Fix: Remove alpha channel if present (RGBA → RGB) ===
+# === Remove alpha channel if present ===
 if image.shape[-1] == 4:
     image = image[..., :3]
 
-# === Convert to grayscale ===
-gray_image = color.rgb2gray(image)
+# === Normalize image to [0, 1] for processing ===
+image = image / 255.0  # Ensure all values are float between 0 and 1
 
-# === Apply Gaussian blur to reduce noise ===
-blurred_image = filters.gaussian(gray_image, sigma=1)
+# === Apply Gaussian blur to color image ===
+blurred_image = filters.gaussian(image, sigma=1, channel_axis=-1)
 
-# === Detect edges using Canny edge detection ===
-edges = feature.canny(blurred_image, sigma=1)
+# === Convert to grayscale for edge detection only ===
+gray = np.dot(image[..., :3], [0.299, 0.587, 0.114])  # manual grayscale conversion
+edges = feature.canny(gray, sigma=1)
 
-# === Enhance contrast using histogram equalization ===
-equalized_image = exposure.equalize_hist(gray_image)
+# === Create red edge overlay ===
+edge_overlay = np.copy(image)
+edge_overlay[edges] = [1, 0, 0]  # red edges
 
-# === Plot all images ===
+# === Apply histogram equalization to each color channel ===
+equalized_image = np.zeros_like(image)
+for i in range(3):  # R, G, B channels
+    equalized_image[..., i] = exposure.equalize_hist(image[..., i])
+
+# === Plot everything ===
 fig, axes = plt.subplots(2, 3, figsize=(15, 8))
 ax = axes.ravel()
 
+# 1. Original
 ax[0].imshow(image)
 ax[0].set_title("Original Image")
 
-ax[1].imshow(gray_image, cmap='gray')
-ax[1].set_title("Grayscale")
+# 2. Gaussian Blur (color)
+ax[1].imshow(blurred_image)
+ax[1].set_title("Gaussian Blur")
 
-ax[2].imshow(blurred_image, cmap='gray')
-ax[2].set_title("Gaussian Blur")
+# 3. Edge Overlay (in red)
+ax[2].imshow(edge_overlay)
+ax[2].set_title("Canny Edges (Red Overlay)")
 
-ax[3].imshow(edges, cmap='gray')
-ax[3].set_title("Canny Edges")
+# 4. Histogram Equalization (color-enhanced)
+ax[3].imshow(equalized_image)
+ax[3].set_title("Histogram Equalization")
 
-ax[4].imshow(equalized_image, cmap='gray')
-ax[4].set_title("Histogram Equalization")
+# 5. Optional: Side-by-side (Blur + Edges)
+combined = 0.5 * blurred_image + 0.5 * edge_overlay
+ax[4].imshow(np.clip(combined, 0, 1))
+ax[4].set_title("Blur + Edges Combo")
 
-# Leave the last subplot blank
+# 6. Empty
 ax[5].axis('off')
 
-# Remove axes ticks
+# Hide axes
 for a in ax:
     a.axis('off')
 
@@ -83,5 +97,6 @@ plt.show()
 **Output**
 
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/3b04f4ec-458d-420d-9f2b-8e074ef8c0d2" />
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/bdb36fc4-cf6e-422e-aad0-4e065e876a3b" />
+
 
