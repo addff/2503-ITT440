@@ -36,7 +36,7 @@ Part 1: Image Color Detection
    - Displays a colored rectangle with the name and RGB value of the detected color.
    - Press ESC to move to the next image.
 
-   ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d | width = 80)
+   ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d width="100" height="100")
 
 Part 2: Webcam Color Detection
    - Captures video from the webcam in real-time.
