@@ -4,7 +4,7 @@
 
 ---
 
-🔍 **Title: Object Detection with Keras Using Custom Rectangle Images**
+🔍 **Easy Object Detection with Keras: A Hands-On Student Project**
 
 ---
 
