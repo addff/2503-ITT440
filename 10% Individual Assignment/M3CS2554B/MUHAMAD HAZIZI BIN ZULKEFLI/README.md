@@ -36,6 +36,77 @@ pip install matplotlib
 
 import matplotlib.pyplot as plt
 
+# Source Code
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+from scipy import ndimage
+
+import imageio
+
+Load the image
+
+image = imageio.v2.imread
+
+1. Apply Sobel filters for edge detection
+   
+sobel_x = ndimage.sobel(image, axis=0)
+
+sobel_y = ndimage.sobel(image, axis=1)
+
+edges = np.hypot(sobel_x, sobel_y)
+
+
+2. Plot the original and processed images
+   
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 3, 1)
+
+plt.title("Original Grayscale")
+
+plt.imshow(image, cmap='gray')
+
+plt.axis('off')
+
+plt.subplot(1, 3, 2)
+
+plt.title("Sobel X")
+
+plt.imshow(sobel_x, cmap='gray')
+
+plt.axis('off')
+
+plt.subplot(1, 3, 3)
+
+plt.title("Edge Detection")
+
+plt.imshow(edges, cmap='gray')
+
+plt.axis('off')
+
+plt.tight_layout()
+
+plt.show()
+
+# Output Description
+
+- Loads a grayscale image
+
+- Detects edges using Sobel operators
+
+- Visualizes the original and processed images side by side
+
+# Video Tutorial
+
+- https://www.youtube.com/watch?v=aUw47Xey8sg
+
+
+
+
+
 
 
 
