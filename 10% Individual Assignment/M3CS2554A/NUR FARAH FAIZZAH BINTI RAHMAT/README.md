@@ -7,7 +7,7 @@
 * To implement hashing techniques for the purpose of evaluating visual similarities and differences between digital image
 * To develop the ability to intepret and analyze image hash outputs to assess the degree of similarity between images
 ### IMAGE PROCESSING 
-Image processing refers to the techniques of converting an image into its digital representation and applying various operations tp extract meaningful information from it. Typically, an image processing system interprets iamges as two-dimensional signals and utilizes predefined signal processing methods to analyze and manipulate the image data
+Image processing refers to the techniques of converting an image into its digital representation and applying various operations to extract meaningful information from it. Typically, an image processing system interprets images as two-dimensional signals and utilizes predefined signal processing methods to analyze and manipulate the image data
 ### IMAGEHASH
 <img src="logo.png" alt="logo" width="250">
 
@@ -194,5 +194,10 @@ if hamming_distance == 0:
 else:
     print("The images are different.")
 ```
+Image hashing is a method that generates a compact digital signature based on an image’s visual content. Perceptual hashing, such as that provided by the imagehash library, allows for the comparison of images by detecting visual similarities rather than exact binary matches. When an image is modified—through color adjustments, rotation, or filtering—the resulting hash usually changes.
+
+By comparing the hashes of the original and altered images, one can measure their similarity using techniques like Hamming distance. A smaller distance indicates higher similarity. This approach is widely used in areas such as digital forensics, duplicate detection, and content verification due to its efficiency and sensitivity to changes.
+
+
 
 
