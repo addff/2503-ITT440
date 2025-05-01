@@ -1,12 +1,32 @@
 # NUR AMIRA NADIRA BINTI SHAHARUDDIN (2023414868)
 
-## Image Processing Using imageIO in Python
+## Image Processing Using imageio in Python
+
+![imageio](https://github.com/user-attachments/assets/a1c72c2e-0029-4b51-84da-8877780655ec)
+
 ## Introduction
-This project demonstrates basic image processing operations using imageIO in Python. The operations include reading, resized and grayscale  an image. imageIO with help with other library can transform module makes it simple to manipulate images easily and efficiently and differently. 
+This project demonstrates basic image processing operations using imageIO in Python. The operations include reading, resized and grayscale  an image. imageIO with help with other library can transform module makes it simple to manipulate images easily and efficiently and differently. Image processing is a technique used to perform operations on digital images to enhance, analyze, or extract useful information from them. It involves manipulating image data using algorithms to perform tasks such as resizing, filtering, rotating, converting to grayscale, and more. Image processing is widely used in fields like computer vision, medical imaging, photography, remote sensing, and artificial intelligence. By using programming languages like Python along with libraries such as ImageIO, Pillow, and OpenCV, image processing becomes an accessible and powerful tool for solving real-world problems involving visual data.
 
 ## Technologies Used
 - Python 3.10.11
 - imageIO Library
+
+  ## What imageio can do?
+✅ Read images from files or URLs into NumPy arrays
+
+✅ Write (save) images to various formats like JPG, PNG, GIF, BMP, TIFF
+
+✅ Read and write animated images (e.g., animated GIFs as frames)
+
+✅ Read and write videos (with plugins like ffmpeg)
+
+✅ Work with multi-page images (e.g., TIFF stacks)
+
+✅ Support a wide range of file formats
+
+✅ Integrate with other libraries like NumPy, Pillow, and OpenCV for advanced processing
+
+✅ Perform image I/O for scientific computing, visualization, and machine learning
 
 ## Installation
 To run this project, you need to install imageIO first and other libraries that you need:
@@ -133,3 +153,5 @@ else:
 ### Conclusion
 In conclusion by using imageio library, I was able to efficiently perform image processing in Python by reading an image to access its pixel data, converting it to grayscale to simplify visual information, resizing it to adjust dimensions, and downloading an image from a URL to use external resources—all with simple and effective code.
 
+### youtube link video:
+https://youtu.be/5-1sVW0yAwQ?feature=shared
