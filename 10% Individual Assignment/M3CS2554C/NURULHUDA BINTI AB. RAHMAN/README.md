@@ -38,6 +38,7 @@ Part 1: Image Color Detection
 
    <img src="https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d" width="600" height="500" />
 
+
 Part 2: Webcam Color Detection
    - Captures video from the webcam in real-time.
    - Tracks the mouse movement across the window.
