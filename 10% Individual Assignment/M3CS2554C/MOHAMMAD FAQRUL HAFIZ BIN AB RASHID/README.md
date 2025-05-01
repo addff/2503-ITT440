@@ -234,7 +234,7 @@ _**Combining with NumPy and SciPy**_ : While SymPy is primarily focused on symbo
 ## DEMONSTRATION OF INSTALATION ANACONDA, FRAMEWORK STREAMLIT, AND LIBRARY SYMPY
 ### Watch the DEMONSTRATION
 
-###[link]([demostartion](https://youtu.be/37TbKwJ8qKU))
+#[link]([demostartion](https://youtu.be/37TbKwJ8qKU))
 
 <a href="https://youtu.be/37TbKwJ8qKU">link</a>
 
