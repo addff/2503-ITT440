@@ -55,7 +55,7 @@ Part 2: Webcam Color Detection
 This project demonstrates a practical application of computer vision, allowing users to easily identify and label colors from any visual source. It combines image processing with user interaction to deliver a simple but effective color detection system. Such a tool can be useful in design, digital art, education, and accessibility.
 
 ### Demo
-Click this link for Demo session : https://youtu.be/WKey80JH_d8
+Click this link for Demo session : https://youtu.be/N6FoeMIqUPI
 
 To run this program:
 1. Ensure colors.csv is correctly formatted and present in the same directory.
