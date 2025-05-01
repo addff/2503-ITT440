@@ -1,5 +1,5 @@
-## 2503-ITT440
-## 10% Individual Assignment
+### 2503-ITT440
+### 10% Individual Assignment
 #### NAME: NUR 'IZZAH NAJIHAH BINTI NOOR AZMI  
 #### MATRIC NUMBER: 2023298506
 #### CLASS: M3CS2554A
@@ -131,7 +131,7 @@ Visual Studio Code, with its rich features and extensibility, stands out as one 
 
 ---
 ## Demonstration
-https://youtu.be/aI3d14m9PUM?si=PTSDmiIwe0NxKEWy
+[![Watch the video](https://i.ytimg.com/vi/aI3d14m9PUM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCy9K60OCqFVhGYw9-9ED2fJIfdkg)](https://youtu.be/aI3d14m9PUM?si=PTSDmiIwe0NxKEWy)
 
 
 ### Sample Output
