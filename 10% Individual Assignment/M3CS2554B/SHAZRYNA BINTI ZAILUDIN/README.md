@@ -217,3 +217,5 @@ In conclusion, the Pillow library provides a powerful yet user-friendly toolkit 
 ---
 
 #### VIDEO DEMONSTRATION
+[![Watch the video](https://img.youtube.com/vi/9-oYywPECxA/0.jpg)](https://www.youtube.com/watch?v=9-oYywPECxA)
+

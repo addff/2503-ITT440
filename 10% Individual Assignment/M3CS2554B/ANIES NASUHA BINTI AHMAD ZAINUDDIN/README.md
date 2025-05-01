@@ -38,10 +38,53 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 💠Images or videos
 
-## Steps to implement Pygame
+## Pygame Installation 
+1. Make sure Python is installed (python 3.13)
 
--
+2. Open command prompt
 
+3. Run the following command
+   
+<pre> pip install pygame </pre>
 
+4. To verify installation
 
+<pre> python -m pygame.examples.aliens </pre>
+   
+  ## Step To Implement Pygme in a CVG Project
+
+1. Install Python & Pygame
+
+2. Prepare the image or video
+
+3. Import Pygame and initialize 
+
+*'''*
+import pygame
+*'''*
+
+4. Create a display surface
+
+<pre> 
+screen = pygame.display.set_mode((640, 480))
+</pre>
+
+5. Load and display the image
+
+<pre> 
+img = pygame.image.load("your_image.jpg")
+screen.blit(img, (0, 0))
+pygame.display.update()
+</pre>
+
+6. Create a game loop
+
+<pre>
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+pygame.quit()
+</pre>
 
