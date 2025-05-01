@@ -72,8 +72,7 @@ cv2.imshow('Result', result)
 
 Click [here](https://youtu.be/phayb3zSE24) to see the demonstration clearly!
 
-**Computer Vison element from the video:**
-+ 
+## Application
 
 ## 🥇 Why use OpenCV for computer vision?
 + fast performance
