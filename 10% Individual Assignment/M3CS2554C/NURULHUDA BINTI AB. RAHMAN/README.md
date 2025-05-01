@@ -36,7 +36,7 @@ Part 1: Image Color Detection
    - Displays a colored rectangle with the name and RGB value of the detected color.
    - Press ESC to move to the next image.
 
-   ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d)
+   ![image](https://github.com/user-attachments/assets/818da0b7-f50b-456f-87ad-e7929f6c7b4d | width = 80)
 
 Part 2: Webcam Color Detection
    - Captures video from the webcam in real-time.
@@ -53,7 +53,7 @@ This project demonstrates a practical application of computer vision, allowing u
 To run this program:
 
 1. Ensure colors.csv is correctly formatted and present in the same directory.
- ![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
+![Screenshot_150](https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd)
 
 3. Install necessary dependencies using:
    pip install opencv-python pandas numpy
