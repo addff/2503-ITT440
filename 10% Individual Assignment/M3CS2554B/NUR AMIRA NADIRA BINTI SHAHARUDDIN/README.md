@@ -130,4 +130,6 @@ else:
 ```downloaded_picture.jpg(URL)```
 ![downloaded_image](https://github.com/user-attachments/assets/a78320e5-cd7e-430b-bb48-7ab860c4d3e2)
 
+### Conclusion
+In conclusion by using imageio library, I was able to efficiently perform image processing in Python by reading an image to access its pixel data, converting it to grayscale to simplify visual information, resizing it to adjust dimensions, and downloading an image from a URL to use external resources—all with simple and effective code.
 
