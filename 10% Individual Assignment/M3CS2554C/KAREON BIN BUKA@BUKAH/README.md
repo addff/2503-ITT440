@@ -104,7 +104,7 @@ plt.imsave('binary_image.jpg', binary, cmap='gray')
 
 ## Video Demonstration
 
-
+https://youtu.be/bQzVHc9H9Kk
 
 ---
 
@@ -115,4 +115,3 @@ In this assignment, I learned:
 - How matplotlib can be used not just for plots, but also for basic image processing.
 - How to visualize and convert color images into grayscale and binary formats.
 - How to use NumPy arrays to manipulate pixel data.
-- gg
