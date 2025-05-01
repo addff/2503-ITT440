@@ -33,18 +33,19 @@ At a granular level, Kornia is a library that consists of the following componen
 - kornia.morphology : a module to perform morphological operations
 - kornia.utils : image to tensor utilities and metrics for vision problems
 
-# Example
+# Example of Image Processing using Kornia
 
+```
 import torch
 import kornia
 import matplotlib.pyplot as plt
 import cv2
 
-Load and convert image to RGB
+# Load and convert image to RGB
 image = cv2.imread('kornia1.jpg')  # Make sure the file exists
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-Convert to normalized tensor
+# Convert to normalized tensor
 image_tensor = torch.tensor(image_rgb).float() / 255.0
 image_tensor = image_tensor.permute(2, 0, 1).unsqueeze(0)  # (1, 3, H, W)
 
@@ -99,6 +100,9 @@ for i, (img, title) in enumerate(images):
 
 plt.tight_layout()
 plt.show()
+```
+**RESULT**
+
 
 
 
