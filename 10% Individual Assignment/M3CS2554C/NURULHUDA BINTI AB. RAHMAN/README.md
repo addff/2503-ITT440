@@ -48,6 +48,9 @@ Part 2: Webcam Color Detection
    - Draws a colored rectangle and overlays the detected color name with RGB values.
    - Press ESC to exit.
 
+      <img src ="https://github.com/user-attachments/assets/a720466e-4911-41cb-b5eb-62604c98e3c3" width="600" height="500" />)
+
+
 ### Conclusion
 This project demonstrates a practical application of computer vision, allowing users to easily identify and label colors from any visual source. It combines image processing with user interaction to deliver a simple but effective color detection system. Such a tool can be useful in design, digital art, education, and accessibility.
 
