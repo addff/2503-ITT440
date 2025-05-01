@@ -18,12 +18,21 @@ Image processing involves the manipulation and enhancement of digital images thr
 ##### What is Albumenatations ?
 Albumentations is a fast and flexible Python library used for image augmentation. It's specifically designed to perform various image transformation operations, making it a popular choice for data preprocessing in machine learning and computer vision projects. Albumentations provides a wide range of augmentations, from basic transformations like rotation and flipping to more advanced ones like elastic deformations and random brightness adjustments.
 
-### Core Features of Albumenatations
+### Core Features of Albumentations
  1) Gaussian blur
  2) Median blur
  3) Image sharpening
  4) Edge detection (via emulation, since direct Sobel is not available)
  5) Brightness and contrast contro
+
+
+## Key Features of Albumentations
+- Rich transformation library: Includes flip, rotate, crop, blur, noise, brightness, contrast, and more
+- Composable pipelines: Combine multiple augmentations easily.
+- GPU-friendly: Can work with DALI or other tools for high-speed data loading.
+- Deterministic behavior: Supports reproducibility with random seeds.
+- -Bounding box and mask support: Ideal for object detection and segmentation tasks.
+- -Flexible format support: Works with images, masks, keypoints, bounding boxes, and more.
 
 ##### Albumenatations Advantages :
 Here are some advantages of the Albumenatations framework:
@@ -47,6 +56,27 @@ Albumentations can be used in various popular IDEs such as Jupyter Notebook, VS 
  3) A.Sharpen(p=1.0) – Enhances edges and detail.
  4) A.RandomBrightnessContrast(p=1.0) – Adjusts brightness and contrast.
  5) A.Equalize(p=1.0) – Improves overall image histogram distribution.
+
+## How pyvips Works
+
+**Step 1: Build Your AUgmentations**  
+You choose what changes you want to make — like flipping, rotating, or changing brightness.
+
+**Step 2: Combine Them into a Pipeline**  
+Put those changes together using A.Compose() like a recipe that tells how and when to apply each one.
+
+**Step 2: Apply To Your Image**  
+Feed in your image, and Albumentations instantly gives you a new, changed version.
+It works with images, masks, boxes, and keypoints — great for training AI models
+
+## How to Install ALbumentations (Windows)
+
+1. **Install Albumentations via pip**
+   - Pip install albumentations
+2. **Install additional dependencies (Optional)**
+   - Pip install opencv-python (for image operations like reading / saving images)
+3. **Verify Installation**
+   - python -c "import albumentations as A; print(A.__version__)"
 
    
 ###### Exact code used:
