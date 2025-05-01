@@ -59,10 +59,9 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 3. Import Pygame and initialize 
 
-<pre>
+*'''*
 import pygame
-pygame.init()
-</pre>
+*'''*
 
 4. Create a display surface
 
