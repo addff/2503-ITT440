@@ -1,7 +1,8 @@
 # NUR IEMAN AYRA BINTI ABDUL AZIZ
 # ITT440-CDCS2554B
 
-# Smart Image Processing with ImageAI in Python
+# Learn Image Processing with ImageAI in Python : Image Detection
+![gambar imageai](https://github.com/user-attachments/assets/b21d699f-7e22-4243-8a6c-09664fe24da5)
 
 
 # Introduction
