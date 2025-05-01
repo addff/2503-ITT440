@@ -5,8 +5,11 @@
 Computer vision is a fast-growing area focused on enabling machines to understand visual data. Scikit-image is a widely used open-source Python library for image processing. Built on SciPy, NumPy, and Matplotlib, it offers a broad set of tools for image manipulation, feature extraction, segmentation, and other essential computer vision tasks for researchers, developers, and data scientists.
 <h4>KEY FEATURES</h4>
 Scikit-image has the following main capabilities:
+
   • Color space conversions, including RGB to LAB, HSV, and grayscale.
+  
   • Reading and writing images in a range of formats is known as image I/O.
+  
   • Filtering: edge detection, median filters, and Gaussian blur.
   • Segmentation: Instruments like as thresholding, active contours, and watersheds.
   • Morphological processes: opening, closure, dilation, and erosion.
