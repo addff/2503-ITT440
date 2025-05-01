@@ -51,7 +51,7 @@ Pygame is an open-source library that is based on SDL (Simple Direct Media Layer
 
 <pre> python -m pygame.examples.aliens </pre>
    
-  ## Step To Implement Pygme in a CVG Project
+ ## Steps To Implement Pygme in a CVG Project
 
 1. Install Python & Pygame
 
@@ -86,3 +86,13 @@ while running:
 pygame.quit()
 </pre>
 
+## Advantages of using Pygame
+
+🧠 Easy to learn and use
+    
+    Pygame has a simple and beginner friendly syntax, making it accessible even for students who are new to graphics programming or Python
+
+⚙️ Minimal setup
+
+    Installation is straightforward with a single pip install pygame command and also there are no complex configurations or external 
+    dependencies needed 
