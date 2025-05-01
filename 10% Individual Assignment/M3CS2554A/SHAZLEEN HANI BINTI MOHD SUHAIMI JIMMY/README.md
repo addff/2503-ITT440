@@ -7,7 +7,6 @@ Computer vision is a fast-growing area focused on enabling machines to understan
 Scikit-image has the following main capabilities:
 
   • Color space conversions, including RGB to LAB, HSV, and grayscale.
-  
   • Reading and writing images in a range of formats is known as image I/O.
   
   • Filtering: edge detection, median filters, and Gaussian blur.
