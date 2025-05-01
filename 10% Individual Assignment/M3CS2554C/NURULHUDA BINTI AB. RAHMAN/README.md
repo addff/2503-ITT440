@@ -1,6 +1,6 @@
-# NURULHUDA BINTI AB. RAHMAN
-# STUDENT ID : 2023365581
-# CLASS : M3CS2554C
+## NURULHUDA BINTI AB. RAHMAN
+## STUDENT ID : 2023365581
+## CLASS : M3CS2554C
 
 ## Identifying Colors with OpenCV and Pandas
 
@@ -54,8 +54,9 @@ Part 2: Webcam Color Detection
 This project demonstrates a practical application of computer vision, allowing users to easily identify and label colors from any visual source. It combines image processing with user interaction to deliver a simple but effective color detection system. Such a tool can be useful in design, digital art, education, and accessibility.
 
 ### Demo
-To run this program:
+Click this link for Demo session : https://youtu.be/WKey80JH_d8
 
+To run this program:
 1. Ensure colors.csv is correctly formatted and present in the same directory.
 <img src="https://github.com/user-attachments/assets/e96aa977-eb27-44a1-8427-7a9283771dcd" width="200" height="500" />
 
@@ -63,6 +64,13 @@ To run this program:
    pip install opencv-python pandas numpy
 
 4. Run the script and select an image or use the webcam.
+
+### Image color detection
+
+![image](https://github.com/user-attachments/assets/52816e99-be09-49ee-9c10-b6217d737696)
+
+#### Webcam Color Detection
+![image](https://github.com/user-attachments/assets/fe24c555-3adb-4dd0-868f-260f5deb0014)
 
 5. Click on pixels in the image or move the cursor in the webcam feed to see color detection in action.
 
