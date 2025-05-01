@@ -103,7 +103,7 @@ plt.show()
 ```
 **RESULT**
 
-
+![image](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554B/NUR%20FARISHA%20ADRIANA%20BINTI%20ROSLI/Image%20Processing%20of%20%20Kornia.png)
 
 
 
