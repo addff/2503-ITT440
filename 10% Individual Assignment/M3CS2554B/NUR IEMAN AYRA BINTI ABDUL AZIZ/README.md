@@ -95,55 +95,73 @@ pip install imageai
     yolo.h5 (optional, if you use object detection)
 ```
 
-5. Coding
+5. Coding Detector Image
+- For input image, load the model, do the object detection and also display the output
 ```
-from imageai.Prediction import ImagePrediction
+from imageai.Detection import ObjectDetection
+
+class detectorImage:
+    def init(self):
+        self.detector = ObjectDetection()
+
+    def setModelTypeAsTinyYOLOv3(self):
+        self.detector.setModelTypeAsTinyYOLOv3()
+
+    def setModelPath(self, path):
+        self.detector.setModelPath(path)
+
+    def loadModel(self):
+        self.detector.loadModel()
+
+    def detectObjectsFromImage(self, input_image, output_image_path):
+        return self.detector.detectObjectsFromImage(
+            input_image=input_image,
+            output_image_path=output_image_path
+        )
+
+```
+6. Main Script
+- Running the code for run_detector to perform object detection
+
+```
+import sys
+sys.path.append(r'C:\Users\hp\Desktop\imagedetection')  # Add the path to the imagedetection folder
+
+from imagedetection import detectorImage
 import os
 
-# Get current folder path
-execution_path = os.getcwd()
+# Initialize the detector
+detector = detectorImage.detectorImage()  # Access the class from the module
 
-# Initialize ImagePrediction
-prediction = ImagePrediction()
-prediction.setModelTypeAsResNet()
+# Define paths
+model_path = "C:/Users/hp/Desktop/imagedetection/Models/yolo-tiny.h5"
+input_path = "C:/Users/hp/Desktop/imagedetection/Input/CAR.jpg"
+output_path = "C:/Users/hp/Desktop/imagedetection/Output/CAR_detected.jpg"
 
-# Load a pre-trained model (you must have this file!)
-prediction.setModelPath(os.path.join(execution_path, "resnet50_imagenet_tf.2.0.h5"))
-prediction.loadModel()
+# Check if paths exist
+print(f"Model Path Exists: {os.path.exists(model_path)}")
+print(f"Input Image Path Exists: {os.path.exists(input_path)}")
+print(f"Output Path Exists: {os.path.exists(output_path)}")
 
-# Predict the image
-predictions, probabilities = prediction.predictImage(
-    os.path.join(execution_path, "input/myphoto.jpg"), 
-    result_count=5
+# Load the model
+detector.setModelTypeAsTinyYOLOv3()
+detector.setModelPath(model_path)
+detector.loadModel()
+
+# Perform detection
+detections = detector.detectObjectsFromImage(
+    input_image=input_path,
+    output_image_path=output_path
 )
 
-# Print results
-for eachPrediction, eachProbability in zip(predictions, probabilities):
-    print(eachPrediction, " : ", eachProbability)
-
+# Print the results
+for item in detections:
+    print(f"{item['name']} : {item['percentage_probability']}")
 ```
-
-# Run The Project
-```
-python process.py
-```
-# Sample Image
-![dog](https://github.com/user-attachments/assets/f6be07dc-7c8d-4b30-a420-c084585cb180)
-
-# Output After Running Script
-```
-golden_retriever  :  92.54
-Labrador_retriever  :  5.32
-cocker_spaniel  :  1.12
-vizsla  :  0.54
-Irish_setter  :  0.48
-```
-
-AfterImageAI predicts 92.54% sure that this is a golden retriever. processing the image, the AI model predicted the object as a golden retriever with a 92% probability.Other possible predictions included labrador retriever (5.3%) and cocker spaniel (1.1%), but the model was highly confident that the dog is a golden retriever.The high probability score indicates that the AI correctly recognized the breed based on features like the dog's fur color, body shape, and posture.Therefore,ImageAI predicts 92.54% sure that this is a golden retriever.
 
 
 # Conclusion
 ImageAI makes it easy for anyone to work with AI-powered image processing, even without deep knowledge of computer vision or machine learning. With simple tools for object detection, image classification, and training custom models, it helps developers and enthusiasts quickly build smart, practical applications. Whether you're working on a hobby project or building something for a real-world need, ImageAI takes the complexity out of AI and puts powerful image tools at your fingertips.
 
 # Refer to this link 
-
+[https://youtu.be/PdpUn861ZtU?si=6yQLiysURxtwyBPn]
