@@ -1,7 +1,7 @@
-# NUR IEMAN AYRA BINTI ABDUL AZIZ
-# ITT440-CDCS2554B
+## NUR IEMAN AYRA BINTI ABDUL AZIZ
+### ITT440-CDCS2554B
 
-# Learn Image Processing with ImageAI in Python : ImageAI Analysis
+## Learn Image Processing with ImageAI in Python : ImageAI Analysis
 
 
 ![gambar imageai](https://github.com/user-attachments/assets/3e7fcb8b-444d-443c-bf19-7738b97b19cd)
@@ -58,44 +58,21 @@ Setting Up ImageAI for Image Processing
 Follow these steps :
 
 1. Install Python
-First, make sure you have Python 3.6, 3.7, 3.8, or 3.9 installed on your computer.
+First, make sure you have Python 3.7 installed on your computer.
 If you don't have Python yet, download and install it here: https://www.python.org/downloads/
 
-2. Create a virtual Environment
-```
-python -m venv myenv
-```
 
-Then,activate it
-
-Windows : 
-```
-myenv\Scripts\activate
-```
-Mac/Linux :
-```
-source myenv/bin/activate
-```
-3. Install Required Libraries
+2. Install Required Libraries
 Now, install TensorFlow and ImageAI.
 ```
 pip install tensorflow
 pip install imageai 
 ```
 
-4. Prepare Project Folder
-```
-/my-imageai-project
-    /input
-        (your images here)
-    /output
-        (processed images saved here)
-    process.py (your main Python code)
-    README.md
-    yolo.h5 (optional, if you use object detection)
-```
+3. Prepare Project Folder
+- Create folder into your desktop
 
-5. Coding Detector Image
+4. Coding Detector Image
 - For input image, load the model, do the object detection and also display the output
 ```
 from imageai.Detection import ObjectDetection
@@ -120,7 +97,7 @@ class detectorImage:
         )
 
 ```
-6. Main Script
+5. Main Script
 - Running the code for run_detector to perform object detection
 
 ```
