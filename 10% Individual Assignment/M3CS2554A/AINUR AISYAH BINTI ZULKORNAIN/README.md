@@ -47,17 +47,11 @@ Below are commonly used image processing functions in MATLAB along with their pu
 1. Flip Image
   fliplr(image): flips the image horizontally (left to right).
 
-3. RGB to Grayscale
+2. RGB to Grayscale
    rgb2gray(image): Converts an RGB image to grayscale, simplifying the image for further   
    processing.
 
-4. Sharpening
-   imsharpen(image): Makes the edges and details in the image clearer.
-
-5. Brightness & Contrast Adjustment
-   imadjust(image): Changes the brightness and contrast of the image.
-
-6. Gaussian Blur
+3. Gaussian Blur
 imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 ###### Code:
@@ -84,25 +78,7 @@ figure;
 imshow(grayImage);
 title('Grayscale Image');
 
-%% 3. Sharpening
-% Apply sharpening to the grayscale image
-sharpenedImage = imsharpen(grayImage);
-
-% Display the sharpened image
-figure;
-imshow(sharpenedImage);
-title('Sharpened Image');
-
-%% 4. Brightness & Contrast Adjustment
-% Apply brightness and contrast adjustment to the grayscale image
-adjustedImage = imadjust(grayImage);
-
-% Display the brightness & contrast adjusted image
-figure;
-imshow(adjustedImage);
-title('Brightness & Contrast Adjusted Image');
-
-%% 5. Gaussian Blur
+%% 3. Gaussian Blur
 % Apply Gaussian Blur to the grayscale image
 blurredImage = imgaussfilt(grayImage, 2);  % Sigma = 2 for smoothing
 
