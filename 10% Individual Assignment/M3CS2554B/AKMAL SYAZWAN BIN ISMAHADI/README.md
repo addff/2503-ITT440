@@ -87,7 +87,7 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
-### 🎬Learn How To Do Image Processing in this video Tutorial  
+### 🎬Tutorial Video to do Image Processing int Pytorch 
 [**Watch on YouTube**](https://www.youtube.com/watch?v=5TMRnwmwGTI)
 
 ---
