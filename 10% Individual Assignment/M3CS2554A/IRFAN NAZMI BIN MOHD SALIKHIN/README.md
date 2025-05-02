@@ -22,7 +22,7 @@ MediaPipe is an open-source framework developed by Google to build machine learn
 
 ✅ Real-time processing (optimized for mobile & edge devices)
 
-Why MediaPipe?
+### Why MediaPipe?
 
 ✅ Easy to use (few lines of code)
 
@@ -32,7 +32,7 @@ Why MediaPipe?
 
 ✅ GPU acceleration (supports OpenGL and Vulkan)
 
-What is Computer Vision Graphic (CVG)?
+### What is Computer Vision Graphic (CVG)?
 
 ✅ CV refines useful information from images on the computer.
 
