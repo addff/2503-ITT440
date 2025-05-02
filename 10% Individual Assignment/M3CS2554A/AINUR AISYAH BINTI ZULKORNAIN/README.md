@@ -88,3 +88,7 @@ imshow(blurredImage);
 title('Gaussian Blurred Image');
 ```
 ### The Original Image
+
+### Output
+
+### Demo
