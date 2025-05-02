@@ -12,7 +12,7 @@
 For this project, I chose to use ImageAI, a powerful Python library designed to simplify the development of applications with deep learning and computer vision capabilities. ImageAI makes it easy for developers, researchers, and students to perform complex tasks such as object detection, image prediction, and custom model training with just a few lines of code. Image processing, a crucial aspect of computer vision, involves enhancing, analyzing, and transforming images to extract valuable information, and ImageAI provides an accessible way to implement these techniques efficiently.
 
 
-# Concept ImageAI
+## Concept ImageAI
 
 1. Pre-trained Models:
 ImageAI uses deep learning models like YOLOv3, ResNet, and others for tasks such as object detection and classification without needing to train from scratch.
@@ -24,7 +24,7 @@ It can identify multiple objects in images or video streams, drawing bounding bo
 Classifies images into categories using pre-trained models (e.g., identifying whether an image is of a cat, dog, or car).
 
 
-# Typical Inference Models for AI-based Image Recognition
+### Typical Inference Models for AI-based Image Recognition
 
 Detecting people, objects, and vehicles
 
@@ -38,7 +38,7 @@ Detecting human skeletal structure and posture
 
 This technology detects the skeletal structure and posture of the human body by recognizing information about the head, neck, hands, and other parts of the human body. Deep learning technology is used to detect not only parts of the human body, but also optimal connections between them. In the past, skeletal structure and posture detection required expensive cameras that could estimate depth, but advances in AI technology have made detection possible even with ordinary monocular cameras.
 
-# Typical Applications of AI Image Recognition Technology
+### Typical Applications of AI Image Recognition Technology
 
 Monitoring road traffic conditions
 
@@ -52,7 +52,7 @@ Access control for buildings
 
 This system uses biometric authentication technology based on AI image recognition to control access to buildings. The access control system uses biometric authentication technologies such as facial recognition, iris recognition, and fingerprint recognition to identify individuals and allow them to enter and exit without touching the authentication device. Since each biometric authentication has its own strengths and weaknesses, some systems combine multiple biometrics for authentication.
 
-# How is it work?
+## How is it work?
 
 Setting Up ImageAI for Image Processing
 Follow these steps :
@@ -137,8 +137,8 @@ for item in detections:
 ```
 
 
-# Conclusion
+## Conclusion
 ImageAI makes it easy for anyone to work with AI-powered image processing, even without deep knowledge of computer vision or machine learning. With simple tools for object detection, image classification, and training custom models, it helps developers and enthusiasts quickly build smart, practical applications. Whether you're working on a hobby project or building something for a real-world need, ImageAI takes the complexity out of AI and puts powerful image tools at your fingertips.
 
-# Refer to this link 
+## Refer to this link 
 [Learn How To Use](https://youtu.be/PdpUn861ZtU?si=6yQLiysURxtwyBPn)
