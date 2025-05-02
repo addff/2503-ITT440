@@ -2,10 +2,10 @@
 # 2023277674
 
 ---
+![image alt](https://github.com/akmalsyzwn/picture/blob/main/Pytorch_logo.png?raw=true)
+---
 
 ### **Introduction to Image Processing with PyTorch**
-![image alt](https://github.com/akmalsyzwn/picture/blob/main/Pytorch_logo.png?raw=true)
-
 Image processing is all about tweaking and analyzing pictures to pull out useful details or make them look better. PyTorch, a powerful deep learning framework, is widely used in computer vision for these tasks. Thanks to its flexible structure and dynamic computational graphs, it’s a go-to choice for building and experimenting with models.
 
 ---
