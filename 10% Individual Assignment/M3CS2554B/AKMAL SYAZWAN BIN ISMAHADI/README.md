@@ -35,7 +35,38 @@ Image processing is all about tweaking and analyzing pictures to pull out useful
    - Instead of training from scratch, you can use well-known models like ResNet, VGG, or EfficientNet from `torchvision.models` for tasks like transfer learning or feature extraction.
 
 ---
+### **Steps to Install Pytorch**
 
+### **1. Check Your Python Version**
+Before installing PyTorch, ensure you have Python installed. Open a terminal or command prompt and run:
+```bash
+python --version
+```
+PyTorch supports Python **3.9 or later**.
+
+### **2. Install PyTorch Using pip**
+If you’re using pip, run the following command:
+```bash
+pip install torch torchvision torchaudio
+```
+This will install PyTorch along with its essential libraries.
+
+### **3. Install PyTorch Using Conda**
+If you prefer Conda, use:
+```bash
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+```
+This is useful if you’re working in an Anaconda environment.
+
+### **4. Verify Installation**
+Once installed, check if PyTorch is working correctly by running:
+```python
+import torch
+print(torch.__version__)
+```
+If this prints a version number, PyTorch is installed successfully.
+
+---
 ### **Example in PyTorch**
 Here’s a simple example to preprocess an image, load it into PyTorch, and apply transformations:
 
