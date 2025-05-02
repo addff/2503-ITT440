@@ -62,46 +62,52 @@ imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 ###### Code:
 ```py
-% Read the image from the current folder
-imageFileName = 'formatlab.jpg';  
-if exist(imageFileName, 'file') ~= 2
-    error('Image file "%s" not found in the current folder.', imageFileName);
-end
-
-% Load and convert to grayscale
+% Read the color image
+imageFileName = 'LATESTMATLAB.jpeg';  % 
 originalImage = imread(imageFileName);
+
+%% 1. Flip Image (only RGB)
+% Flip the image horizontally (left-right)
+flippedImage = fliplr(originalImage);
+
+% Display the flipped image
+figure;
+imshow(flippedImage);
+title('Flipped Image (Left-Right)');
+
+%% 2. RGB to Grayscale
+% Convert the RGB image to grayscale
 grayImage = rgb2gray(originalImage);
 
-% Apply Gaussian Blur
-gaussianBlur = imgaussfilt(grayImage, 2);  % sigma = 2
-
-% Apply Histogram Equalization
-equalizedImage = histeq(grayImage);
-
-% Detect Edges using Canny method
-edges = edge(grayImage, 'Canny');
-
-% Display results in a 2x3 grid
-figure('Name', 'Image Processing Demo', 'NumberTitle', 'off');
-
-subplot(2,3,1);
-imshow(originalImage);
-title('Original Image');
-
-subplot(2,3,2);
+% Display the grayscale image
+figure;
 imshow(grayImage);
-title('Grayscale');
+title('Grayscale Image');
 
-subplot(2,3,3);
-imshow(gaussianBlur);
-title('Gaussian Blur');
+%% 3. Sharpening
+% Apply sharpening to the grayscale image
+sharpenedImage = imsharpen(grayImage);
 
-subplot(2,3,4);
-imshow(edges);
-title('Canny Edges');
+% Display the sharpened image
+figure;
+imshow(sharpenedImage);
+title('Sharpened Image');
 
-subplot(2,3,5);
-imshow(equalizedImage);
-title('Histogram Equalization');
+%% 4. Brightness & Contrast Adjustment
+% Apply brightness and contrast adjustment to the grayscale image
+adjustedImage = imadjust(grayImage);
 
+% Display the brightness & contrast adjusted image
+figure;
+imshow(adjustedImage);
+title('Brightness & Contrast Adjusted Image');
+
+%% 5. Gaussian Blur
+% Apply Gaussian Blur to the grayscale image
+blurredImage = imgaussfilt(grayImage, 2);  % Sigma = 2 for smoothing
+
+% Display the Gaussian blurred image
+figure;
+imshow(blurredImage);
+title('Gaussian Blurred Image');
 
