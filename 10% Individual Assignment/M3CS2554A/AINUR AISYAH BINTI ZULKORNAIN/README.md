@@ -99,6 +99,6 @@ title('Gaussian Blurred Image');
 
 ![Gaussian blurred image](https://github.com/user-attachments/assets/2e48a0ee-77e8-488d-8a22-11c03149c9b6)
 
-### Demo
+### Demonstration
 
 https://drive.google.com/file/d/1QxY69D481oXSKIHN8-vvSToBxRSUr__b/view?usp=drive_link
