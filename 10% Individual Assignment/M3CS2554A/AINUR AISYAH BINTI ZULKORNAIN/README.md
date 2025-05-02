@@ -44,19 +44,20 @@ The Image Processing Toolbox in MATLAB provides a set of tools and functions to 
 
 Below are commonly used image processing functions in MATLAB along with their purposes:
 
-1. Median Blur
-   medfilt2(image): Removes salt-and-pepper noise from the image.
+1. Flip Image
+  fliplr(image): flips the image horizontally (left to right).
 
-2. Sharpening
+3. RGB to Grayscale
+   rgb2gray(image): Converts an RGB image to grayscale, simplifying the image for further   
+   processing.
+
+4. Sharpening
    imsharpen(image): Makes the edges and details in the image clearer.
 
-3. Brightness & Contrast Adjustment
+5. Brightness & Contrast Adjustment
    imadjust(image): Changes the brightness and contrast of the image.
 
-4. Histogram Equalization
-   histeq(image):  Improves the overall contrast by spreading out intensity values.
-
-5. Gaussian Blur
+6. Gaussian Blur
 imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 ###### Code:
