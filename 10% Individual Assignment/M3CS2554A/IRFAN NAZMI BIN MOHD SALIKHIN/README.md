@@ -8,6 +8,8 @@
 
 ## 1. Introduction to MediaPipe
 
+### What is MediaPipe?
+
 MediaPipe is an open-source framework developed by Google to build machine learning pipelines for processing multimodal data (video, audio, sensor data). It provides pre-built solutions for:
 
 ✅ Face Detection & Mesh (468 3D landmarks)
