@@ -143,7 +143,7 @@ imageio.imwrite('sobel_edges.jpg', sobel_edges.astype(np.uint8))
 
 ## Use Cases
 
-| Domain | Use Case |
+| Field | Use Case |
 |--------|----------|
 | Microscopy | Cell and bacteria detection |
 | Astronomy | Noise reduction, object localization |
