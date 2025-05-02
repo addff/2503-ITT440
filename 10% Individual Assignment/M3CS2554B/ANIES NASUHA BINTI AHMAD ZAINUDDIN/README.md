@@ -420,3 +420,7 @@ In conclusion, I admit there are a lot of valuable learning experience in unders
 ## Demonstration video of motion detection 
 
 https://drive.google.com/file/d/1BfsChDcsNB3htTKaCrbEjpzL2UpwieIW/view?usp=drivesdk
+
+## Demonstration video of face controlled game
+
+https://drive.google.com/file/d/1pHPW94JRbbuRA-xH0iN9oXXnlrg62xqV/view?usp=drivesdk
