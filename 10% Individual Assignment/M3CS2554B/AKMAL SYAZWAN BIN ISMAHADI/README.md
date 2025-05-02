@@ -30,7 +30,7 @@ Image processing is all about tweaking and analyzing pictures to pull out useful
    - PyTorch’s automatic differentiation tool, crucial for model training.
    
 4. **Pre-trained Models**:
-   - Instead of training from scratch, you can use well-known models like ResNet, VGG, or EfficientNet from 'torchvision.models' for tasks like transfer learning or feature extraction.
+   - Instead of training from scratch, you can use well-known models like ResNet, VGG, or EfficientNet from `torchvision.models` for tasks like transfer learning or feature extraction.
 
 ---
 
@@ -57,7 +57,8 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
-
+### **Full Guide to do IP in Pytorch**
+https://www.youtube.com/watch?v=5TMRnwmwGTI
 
 
 ---
