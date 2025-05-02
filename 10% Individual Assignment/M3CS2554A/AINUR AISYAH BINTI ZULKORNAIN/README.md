@@ -10,7 +10,8 @@
 Image processing enhances and analyzes digital images using algorithmic and mathematical procedures. The Image Processing Toolbox in MATLAB offers preprocessing, analysis and visualization capabilities. It is widely used in practical applications like industrial inspection, surveillance and medical imaging which highlights its increasing significance in domains like computer vision and machine learning.
 
  
-![unnamed.png](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554A/AINUR%20AISYAH%20BINTI%20ZULKORNAIN%EF%80%8D/matlabpic.png)
+![matlabpic](https://github.com/user-attachments/assets/0120101d-5197-4611-a994-37d71181a476)
+
 
 ### What is MATLAB?
 MATLAB is a high-level programming language and environment designed for numerical computing, data analysis, and visualization. It also comes with specialized toolboxes that make it easier to tackle specific challenges in fields like engineering and science.
@@ -89,6 +90,16 @@ title('Gaussian Blurred Image');
 ```
 ### The Original Image
 
+![LATESTMATLAB](https://github.com/user-attachments/assets/3993013d-b50a-4308-9114-8a37e5c09588)
+
 ### Output
 
+![flipped image](https://github.com/user-attachments/assets/4ea00628-66c2-435e-af46-853935a82b5b)
+
+![grayscale image](https://github.com/user-attachments/assets/09954ed3-3388-4f3d-bf73-d53a3ab5e0e6)
+
+![Gaussian blurred image](https://github.com/user-attachments/assets/2e48a0ee-77e8-488d-8a22-11c03149c9b6)
+
 ### Demo
+
+
