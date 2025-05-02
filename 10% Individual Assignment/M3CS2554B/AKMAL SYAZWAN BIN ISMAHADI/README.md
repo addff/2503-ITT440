@@ -37,28 +37,22 @@ Image processing is all about tweaking and analyzing pictures to pull out useful
 ---
 ### **Steps to Install Pytorch**
 
-### **1. Check Your Python Version**
+### *1. Check Your Python Version*
 Before installing PyTorch, ensure you have Python installed. Open a terminal or command prompt and run:
 ```bash
 python --version
 ```
 PyTorch supports Python **3.9 or later**.
 
-### **2. Install PyTorch Using pip**
+### *2. Install PyTorch Using pip*
 If you’re using pip, run the following command:
 ```bash
 pip install torch torchvision torchaudio
 ```
 This will install PyTorch along with its essential libraries.
 
-### **3. Install PyTorch Using Conda**
-If you prefer Conda, use:
-```bash
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-```
-This is useful if you’re working in an Anaconda environment.
 
-### **4. Verify Installation**
+### *3. Verify Installation*
 Once installed, check if PyTorch is working correctly by running:
 ```python
 import torch
