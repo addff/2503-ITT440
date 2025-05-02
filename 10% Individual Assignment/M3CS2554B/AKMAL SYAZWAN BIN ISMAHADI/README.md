@@ -57,7 +57,7 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
-### **Full Guide to do IP in Pytorch**
+### **Full Guide to do Image Processing in Pytorch**
 https://www.youtube.com/watch?v=5TMRnwmwGTI
 
 
