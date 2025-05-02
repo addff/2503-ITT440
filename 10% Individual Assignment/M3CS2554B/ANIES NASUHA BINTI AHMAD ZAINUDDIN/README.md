@@ -415,3 +415,8 @@ Throughout the development of various mini projects under Computer Vision Graphi
 By using Pygame, a lightweight and beginner-friendly graphics library in Python, each project was developed with a focus on visual interaction, real-time feedback, and frame-based control. These implementations highlight how graphical simulation can effectively represent the core principles of computer vision.
 
 In conclusion, I admit there are a lot of valuable learning experience in understanding the graphical side of computer vision. It proves that with the right approach, even basic tools can deliver meaningful visual outputs and interactive elements that are central to the field of CVG.
+
+
+## Demonstration video of motion detection 
+
+https://drive.google.com/file/d/1-eMR4l-Tj0gAw-4iK_VEBz8S84UspNW0/view?usp=drivesdk
