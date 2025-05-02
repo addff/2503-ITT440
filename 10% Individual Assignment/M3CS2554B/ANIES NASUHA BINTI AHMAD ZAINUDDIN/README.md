@@ -113,7 +113,7 @@ Pygame is specialized for speed and performance in 2D graphics. The library can 
 
 Can easily overlay or overlay text, shapes, or other graphics on top of images and video frames, this produces an interesting and informative CVG output. It is also suitable for both basic visual output, such as image displays, and advanced GUIs or animated simulations.
 
-Example projects using pygame
+## Example projects using pygame
 
 
 # 1. OBJECT TRACKING 
