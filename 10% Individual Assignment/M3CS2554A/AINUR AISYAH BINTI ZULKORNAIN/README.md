@@ -21,16 +21,16 @@ The Image Processing Toolbox in MATLAB provides a set of tools and functions to 
 
 ### Core Features of the Image Processing Toolbox
 
-1. Image Enhancement - Contrast adjustment, histogram equalization
-2. Filtering - Gaussian blur, median filtering and sharpening.
-3. Edge Detection - Sobel, Prewitt, Canny and Roberts.
-4. Morphological Operations - Dilation, erosion, opening and closing
-5. Geometric Transformations - Resize, rotate, flip and crop
-6. Color Space Transformations - RGB to grayscale, HSV and etc
-7. Segmentation - Thresholding, region growing and watershed.
-8. Feature Detection & Extraction - Corners, blobs, Surf and Harris
-9. Image Registration & Alignment
-10. Batch Image Processing using MATLAB scripts
+- Image Enhancement - Contrast adjustment, histogram equalization
+- Filtering - Gaussian blur, median filtering and sharpening.
+- Edge Detection - Sobel, Prewitt, Canny and Roberts.
+- Morphological Operations - Dilation, erosion, opening and closing
+- Geometric Transformations - Resize, rotate, flip and crop
+- Color Space Transformations - RGB to grayscale, HSV and etc
+- Segmentation - Thresholding, region growing and watershed.
+- Feature Detection & Extraction - Corners, blobs, Surf and Harris
+- Image Registration & Alignment
+- Batch Image Processing using MATLAB scripts
 
 ### Advantages of MATLAB for Image Processing
 
@@ -44,14 +44,14 @@ The Image Processing Toolbox in MATLAB provides a set of tools and functions to 
 
 Below are commonly used image processing functions in MATLAB along with their purposes:
 
-1. Flip Image
+- Flip Image
   fliplr(image): flips the image horizontally (left to right).
 
-2. RGB to Grayscale
+- RGB to Grayscale
    rgb2gray(image): Converts an RGB image to grayscale, simplifying the image for further   
    processing.
 
-3. Gaussian Blur
+- Gaussian Blur
 imgaussfilt(image, sigma): Smooths the image and reduces noise or detail.
 
 ###### Code:
@@ -86,4 +86,5 @@ blurredImage = imgaussfilt(grayImage, 2);  % Sigma = 2 for smoothing
 figure;
 imshow(blurredImage);
 title('Gaussian Blurred Image');
-
+```
+### The Original Image
