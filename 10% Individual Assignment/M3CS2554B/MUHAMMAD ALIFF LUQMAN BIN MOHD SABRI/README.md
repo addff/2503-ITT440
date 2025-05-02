@@ -16,6 +16,23 @@ SciPy is a scientific computing library in Python, built on top of NumPy. While 
 - Save the modified images.
 - Understand SciPy's position in the scientific Python ecosystem.
 
+## Core Concepts
+
+### Images as NumPy Arrays
+- Grayscale: 2D arrays (height x width)
+- RGB: 3D arrays (height x width x 3)
+
+### Filters and Convolution Kernels
+- Gaussian, Median, Uniform filters
+- Sobel, Laplace for edge detection
+
+### Geometric Transformations
+- Rotate, zoom, shift, crop
+
+### Labeling and Morphological Operations
+- `ndimage.label` to identify connected components
+- Morphology: erosion, dilation, opening, closing
+
 ## 1. Setup the Environment
 
 Install required libraries:
@@ -110,22 +127,6 @@ plt.show()
 imageio.imwrite('sobel_edges.jpg', sobel_edges.astype(np.uint8))
 ```
 
-## Core Concepts
-
-### Images as NumPy Arrays
-- Grayscale: 2D arrays (height x width)
-- RGB: 3D arrays (height x width x 3)
-
-### Filters and Convolution Kernels
-- Gaussian, Median, Uniform filters
-- Sobel, Laplace for edge detection
-
-### Geometric Transformations
-- Rotate, zoom, shift, crop
-
-### Labeling and Morphological Operations
-- `ndimage.label` to identify connected components
-- Morphology: erosion, dilation, opening, closing
 
 ## Key Functions in `scipy.ndimage`
 
