@@ -59,7 +59,7 @@ Follow these steps :
 
 1. Install Python
 First, make sure you have Python 3.7 installed on your computer.
-If you don't have Python yet, download and install it here: https://www.python.org/downloads/
+If you don't have Python yet, download and install it here : (https://www.python.org/downloads/release/python-3717/)
 
 
 2. Install Required Libraries
