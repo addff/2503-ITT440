@@ -113,7 +113,10 @@ Pygame is specialized for speed and performance in 2D graphics. The library can 
 
 Can easily overlay or overlay text, shapes, or other graphics on top of images and video frames, this produces an interesting and informative CVG output. It is also suitable for both basic visual output, such as image displays, and advanced GUIs or animated simulations.
 
-# 1. OBJECT TRACKING USING PYGAME
+Example projects using pygame
+
+
+# 1. OBJECT TRACKING 
 - This project demonstrates a basic form of interactive object tracking using a single static image.
 
 - When the image is displayed using Pygame, user can click anywhere on the image. The program captures the position of the mouse click and interprets it as a point of interest like simulating an object detection. Once the click is detected, the program automatically draws a green diamond shape around the clicked region. This visually indicates the area of interest or the “detected object.”
