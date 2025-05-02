@@ -1,10 +1,12 @@
-# **ASSIGNMENT ITT440**  
+# **Real-Time Computer Vision with MediaPipe: Face & Hand Tracking using Python**  
 
 **NAME**          : IRFAN NAZMI BIN MOHD SALIKHIN
 
 **STUDENT ID**    : 2023414534
 
 **CLASS**         : CDCS2554A
+
+**SUBJECT**       : ITT440
 
 ## 1. Introduction to MediaPipe
 
