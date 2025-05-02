@@ -1,8 +1,10 @@
 # **ASSIGNMENT ITT440**  
 
-**NAME** : Irfan Nazmi bin Mohd Salikhin  
+**NAME**          : IRFAN NAZMI BIN MOHD SALIKHIN
 
-**CLASS** : CDCS2554A
+**STUDENT ID**    : 2023414534
+
+**CLASS**         : CDCS2554A
 
 ## 1. Introduction to MediaPipe
 
@@ -30,9 +32,17 @@ Why MediaPipe?
 
 ✅ GPU acceleration (supports OpenGL and Vulkan)
 
+What is Computer Vision Graphic (CVG)?
+
+✅ CV refines useful information from images on the computer.
+
+✅ CG uses mathematical models and computer algorithms to generate images.
+
 Reference:
 
-MediaPipe Official Documentation
+[What is MediaPipe?](https://viso.ai/computer-vision/mediapipe/#:~:text=MediaPipe%20is%20an%20open%2Dsource,a%20graph%20of%20modular%20components.)
+
+[Understand the Difference between Computer Vision (CV) and Computer Graphics (CG)](https://www.alibabacloud.com/blog/understand-the-difference-between-computer-vision-cv-and-computer-graphics-cg_599039#:~:text=CV%20and%20CG%20are%20two,or%20extracted%20in%20some%20features.)
 
 ___
 
@@ -41,15 +51,18 @@ ___
 ### Installation
 
 https://www.python.org/downloads/release/python-3109/ (Python 3.10.9)
+
 https://code.visualstudio.com/download (VS Code)
 
 To get started with MediaPipe, first install the required packages:
 
     pip install mediapipe opencv-python
 
-### Basic Face Detection Example
+___
 
-A. Basic Face Detection
+## 3. Code Demonstration: Real-Time Computer Vision with MediaPipe
+
+### A. Basic Face Detection
 
     import cv2
     import mediapipe as mp
@@ -70,7 +83,7 @@ A. Basic Face Detection
             # Convert BGR to RGB & process
             image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = face_detection.process(image_rgb)
-            
+    
             # Draw face detections
             if results.detections:
                 for detection in results.detections:
@@ -87,7 +100,7 @@ Reference:
 
 https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/face_detection.md
 
-B. Hand Tracking (Gesture Recognition)
+### B. Hand Tracking (Gesture Recognition)
 
 Detects 21 landmarks per hand, useful for applications like sign language recognition or virtual controllers.
 
@@ -125,6 +138,6 @@ https://gautamaditee.medium.com/hand-recognition-using-opencv-a7b109941c88
 
 ___
 
+## 4. Video Tutorial
 
-
-  
+https://youtu.be/P5r4eA8Gp_0
