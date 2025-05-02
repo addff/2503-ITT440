@@ -6,7 +6,29 @@
 
 ## 1. Introduction to MediaPipe
 
-MediaPipe is an open-source framework developed by Google to build machine learning pipelines for processing multimodal data (video, audio, sensor data). It simplifies many advanced computer vision and machine learning tasks and provides pre-built solutions for tasks like face detection, hand tracking, pose estimation, and more.
+MediaPipe is an open-source framework developed by Google to build machine learning pipelines for processing multimodal data (video, audio, sensor data). It provides pre-built solutions for:
+
+✅ Face Detection & Mesh (468 3D landmarks)
+
+✅ Hand Tracking (21 landmarks per hand)
+
+✅ Pose Estimation (33 body landmarks)
+
+✅ Object Detection & Tracking
+
+✅ Augmented Reality (AR) Effects
+
+✅ Real-time processing (optimized for mobile & edge devices)
+
+Why MediaPipe?
+
+✅ Easy to use (few lines of code)
+
+✅ Cross-platform (Python, Android, iOS, JavaScript)
+
+✅ Pre-trained models (no need for deep learning expertise)
+
+✅ GPU acceleration (supports OpenGL and Vulkan)
 
 Reference:
 
@@ -14,21 +36,20 @@ MediaPipe Official Documentation
 
 ___
 
-## 2. Setting Up MediaPipe in Python
+## 2. Setting Up MediaPipe in Python (VS Code)
 
 ### Installation
 
+https://www.python.org/downloads/release/python-3109/ (Python 3.10.9)
+https://code.visualstudio.com/download (VS Code)
+
 To get started with MediaPipe, first install the required packages:
 
-    pip install mediapipe opencv-python numpy matplotlib
-
-Reference:
-
-Installing MediaPipe in Python
+    pip install mediapipe opencv-python
 
 ### Basic Face Detection Example
 
-A basic face detection implementation using MediaPipe:
+A. Basic Face Detection
 
     import cv2
     import mediapipe as mp
@@ -64,13 +85,9 @@ A basic face detection implementation using MediaPipe:
 
 Reference:
 
-MediaPipe Face Detection Guide
+https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/face_detection.md
 
-___
-
-## 3. Key MediaPipe Use Cases for Your Assignment
-
-### A. Hand Tracking (Gesture Recognition)
+B. Hand Tracking (Gesture Recognition)
 
 Detects 21 landmarks per hand, useful for applications like sign language recognition or virtual controllers.
 
@@ -104,37 +121,7 @@ Detects 21 landmarks per hand, useful for applications like sign language recogn
 
 Reference:
 
-Hand Tracking with MediaPipe
-
-### B. Pose Estimation (Fitness Apps, Motion Analysis)
-
-Detects 33 body landmarks used in applications like yoga apps, sports analysis, and animation.
-
-    import mediapipe as mp
-    
-    mp_pose = mp.solutions.pose
-    pose = mp_pose.Pose()
-    
-    # (Similar loop as above, replace with `results.pose_landmarks`)
-
-Reference:
-
-Pose Estimation with MediaPipe
-
-### C. Face Mesh (AR Filters, Virtual Makeup)
-
-Detects 468 3D landmarks for facial features, such as lips, eyes, and jawline, used in AR applications like Snapchat filters.
-
-    import mediapipe as mp
-    
-    mp_face_mesh = mp.solutions.face_mesh
-    face_mesh = mp_face_mesh.FaceMesh()
-    
-    # (Similar loop as above, replace with `results.multi_face_landmarks`)
-
-Reference:
-
-Face Mesh with MediaPipe
+https://gautamaditee.medium.com/hand-recognition-using-opencv-a7b109941c88
 
 ___
 
