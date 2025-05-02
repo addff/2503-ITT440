@@ -242,6 +242,57 @@ plt.show()
 
  </div>
 
+<br>
+<br>
+
+```python
+
+
+from skimage import io, color, filters
+import matplotlib.pyplot as plt
+
+# Load the image
+image_path = r'C:\Users\MUHAMMAD IZUDDIN\Downloads\izuddin.jpg'
+image = io.imread(image_path)
+
+# Convert to grayscale
+gray_image = color.rgb2gray(image)
+
+# Apply Gaussian Blur
+blurred_image = filters.gaussian(gray_image, sigma=1)
+
+# Apply Sobel edge detection
+sobel_edges = filters.sobel(blurred_image)
+
+# Display original, blurred, and edge-detected images
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+ax = axes.ravel()
+
+ax[0].imshow(gray_image, cmap='gray')
+ax[0].set_title("Grayscale Image")
+ax[0].axis('off')
+
+ax[1].imshow(blurred_image, cmap='gray')
+ax[1].set_title("Gaussian Blurred")
+ax[1].axis('off')
+
+ax[2].imshow(sobel_edges, cmap='gray')
+ax[2].set_title("Sobel Edges")
+ax[2].axis('off')
+
+plt.tight_layout()
+plt.show()
+
+```
+
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/52bb0dd6-f414-4ba7-aede-f2cf06733eb6)
+
+
+
+ </div>
+
  # CLONCLUSION
 
  Scikit-image is a powerful, easy-to-use Python library that provides efficient and scalable tools for a wide range of image processing tasks. Whether you're working with image filtering, feature extraction, segmentation, or transformations, scikit-image simplifies complex operations, making it accessible to both beginners and advanced users. Its integration with the scientific Python ecosystem (like NumPy and SciPy) ensures that it is suitable for a variety of applications, from scientific research to industrial projects. With its clear documentation and extensive functionality, scikit-image remains an essential tool for anyone working with digital image analysis.
