@@ -12,7 +12,7 @@ Image processing enhances and analyzes digital images using algorithmic and math
  
 ![unnamed.png](https://github.com/addff/2503-ITT440/blob/main/10%25%20Individual%20Assignment/M3CS2554A/AINUR%20AISYAH%20BINTI%20ZULKORNAIN%EF%80%8D/matlabpic.png)
 
-### What is MATLAB
+### What is MATLAB?
 MATLAB is a high-level programming language and environment designed for numerical computing, data analysis, and visualization. It also comes with specialized toolboxes that make it easier to tackle specific challenges in fields like engineering and science.
 
 ### What is the Image Processing Toolbox?
