@@ -7,9 +7,8 @@
 - To demonstrate the coding and functions used in MATLAB related to the topic.
 
 ### Introduction to Image Processing
-Image processing enhances and analyzes digital images using algorithmic and mathematical procedures. The Image Processing Toolbox in MATLAB offers preprocessing, analysis and visualization capabilities. It is widely used in practical applications like industrial inspection, surveillance and medical imaging which highlights its increasing significance in domains like computer vision and machine learning.
+Image processing is the use of math and computer techniques to improve and understand digital images. It helps with tasks like cleaning up images, analyzing them and showing results clearly. Image processing is important in many areas, especially in computer vision and machine learning.
 
- 
 ![matlabpic](https://github.com/user-attachments/assets/0120101d-5197-4611-a994-37d71181a476)
 
 
