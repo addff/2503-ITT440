@@ -1,4 +1,4 @@
-### NAME : AHMAD IMRAN BAHARUDDIN
+### NAME : AHMAD IMRAN BIN BAHARUDDIN
 ### STUDENT NO. : 2023240168
 ### TITLE : BASIC APPLICATION OF CVG USING PYCAIRO
 ----
@@ -27,11 +27,17 @@
   ```
     pip3 install pycairo
   ```
-  2) Open Python
+  2) Open Notepad
+
+  3) Paste the example code (or you can write other code)
+
+  4) Save the file with .py format
+
+  5) Run Python 3 with the python file
   ```
-    python3
+    python3 example.py
   ```
-  4) Start coding using PyCairo
+  6) Check files for the output graphic
 ---
 #### Example Code
 ``` py
@@ -72,4 +78,7 @@ surface.write_to_png("example.png")  # Output to PNG
 
 ---
 #### Example Output Using Code Above
+
+![Generated Vector Graphics](https://github.com/user-attachments/assets/b80bbf00-70b7-42f3-9092-6ece3b94dae3)
+
 
