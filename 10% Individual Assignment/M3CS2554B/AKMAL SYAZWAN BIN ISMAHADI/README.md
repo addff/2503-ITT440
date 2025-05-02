@@ -91,6 +91,14 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
+**Output**
+
+torch.Size([3, 128, 128])
+
+Explanation of the Output:
+- 3 → The number of channels (Red, Green, Blue for an RGB image).
+- 128 → Height of the image after resizing.
+- 128 → Width of the image after resizing.
 
 ---
 
