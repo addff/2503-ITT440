@@ -4,6 +4,7 @@
 ---
 
 ### **Introduction to Image Processing with PyTorch**
+https://cdn.icon-icons.com/icons2/2699/PNG/512/pytorch_logo_icon_169823.png
 Image processing is all about tweaking and analyzing pictures to pull out useful details or make them look better. PyTorch, a powerful deep learning framework, is widely used in computer vision for these tasks. Thanks to its flexible structure and dynamic computational graphs, it’s a go-to choice for building and experimenting with models.
 
 ---
