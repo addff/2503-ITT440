@@ -5,12 +5,12 @@
 ![image alt](https://github.com/akmalsyzwn/picture/blob/main/Pytorch_logo.png?raw=true)
 ---
 
-### **Introduction to Image Processing with PyTorch**
+### ✨**Introduction to Image Processing with PyTorch**
 Image processing is all about tweaking and analyzing pictures to pull out useful details or make them look better. PyTorch, a powerful deep learning framework, is widely used in computer vision for these tasks. Thanks to its flexible structure and dynamic computational graphs, it’s a go-to choice for building and experimenting with models.
 
 ---
 
-### **Core Concepts in Image Processing**
+### 🔥**Core Concepts in Image Processing**
 1. **Pixels and Representations**: Every image is just a collection of pixels, each storing intensity values like RGB for colors.
 2. **Transformations**: Before using images in models, they often need resizing, cropping, rotating, or normalizing.
 3. **Feature Extraction**: This involves techniques like edge detection, segmentation, and filtering to break down image data
@@ -19,7 +19,7 @@ Image processing is all about tweaking and analyzing pictures to pull out useful
 
 ---
 
-### **Tools for Image Processing in PyTorch**
+### 🧰**Tools for Image Processing in PyTorch**
 1. **Torchvision Library**:
    - A collection of datasets, pre-trained models, and tools for image transformations. 
    - Common transformations: `transforms.Compose()`, `transforms.ToTensor()`, and `transforms.Normalize()`.
@@ -35,16 +35,18 @@ Image processing is all about tweaking and analyzing pictures to pull out useful
    - Instead of training from scratch, you can use well-known models like ResNet, VGG, or EfficientNet from `torchvision.models` for tasks like transfer learning or feature extraction.
 
 ---
-### **Steps to Install Pytorch**
+### 🪜**Steps to Install Pytorch**
 
-## *1. Check Your Python Version*
+**1. Check Your Python Version**
+
 Before installing PyTorch, ensure you have Python installed. Open a terminal or command prompt and run:
 ```bash
 python --version
 ```
 PyTorch supports Python **3.9 or later**.
 
-## *2. Install PyTorch Using pip*
+**2. Install PyTorch Using pip**
+
 If you’re using pip, run the following command:
 ```bash
 pip install torch torchvision torchaudio
@@ -52,7 +54,8 @@ pip install torch torchvision torchaudio
 This will install PyTorch along with its essential libraries.
 
 
-## *3. Verify Installation*
+**3. Verify Installation**
+
 Once installed, check if PyTorch is working correctly by running:
 ```python
 import torch
@@ -61,7 +64,7 @@ print(torch.__version__)
 If this prints a version number, PyTorch is installed successfully.
 
 ---
-### **Example in PyTorch**
+**Example in PyTorch**
 Here’s a simple example to preprocess an image, load it into PyTorch, and apply transformations:
 
 ```python
@@ -84,12 +87,12 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
-### **Learn How To Do Image Processing in this video Tutorial**  
+### 🎬Learn How To Do Image Processing in this video Tutorial  
 [**Watch on YouTube**](https://www.youtube.com/watch?v=5TMRnwmwGTI)
 
 ---
 
-### **Real-World Applications**
+### 🗺️Real-World Applications
 1. **Medical Imaging**:
    - Detecting anomalies in X-rays, MRI scans, and CT images.
    - PyTorch is used to train models for diagnosing diseases.
