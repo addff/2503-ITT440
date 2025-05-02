@@ -72,7 +72,7 @@ img = Image.open("input.jpg")
 # Show the image
 img.show()
 
-# 2.Open the image
+# 2.Save the image
 img = Image.open("input.jpg")
 # Save the image to a new file
 img.save("output.jpg")
@@ -92,7 +92,7 @@ cropped_img = img.crop((50, 50, 300, 300))
 # Save the cropped image
 cropped_img.save("cropped_output.jpg")
 
-# 6.Flip horizontally (mirror left ↔ right)
+# 6.Flip horizontally (mirror left ↔ right) and vertical (mirror top ↔ bottom)
 horizontal_flip = img.transpose(Image.FLIP_LEFT_RIGHT)
 horizontal_flip.save("flipped_horizontal.jpg")
 # Flip vertically (mirror top ↔ bottom)
@@ -105,6 +105,8 @@ gray_img = img.convert("L")  # "L" stands for luminance (grayscale)
 gray_img.save("grayscale_output.jpg")
 
 # 8.Apply blur filter
+from PIL import Image, ImageFilter
+
 blurred_img = img.filter(ImageFilter.BLUR)
 # Save the blurred image
 blurred_img.save("blurred_output.jpg")
@@ -115,6 +117,8 @@ sharpened_img = img.filter(ImageFilter.SHARPEN)
 sharpened_img.save("sharpened_output.jpg")
 
 # 10.Create brightness enhancer
+from PIL import Image, ImageEnhace
+
 enhancer = ImageEnhance.Brightness(img)
 # Increase brightness (1.0 = original, >1 = brighter, <1 = darker)
 bright_img = enhancer.enhance(1.5)  # Try 0.5 for darker, 2.0 for more bright
@@ -129,6 +133,8 @@ contrast_img = enhancer.enhance(1.8)  # Try 0.5 for low contrast, 2.0 for high c
 contrast_img.save("contrast_output.jpg")
 
 # 12.Create a drawing context
+from PIL import Image, ImageDraw, ImageFont
+
 draw = ImageDraw.Draw(img)
 # Draw a rectangle (left, top, right, bottom)
 draw.rectangle([50, 50, 250, 250], outline="red", width=5)
@@ -155,3 +161,61 @@ blended_img.save("blended_output.jpg")
 ---
 
 #### OUTPUT
+1. Open Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/Open%20image.jpg" width="700">
+
+
+2. Resize Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/RESIZED.jpg" width="400">
+
+
+3. Rotate Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/ROTATE.jpg" width="400">
+
+
+4. Crop Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/CROP.jpg" width="400">
+
+
+5. Flip Horizontal and Vertical Image
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/HORIZONTAL.jpg" width="400">
+  <img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/VERTICAL.jpg" width="400">
+
+
+6. Grayscale Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/GRAYSCALE.jpg" width="400">
+
+
+7. Blur Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BLUR.jpg" width="400">
+
+
+8. Sharpen Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/SHARPEN.jpg" width="400">
+
+
+9. Brightness Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BRIGHTNESS.jpg" width="400">
+
+
+10. Contrast Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/CONTRAST.jpg" width="400">
+
+
+11. Draw and Text Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/DRAW%20%26%20TEXT.jpg" width="400">
+
+
+12. Blended two Image
+<img src="https://github.com/inaee/website/blob/0ab1dea65856a9455713a5e981c744e07e44b620/BLENDED.jpg" width="400">
+
+---
+
+#### CONCLUSION
+In conclusion, the Pillow library provides a powerful yet user-friendly toolkit for image processing in Python. Throught this project, we explored key functionalities such as opening, editing, resizing, cropping, rotating, and saving images in various formats. Pillow simplifies complex image manipulation tasks and supports a wide range of file types, making it deal for both beginners and advanced users. This experience not only enhanced our practical skills in Python programming but also deepened our understanding of how digital images are represented and manipulated programmatically. Overall, Pillow proved to be an essential tool for efficient and effective image processing.
+
+---
+
+#### VIDEO DEMONSTRATION
+[![Watch the video](https://img.youtube.com/vi/9-oYywPECxA/0.jpg)](https://www.youtube.com/watch?v=9-oYywPECxA)
+

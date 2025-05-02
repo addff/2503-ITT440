@@ -140,7 +140,7 @@ The primary highlight of this project is the ability to process a video frame by
  <img width="391" alt="ss result pycharm" src="https://github.com/user-attachments/assets/0b91538c-33fe-413d-832f-de8304ba6fea" />
 
  ## Conclusion
-In summary, this research shows how computer vision and deep learning, particularly YOLOv8, can automate the process of accurately and quickly counting books on shelves.  It processes the video frame by frame, producing a time-stamped record of the number of books for additional analysis in addition to providing real-time visual feedback.  This system can manage the volume of book inventories, huge book shops, and enormous books while lowering manual labour and increasing efficiency.  any environment where counting and item detection are necessary.
+In summary, this project shows how computer vision and deep learning, particularly YOLOv8, can automate the process of accurately and quickly counting books on shelves.  It processes the video frame by frame, producing a time-stamped record of the number of books for additional analysis in addition to providing real-time visual feedback.  This system can manage the volume of book inventories, huge book shops, and enormous books while lowering manual labour and increasing efficiency  any environment where counting and item detection are necessary.
 
 The main challenge I faced in implementing this project was that it involved a lot of trial and error. I had to do a lot of trial-and-error, which included downloading and installing different Python libraries that were relevant and deleting any that weren't needed. I had to change the project structure since the code would occasionally not compile or execute properly, forcing me to start again in five separate directories.Even though it took a lot of effort and time, this approach  me a lot of chances to learn new things, gain a deeper grasp of computer vision, and develop my Python programming skills.  On the other side, this experience increased my technical skill development and given me the courage I need to manage technology-based projects in future.
  
@@ -151,7 +151,9 @@ https://www.youtube.com/watch?v=vvKUuFk_uWI
 
 
 
-**Video Demostration**
+**Demostration Book Detection and Counting**
+
+https://youtu.be/S0RllfI3AGg
 
 
 

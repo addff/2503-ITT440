@@ -166,7 +166,12 @@ Brightness Filter:
 Edges Filter:  
 <img src="https://github.com/user-attachments/assets/117c0a17-4f50-45bf-81e9-b8d3f2b8614a" width="150" alt="Edges Filter">
 
-## 🎥 Video Demonstration
+## 🎥 Demonstration Video
+
+
+https://github.com/user-attachments/assets/da88233d-dbbb-4514-b10c-f4a749679bad
+
+[🎥 Watch the demonstration video on YouTube](https://youtu.be/P1yTltTYauE)
 ## 📍 Conclusion
 In this assignment, I learned:
 - How to apply basic image processing filters using OpenCV such as grayscale, invert, edge detection and brightness adjustment.

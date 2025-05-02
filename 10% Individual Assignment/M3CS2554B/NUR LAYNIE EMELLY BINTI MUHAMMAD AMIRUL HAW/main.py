@@ -19,23 +19,11 @@ plt.savefig("../outputs/checkerboard.png")
 plt.show()
 plt.close()
 
-# ========== 2. Diagonal Line Pattern ==========
-lines = np.zeros((300, 300), dtype=np.uint8)
-for i in range(300):
-    lines[i, i] = 255
-    lines[i, 299 - i] = 255
-plt.imshow(lines, cmap='gray')
-plt.title("Diagonal Line Pattern")
-plt.axis("off")
-plt.savefig("../outputs/diagonal_lines.png")
-plt.show()
-plt.close()
-
-# ========== 3. Grayscale Conversion ==========
+# ========== 2. Grayscale Image ==========
 try:
     img = imageio.imread("sample.jpg")
 except FileNotFoundError:
-    print("⚠️ 'sample.jpg' not found. Put it in the same folder as main.py.")
+    print("⚠️ 'sample.jpg' not found. Please make sure it is inside the 'code' folder.")
     exit()
 
 gray = np.mean(img, axis=2).astype(np.uint8)
@@ -46,7 +34,7 @@ plt.savefig("../outputs/grayscale.png")
 plt.show()
 plt.close()
 
-# ========== 4. Blue Tint Filter ==========
+# ========== 3. Blue Tint Filter ==========
 blue_tinted = img.copy()
 blue_tinted[:, :, 2] = np.clip(blue_tinted[:, :, 2] + 100, 0, 255)
 plt.imshow(blue_tinted)
@@ -56,7 +44,7 @@ plt.savefig("../outputs/blue_tint.png")
 plt.show()
 plt.close()
 
-# ========== 5. Brightness Enhancement ==========
+# ========== 4. Brightness Enhancement ==========
 brighter = np.clip(img + 50, 0, 255).astype(np.uint8)
 plt.imshow(brighter)
 plt.title("Brightened Image")
@@ -64,3 +52,24 @@ plt.axis("off")
 plt.savefig("../outputs/brightened.png")
 plt.show()
 plt.close()
+
+# ========== 5. Black Area Detection ==========
+img2 = imageio.imread("sample.jpg")  # Reload original image
+r = img2[:, :, 0]
+g = img2[:, :, 1]
+b = img2[:, :, 2]
+
+# Detect black: All color channels are low
+mask = (r < 60) & (g < 60) & (b < 60)
+
+# Highlight detected black areas in bright green
+overlay = img2.copy()
+overlay[mask] = [0, 255, 0]  
+
+plt.imshow(overlay)
+plt.title("Detected Black Areas in Image")
+plt.axis("off")
+plt.savefig("../outputs/black_detection.png")
+plt.show()
+plt.close()
+

@@ -29,7 +29,7 @@ pip install tensorflow matplotlib
 
 ---
 
-## 1. Loading and Preprocessing Images
+## 📌 Loading and Preprocessing Images
 
 Keras provides utility functions to load and preprocess images easily.
 
@@ -51,94 +51,97 @@ image_array = image_array / 255.0  # Normalize pixel values
 
 ---
 
-## 2. Image Augmentation
+Great! Let’s now explore **`pad_sequences`**, **`skipgrams`**, and how they are used in text preprocessing for deep learning using **Keras**.
 
-Image augmentation helps improve model generalization by generating variations of the training data.
-
-```python
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-datagen = ImageDataGenerator(
-    rotation_range=40,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    shear_range=0.2,
-    zoom_range=0.2,
-    horizontal_flip=True,
-    fill_mode='nearest'
-)
-
-# Visualizing Augmented Images
-image_array = image_array.reshape((1,) + image_array.shape)
-i = 0
-for batch in datagen.flow(image_array, batch_size=1):
-    plt.imshow(batch[0])
-    plt.axis("off")
-    i += 1
-    if i > 4:
-        break
-plt.show()
-```
+These are especially useful in **Natural Language Processing (NLP)** tasks like sentiment analysis, language modeling, and word embedding training.
 
 ---
 
-## 3. Building a Simple CNN Model
-
-Let’s now build a simple convolutional neural network to classify images.
-
-```python
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-
-model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)),
-    MaxPooling2D(2, 2),
-    
-    Conv2D(64, (3, 3), activation='relu'),
-    MaxPooling2D(2, 2),
-    
-    Flatten(),
-    Dense(64, activation='relu'),
-    Dense(1, activation='sigmoid')  # For binary classification
-])
-
-model.compile(optimizer='adam',
-              loss='binary_crossentropy',
-              metrics=['accuracy'])
-```
+# 🧠 Preprocessing with `pad_sequences` and `skipgrams` in Keras
 
 ---
 
-## 4. Training the Model with Images
+##  1. `pad_sequences`
 
-Use `ImageDataGenerator` to load images directly from a folder structure.
+`pad_sequences` is used to make all input sequences the **same length**, which is necessary for batching inputs into neural networks.
+
+### ✅ Why use it?
+Neural networks require input tensors to have the same shape. If your input sentences (tokenized as lists of integers) are of different lengths, you must **pad** them.
+
+### ✅ Example:
 
 ```python
-train_datagen = ImageDataGenerator(rescale=1./255)
-train_generator = train_datagen.flow_from_directory(
-    'data/train',
-    target_size=(150, 150),
-    batch_size=20,
-    class_mode='binary'
-)
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-model.fit(train_generator, steps_per_epoch=100, epochs=10)
+sentences = [
+    [1, 5, 7],
+    [2, 3],
+    [9, 8, 6, 4]
+]
+
+# Pad all sequences to same length
+padded = pad_sequences(sentences, padding='post')  # or 'pre'
+print(padded)
 ```
+
+🔹 Output:
+```
+[[1 5 7 0]
+ [2 3 0 0]
+ [9 8 6 4]]
+```
+
+### Options:
+- `maxlen=5`: Force max length
+- `padding='pre'` or `'post'`: Where to add zeros
+- `truncating='pre'` or `'post'`: Cut from the beginning or end
 
 ---
 
-## 5. Making Predictions
+## 📌 2. `skipgrams`
+
+`skipgrams` generates training samples for **word embeddings** like Word2Vec. It forms **(target, context)** pairs from a sentence, useful for context-based learning.
+
+### ✅ Why use it?
+It helps you build word embeddings by predicting surrounding words of a target word in a sentence.
+
+### ✅ Example:
 
 ```python
+from tensorflow.keras.preprocessing.sequence import skipgrams
 import numpy as np
 
-test_image = load_img('test/cat_or_dog.jpg', target_size=(150, 150))
-test_array = img_to_array(test_image) / 255.0
-test_array = np.expand_dims(test_array, axis=0)
+# A tokenized sentence
+sentence = [2, 3, 4, 5, 6]
+vocab_size = 10
 
-prediction = model.predict(test_array)
-print("Predicted class:", "Dog" if prediction[0][0] > 0.5 else "Cat")
+pairs, labels = skipgrams(sentence, vocabulary_size=vocab_size, window_size=2)
+
+for i in range(5):
+    print(f"Target: {pairs[i][0]}, Context: {pairs[i][1]}, Label: {labels[i]}")
 ```
+
+### 🔹 Output (example):
+```
+Target: 3, Context: 2, Label: 1
+Target: 5, Context: 6, Label: 1
+Target: 4, Context: 7, Label: 0   # Negative sample
+...
+```
+
+- `Label = 1` means real pair (word + nearby context)
+- `Label = 0` means negative pair (random word)
+
+### Options:
+- `window_size`: Context range
+- `negative_samples`: Proportion of random (non-related) pairs
+
+---
+
+### ▶️ Video Example
+
+See the example of using keras :  
+[**Watch on YouTube**](https://youtu.be/VdzmTM2vqyA?feature=shared)
 
 ---
 

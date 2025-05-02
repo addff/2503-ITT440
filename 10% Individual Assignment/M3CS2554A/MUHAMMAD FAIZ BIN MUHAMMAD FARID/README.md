@@ -12,6 +12,9 @@ Image processing is the field of computer science and engineering focused on per
 
 What is imageio ?
 ----
+
+![Imageio](https://github.com/user-attachments/assets/abba3721-a2e8-49f2-90d4-40de714ed526)
+
 Imageio is a phython library designed for reading and writing a wide range image and video formats in a simple and cosistant way.It allows users to load images from file,URLs or bytes streams and save them in variety of formats such as PNG, JPEG,TIFF and MP4. Imageio is built to be an easy platform to use while still being one of the most powerful and flexible, making it ideal for tasks in image processing. It is a popular choice for both beginner and advanced users in the Phython.
 
 Main website: ( https://imageio.readthedocs.io/ )
@@ -120,56 +123,57 @@ This example use NumPy for pixel manipulation and Matplotlib for displaying the 
 - Applies a simple Sobel edge detection filter.
 - Saves the result.
 - Displays original, grayscale, and processed images side by side.
-  
+
+input :
+---
+
+![Imageio](https://github.com/user-attachments/assets/abba3721-a2e8-49f2-90d4-40de714ed526)
+
+process:
+---
 ..
 
     import imageio.v3 as iio
     import numpy as np
     import matplotlib.pyplot as plt
     
-    # Step 1: Read the image
-    img = iio.imread("example.jpg")  # Replace with your image path
+    // Step 1: Read the uploaded image
+    img = iio.imread("/mnt/data/Imageio.png")  // Use the correct path to the uploaded image
     
-    # Step 2: Convert to grayscale using a weighted sum formula
+    // Step 2: Convert to grayscale
     def rgb2gray(rgb):
         return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
     
     gray_img = rgb2gray(img)
     
-    # Step 3: Apply a basic edge detection (Sobel filter)
+    // Step 3: Apply basic edge detection (Sobel filter)
     def simple_edge_detect(gray):
-        # Sobel filter kernels
         Kx = np.array([[-1, 0, 1],
                        [-2, 0, 2],
                        [-1, 0, 1]])
-    
         Ky = np.array([[1, 2, 1],
                        [0, 0, 0],
                        [-1, -2, -1]])
-    
-        # Pad image
+        
         padded = np.pad(gray, ((1, 1), (1, 1)), mode='constant')
-    
-        # Create output
         G = np.zeros_like(gray)
-    
+        
         for i in range(gray.shape[0]):
             for j in range(gray.shape[1]):
                 region = padded[i:i+3, j:j+3]
                 gx = np.sum(Kx * region)
                 gy = np.sum(Ky * region)
                 G[i, j] = np.sqrt(gx**2 + gy**2)
-    
-        # Normalize
+        
         G = (G / np.max(G)) * 255
         return G.astype(np.uint8)
     
     edges = simple_edge_detect(gray_img)
     
-    # Step 4: Save the result
-    iio.imwrite("edges_output.png", edges)
+    // Step 4: Save the result
+    iio.imwrite("/mnt/data/edges_output.png", edges)  // Save the edge image
     
-    # Step 5: Display original and processed images
+    // Step 5: Display original and processed images
     plt.figure(figsize=(12, 6))
     
     plt.subplot(1, 3, 1)
@@ -189,3 +193,17 @@ This example use NumPy for pixel manipulation and Matplotlib for displaying the 
     
     plt.tight_layout()
     plt.show()
+
+
+
+The outcome of the process from imageio:
+---
+
+![image](https://github.com/user-attachments/assets/2543a067-1c6d-42d5-a8cc-519ec3bfe93c)
+
+from left to right
+
+1. Original Image – The full-color logo.
+2. Grayscale Conversion – A black-and-white version based on brightness.
+3. Edge Detection (Sobel Filter) – Highlights the contours and outlines of the image, such as      the Python logo, text, and borders.
+
