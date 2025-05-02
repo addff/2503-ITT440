@@ -64,7 +64,11 @@ print(torch.__version__)
 If this prints a version number, PyTorch is installed successfully.
 
 ---
+### 🎬Tutorial Video to do Image Processing in Pytorch 
+[**Watch on YouTube**](https://www.youtube.com/watch?v=5TMRnwmwGTI)
+---
 **Example in PyTorch**
+
 Here’s a simple example to preprocess an image, load it into PyTorch, and apply transformations:
 
 ```python
@@ -87,8 +91,6 @@ image_tensor = transform(image)
 
 print(image_tensor.shape)  # Output the tensor shape
 ```
-### 🎬Tutorial Video to do Image Processing in Pytorch 
-[**Watch on YouTube**](https://www.youtube.com/watch?v=5TMRnwmwGTI)
 
 ---
 
