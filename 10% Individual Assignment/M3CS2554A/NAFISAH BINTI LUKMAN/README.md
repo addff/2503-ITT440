@@ -24,8 +24,6 @@ Image processing is an essential technique in various industries such as medical
 
 # Why Mahotas?
 
-Mahotas is a fast computer vision and image processing library for Python, with all heavy computation implemented in C++ for speed. It is particularly effective for:
-
 - *High-speed processing*: Optimized using C++, achieving excellent performance for large images.
 - *Ease of use*: Python API makes it simple to integrate into data science and engineering workflows.
 - *Rich functionality*: Offers over 100 functions including image filtering, morphological operations, feature extraction, and more.
@@ -34,8 +32,6 @@ Mahotas is a fast computer vision and image processing library for Python, with 
 ---
 
 # Key Functions in Mahotas for Image Processing
-
-Here are some commonly used Mahotas functions:
 
 - mahotas.imread() – Read an image from a file.
 - mahotas.imsave() – Save an image to a file.
@@ -47,8 +43,6 @@ Here are some commonly used Mahotas functions:
 ---
 
 # How To Install Mahotas?
-
-Here are the step to install Mahotas in your Laptop/PC
 
 1) Go to Anaconda website (https://www.anaconda.com/download) and enter your email. The download link will be sent in your email
   ![Image](https://github.com/user-attachments/assets/ef4904de-e888-4215-98e8-0f435ea372fc)
@@ -115,8 +109,7 @@ plt.show()
 
 ---
 
-# Real World Applications of Image Processing
-In the real world, image processing technologies like those powered by Mahotas are used in many industries:
+# Real World Applications of Image ProcessinG
 
 - *Healthcare*: Medical institutions use image processing to improve diagnostic accuracy. Techniques like MRI enhancement and tumor detection rely heavily on image filtering and segmentation.
 - *Manufacturing*: Automated quality control systems capture product images and use image processing to detect defects or assembly errors in real-time.
@@ -129,10 +122,11 @@ In the real world, image processing technologies like those powered by Mahotas a
 
 # Conclusion
 
-Mahotas provides a fast, lightweight, and easy-to-use framework for performing image processing tasks in Python. Its C++ backend ensures efficient computation, while its Python interface offers simplicity and flexibility. Whether for academic research, industrial applications, or personal projects, Mahotas is a powerful choice for developers and researchers who need quick and reliable image processing solutions
+Mahotas is a powerful, efficient, and user-friendly image processing library that bridges high-performance C++ capabilities with the simplicity of Python. It supports a wide range of applications—from medical diagnostics and industrial inspection to agriculture and space exploration—making it a valuable tool for both researchers and engineers. With its minimal dependencies, rich feature set, and ease of integration into Python environments, Mahotas is an excellent choice for anyone looking to perform fast and reliable image analysis. Whether you're developing academic projects, conducting scientific research, or working on real-world engineering solutions, Mahotas provides the tools necessary to bring your image processing tasks to life.
 
 ---
 
 # Here are demonstrate using Mahotas
 
 https://youtu.be/TKKcg88uUUY 
+https://www.youtube.com/watch?v=UM97D0yBkxU
