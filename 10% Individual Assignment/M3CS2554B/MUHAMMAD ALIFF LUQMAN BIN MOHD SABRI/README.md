@@ -1,4 +1,4 @@
-# MUHAMMAD ALIFF LUQMAN BIN MOHD SABRI
+# MUHAMMAD ALIFF LUQMAN BIN MOHD SABRI (2024745785)
 ### ITT440 - Individual Assignment
 # Image Processing Using SciPy
 ![image](https://github.com/user-attachments/assets/9e7fc749-caa9-410c-b6d2-82ea21180dc8)
