@@ -151,6 +151,9 @@ imageio.imwrite('sobel_edges.jpg', sobel_edges.astype(np.uint8))
 | Remote Sensing | Texture and land pattern analysis |
 | Engineering | Visualization and image-based calculations |
 
+## Tutorial
+https://www.youtube.com/watch?v=s_hDL2fGvow
+
 
 
 ## Conclusion
