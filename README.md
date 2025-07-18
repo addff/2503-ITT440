@@ -1,1 +1,1 @@
-Imran's 10% Individual Assignment.
+10% Individual Assignment.
